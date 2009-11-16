@@ -1,0 +1,431 @@
+#Watir
+
+Test web applications in all major browsers and operating systems.
+
+#Introduction
+
+Watir is open source tool that drives browsers and helps you automate boring and repetitive parts of functional testing of web applications, so you have more time to test with your hands (and brain).
+
+It can drive Microsoft Internet Explorer, Mozilla Firefox, Apple Safari and Google Chrome. In the near future (when Watir 2.0 is released) it should also be able to drive Opera.
+
+Watir works on all major operating systems: Microsoft Windows, Apple Mac OS X and Linux.
+
+There is also project named Celerity that uses Watir API, but does not drive a real browser, it emulates one. That means it is way faster. Also, that means it does not use your application in a way a real user would. You should make a decision if speed or accuracy is more important to you. Of course, you can always have some tests in a real browser and some in Celerity.
+
+Watir is just a Ruby library, so you have full access to all nice Ruby features in your tests.
+
+At the moment Watir runs in Ruby MRI (or CRuby) and Celerity runs in JRuby. There is a patch to drive Firefox on JRuby, but it is not officially supported.
+
+Watir 2.0 will use Selenium's WebDriver to drive browsers.
+
+Watir can not control browser plugins like Java applets, Adobe Flash or Microsoft Silverlight. There are open source projects that can control some browser plugins.
+
+If you like Watir, but for some reason just can not use Ruby, I have good news. Watir is ported to .NET (WatiN) and Java (Watij).
+
+#Prerequisites
+
+I will not assume that you know Ruby, but I will assume you know basics of programming. For example, you should know what a variable is, or a loop.
+
+It is possible to write Watir tests with little Ruby knowledge, but the more you know, it will be easier for you. If you grow to like Ruby, there is plenty of literature that will help you learn more.
+
+I will not assume that you know a lot about HTML, CSS, JavaScript, AJAX, DOM and stuff like that, but you will have to know the basics. For example, you will have to understand what a HTML tag is, what tag attributes are and stuff like that.
+
+#Installation 
+
+Because Watir is a Ruby library, you have to install Ruby first.
+
+For Windows, there is one click installer. Ruby is probably already installed on Mac and Linux. Type `ruby -v` in command prompt to see if you have it installed. On Mac it will look something like this:
+
+    $ ruby -v
+    ruby 1.8.6 (2008-08-11 patchlevel 287) [universal-darwin9.0]
+
+If you get an error message, please go to Ruby web site and follow instruction how to install it.
+
+Ruby 1.8.6 is recommended on all platforms.
+
+Ruby has a package system called Ruby gems, and Watir is released as a gem. 
+
+Watir installation is different on each operating system. Only Firefox is available for all major operating systems, and other browsers are available only on some platforms. Hence, you can not install all browser drivers on all platforms.
+
+Depending of your platform, there are a few choices. On all platforms, you have to update Ruby gems first.
+
+On Windows:
+
+    gem update --system
+
+On Mac and Linux:
+
+    sudo gem update --system
+
+If Ruby gems are already up to date, you will get a message saying: `Nothing to update`.
+
+The next step is installing Watir.
+
+On Windows:
+
+    gem install watir
+
+It will install drivers for Internet Explorer and Firefox.
+
+On Mac:
+
+    sudo gem install firewatir
+    sudo gem install safariwatir
+
+The first line will install driver for Firefox, and the second one for Safari. If you plan to use only one driver, feel free to install only one.
+
+On Linux:
+
+    sudo gem install firewatir
+
+Firefox drivers need JSSH extension for Firefox installed. You can find it at Watir wiki.
+
+Driver for Chrome is installed with:
+
+    gem install chromewatir
+
+It works only on Windows. I did not put it in Windows section, because it is broken at the moment due to some changes in Chrome 3. It should be fixed soon.
+
+It is not required, but I would highly recommend to install a browser extension like Internet Explorer Developer Toolbar of Firebug for Firefox. It will make your testing much more enjoying activity.
+
+Internet Explorer 8 and Apple Safari are shipped with such a tool already installed.
+
+#Watir in five minutes
+
+`An example would be handy right about now` Brian Marick would say. Five minutes from now, you will be crazy about Watir. If not, maybe it is not the right tool for you. Even then, if you continue reading the book, I hope you will grow to like it the more you know about it.
+
+In the rest of the book, I will explain all Watir functionality in great (maybe even painful) detail, but for now, I just want to show off a few cool features, to get you excited about it.
+
+I still remember how pleasantly surprised I was the first time I saw Watir at work. I installed it, and in a few hours I was able to create a script that would log me in web application I was testing. Since you have this book you will be able to log in to your web site in minutes, not hours.
+
+If you are familiar with Ruby, I am sure you already think IRB is one of the greatest tools for learning a new Ruby library.
+
+If you are new to Ruby, you are probably thinking: `What is this IRB thing?`
+
+IRB (in this case) does not stand for `International Rugby Board` or `Immigration or Refugee Board` (of Canada). It stands for `Interactive Ruby Shell`. Think of it as a shell that knows Ruby (as the name says).
+
+To start IRB, just type `irb` in command line. You will see something like this (on Mac):
+
+    $ irb
+    >> 
+
+Now you can enter any Ruby command and you will immediately get a result. We will start with telling Ruby that we want to use a library called Watir.
+
+If you are on Windows, and would like to drive Internet Explorer, type this:
+
+    require "watir"
+
+If you are on a Mac, and would like to drive Safari, type this:
+
+    require "safariwatir"
+
+On any platform, if you would like to drive Firefox:
+
+    require "firewatir"
+
+You should see something like this:
+
+    > require "safariwatir"
+    => true
+
+Every Ruby command returns something. `=> true` is what is returned after `require "safariwatir"`. There are two parts in the returned line. `=>` looks like an arrow, it tells you `Ruby returned this`. `true` is what is actually returned. When `true` is returned, it usually means that everything is fine.
+
+Until I say differently, just ignore what is returned.
+
+And now the magic starts. With just one command you will open a browser.
+
+Internet Explorer:
+
+    browser = Watir::IE.new
+
+Firefox:
+
+    browser = FireWatir::Firefox.new
+
+Safari:
+
+    browser = Watir::Safari.new
+
+When I saw the browser magically appearing for the first time, only one thought crossed my mind: `Cool!`
+
+Please open just one browser. It will be enough. You can play with other browsers later. All code that follows should work no matter which browser you have opened. Some features are not implemented in all browsers, and I will explicitly say it when we get to such a feature.
+
+Output should be similar to this:
+
+    >> browser = Watir::Safari.new
+    => #<Watir::Safari:0x605054 @scripter=#<Watir::AppleScripter:0x604cd0 @typing_lag=0.08, @document=app("/Applications/Safari.app").documents[1], @appname="Safari", @js=#<Watir::JavaScripter:0x604d48>, @app=app("/Applications/Safari.app")>>
+
+As I said earlier, you can ignore `#<Watir::Safari:0x605054...>`. Opening Safari returned the browser as an object, and this is textual representation of the object. I hope it will be changed to something less verbose in the near future.
+
+Just opening a browser is cool, but not so useful. Watir can do so much more. For example, it can navigate the browser to any site. I will use pragprog.com in this example. I suggest that you literally follow the example, and then try a few sites yourself.
+
+So, go to pragprog.com:
+
+    >> browser.goto "http://pragprog.com"
+    => nil
+
+And pragprog.com opens. Magic, isn't it?
+
+Controlling the browser is really useful but, as I am sure you already know, there is more to testing than just performing the actions. You have to check what happened after the action. What happens when I enter a URL in browser address bar, when I click a link or a button, when I enter some text in a text field or select something from select box...?
+
+This is the first time we will perform a check. It is also the first time we will care what Ruby returns after the command. Let's check if the browser really opened pragprog.com.
+
+    >> browser.url
+    => "http://pragprog.com/"
+
+It really works! Ruby returned a string (the thing in double quotes, remember?) that contains text from the browser address bar.
+
+Time to click a link. It is easy to explicitly say which link to click. Right now I want to click a link with text `Books`. (It gets just a bit more complicated if there are two links with the same text on the page, but we will deal with that later.)
+
+    >> browser.link(:text, "Books").click
+    => nil
+
+This time, let's check the page title.
+
+    >> browser.title
+    => "The Pragmatic Bookshelf | Our Titles"
+
+We got back the string with the page title.
+
+I want books to be sorted by category, so I have to click `By Category`. It is hard to say how it is implemented by just looking at it. It is the time to fire up your favorite page inspector tool. If you are using Safari on Mac, you already have one installed.
+
+Right click `By Category` and select `Inspect Element` from context menu. This line will be highlighted in Inspector:
+
+    <span>By Category</span>
+
+That means we need to click a span with text `By Category`.
+
+    >> browser.span(:text, "By Category").click
+    => nil
+
+Just for a second, take a closer look at this two commands that we used to click the link and the span:
+
+    browser.link(:text, "Books"      ).click
+    browser.span(:text, "By Category").click
+
+They are almost identical. String (in double quotes) that we used to identify the link and the span are, of course, different. In the first example there is `link`, in the second one, there is `span`. The rest is the same. That is on purpose. You will appreciate that later.
+
+Let's try to find all Ruby related books. There is a search box. Right click it and select `Inspect Element` from context menu. This line will be highlighted in Inspector:
+
+    <input class="textbox narrow" id="q" name="q" type="text">
+
+So it is a text box (that is pretty obvious) with and id attribute is `q`. If an element has an id attribute, you should use it.
+
+    >> browser.text_field(:id, "q").set "ruby"
+    => :missing_value
+
+You can even see how Watir is typing each letter. Watir is just great in impressing people.
+
+To perform search, we have to click `Go`. Right click it and select `Inspect Element`. I guess you already know what to do. You will see:
+
+    <button class="go" type="submit">
+
+No id this time, but there is class attribute. Watir is just great with real world web applications. If developers can create an element, Watir will have a way to access it.
+
+    >> browser.button(:class, "go").click
+    => nil
+
+This time, let's check a lot of stuff. Is there text `151 results matching 'ruby'` on the page?
+
+    >> browser.text.include?("151 results matching 'ruby'")
+    => true
+
+This time we asked Ruby if page text included a string, and it said `true`. It is it's cute way of saying `yes`. When asking the question we were even polite, please notice question mark in `include?`.
+
+Is the text we have entered in the search box at the previous page still there? (This feature is not implemented for Safari yet. It works in Internet Explorer and Firefox. It should be implemented for Safari soon.)
+
+    >> browser.text_field(:id, "q").value
+    => "ruby"
+
+Ruby returned text from the text field. It is the same text we entered, so everything is fine.
+
+Let's check if there is a link to `Programming Ruby: The Pragmatic Programmers' Guide, Second Edition`:
+
+    >> browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").exists?
+    => true
+
+If you are not impressed by now, you probably never will. But wait, it is time to bring on heavy artillery. Let's go deeper.
+
+#HTML Elements Supported by Watir
+
+Watir can access following HTML elements (alphabetically):
+
+    <area>
+    <a>
+    <button>
+    <dd>
+    <div>
+    <dl>
+    <dt>
+    <em>
+    <form>
+    <frame>
+    <h1>
+    <h2>
+    <h3>
+    <h4>
+    <h5>
+    <h6>
+    <iframe>
+    <img>
+    <input type="button">
+    <input type="checkbox">
+    <input type="file">
+    <input type="hidden">
+    <input type="image">
+    <input type="password">
+    <input type="radio">
+    <input type="reset">
+    <input type="submit">
+    <input type="text">
+    <input>
+    <label>
+    <li>
+    <map>
+    <p>
+    <pre>
+    <select>
+    <span>
+    <strong>
+    <table>
+    <tbody>
+    <td>
+    <textarea>
+    <tr>
+    <ul>
+
+
+If that is not enough for you, Watir also has XPath support. You can use it to access any HTML element.
+
+#Link
+
+Let's take a closer look at one element. I think you will use links the most, so it would be just fair to start there.
+
+Usually, you can recognize a link on a web page because it's text is underlined:
+
+    Programming Ruby: The Pragmatic Programmers' Guide, Second Edition
+
+HTML code of a link could look something like this:
+
+    <a href="http://www.pragprog.com/titles/ruby/programming-ruby">Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+
+You could access the link in a lot of ways.
+
+Link can be accessed with (alphabetically):
+
+    after?
+    class
+    href
+    url
+    html
+    id
+    index
+    name
+    text
+    xpath
+
+and multiple attributes.
+
+Index accepts only integer as a value. Xpath accepts only string. Multiple attributes accepts only hash. All other methods accept string, regular expression and hash.
+
+Since this link has text and href attribute, we will start there.
+
+##text
+
+###text and string
+
+Let's start in the original Watir way, `link` method accepting two parameters. The first parameter is a symbol (you will know something is a symbol because it starts with a colon), the second one is a string.
+
+    browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+
+`link` method also accepts a hash. Hash consists of two parts, key and value. In this case the key is a symbol and the value is a string. Between them is that familiar arrow.
+
+    browser.link(:text => "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+
+###text and regular expression
+
+    browser.link(:text, /Programming Ruby/).click
+
+or
+
+    browser.link(:text => /Programming Ruby/).click
+
+##href
+
+###href and string
+
+    browser.link(:href, "http://www.pragprog.com/titles/ruby/programming-ruby").click
+
+or
+
+    browser.link(:href => "http://www.pragprog.com/titles/ruby/programming-ruby").click
+
+###href and regular expression
+
+    browser.link(:href, /programming-ruby/).click
+
+or
+
+    browser.link(:href => /programming-ruby/).click
+
+##id
+
+If the link had an id attribute, like this
+
+    <a href="http://www.pragprog.com/titles/ruby/programming-ruby" id="programming-ruby" >Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+
+we could access it that way too.
+
+##id and string
+
+    browser.link(:id, "programming-ruby").click
+
+or
+
+    browser.link(:id => "programming-ruby").click
+
+##id and regular expression
+
+    browser.link(:id, /programming-ruby/).click
+
+or
+
+    browser.link(:id => /programming-ruby/).click
+
+If it had a name attribute:
+
+    <a href="http://www.pragprog.com/titles/ruby/programming-ruby" name="programming-ruby" >Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+
+##name and string
+
+    browser.link(:name, "programming-ruby").click
+
+or
+
+    browser.link(:name => "programming-ruby").click
+
+##name and regular expression
+
+    browser.link(:name, /programming-ruby/).click
+
+or
+
+    browser.link(:name => /programming-ruby/).click
+
+##Index
+
+If you had no way other way, but you knew link's position on the page, you could use index. In this example, it is the first link.
+
+    browser.link(:index, 1).click
+
+or
+
+    browser.link(:index => 1).click
+
+##Collections
+
+You can even do stuff with all links on a page. This will display href attribute of all links:
+
+    browser.links.each do |link|
+      puts link.href
+    end
