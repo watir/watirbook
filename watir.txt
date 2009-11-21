@@ -511,6 +511,45 @@ Maybe you have noticed that this is the first time we did not use a string (doub
 
 Please notice that the first link is accessed with the number one (that is called one-based indexing). It is usual in programming that the first element is the number zero (zero-based indexing). Watir will use zero-based indexing in Watir 2.0.
 
+## Nested Elements
+
+### Simple Nesting
+
+Sometimes the only way to uniquely identify a link is to specify one or more of it's parent elements. How would you click the second link in this example?
+
+    <div id="one">
+      <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    </div>
+    <div id="two">
+      <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    </div>
+
+This will click the first link, but we want to click the second one:
+
+    browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+
+This will work, but it is really fragile:
+
+    browser.link(:index, 2).click
+
+If in further development a link (or more) is added between the two links we have so far, the code above will click what ever link was the second, and that is not what we want.
+
+Let's make it less fragile.
+
+We know that the second link is a child element of a div with an id. This is the solution to the problem:
+
+    browser.div(:id, "two").link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+
+Isn't that just so elegant?!
+
+The above solution is not the only one. This will work too:
+
+    browser.div(:id, "two").link(:index, 1).click
+
+This time we said to Watir that we want it to click the first link in a specific div.
+
+There are endless options how to click an element on a page, and this book will try to teach you all of them.
+
 ## Collections
 
 You can even do stuff with all links on a page. This will display href attribute of all links:
