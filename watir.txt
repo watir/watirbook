@@ -433,7 +433,7 @@ So, if the link had an id attribute, like this:
 
 we could access it using `:id`.
 
-##id and string
+###id and string
 
     browser.link(:id, "programming-ruby").click
 
@@ -441,7 +441,7 @@ or
 
     browser.link(:id => "programming-ruby").click
 
-##id and regular expression
+###id and regular expression
 
     browser.link(:id, /programming-ruby/).click
 
@@ -449,11 +449,13 @@ or
 
     browser.link(:id => /programming-ruby/).click
 
+##name
+
 If it had a name attribute:
 
     <a href="http://www.pragprog.com/titles/ruby/programming-ruby" name="programming-ruby" >Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
 
-##name and string
+###name and string
 
     browser.link(:name, "programming-ruby").click
 
@@ -461,7 +463,7 @@ or
 
     browser.link(:name => "programming-ruby").click
 
-##name and regular expression
+###name and regular expression
 
     browser.link(:name, /programming-ruby/).click
 
