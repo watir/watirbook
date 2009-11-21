@@ -1,8 +1,8 @@
-#Watir
+# Watir
 
 Test web applications in all major browsers and operating systems.
 
-#Introduction
+# Introduction
 
 Watir is open source tool that drives browsers and helps you automate boring and repetitive parts of functional testing of web applications, so you have more time to test with your hands (and brain).
 
@@ -22,7 +22,7 @@ Watir can not control browser plugins like Java applets, Adobe Flash or Microsof
 
 If you like Watir, but for some reason just can not use Ruby, I have good news. Watir is ported to .NET (WatiN) and Java (Watij).
 
-#Prerequisites
+# Prerequisites
 
 I will not assume that you know Ruby, but I will assume you know basics of programming. For example, you should know what a variable is, or a loop.
 
@@ -32,7 +32,7 @@ I will not assume that you know a lot about HTML, CSS, JavaScript, AJAX, DOM and
 
 I have not made up the prerequisites. I have just listed everything I knew when I started using Watir.
 
-#Installation 
+# Installation 
 
 Because Watir is a Ruby library, you have to install Ruby first.
 
@@ -92,7 +92,7 @@ It is not required, but I would highly recommend to install a browser extension 
 
 Internet Explorer 8 and Apple Safari are shipped with such a tool already installed.
 
-#Watir in five minutes
+# Watir in Five Minutes
 
 `An example would be handy right about now` Brian Marick would say. Five minutes from now, you will be crazy about Watir. If not, maybe it is not the right tool for you. Even then, if you continue reading the book, I hope you will grow to like it the more you know about it.
 
@@ -248,7 +248,7 @@ Let's check if there is a link to `Programming Ruby: The Pragmatic Programmers' 
 
 If you are not impressed by now, you probably never will. But wait, it is time to bring on heavy artillery. Let's go deeper.
 
-#HTML Elements Supported by Watir
+# HTML Elements Supported by Watir
 
 Watir can access following HTML elements (alphabetically):
 
@@ -299,7 +299,7 @@ Watir can access following HTML elements (alphabetically):
 
 If that is not enough for you, Watir also has XPath support. You can use it to access any HTML element.
 
-#Link
+# Link
 
 Let's take a closer look at one element. I think you will use links the most, so it would be just fair to start there.
 
@@ -332,13 +332,13 @@ Index accepts only integer as a value. Xpath accepts only string. Multiple attri
 
 Since this link has text and href attribute, we will start there.
 
-##text
+## Text
 
 For this example, we are interested only in text of the link.
 
     <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
 
-###text and string
+### Text and String
 
 Let's start in the original Watir way, `link` method accepting two parameters. The first parameter is a symbol, the second one is a string. You will know something is a symbol because it starts with a colon, like `:text`. For now, consider symbol to be nothing more than a string written in a strange way.
 
@@ -352,7 +352,7 @@ So, the only thing that is different between the two ways is that in the first e
 
 In both examples we used a string to locate the link. We could do that because we knew the complete text of the link.
 
-###text and regular expression
+### Text and Regular expression
 
 If you know only a portion of a string, you can use regular expression.
 
@@ -374,13 +374,13 @@ or
 
     browser.link(:text => /Programming Ruby/).click
 
-##href
+## Href
 
 For this example, let's look only at link's href attribute.
 
     <a href="http://www.pragprog.com/titles/ruby/programming-ruby"></a>
 
-###href and string
+### Href and String
 
 If you know the full value of link's href attribute, you could use `:href` symbol and a string to click the link.
 
@@ -390,7 +390,7 @@ or
 
     browser.link(:href => "http://www.pragprog.com/titles/ruby/programming-ruby").click
 
-###href and regular expression
+### Href and Regular Expression
 
 If you know only a portion of href attribute, you will still use `:href` to locate the link, but this time with an regular expression instead of a string.
 
@@ -400,13 +400,13 @@ or
 
     browser.link(:href => /programming-ruby/).click
 
-##url
+## URL
 
 Since href attribute points to an URL, you can use `:url` instead of `:href`.
 
     <a href="http://www.pragprog.com/titles/ruby/programming-ruby"></a>
 
-###url and string
+### URL and String
 
     browser.link(:url, "http://www.pragprog.com/titles/ruby/programming-ruby").click
 
@@ -414,7 +414,7 @@ or
 
     browser.link(:url => "http://www.pragprog.com/titles/ruby/programming-ruby").click
 
-###url and regular expression
+### URL and Regular Expression
 
 
     browser.link(:url, /programming-ruby/).click
@@ -423,7 +423,7 @@ or
 
     browser.link(:url => /programming-ruby/).click
 
-##id
+## ID
 
 According to HTML specification, all HTML elements can have an id and each id should be unique on the page. Uniqueness makes id very convenient for us. All other element attributes can appear more than once on the page and Watir will locate only the first element with a specific attribute, and maybe we want the second or the third one. (There is workaround for that, keep on reading.)
 
@@ -433,7 +433,7 @@ So, if the link had an id attribute, like this:
 
 we could access it using `:id`.
 
-###id and string
+### ID and String
 
     browser.link(:id, "programming-ruby").click
 
@@ -441,7 +441,7 @@ or
 
     browser.link(:id => "programming-ruby").click
 
-###id and regular expression
+### ID and Regular Expression
 
     browser.link(:id, /programming-ruby/).click
 
@@ -449,7 +449,7 @@ or
 
     browser.link(:id => /programming-ruby/).click
 
-##name
+## Name
 
 Another attribute that almost all HTML elements can have is `name`. It is not supposed to be unique on the page. It is very common that elements that are somehow related on the page have the same name.
 
@@ -457,7 +457,7 @@ If it had a name attribute:
 
     <a href="http://www.pragprog.com/titles/ruby/programming-ruby" name="programming-ruby" >Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
 
-###name and string
+### Name and String
 
     browser.link(:name, "programming-ruby").click
 
@@ -465,7 +465,7 @@ or
 
     browser.link(:name => "programming-ruby").click
 
-###name and regular expression
+### Name and Regular expression
 
     browser.link(:name, /programming-ruby/).click
 
@@ -495,7 +495,7 @@ or
 
     browser.link(:class => /book/).click
 
-##Index
+## Index
 
 If you had no way other way, but you knew link's position on the page, you could use index. In this example, it is the first link.
 
@@ -511,7 +511,7 @@ Maybe you have noticed that this is the first time we did not use a string (doub
 
 Please notice that the first link is accessed with the number one (that is called one-based indexing). It is usual in programming that the first element is the number zero (zero-based indexing). Watir will use zero-based indexing in Watir 2.0.
 
-##Collections
+## Collections
 
 You can even do stuff with all links on a page. This will display href attribute of all links:
 
