@@ -90,7 +90,7 @@ Before we really click the link, I want to show of one of Watir's killer feature
     >> browser.link(:text, "Books").flash
     => nil
 
-Link should flash. (It's background color changes to yellow a few times.) Isn't that cool? I use it all the time when I present Watir at conferences. I think Watir is just great for presentations. It is very visual.
+Link should flash. It's background color changes to yellow a few times. (This feature is available at the moment only for Internet Explorer. Other drivers should get it soon.) Isn't that cool? I use it all the time when I present Watir at conferences. I think Watir is just great for presentations. It is very visual.
 
 It is the time to really click the link:
 
