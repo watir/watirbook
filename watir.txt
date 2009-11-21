@@ -346,6 +346,8 @@ Let's start in the original Watir way, `link` method accepting two parameters. T
 
 So, the only thing that is different between the two ways is that in the first example there is a comma between symbol and string, and in the second example there is and arrow. You will see why the arrow is introduced later.
 
+In both examples we used a string to locate the link. We could do that because we knew the complete text of the link.
+
 ###text and regular expression
 
     browser.link(:text, /Programming Ruby/).click
