@@ -51,6 +51,10 @@ So, the only thing that is different between the two ways is that in the first e
 
 In both examples we used a string to locate the link. We could do that because we knew the complete text of the link.
 
+There is a slightly more verbose way to write a hash (please notice curly braces):
+
+    browser.link({:text => "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition"}).click
+
 ### Text and Regular expression
 
 If you know only a portion of a string, you can use regular expression.
