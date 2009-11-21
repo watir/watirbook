@@ -376,6 +376,10 @@ or
 
 ##href
 
+For this example, let's look only at link's href attribute.
+
+    <a href="http://www.pragprog.com/titles/ruby/programming-ruby"></a>
+
 ###href and string
 
     browser.link(:href, "http://www.pragprog.com/titles/ruby/programming-ruby").click
