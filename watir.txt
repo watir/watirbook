@@ -241,9 +241,9 @@ Is the text we have entered in the search box at the previous page still there? 
 
 Ruby returned text from the text field. It is the same text we entered, so everything is fine.
 
-Let's check if there is a link to `Programming Ruby: The Pragmatic Programmers' Guide, Second Edition`:
+Let's check if there is a link to `Programming Ruby`:
 
-    >> browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").exists?
+    >> browser.link(:text, "Programming Ruby").exists?
     => true
 
 If you are not impressed by now, you probably never will. But wait, it is time to bring on heavy artillery. Let's go deeper.
@@ -429,7 +429,7 @@ According to HTML specification, all HTML elements can have an id and each id sh
 
 So, if the link had an id attribute, like this:
 
-    <a id="programming-ruby">Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <a id="programming-ruby"></a>
 
 we could access it using `:id`.
 
@@ -455,7 +455,7 @@ Another attribute that almost all HTML elements can have is `name`. It is not su
 
 If it had a name attribute:
 
-    <a name="programming-ruby">Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <a name="programming-ruby"></a>
 
 ### Name and String
 
@@ -477,7 +477,7 @@ or
 
 It is also very common for an HTML element to have a class attribute.
 
-    <a class="book">Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <a class="book"></a>
 
 ### Class and String
 
@@ -515,13 +515,13 @@ Please notice that the first link is accessed with the number one (that is calle
 
 Sometimes the only way to identify the element is to say that it should be after another element. Take a look at this example:
 
-    <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <a>Programming Ruby</a>
     <div id="one" />
-    <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <a>Programming Ruby</a>
 
 You want to click the second link. This will click the first link, but we want to click the second one:
 
-    browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+    browser.link(:text, "Programming Ruby").click
 
 One of the ways you could do it is:
 
@@ -579,15 +579,15 @@ but this will not work:
 Sometimes the only way to uniquely identify a link is to specify one or more of it's parent elements. How would you click the second link in this example?
 
     <div id="one">
-      <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+      <a>Programming Ruby</a>
     </div>
     <div id="two">
-      <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+      <a>Programming Ruby</a>
     </div>
 
 This will click the first link, but we want to click the second one:
 
-    browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+    browser.link(:text, "Programming Ruby").click
 
 This will work, but it is really fragile:
 
@@ -599,7 +599,7 @@ Let's make it less fragile.
 
 We know that the second link is a child element of a div with an id. This is the solution to the problem:
 
-    browser.div(:id, "two").link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+    browser.div(:id, "two").link(:text, "Programming Ruby").click
 
 Isn't that just so elegant?!
 
@@ -617,13 +617,13 @@ If for some reason you want to be very specific about where the element is locat
 
     <div id="one">
       <div id="two">
-        <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+        <a>Programming Ruby</a>
       </div>
     </div>
 
 You could click the link with:
 
-    browser.div(:id, "one").div(:id, "two").link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+    browser.div(:id, "one").div(:id, "two").link(:text, "Programming Ruby").click
 
 The nesting can go as deep as you like.
 
