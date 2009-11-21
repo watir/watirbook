@@ -279,7 +279,7 @@ At the moment, you can use XPath to access elements located in a frame, but you 
 
     browser.frame(:name, "one").link(:xpath, "//a[@href='test.htm']/").click
 
-but this will not work:
+but this would not:
 
     browser.frame(:xpath, "//frame[@name='one']/")
 
