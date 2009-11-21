@@ -400,6 +400,29 @@ or
 
     browser.link(:href => /programming-ruby/).click
 
+##url
+
+Since href attribute points to an URL, you can use `:url` instead of `:href`.
+
+    <a href="http://www.pragprog.com/titles/ruby/programming-ruby"></a>
+
+###url and string
+
+    browser.link(:url, "http://www.pragprog.com/titles/ruby/programming-ruby").click
+
+or
+
+    browser.link(:url => "http://www.pragprog.com/titles/ruby/programming-ruby").click
+
+###url and regular expression
+
+
+    browser.link(:url, /programming-ruby/).click
+
+or
+
+    browser.link(:url => /programming-ruby/).click
+
 ##id
 
 If the link had an id attribute, like this
