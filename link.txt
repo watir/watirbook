@@ -304,7 +304,7 @@ This will work, but it is really fragile:
 
     browser.link(:index, 2).click
 
-If in further development a link (or more) is added between the two links we have so far, the code above will click what ever link was the second, and that is not what we want.
+If in further development a link (or more) is added between the two links we have so far, the code above will click whatever link was the second, and that is not what we want.
 
 Let's make it less fragile.
 
