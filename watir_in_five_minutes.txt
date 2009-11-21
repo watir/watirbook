@@ -117,7 +117,7 @@ Let's try to find all Ruby related books. There is a search box. Right click it 
 
     <input class="textbox narrow" id="q" name="q" type="text">
 
-So it is a text box (that is pretty obvious) with and id attribute is `q`. If an element has an id attribute, you should use it.
+So it is a text box (that is pretty obvious) and it's id attribute is `q`. If an element has an id attribute, you should use it.
 
     >> browser.text_field(:id, "q").set "ruby"
     => :missing_value
