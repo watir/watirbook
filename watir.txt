@@ -546,6 +546,32 @@ In above example, we have used regular expression as a second parameter, but I a
 
 ## XPath
 
+XPath was not in Watir from the beginning. It was added by Angrez Singh. He also created Watir's Firefox driver. Aidy Lewis recently moved Watir's XPath from REXML to Nokogiri, and now it is faster. XPath is really powerful. Most times you can just use `:html`, but if it does not solve the problem, try XPath.
+
+If you have a link:
+
+    <a href="test.htm">click me</a>
+
+You could click it with:
+
+    browser.link(:xpath, "//a[@href='test.htm']/").click
+
+or
+
+    browser.link(:xpath => "//a[@href='test.htm']/").click
+
+Another way, especially useful if the element you are trying to access in not directly supported by Watir:
+
+    browser.element_by_xpath("//a[@href='test.htm']/").click
+
+At the moment, you can use XPath to access elements located in a frame, but you can not use XPath to access the frame itself. In another words, this would work:
+
+    browser.frame(:name, "one").link(:xpath, "//a[@href='test.htm']/").click
+
+but this will not work:
+
+    browser.frame(:xpath, "//frame[@name='one']/")
+
 ## Nested Elements
 
 ### Simple Nesting
