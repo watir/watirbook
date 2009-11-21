@@ -483,6 +483,10 @@ or
 
     browser.link(:index => 1).click
 
+Do you see anything strange in the above code? Take a look. I will wait.
+
+Maybe you have noticed that this is the first time we did not use a string (double quotes around the text) or a regular expression (slashed around the text). We have used just the number one. Such numbers are called integers. Watir uses integers only with `:index`.
+
 Please notice that the first link is accessed with the number one (that is called one-based indexing). It is usual in programming that the first element is the number zero (zero-based indexing). Watir will use zero-based indexing in Watir 2.0.
 
 ##Collections
