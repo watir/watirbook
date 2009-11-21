@@ -511,6 +511,26 @@ Maybe you have noticed that this is the first time we did not use a string (doub
 
 Please notice that the first link is accessed with the number one (that is called one-based indexing). It is usual in programming that the first element is the number zero (zero-based indexing). Watir will use zero-based indexing in Watir 2.0.
 
+## After
+
+Sometimes the only way to identify the element is to say that it should be after another element. Take a look at this example:
+
+    <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <div id="one" />
+    <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+
+You want to click the second link. This will click the first link, but we want to click the second one:
+
+    browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+
+One of the ways you could do it is:
+
+    browser.link(:after?, browser.div(:id, "one")).click
+
+We said to Watir that we want to click a link after a div that has `id` attribute set to `one`. I rarely use it, but there are times when it is really handy.
+
+Do you see something strange in the above code? This is the first time we have a syntax for accessing page element instead of strings or regular expressions.
+
 ## Nested Elements
 
 ### Simple Nesting
