@@ -473,6 +473,28 @@ or
 
     browser.link(:name => /programming-ruby/).click
 
+## Class
+
+It is also very common for an HTML element to have a class attribute.
+
+    <a class="book">Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+
+### Class and String
+
+    browser.link(:class, "book").click
+
+or
+
+    browser.link(:class => "book").click
+
+### Class and Regular Expression
+
+    browser.link(:class, /book/).click
+
+or
+
+    browser.link(:class => /book/).click
+
 ##Index
 
 If you had no way other way, but you knew link's position on the page, you could use index. In this example, it is the first link.
