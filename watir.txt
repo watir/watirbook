@@ -533,6 +533,17 @@ Do you see something strange in the above code? This is the first time we have a
 
 ## HTML
 
+If the link you want to access does not have any usual attributes that could uniquely identify it, Watir can handle that too. For example, you need to click the second link:
+
+    <a onclick="new Ajax.Request('001')">add</a>
+    <a onclick="new Ajax.Request('007')">add</a>
+
+One of the really elegant ways to do it is by using `:html`:
+
+    browser.link(:html, /007/).click
+
+In above example, we have used regular expression as a second parameter, but I am sure you have already got used to them. I am sure you are already convinced that regular expressions are very useful.
+
 ## XPath
 
 ## Nested Elements
