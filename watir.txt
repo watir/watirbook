@@ -629,6 +629,17 @@ The nesting can go as deep as you like.
 
 ## Multiple Attributes
 
+Multiple attributes was also fairly recently added to Watir. It is a killer feature, as you will see. For example, if you have two completely identical links on the same page, and you want to click the second one:
+
+      <a>Programming Ruby</a>
+      <a>Programming Ruby</a>
+
+you could do it with:
+
+    browser.link(:text => "Programming Ruby", :index => 2).click
+
+The above code will click the second link with text `Programming Ruby`.
+
 ## Collections
 
 You can even do stuff with all elements of a particular kind on a page. If you want to check href attributes of all links in the page, this will do it:
