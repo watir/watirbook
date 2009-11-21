@@ -451,6 +451,8 @@ or
 
 ##name
 
+Another attribute that almost all HTML elements can have is `name`. It is not supposed to be unique on the page. It is very common that elements that are somehow related on the page have the same name.
+
 If it had a name attribute:
 
     <a href="http://www.pragprog.com/titles/ruby/programming-ruby" name="programming-ruby" >Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
