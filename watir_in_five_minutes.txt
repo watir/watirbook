@@ -156,9 +156,60 @@ Is the text we have entered in the search box at the previous page still there? 
 
 Ruby returned text from the text field. It is the same text we entered, so everything is fine.
 
-Let's check if there is a link to `Programming Ruby`:
+Let's check if there is a link to `Programming Ruby: The Pragmatic Programmers' Guide, Second Edition`:
 
-    >> browser.link(:text, "Programming Ruby").exists?
+    >> browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").exists?
     => true
+
+Well, that was a lot of fun. But you do not want to type into IRB Watir commands all the time. You want to run the tests and do something else while it runs. As for almost everything else in Ruby and Watir, there is a simple solution. Paste all the code you have entered in IRB in a file, and save it with `rb` extension. IRB is used only for development or debugging, so do not paste `irb` as the first line of the file. If you are using Internet Explorer driver you should have this in the file:
+
+    require "watir"
+    browser = Watir::IE.new
+    browser.goto "http://pragprog.com"
+    browser.url
+    browser.link(:text, "Books").flash
+    browser.link(:text, "Books").click
+    browser.title
+    browser.span(:text, "By Category").click
+    browser.text_field(:id, "q").set "ruby"
+    browser.button(:class, "go").click
+    browser.text.include?("151 results matching 'ruby'")
+    browser.text_field(:id, "q").value
+    browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").exists?
+
+Save it as `pragprog.rb`. To run it navigate in command prompt to the folder where you have saved it and type `ruby pragprog.rb`.
+
+Go run it. What is the output on the screen? Nothing? Yes, nothing. IRB displays values that Ruby returns, but when you execute it from the command line, nothing is displayed. You have to explicitly say to Ruby that you want them displayed. It is as easy as adding `puts` in front of the command. Modify the script to look like this (you can add puts in front of every command, but you really do not care what some commands return):
+
+    require "watir"
+    browser = Watir::IE.new
+    browser.goto "http://pragprog.com"
+    puts browser.url
+    browser.link(:text, "Books").flash
+    browser.link(:text, "Books").click
+    puts browser.title
+    browser.span(:text, "By Category").click
+    browser.text_field(:id, "q").set "ruby"
+    browser.button(:class, "go").click
+    puts browser.text.include?("151 results matching 'ruby'")
+    puts browser.text_field(:id, "q").value
+    puts browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").exists?
+
+Output should look like this:
+
+    $ruby pragprog.rb
+    http://pragprog.com/
+    The Pragmatic Bookshelf | Our Titles
+    true
+    ruby
+    true
+
+Later I will show you how to make cool looking reports.
+
+If you want to make the script a bit faster, delete this line:
+
+    browser.link(:text, "Books").flash
+
+It really does not do anything, we just used it for identifying the element while developing the script.
 
 If you are not impressed by now, you probably never will. But wait, it is time to bring on heavy artillery. Let's go deeper.
