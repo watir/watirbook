@@ -392,6 +392,8 @@ or
 
 ###href and regular expression
 
+If you know only a portion of href attribute, you will still use `:href` to locate the link, but this time with an regular expression instead of a string.
+
     browser.link(:href, /programming-ruby/).click
 
 or
