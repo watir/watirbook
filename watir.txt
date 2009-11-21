@@ -425,11 +425,13 @@ or
 
 ##id
 
-If the link had an id attribute, like this
+According to HTML specification, all HTML elements can have an id and each id should be unique on the page. Uniqueness makes id very convenient for us. All other element attributes can appear more than once on the page and Watir will locate only the first element with a specific attribute, and maybe we want the second or the third one. (There is workaround for that, keep on reading.)
+
+So, if the link had an id attribute, like this:
 
     <a href="http://www.pragprog.com/titles/ruby/programming-ruby" id="programming-ruby" >Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
 
-we could access it that way too.
+we could access it using `:id`.
 
 ##id and string
 
