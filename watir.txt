@@ -350,6 +350,20 @@ In both examples we used a string to locate the link. We could do that because w
 
 ###text and regular expression
 
+If you know only a portion of a string, you can use regular expression.
+
+For now, think of regular expression as a portion of a string with a strange syntax. It looks like this: `/Programming Ruby/`.
+
+We could know only the portion of a string if, for example, the string changed from time to time. For example, you want to click a discussion by title, but the title changes form `On Dogs (1)` to `On Dogs (2)` after the first reply is posted.
+
+You could not use `"On Dogs"` to locate the link, because link text is `On Dogs (1)` and Watir will complain that it could not find it.
+
+You could use `"On Dogs (1)"` to locate the link the first time, but when link text changes to `On Dogs (2)`, Watir will no longer be able to find the link.
+
+In that case, you could say to Watir: `Well, I know the portion of the string.` and it will happily look at all strings until it finds the one that matches the portion you know.
+
+In our example, we will use `/Programming Ruby/`. To click a link that has text `Programming Ruby`, use this (for now we do not care if there is any text before or after `Programming Ruby`):
+
     browser.link(:text, /Programming Ruby/).click
 
 or
