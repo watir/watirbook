@@ -429,7 +429,7 @@ According to HTML specification, all HTML elements can have an id and each id sh
 
 So, if the link had an id attribute, like this:
 
-    <a href="http://www.pragprog.com/titles/ruby/programming-ruby" id="programming-ruby" >Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <a id="programming-ruby">Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
 
 we could access it using `:id`.
 
@@ -455,7 +455,7 @@ Another attribute that almost all HTML elements can have is `name`. It is not su
 
 If it had a name attribute:
 
-    <a href="http://www.pragprog.com/titles/ruby/programming-ruby" name="programming-ruby" >Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <a name="programming-ruby">Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
 
 ### Name and String
 
