@@ -334,6 +334,10 @@ Since this link has text and href attribute, we will start there.
 
 ##text
 
+For this example, we are interested only in text of the link.
+
+    <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+
 ###text and string
 
 Let's start in the original Watir way, `link` method accepting two parameters. The first parameter is a symbol, the second one is a string. You will know something is a symbol because it starts with a colon, like `:text`. For now, consider symbol to be nothing more than a string written in a strange way.
