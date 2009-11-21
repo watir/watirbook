@@ -1,0 +1,155 @@
+# Watir in Five Minutes
+
+`An example would be handy right about now` Brian Marick would say. Five minutes from now, you will be crazy about Watir. If not, maybe it is not the right tool for you. Even then, if you continue reading the book, I hope you will grow to like it the more you know about it.
+
+In the rest of the book, I will explain all Watir functionality in great (maybe even painful) detail, but for now, I just want to show off a few cool features, to get you excited about it.
+
+I still remember how pleasantly surprised I was the first time I saw Watir at work. I installed it, and in a few hours I was able to create a script that would log me in web application I was testing. Since you have this book you will be able to log in to your web site in minutes, not hours.
+
+If you are familiar with Ruby, I am sure you already think IRB is one of the greatest tools for learning a new Ruby library.
+
+If you are new to Ruby, you are probably thinking: `What is this IRB thing?`
+
+IRB (in this case) does not stand for `International Rugby Board` or `Immigration or Refugee Board` (of Canada). It stands for `Interactive Ruby Shell`. Think of it as a shell that knows Ruby (as the name says).
+
+To start IRB, just type `irb` in command line. You will see something like this (on Mac):
+
+    $ irb
+    >> 
+
+Now you can enter any Ruby command and you will immediately get a result. We will start with telling Ruby that we want to use a library called Watir.
+
+If you are on Windows, and would like to drive Internet Explorer, type this:
+
+    require "watir"
+
+If you are on a Mac, and would like to drive Safari, type this:
+
+    require "safariwatir"
+
+On any platform, if you would like to drive Firefox:
+
+    require "firewatir"
+
+You should see something like this:
+
+    > require "safariwatir"
+    => true
+
+Every Ruby command returns something. `=> true` is what is returned after `require "safariwatir"`. There are two parts in the returned line. `=>` looks like an arrow, it tells you `Ruby returned this`. `true` is what is actually returned. When `true` is returned, it usually means that everything is fine.
+
+Until I say differently, just ignore what is returned.
+
+And now the magic starts. With just one command you will open a browser.
+
+Internet Explorer:
+
+    browser = Watir::IE.new
+
+Firefox:
+
+    browser = FireWatir::Firefox.new
+
+Safari:
+
+    browser = Watir::Safari.new
+
+When I saw the browser magically appearing for the first time, only one thought crossed my mind: `Cool!`
+
+Please open just one browser. It will be enough. You can play with other browsers later. All code that follows should work no matter which browser you have opened. Some features are not implemented in all browsers, and I will explicitly say it when we get to such a feature.
+
+Output should be similar to this:
+
+    >> browser = Watir::Safari.new
+    => #<Watir::Safari:0x605054 @scripter=#<Watir::AppleScripter:0x604cd0 @typing_lag=0.08, @document=app("/Applications/Safari.app").documents[1], @appname="Safari", @js=#<Watir::JavaScripter:0x604d48>, @app=app("/Applications/Safari.app")>>
+
+As I said earlier, you can ignore `#<Watir::Safari:0x605054...>`. Opening Safari returned the browser as an object, and this is textual representation of the object. I hope it will be changed to something less verbose in the near future.
+
+Just opening a browser is cool, but not so useful. Watir can do so much more. For example, it can navigate the browser to any site. I will use pragprog.com in this example. I suggest that you literally follow the example, and then try a few sites yourself.
+
+So, go to pragprog.com:
+
+    >> browser.goto "http://pragprog.com"
+    => nil
+
+And pragprog.com opens. Magic, isn't it?
+
+Controlling the browser is really useful but, as I am sure you already know, there is more to testing than just performing the actions. You have to check what happened after the action. What happens when I enter a URL in browser address bar, when I click a link or a button, when I enter some text in a text field or select something from select box...?
+
+This is the first time we will perform a check. It is also the first time we will care what Ruby returns after the command. Let's check if the browser really opened pragprog.com.
+
+    >> browser.url
+    => "http://pragprog.com/"
+
+It really works! Ruby returned a string (the thing in double quotes, remember?) that contains text from the browser address bar.
+
+Time to click a link. It is easy to explicitly say which link to click. Right now I want to click a link with text `Books`. (It gets just a bit more complicated if there are two links with the same text on the page, but we will deal with that later.)
+
+    >> browser.link(:text, "Books").click
+    => nil
+
+This time, let's check the page title.
+
+    >> browser.title
+    => "The Pragmatic Bookshelf | Our Titles"
+
+We got back the string with the page title.
+
+I want books to be sorted by category, so I have to click `By Category`. It is hard to say how it is implemented by just looking at it. It is the time to fire up your favorite page inspector tool. If you are using Safari on Mac, you already have one installed.
+
+Right click `By Category` and select `Inspect Element` from context menu. This line will be highlighted in Inspector:
+
+    <span>By Category</span>
+
+That means we need to click a span with text `By Category`.
+
+    >> browser.span(:text, "By Category").click
+    => nil
+
+Just for a second, take a closer look at this two commands that we used to click the link and the span:
+
+    browser.link(:text, "Books"      ).click
+    browser.span(:text, "By Category").click
+
+They are almost identical. String (in double quotes) that we used to identify the link and the span are, of course, different. In the first example there is `link`, in the second one, there is `span`. The rest is the same. That is on purpose. You will appreciate that later.
+
+Let's try to find all Ruby related books. There is a search box. Right click it and select `Inspect Element` from context menu. This line will be highlighted in Inspector:
+
+    <input class="textbox narrow" id="q" name="q" type="text">
+
+So it is a text box (that is pretty obvious) with and id attribute is `q`. If an element has an id attribute, you should use it.
+
+    >> browser.text_field(:id, "q").set "ruby"
+    => :missing_value
+
+You can even see how Watir is typing each letter. Watir is just great in impressing people.
+
+To perform search, we have to click `Go`. Right click it and select `Inspect Element`. I guess you already know what to do. You will see:
+
+    <button class="go" type="submit">
+
+No id this time, but there is class attribute. Watir is just great with real world web applications. If developers can create an element, Watir will have a way to access it.
+
+    >> browser.button(:class, "go").click
+    => nil
+
+This time, let's check a lot of stuff. Is there text `151 results matching 'ruby'` on the page?
+
+    >> browser.text.include?("151 results matching 'ruby'")
+    => true
+
+This time we asked Ruby if page text included a string, and it said `true`. It is it's cute way of saying `yes`. When asking the question we were even polite, please notice question mark in `include?`.
+
+Is the text we have entered in the search box at the previous page still there? (This feature is not implemented for Safari yet. It works in Internet Explorer and Firefox. It should be implemented for Safari soon.)
+
+    >> browser.text_field(:id, "q").value
+    => "ruby"
+
+Ruby returned text from the text field. It is the same text we entered, so everything is fine.
+
+Let's check if there is a link to `Programming Ruby`:
+
+    >> browser.link(:text, "Programming Ruby").exists?
+    => true
+
+If you are not impressed by now, you probably never will. But wait, it is time to bring on heavy artillery. Let's go deeper.
