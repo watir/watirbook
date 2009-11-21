@@ -249,7 +249,11 @@ One of the really elegant ways to do it is by using `:html`:
 
     browser.link(:html, /007/).click
 
-In above example, we have used regular expression as a second parameter, but I am sure you have already got used to them. I am sure you are already convinced that regular expressions are very useful.
+or
+
+    browser.link(:html => /007/).click
+
+In above example, we have used regular expression as a second parameter, but I am sure you have already got used to them. I am also sure you are already convinced that regular expressions are very useful.
 
 ## XPath
 
