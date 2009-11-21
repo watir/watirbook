@@ -531,6 +531,10 @@ We said to Watir that we want to click a link after a div that has `id` attribut
 
 Do you see something strange in the above code? This is the first time we have a syntax for accessing page element instead of strings or regular expressions.
 
+## HTML
+
+## XPath
+
 ## Nested Elements
 
 ### Simple Nesting
@@ -585,6 +589,8 @@ You could click the link with:
     browser.div(:id, "one").div(:id, "two").link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
 
 The nesting can go as deep as you like.
+
+## Multiple Attributes
 
 ## Collections
 
