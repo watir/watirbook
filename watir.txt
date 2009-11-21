@@ -568,7 +568,7 @@ The nesting can go as deep as you like.
 
 ## Collections
 
-You can even do stuff with all links on a page. This will display href attribute of all links:
+You can even do stuff with all elements of a particular kind on a page. If you want to check href attributes of all links in the page, this will do it:
 
     browser.links.each do |link|
       puts link.href
