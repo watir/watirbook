@@ -483,6 +483,8 @@ or
 
     browser.link(:index => 1).click
 
+Please notice that the first link is accessed with the number one (that is called one-based indexing). It is usual in programming that the first element is the number zero (zero-based indexing). Watir will use zero-based indexing in Watir 2.0.
+
 ##Collections
 
 You can even do stuff with all links on a page. This will display href attribute of all links:
