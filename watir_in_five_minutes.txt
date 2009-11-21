@@ -85,6 +85,15 @@ It really works! Ruby returned a string (the thing in double quotes, remember?) 
 
 Time to click a link. It is easy to explicitly say which link to click. Right now I want to click a link with text `Books`. (It gets just a bit more complicated if there are two links with the same text on the page, but we will deal with that later.)
 
+Before we really click the link, I want to show of one of Watir's killer features. It is called `flash`. Real world web applications are complex, and sometimes when you are developing a new test or debugging an existing text, you want to make sure you are interacting with the correct element. Try this:
+
+    >> browser.link(:text, "Books").flash
+    => nil
+
+Link should flash. (It's background color changes to yellow a few times.) Isn't that cool? I use it all the time when I present Watir at conferences. I think Watir is just great for presentations. It is very visual.
+
+It is the time to really click the link:
+
     >> browser.link(:text, "Books").click
     => nil
 
