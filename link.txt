@@ -27,7 +27,7 @@ Link can be accessed with (alphabetically):
 
 and multiple attributes.
 
-Index accepts only integer as a value. Xpath accepts only string. Multiple attributes accepts only hash. All other methods accept string, regular expression and hash. You should already know what a string is, we have used it already. If you do not know what integer, hash or regular expression are, do not worry. I will explain them enough for the examples, and I will point you to places where you can learn more.
+With index you can use only integer. With XPath only string. With multiple attributes only hash. With all other methods you can use string, regular expression and hash. You should already know what a string is, we have used it already. If you do not know what integer, hash or regular expression are, do not worry. I will explain them enough for the examples, and I will point you to places where you can learn more.
 
 Since this link has text and href attribute, we will start there.
 
