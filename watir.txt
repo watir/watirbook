@@ -1,37 +1,3 @@
-# Watir
-
-Test web applications in all major browsers and operating systems.
-
-# Introduction
-
-Watir is open source tool that drives browsers and helps you automate boring and repetitive parts of functional testing of web applications, so you have more time to test with your hands (and brain).
-
-It can drive Microsoft Internet Explorer, Mozilla Firefox, Apple Safari and Google Chrome. In the near future (when Watir 2.0 is released) it should also be able to drive Opera.
-
-Watir works on all major operating systems: Microsoft Windows, Apple Mac OS X and Linux.
-
-There is also project named Celerity that uses Watir API, but does not drive a real browser, it emulates one. That means it is way faster. Also, that means it does not use your application in a way a real user would. You should make a decision if speed or accuracy is more important to you. Of course, you can always have some tests in a real browser and some in Celerity.
-
-Watir is just a Ruby library, so you have full access to all nice Ruby features in your tests.
-
-At the moment Watir runs in Ruby MRI (or CRuby) and Celerity runs in JRuby. There is a patch to drive Firefox on JRuby, but it is not officially supported.
-
-Watir 2.0 will use Selenium's WebDriver to drive browsers.
-
-Watir can not control browser plugins like Java applets, Adobe Flash or Microsoft Silverlight. There are open source projects that can control some browser plugins.
-
-If you like Watir, but for some reason just can not use Ruby, I have good news. Watir is ported to .NET (WatiN) and Java (Watij).
-
-# Prerequisites
-
-I will not assume that you know Ruby, but I will assume you know basics of programming. For example, you should know what a variable is, or a loop.
-
-It is possible to write Watir tests with little Ruby knowledge, but the more you know, it will be easier for you. If you grow to like Ruby, there is plenty of literature that will help you learn more.
-
-I will not assume that you know a lot about HTML, CSS, JavaScript, AJAX, DOM and stuff like that, but you will have to know the basics. For example, you will have to understand what a HTML tag is, what tag attributes are and stuff like that.
-
-I have not made up the prerequisites. I have just listed everything I knew when I started using Watir.
-
 # Installation 
 
 Because Watir is a Ruby library, you have to install Ruby first.
