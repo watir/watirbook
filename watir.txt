@@ -382,6 +382,8 @@ For this example, let's look only at link's href attribute.
 
 ###href and string
 
+If you know the full value of link's href attribute, you could use `:href` symbol and a string to click the link.
+
     browser.link(:href, "http://www.pragprog.com/titles/ruby/programming-ruby").click
 
 or
