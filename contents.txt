@@ -1,5 +1,6 @@
 # Introduction
 # Prerequisites
+# Installation
 # Watir in Five Minutes
 # HTML Elements Supported by Watir
 # Link
