@@ -10,11 +10,11 @@ It can drive Microsoft Internet Explorer, Mozilla Firefox, Apple Safari and Goog
 
 Watir works on all major operating systems: Microsoft Windows, Apple Mac OS X and Linux.
 
-There is also project named Celerity that uses Watir API, but does not drive a real browser, it emulates one. That means it is way faster. Also, that means it does not use your application in a way a real user would. You should make a decision if speed or accuracy is more important to you. Of course, you can always have some tests in a real browser and some in Celerity.
+There is also project named Celerity that uses Watir API, but does not drive a real browser, it emulates one. That means it is way faster. Also, that means it does not use your application in a way a real user would. You should make the decision if speed or accuracy is more important to you. Of course, you can always have some tests in a real browser and some in Celerity.
 
 Watir is just a Ruby library, so you have full access to all nice Ruby features in your tests.
 
-At the moment Watir runs in Ruby MRI (or CRuby) and Celerity runs in JRuby. There is a patch to drive Firefox on JRuby, but it is not officially supported.
+At the moment Watir runs in Ruby MRI (or CRuby) and Celerity runs in JRuby. There is a patch to drive Firefox on JRuby, but it is not officially supported at the moment.
 
 Watir 2.0 will use Selenium's WebDriver to drive browsers.
 
