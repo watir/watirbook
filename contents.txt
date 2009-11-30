@@ -53,6 +53,12 @@ Contributing code is not the only way you can help. You can answer Watir related
 
 You need tools to help you test. You already know about Ruby, IRB and Watir. In this chapter I will talk about browser extensions, text editors and IDEs and everything else that will make you life easier.
 
+# Frameworks
+## Test Unit
+## RSpec
+## WatirCraft
+## Taza
+
 # Other Tools for Testing Web Applications
 
 In this chapter I will briefly mention other tools that can be used to test web applications.
