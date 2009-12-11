@@ -18,9 +18,16 @@
 # Develop Watir
 # Community
 # Tools
+## IRB
+## Text Editors
+## IDEs
+## Internet Explorer Developer Toolbar
+## Firebug
 # Frameworks
 ## Test Unit
 ## RSpec
 ## WatirCraft
 ## Taza
+## Rasta
+## Watirloo
 # Other Tools for Testing Web Applications
