@@ -21,6 +21,9 @@
 ## IRB
 ## Text Editors
 ## IDEs
+## Version Control
+### SVN
+### Git
 ## Internet Explorer Developer Toolbar
 ## Firebug
 # Frameworks
