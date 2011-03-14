@@ -342,3 +342,6 @@ You can even do stuff with all elements of a particular kind on a page. If you w
     browser.links.each do |link|
       puts link.href
     end
+
+---
+

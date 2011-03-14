@@ -1,3 +1,5 @@
+# Contents
+
 - [Summary][summary]
 - [Introduction][introduction]
 - [Prerequisites][prerequisites]
@@ -42,3 +44,6 @@
 [watir_in_five_minutes]: https://github.com/zeljkofilipin/watirbook/blob/master/watir_in_five_minutes.md
 [html_elements_supported_by_watir]: https://github.com/zeljkofilipin/watirbook/blob/master/html_elements_supported_by_watir.md
 [link]: https://github.com/zeljkofilipin/watirbook/blob/master/link.md
+
+---
+
