@@ -1,7 +1,3 @@
-# Watir
-
-Test web applications in all major browsers and operating systems.
-
 # Introduction
 
 Watir is open source tool that drives browsers and helps you automate boring and repetitive parts of functional testing of web applications, so you have more time to test with your hands (and brain).
@@ -21,3 +17,6 @@ Watir 2.0 will use Selenium's WebDriver to drive browsers.
 Watir can not control browser plugins like Java applets, Adobe Flash or Microsoft Silverlight. There are open source projects that can control some browser plugins.
 
 If you like Watir, but for some reason just can not use Ruby, I have good news. Watir is ported to .NET (WatiN) and Java (Watij).
+
+\newpage
+

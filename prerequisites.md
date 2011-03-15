@@ -7,3 +7,6 @@ It is possible to write Watir tests with little Ruby knowledge, but the more you
 I will not assume that you know a lot about HTML, CSS, JavaScript, AJAX, DOM and stuff like that, but you will have to know the basics. For example, you will have to understand what a HTML tag is, what tag attributes are and stuff like that.
 
 I have not made up the prerequisites. I have just listed everything I knew when I started using Watir.
+
+\newpage
+

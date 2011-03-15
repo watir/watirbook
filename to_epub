@@ -1,0 +1,1 @@
+pandoc --toc watirbook.md -o watirbook.epub

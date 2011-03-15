@@ -57,3 +57,6 @@ It works only on Windows. I did not put it in Windows section, because it is bro
 It is not required, but I would highly recommend to install a browser extension like Internet Explorer Developer Toolbar of Firebug for Firefox. It will make your testing much more enjoying activity.
 
 Internet Explorer 8 and Apple Safari are shipped with such a tool already installed.
+
+\newpage
+
