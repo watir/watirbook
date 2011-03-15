@@ -2,7 +2,7 @@
 
 Let's take a closer look at one element. I think you will use links the most, so it would be just fair to start there.
 
-Usually, you can recognize a link on a web page because it's text is underlined:
+Usually, you can recognize a link on a web page because its text is underlined:
 
     Programming Ruby: The Pragmatic Programmers' Guide, Second Edition
 
@@ -25,7 +25,7 @@ You could access the link in a lot of ways (alphabetically):
 
 and multiple attributes.
 
-Since this link has text and href attribute, we will start there.
+Since this link has text and href attributes, we will start there.
 
 ## Text
 
@@ -35,17 +35,17 @@ For this example, we are interested only in the text of the link.
 
 ### Text and String
 
-Let's start with the original Watir way, `link` method accepting two parameters. The first parameter is a symbol, the second one is a string. You will know something is a symbol because it starts with a colon, like `:text`. For now, consider symbol to be nothing more than a string written in a strange way.
+Let's start with the original Watir way, `link` method accepting two parameters. The first parameter is a symbol, the second one is a string. You will know something is a symbol because it starts with a colon, like `:text`. For now, consider a symbol to be nothing more than a string written in a strange way.
 
     browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
 
-`link` method also accepts a hash. Hash consists of two parts, key and value. In this case the key is a symbol and the value is a string. Between them is that familiar arrow from IRB.
+`link` method also accepts a hash. A hash consists of two parts: key and value. In this case the key is a symbol and the value is a string. Between them is that familiar arrow from IRB.
 
     browser.link(:text => "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
 
-So, the only thing that is different between the two ways is that in the first example there is a comma between symbol and string, and in the second example there is and arrow. Later, I will explain why the arrow is introduced.
+So, the only thing that is different between the two ways is that in the first example there is a comma between symbol and string, and in the second example there is an arrow. Later, I will explain why the arrow is introduced.
 
-There is also a slightly more verbose way to write a hash (please notice curly braces):
+There is also a slightly more verbose way to write a hash (please notice the curly braces):
 
     browser.link({:text => "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition"}).click
 
@@ -53,19 +53,19 @@ In all examples we have used a string to locate the link. We could do that becau
 
 ### Text and Regular expression
 
-If you know only a portion of a string, you can use regular expression.
+If you know only a portion of a string, you can use regular expressions.
 
-For now, think of regular expression as a portion of a string with a strange syntax. It looks like this: `/Programming Ruby/`. Please notice slashes.
+For now, think of regular expressions as a string with a strange syntax. It looks like this: `/Programming Ruby/`. Please notice the slashes.
 
-When would you use regular expression? For example, you want to click a discussion by title, but the title changes form `On Dogs (1)` to `On Dogs (2)` after the first reply is posted.
+When would you use regular expressions? For example, you want to click on a discussion on a forum by its title, but the title changes form `On Dogs (1)` to `On Dogs (2)` after the first reply is posted.
 
 You could not use `"On Dogs"` to locate the link, because link text is `On Dogs (1)` and Watir will complain that it could not find it.
 
 You could use `"On Dogs (1)"` to locate the link the first time, but when link text changes to `On Dogs (2)`, Watir will no longer be able to find the link.
 
-In that case, you could say to Watir: `Well, I know the portion of the string.` and it will happily look at all strings until it finds the one that matches the portion you have provided.
+In that case, you could tell Watir: `Well, I know the portion of the string.` and it will happily look at all strings until it finds the one that matches the portion you have provided.
 
-In our example, we will use `/Programming Ruby/`. To click a link that has `Programming Ruby` in text, use one of the following (for now we do not care if there is any text before or after `Programming Ruby`):
+In our example, we will use `/Programming Ruby/`. To click on a link that has the `Programming Ruby` text, use one of the following (for now we do not care if there is any text before or after `Programming Ruby`):
 
     browser.link(:text, /Programming Ruby/).click
     browser.link(:text => /Programming Ruby/).click
@@ -73,7 +73,7 @@ In our example, we will use `/Programming Ruby/`. To click a link that has `Prog
 
 ## Href
 
-For this example, let's look only at link's href attribute.
+For this example, let's look only at the link's href attribute.
 
     <a href="http://www.pragprog.com/titles/ruby/programming-ruby"></a>
 
@@ -95,7 +95,7 @@ If you know only a portion of href attribute, you will still use `:href` to loca
 
 ## URL
 
-Since href attribute points to an URL, you can use `:url` instead of `:href`. We will use the same HTML as in the previous example:
+Since the href attribute points to an URL, you can use `:url` instead of `:href`. We will use the same HTML as in the previous example:
 
     <a href="http://www.pragprog.com/titles/ruby/programming-ruby"></a>
 
@@ -109,7 +109,7 @@ One of these would click the above link if you know the entire value of link's h
 
 ### URL and Regular Expression
 
-One of these would click the above link if you know only the portion of link's href attribute:
+One of these would click the above link if you know only the portion of the link's href attribute:
 
     browser.link(:url, /programming-ruby/).click
     browser.link(:url => /programming-ruby/).click
@@ -117,9 +117,9 @@ One of these would click the above link if you know only the portion of link's h
 
 ## ID
 
-According to HTML specification, almost all HTML elements can have an id, and each id should be unique on the page. Uniqueness makes ids very convenient for us. All other element attributes can appear more than once on the page and Watir will locate only the first element with a specific attribute, and maybe you want the second or the third one. (There is workaround for that problem, keep on reading.)
+According to the HTML specification, almost all HTML elements can have an id, and each id should be unique on the page. Uniqueness makes ids very convenient for us. All other element attributes can appear more than once on the page and Watir will locate only the first element with the specified attribute, and maybe you want the second or the third one (there is a workaround for that problem, keep on reading).
 
-So, if the link had an id attribute, like this:
+So, if the link has an id attribute, like this:
 
     <a id="programming-ruby"></a>
 
@@ -189,7 +189,7 @@ If you know the portion of class:
 
 ## Index
 
-If you had no way other way, but you knew link's position on the page, you could use index. In this example, it is the first link.
+If you have no other way, but you know the link's position on the page, you could use an index. In this example, it is the first link.
 
     browser.link(:index, 1).click
     browser.link(:index => 1).click
@@ -219,7 +219,7 @@ One of the ways you could do it is:
     browser.link(:after? => browser.div(:id, "one")).click
     browser.link({:after? => browser.div(:id, "one")}).click
 
-We said to Watir that we want to click a link after a div that has `id` attribute set to `one`. I rarely use it, but there are times when it is really handy.
+We told Watir that we want to click on a link after a div that has `id` attribute set to `one`. I rarely use it, but there are times when it is really handy.
 
 Do you see something strange in the above code? This is the first time we have used a page element as the second parameter (instead of string or regular expression).
 
@@ -236,7 +236,7 @@ One of the really elegant ways to do it is by using `:html`:
     browser.link(:html => /007/).click
     browser.link({:html => /007/}).click
 
-In above example, we have used regular expression as a second parameter, but I am sure you have already got used to them. I am also sure you are already convinced that regular expressions are very useful.
+In above example, we have used a regular expression as the second parameter, but I am sure you have already gotten used to them. I am also sure you are already convinced that regular expressions are very useful.
 
 ## XPath
 
@@ -268,7 +268,7 @@ but this would not:
 
 ### Simple Nesting
 
-Sometimes the only way to uniquely identify a link is to specify one or more of it's parent elements. How would you click the second link in this example?
+Sometimes the only way to uniquely identify a link is to specify one or more of its parent elements. How would you click the second link in this example?
 
     <div id="one">
       <a>Programming Ruby</a>
@@ -277,7 +277,7 @@ Sometimes the only way to uniquely identify a link is to specify one or more of 
       <a>Programming Ruby</a>
     </div>
 
-This will click the first link, but we want to click the second one:
+This will click on the first link, but we want to click on the second one:
 
     browser.link(:text, "Programming Ruby").click
 
@@ -285,7 +285,7 @@ This will work, but it is really fragile:
 
     browser.link(:index, 2).click
 
-If in further development a link (or more) is added between the two links we have so far, the code above will click whatever link was the second, and that is not what we want.
+If in further development a link (or more) is added between the two links we have so far, the code above will click on whatever link was the second, and that is not what we want.
 
 Let's make it less fragile.
 
@@ -299,9 +299,9 @@ The above solution is not the only one. This will work too:
 
     browser.div(:id, "two").link(:index, 1).click
 
-This time we said to Watir that we want it to click the first link in a specific div.
+This time we told Watir that we want it to click the first link in a specific div.
 
-There are endless options how to click an element on a page, and this book will try to teach you all of them.
+There are endless options how to click on an element on a page, and this book will try to teach you all of them.
 
 ### More nesting
 
@@ -323,7 +323,7 @@ The nesting can go as deep as you like.
 
 ## Multiple Attributes
 
-Multiple attributes was also fairly recently added to Watir. It is a killer feature, as you will see. For example, if you have two completely identical links on the same page, and you want to click the second one:
+Accessing an element using multiple attributes was also fairly recently added to Watir. This is a killer feature, as you will see. For example, if you have two completely identical links on the same page, and you want to click the second one:
 
       <a>Programming Ruby</a>
       <a>Programming Ruby</a>
