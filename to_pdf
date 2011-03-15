@@ -1,1 +1,1 @@
-markdown2pdf watirbook.md --toc
+markdown2pdf --toc watirbook.md
