@@ -18,5 +18,5 @@ Watir can not control browser plugins like Java applets, Adobe Flash or Microsof
 
 If you like Watir, but for some reason just can not use Ruby, I have good news. Watir is ported to .NET (WatiN) and Java (Watij).
 
----
+\newpage
 

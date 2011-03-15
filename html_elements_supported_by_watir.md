@@ -48,5 +48,5 @@ Watir can access following HTML elements (alphabetically):
 
 If that is not enough for you, Watir also has XPath support. You can use it to access any HTML element.
 
----
+\newpage
 

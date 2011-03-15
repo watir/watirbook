@@ -8,5 +8,5 @@ I will not assume that you know a lot about HTML, CSS, JavaScript, AJAX, DOM and
 
 I have not made up the prerequisites. I have just listed everything I knew when I started using Watir.
 
----
+\newpage
 

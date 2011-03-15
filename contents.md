@@ -45,5 +45,5 @@
 [html_elements_supported_by_watir]: https://github.com/zeljkofilipin/watirbook/blob/master/html_elements_supported_by_watir.md
 [link]: https://github.com/zeljkofilipin/watirbook/blob/master/link.md
 
----
+\newpage
 

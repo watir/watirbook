@@ -13,5 +13,5 @@ Book source is at [github.com/zeljkofilipin/watirbook][github] and there is also
 [google]: http://groups.google.com/group/watirbook/
 [contents]: https://github.com/zeljkofilipin/watirbook/blob/master/contents.md
 
----
+\newpage
 

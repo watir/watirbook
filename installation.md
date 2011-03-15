@@ -58,5 +58,5 @@ It is not required, but I would highly recommend to install a browser extension 
 
 Internet Explorer 8 and Apple Safari are shipped with such a tool already installed.
 
----
+\newpage
 
