@@ -1,1 +1,1 @@
-cat README.md LICENSE.md introduction.md prerequisites.md installation.md watir_in_five_minutes.md html_elements_supported_by_watir.md link.md > watirbook.md
+cat LICENSE.md README.md introduction.md prerequisites.md installation.md watir_in_five_minutes.md html_elements_supported_by_watir.md link.md > watirbook.md
