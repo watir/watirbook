@@ -124,8 +124,8 @@ Watir.com should open in Internet Explorer.
 
 If you are still in the IRB (command prompt starts with `irb`), type `exit` to return to normal command prompt.
 
-  irb(main):007:0> exit
-  C:\Documents and Settings\zeljko>
+    irb(main):007:0> exit
+    C:\Documents and Settings\zeljko>
 
 If you have already installed watir gem, firewatir got installed with it. You can always check which gems are installed with `gem list`. 
 
