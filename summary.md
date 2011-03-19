@@ -9,7 +9,7 @@
   - (other elements from HTML Elements Supported by Watir)
 - Pop Ups
 
-  There are a lot of popups that Watir users need to deal with. The last time I have checked, there was 11 different pop ups we know about. Some of them Watir can handle with ease, some not. In this chapter you will learn what to do when you see a pop up.
+  There are a lot of popups that Watir users need to deal with. The last time I checked, there were 11 different popups that we know about. Some of them can be handled by Watir with ease, some not. In this chapter you will learn what to do when you see a pop up.
 
 - Reference
 
@@ -37,7 +37,7 @@
 
   - Watir
 
-      If you want to learn more Watir, there are a lot of resources. Unfortunately, they are not easy to find. In this chapter I will list all resources I know about, including Watir web site and wiki, Watir related articles, blogs and podcast. There is even custom Google search engine that searches all Watir related sites, but nothing more.
+      If you want to learn more about Watir, there are a lot of resources. Unfortunately, they are not easy to find. In this chapter I will list all resources I know about, including the Watir web site and wiki, Watir related articles, blogs and podcast. There is even a custom Google search engine that searches all Watir related sites, but nothing more.
 
   - Ruby
 
@@ -45,7 +45,7 @@
 
 - Develop Watir
 
-  If you are need to fix a bug or implement a feature, Watir can easily be extended. In this chapter you will learn how to do it. After all, that is what open source is all about. You will learn how to get Watir source code, run unit tests, build and install Watir gems, install development gems, how to contribute code and a few more tricks.
+  If you need to fix a bug or implement a feature, Watir can easily be extended. In this chapter you will learn how to do it. After all, that is what open source is all about. You will learn how to get the Watir source code, run unit tests, build and install the Watir gems, install development gems, how to contribute code and a few more tricks.
 
 - Community
 
