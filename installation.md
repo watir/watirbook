@@ -229,5 +229,19 @@ If you get error message like this, then you are out of luck. I have tried every
             from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:65:in `new'
             from (irb):3
 
+### Firefox, Chrome and Internet Explorer with watir-webdriver gem
+
+I think watir-webdriver gem is the future of Watir. It can drive Firefox, Chrome and Internet Explorer.
+
+After you have installed Ruby and upgraded RubyGems, install [RubyInstaller Development Kit (DevKit)][DevKit]. Current version is DevKit-tdm-32-4.5.1-20101214-1400-sfx.exe. Execute the file and when it asks where to extract, say to `C:\Ruby187\bin` if you have installed Ruby into `C:\Ruby187`. I guess every folder that is in your path will do.
+
+Problems again. You will probably get the error message for `gem install watir-webdriver` or `gem install watir-webdriver --no-ri --no-rdoc`:
+
+    C:\Documents and Settings\zeljko>gem install watir-webdriver --no-ri --no-rdoc
+    ERROR:  While executing gem ... (ArgumentError)
+        marshal data too short
+
+[DevKit]: http://rubyinstaller.org/downloads/
+
 \newpage
 
