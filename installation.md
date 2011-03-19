@@ -6,6 +6,8 @@ I have already said that Watir is "just" a piece of software written in Ruby, so
 
 ## Windows XP
 
+### Ruby
+
 As I said, if you do not have Ruby installed, you have to install it. To check if Ruby is installed, open command prompt (Start > Run... > type cmd > Enter) and type `ruby -v`. (It means: "Ruby, please tell me your version". Ruby is really polite, it likes when you say please.) If you get something like this, you do not have Ruby installed:
 
     C:\Documents and Settings\zeljko>ruby -v
@@ -20,6 +22,8 @@ Let's check if Ruby is installed. You will have to open another command prompt, 
     ruby 1.8.7 (2011-02-18 patchlevel 334) [i386-mingw32]
 
 Ruby says it is version 1.8.7, and some other stuff we do not care about at the moment.
+
+### RubyGems
 
 Software written in Ruby is usually distributed as RubyGems (colloquial name is gem), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we can ask it for it's version with `gem -v`.
 
@@ -40,6 +44,8 @@ Ask RubyGems again for it's version:
 
     C:\Documents and Settings\zeljko>gem -v
     1.6.2
+
+### Internet Explorer with watir gem
 
 Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
 
@@ -101,8 +107,6 @@ Ruby complains with `no such file to load`. It want so tell you that it does not
     => true
     irb(main):004:0> require "watir"
     => true
-
-### Internet Explorer
 
 Let's try to open Internet Explorer with `browser = Watir::Browser.new`:
 
