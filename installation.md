@@ -206,6 +206,19 @@ Let Ruby know you want to use RubyGems and firewatir gem:
     irb(main):002:0> require "firewatir"
     => true
 
+Time to open Firefox with `browser = Watir::Browser.new`.
+
+You can also require watir gem to drive Firefox (if you have watir gem installed), but in that case, you have to tell it that `browser = Watir::Browser.new` should open Firefox, because by default it will open Internet Explorer.
+
+    C:\Documents and Settings\zeljko>irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "watir"
+    => true
+    irb(main):003:0> Watir::Browser.default = "firefox"
+    => "firefox"
+    irb(main):004:0> browser = Watir::Browser.new
+
 If you get error message like this, then you are out of luck. I have tried every fix I could find online and could not get it fixed. I will try again later.
 
     irb(main):003:0> browser = Watir::Browser.new
