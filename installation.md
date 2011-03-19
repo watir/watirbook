@@ -120,5 +120,101 @@ A window with Internet Explorer should open. Let's tell it to go to watir.com wi
 
 Watir.com should open in Internet Explorer.
 
+### Firefox with firewatir gem
+
+If you are still in the IRB (command prompt starts with `irb`), type `exit` to return to normal command prompt.
+
+  irb(main):007:0> exit
+  C:\Documents and Settings\zeljko>
+
+If you have already installed watir gem, firewatir got installed with it. You can always check which gems are installed with `gem list`. 
+
+    C:\Documents and Settings\zeljko>gem list
+
+    *** LOCAL GEMS ***
+
+    builder (3.0.0)
+    commonwatir (1.8.0)
+    firewatir (1.8.0)
+    hoe (2.9.1)
+    nokogiri (1.4.4.1 x86-mingw32)
+    rake (0.8.7)
+    rubygems-update (1.6.2)
+    s4t-utils (1.0.4)
+    user-choices (1.1.6.1)
+    watir (1.8.0)
+    win32-api (1.4.8 x86-mingw32)
+    win32-process (0.6.5)
+    windows-api (0.4.0)
+    windows-pr (1.1.3)
+    xml-simple (1.0.14)
+
+If you only want to know if firewatir is installed, you can ask for it specifically with `gem list firewatir`. It is usefull when you have a lot of gems installed.
+
+    C:\Documents and Settings\zeljko>gem list firewatir
+
+    *** LOCAL GEMS ***
+
+    firewatir (1.8.0)
+
+Great, firewatir is here.
+
+If you have only installed Ruby and updated RubyGems (and did not install watir gem), you will get this:
+
+C:\Documents and Settings\zeljko>gem list
+
+    *** LOCAL GEMS ***
+
+    rubygems-update (1.6.2)
+
+    C:\Documents and Settings\zeljko>gem list firewatir
+
+    *** LOCAL GEMS ***
+
+You do not have to install watir gem to drive Firefox. Watir gem drives Internet Explorer. We will install firewatir gem to drive Firefox with `gem install firewatir`:
+
+    C:\Documents and Settings\zeljko>gem install firewatir --no-ri --no-rdoc
+    Fetching: xml-simple-1.0.14.gem (100%)
+    Fetching: rake-0.8.7.gem (100%)
+    Fetching: hoe-2.9.1.gem (100%)
+    Fetching: s4t-utils-1.0.4.gem (100%)
+    Fetching: builder-3.0.0.gem (100%)
+    Fetching: user-choices-1.1.6.1.gem (100%)
+    Fetching: commonwatir-1.8.0.gem (100%)
+    Fetching: firewatir-1.8.0.gem (100%)
+    Successfully installed xml-simple-1.0.14
+    Successfully installed rake-0.8.7
+    Successfully installed hoe-2.9.1
+    Successfully installed s4t-utils-1.0.4
+    Successfully installed builder-3.0.0
+    Successfully installed user-choices-1.1.6.1
+    Successfully installed commonwatir-1.8.0
+    Successfully installed firewatir-1.8.0
+    8 gems installed
+
+To drive Firefox, it has to be installed. You can get it at http://www.mozilla.com/en-US/firefox. Current version is 3.6. You also need Firefox extension that allows firewatir gem to control Firefox. Go to http://watir.com/installation/ and click link *Windows plugin for Firefox 3.6* if you have Firefox 3.6, or appropriate link if you have other version. (There is no plugin for Firefox 4. Watir-webdriver gem can drive Firefox 4.) Firefox will say *Firefox prevented this site (watir.com) from asking you to install software on your computer.* Click button *Allow* and then *Install Now*. Firefox will now say *Restart Firefox to complete your changes.* Click button *Restart Firefox*. Close Firefox when it restarts.
+
+This was a bit complicated then installing driver for Internet Explorer. Let's see if everything works. Open IRB with `irb`:
+
+    C:\Documents and Settings\zeljko>irb
+    irb(main):001:0>
+
+Let Ruby know you want to use RubyGems and firewatir gem:
+
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "firewatir"
+    => true
+
+If you get error message like this, then you are out of luck. I have tried every fix I could find online and could not get it fixed. I will try again later.
+
+    irb(main):003:0> browser = Watir::Browser.new
+    Watir::Exception::UnableToStartJSShException: Unable to connect to machine : 127.0.0.1 on port 9997. Make sure that JSSh is properly installed and Firefox is running with '-jssh' option
+            from C:/Ruby187/lib/ruby/gems/1.8/gems/firewatir-1.8.0/lib/firewatir/firefox.rb:156:in `set_defaults'
+            from C:/Ruby187/lib/ruby/gems/1.8/gems/firewatir-1.8.0/lib/firewatir/firefox.rb:43:in `initialize'
+            from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:65:in `new'
+            from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:65:in `new'
+            from (irb):3
+
 \newpage
 
