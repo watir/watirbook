@@ -222,12 +222,18 @@ You can also require watir gem to drive Firefox (if you have watir gem installed
 If you get error message like this, then you are out of luck. I have tried every fix I could find online and could not get it fixed. I will try again later.
 
     irb(main):003:0> browser = Watir::Browser.new
-    Watir::Exception::UnableToStartJSShException: Unable to connect to machine : 127.0.0.1 on port 9997. Make sure that JSSh is properly installed and Firefox is running with '-jssh' option
-            from C:/Ruby187/lib/ruby/gems/1.8/gems/firewatir-1.8.0/lib/firewatir/firefox.rb:156:in `set_defaults'
-            from C:/Ruby187/lib/ruby/gems/1.8/gems/firewatir-1.8.0/lib/firewatir/firefox.rb:43:in `initialize'
-            from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:65:in `new'
-            from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:65:in `new'
-            from (irb):3
+    Watir::Exception::UnableToStartJSShException: Unable to connect to machine :
+      127.0.0.1 on port 9997. Make sure that JSSh is properly installed and
+      Firefox is running with '-jssh' option
+    from C:/Ruby187/lib/ruby/gems/1.8/gems/firewatir-1.8.0/lib/firewatir/firefox.rb:
+      156:in `set_defaults'
+    from C:/Ruby187/lib/ruby/gems/1.8/gems/firewatir-1.8.0/lib/firewatir/firefox.rb:
+      43:in `initialize'
+    from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:
+      65:in `new'
+    from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:
+      65:in `new'
+    from (irb):3
 
 ### Firefox, Chrome and Internet Explorer with watir-webdriver gem
 
