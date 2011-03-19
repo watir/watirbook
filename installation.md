@@ -1,62 +1,120 @@
-# Installation 
+# Installation
 
-Because Watir is a Ruby library, you have to install Ruby first.
+Installation is not complicated, but unfortunately, it is not trivial either.
 
-For Windows, there is a one-click installer. Ruby is probably already installed on Mac and Linux. Type `ruby -v` in command prompt to see if you have it installed. On Mac it will look something like this:
+I have already said that Watir is "just" a piece of software written in Ruby, so to install it, you have to install Ruby first. Since both Ruby and Watir are available on Windows, Mac and Linux. Each of them has several releases (or in case of Linux, both distributions and released) currently in use, I will cover what I think is the relevant ones. Ruby has two relevant releases, 1.8.7 and 1.9.2. At the moment Watir works only on 1.8.7.
 
-    $ ruby -v
-    ruby 1.8.6 (2008-08-11 patchlevel 287) [universal-darwin9.0]
+## Windows XP
 
-If you get an error message, please go to Ruby web site and follow instruction how to install it.
+As I said, if you do not have Ruby installed, you have to install it. To check if Ruby is installed, open command prompt (Start > Run... > type cmd > Enter) and type `ruby -v`. (It means: "Ruby, please tell me your version". Ruby is really polite, it likes when you say please.) If you get something like this, you do not have Ruby installed:
 
-Ruby 1.8.6 is recommended on all platforms.
+    C:\Documents and Settings\zeljko>ruby -v
+    'ruby' is not recognized as an internal or external command,
+    operable program or batch file.
 
-Ruby has a package system called RubyGems, and Watir is released as a gem. 
+Download the latest Ruby 1.8.7 from http://rubyinstaller.org/downloads. At the moment it is Ruby 1.8.7-p334 and it is approximately 10 MB. Execute the file. You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check both *Add Ruby executables to your PATH* and *Associate .rb and .rbw files with this Ruby installation* checkboxes. Installation should take you just a few seconds.
 
-Installing Watir is different on each operating system. Only Firefox is available for all major operating systems, and other browsers are available only on some platforms. Hence, you can not install all browser drivers on all platforms.
+Let's check if Ruby is installed. You will have to open another command prompt, because the one you have opened does not see Ruby.
 
-Depending of your platform, there are a few choices. On all platforms, you have to update RubyGems first.
+    C:\Documents and Settings\zeljko>ruby -v
+    ruby 1.8.7 (2011-02-18 patchlevel 334) [i386-mingw32]
 
-On Windows:
+Ruby says it is version 1.8.7, and some other stuff we do not care about at the moment.
 
-    gem update --system
+Software written in Ruby is usually distributed as RubyGems (colloquial name is gem), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we can ask it for it's version with `gem -v`.
 
-On Mac and Linux:
+    C:\Documents and Settings\zeljko>gem -v
+    1.5.2
 
-    sudo gem update --system
+You should update it with `gem update --system`:
 
-If Ruby gems are already up to date, you will get a message saying: `Nothing to update`.
+    C:\Documents and Settings\zeljko>gem update --system
+    Updating rubygems-update
+    Fetching: rubygems-update-1.6.2.gem (100%)
+    Successfully installed rubygems-update-1.6.2
+    Installing RubyGems 1.6.2
+    RubyGems 1.6.2 installed
+    (...)
 
-The next step is installing Watir.
+Ask RubyGems again for it's version:
 
-On Windows:
+    C:\Documents and Settings\zeljko>gem -v
+    1.6.2
 
-    gem install watir
+Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
 
-This will install drivers for Internet Explorer and Firefox.
+    C:\Documents and Settings\zeljko>gem install watir --no-ri --no-rdoc
+    Fetching: win32-api-1.4.8-x86-mingw32.gem (100%)
+    Fetching: windows-api-0.4.0.gem (100%)
+    Fetching: windows-pr-1.1.3.gem (100%)
+    Fetching: win32-process-0.6.5.gem (100%)
+    Fetching: xml-simple-1.0.14.gem (100%)
+    Fetching: rake-0.8.7.gem (100%)
+    Fetching: hoe-2.9.1.gem (100%)
+    Fetching: s4t-utils-1.0.4.gem (100%)
+    Fetching: builder-3.0.0.gem (100%)
+    Fetching: user-choices-1.1.6.1.gem (100%)
+    Fetching: commonwatir-1.8.0.gem (100%)
+    Fetching: firewatir-1.8.0.gem (100%)
+    Fetching: nokogiri-1.4.4.1-x86-mingw32.gem (100%)
+    Fetching: watir-1.8.0.gem (100%)
+    Successfully installed win32-api-1.4.8-x86-mingw32
+    Successfully installed windows-api-0.4.0
+    Successfully installed windows-pr-1.1.3
+    Successfully installed win32-process-0.6.5
+    Successfully installed xml-simple-1.0.14
+    Successfully installed rake-0.8.7
+    Successfully installed hoe-2.9.1
+    Successfully installed s4t-utils-1.0.4
+    Successfully installed builder-3.0.0
+    Successfully installed user-choices-1.1.6.1
+    Successfully installed commonwatir-1.8.0
+    Successfully installed firewatir-1.8.0
+    Successfully installed nokogiri-1.4.4.1-x86-mingw32
+    Successfully installed watir-1.8.0
+    14 gems installed
 
-On Mac:
+As you can see, Watir depends on quite a few gems, but you do not have to think about it, RubyGems installed them all for you.
 
-    sudo gem install firewatir
-    sudo gem install safariwatir
+You have installed drivers for Internet Explorer and Firefox. Let's see if everything is installed. For now we will use Watir from IRB (Interactive Ruby Shell), and later we will create a script. To run IRB, type `irb` in command prompt:
 
-The first line will install the driver for Firefox, and the second one for Safari. If you plan to use only one driver, feel free to install only one.
+    C:\Documents and Settings\zeljko>irb
+    irb(main):001:0>
 
-On Linux:
+In short, IRB is a command line that understands Ruby. Let's ask it how much is 1+1. Type `1+1` and press enter:
 
-    sudo gem install firewatir
+    irb(main):001:0> 1+1
+    => 2
 
-The Firefox drivers need JSSH extension for Firefox installed. You can find it at Watir wiki.
+Isn't it smart? :)
 
-Driver for Chrome is installed with:
+To use Watir in IRB or script, we first have to tell Ruby that we want to use it, with `require "watir"`. (Make sure you require `watir` and not `Watir`. I will explain later.)
 
-    gem install chromewatir
+    irb(main):002:0> require "watir"
+    LoadError: no such file to load -- watir
+            from (irb):2:in `require'
+            from (irb):2
 
-It works only on Windows. I did not put it in the Windows section, because it is broken at the moment due to some changes in Chrome 3. It should be fixed soon.
+Ruby complains with `no such file to load`. It want so tell you that it does not know nothing about Watir. It happens a lot, so I wanted to let you know how to fix it. Simply, type `require "rubygems"` and then `require "watir"`.
 
-It is not required, but I would highly recommend you to install a browser extension like Internet Explorer Developer Toolbar of Firebug for Firefox. It will make your testing a much more enjoying activity.
+    irb(main):003:0> require "rubygems"
+    => true
+    irb(main):004:0> require "watir"
+    => true
 
-Internet Explorer 8 and Safari are shipped with such a tool already installed.
+### Internet Explorer
+
+Let's try to open Internet Explorer with `browser = Watir::Browser.new`:
+
+    irb(main):005:0> browser = Watir::Browser.new
+    => #<Watir::IE:0x31d1858 url="about:blank" title="">
+
+A window with Internet Explorer should open. Let's tell it to go to watir.com with `browser.goto "watir.com"`, and that will be all for now:
+
+    irb(main):006:0> browser.goto "watir.com"
+    => 2.218779
+
+Watir.com should open in Internet Explorer.
 
 \newpage
 
