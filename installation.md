@@ -8,7 +8,7 @@ I am installing everything in VMware Fusion (Version 3.1.2 332101) virtual machi
 
 ## Windows XP
 
-Machine is clean installation of Microsoft Windows XP Professional, Version 2002, Service Pack 3, 512 MB RAM. Fully patched, except it left Internet Explorer on version 6.
+Machine is a clean installation of Microsoft Windows XP Professional, Version 2002, Service Pack 3, 512 MB RAM. Fully patched, except it left Internet Explorer on version 6.
 
 ### Ruby
 
