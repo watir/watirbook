@@ -1,11 +1,3 @@
-# Installation
-
-Installation is not complicated, but unfortunately, it is not trivial either.
-
-I have already said that Watir is "just" a piece of software written in Ruby, so to install it, you have to install Ruby first. Since both Ruby and Watir are available on Windows, Mac and Linux. Each of them has several releases (or in case of Linux, both distributions and released) currently in use, I will cover what I think is the relevant ones. Ruby has two relevant releases, 1.8.7 and 1.9.2. At the moment Watir works only on 1.8.7.
-
-I am installing everything in VMware Fusion (Version 3.1.2 332101) virtual machines, except Mac OS, since it does not want to be virtualized. Host machine for VMware Fusion is MacBook Pro, Mac OS X 10.6.6, processor 2.4 GHz Intel Core 2 Duo, Memory 4 GB 667 MHz DDR2 SDRAM.
-
 ## Windows XP
 
 Machine is a clean installation of Microsoft Windows XP Professional, Version 2002, Service Pack 3, 512 MB RAM. Fully patched, except it left Internet Explorer on version 6.
@@ -252,74 +244,6 @@ Problems again. You will probably get the error message for `gem install watir-w
         marshal data too short
 
 [DevKit]: http://rubyinstaller.org/downloads/
-
-## Windows Vista
-## Windows 7
-## Mac OS X 10.5
-
-It was easier for me to install Mac OS to a real machine instead to a virtual one, because Mac OS does not want to be virtualized.
-
-Host machine is Mac mini, processor 2 GHz Intel Core 2 Duo, memory 4 GB 1067 MHz DDR3. 
-
-## Mac OS X 10.6
-## Ubuntu Linux 10.10
-
-Machine is a clean installation of Ubuntu Linux 10.10, 512 MB RAM, fully patched.
-
-### Ruby
-
-Let's see if Ubuntu comes with Ruby installed. Open Terminal (Applications > Accessories > Terminal) and type `ruby -v`:
-
-    zeljko@ubuntu:~$ ruby -v
-    The program 'ruby' is currently not installed.  You can install it by typing:
-    sudo apt-get install ruby
-
-Install it with `sudo apt-get install ruby``:
-
-    zeljko@ubuntu:~$ sudo apt-get install ruby
-    [sudo] password for zeljko: 
-    Reading package lists... Done
-    (...)
-    ldconfig deferred processing now taking place
-
-Check the version with `ruby -v`:
-
-    zeljko@ubuntu:~$ ruby -v
-    ruby 1.8.7 (2010-06-23 patchlevel 299) [i686-linux]
-
-### RubyGems
-
-Let's see the version of RubyGems we got with Ruby with `gem -v`:
-
-    zeljko@ubuntu:~$ gem -v
-    The program 'gem' can be found in the following packages:
-     * rubygems1.8
-     * rubygems1.9.1
-    Try: sudo apt-get install <selected package>
-
-Looks like we did not get any version installed. Install rubygems1.8 with `sudo apt-get install rubygems1.8`:
-
-    zeljko@ubuntu:~$ sudo apt-get install rubygems1.8
-    Reading package lists... Done
-    (...)
-    Setting up rubygems1.8 (1.3.7-2) ...
-
-Ask RubyGems for it's version with `gem -v`:
-
-    zeljko@ubuntu:~$ gem -v
-    1.3.7
-
-### Firefox with firewatir gem
-
-Install firewatir gem with `sudo gem install firewatir`:
-
-    zeljko@ubuntu:~$ sudo gem install firewatir
-    ERROR:  Error installing firewatir:
-      hoe requires RubyGems version >= 1.4. Try 'gem update --system' to update RubyGems itself.
-
-Done for now. I will have to install at least RubyGems from source, 1.3.7 version is just too old.
-
-### Firefox and Chrome with watir-webdriver gem
 
 \newpage
 
