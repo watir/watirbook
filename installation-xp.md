@@ -10,7 +10,11 @@ As I said, if you do not have Ruby installed, you have to install it. To check i
     'ruby' is not recognized as an internal or external command,
     operable program or batch file.
 
-Download the latest Ruby 1.8.7 from http://rubyinstaller.org/downloads. At the moment it is Ruby 1.8.7-p334 and it is approximately 10 MB. Execute the file. You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check both *Add Ruby executables to your PATH* and *Associate .rb and .rbw files with this Ruby installation* checkboxes. Installation should take you just a few seconds.
+Download the latest Ruby 1.8.7 from http://rubyinstaller.org/downloads. At the moment it is Ruby 1.8.7-p334 and it is approximately 10 MB. Execute the file.
+
+![Ruby installation][xp-ruby-install]
+
+You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check both *Add Ruby executables to your PATH* and *Associate .rb and .rbw files with this Ruby installation* checkboxes. Installation should take you just a few seconds.
 
 Let's check if Ruby is installed. You will have to open another command prompt, because the one you have opened does not see Ruby.
 
@@ -18,6 +22,8 @@ Let's check if Ruby is installed. You will have to open another command prompt, 
     ruby 1.8.7 (2011-02-18 patchlevel 334) [i386-mingw32]
 
 Ruby says it is version 1.8.7, and some other stuff we do not care about at the moment.
+
+[xp-ruby-install]: images/xp-ruby-install.jpg
 
 ### RubyGems
 
@@ -46,30 +52,12 @@ Ask RubyGems again for it's version:
 Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
 
     C:\Documents and Settings\zeljko>gem install watir --no-ri --no-rdoc
-    Fetching: win32-api-1.4.8-x86-mingw32.gem (100%)
-    Fetching: windows-api-0.4.0.gem (100%)
-    Fetching: windows-pr-1.1.3.gem (100%)
-    Fetching: win32-process-0.6.5.gem (100%)
-    Fetching: xml-simple-1.0.14.gem (100%)
-    Fetching: rake-0.8.7.gem (100%)
-    Fetching: hoe-2.9.1.gem (100%)
-    Fetching: s4t-utils-1.0.4.gem (100%)
-    Fetching: builder-3.0.0.gem (100%)
-    Fetching: user-choices-1.1.6.1.gem (100%)
+    (...)
     Fetching: commonwatir-1.8.0.gem (100%)
     Fetching: firewatir-1.8.0.gem (100%)
     Fetching: nokogiri-1.4.4.1-x86-mingw32.gem (100%)
     Fetching: watir-1.8.0.gem (100%)
-    Successfully installed win32-api-1.4.8-x86-mingw32
-    Successfully installed windows-api-0.4.0
-    Successfully installed windows-pr-1.1.3
-    Successfully installed win32-process-0.6.5
-    Successfully installed xml-simple-1.0.14
-    Successfully installed rake-0.8.7
-    Successfully installed hoe-2.9.1
-    Successfully installed s4t-utils-1.0.4
-    Successfully installed builder-3.0.0
-    Successfully installed user-choices-1.1.6.1
+    (...)
     Successfully installed commonwatir-1.8.0
     Successfully installed firewatir-1.8.0
     Successfully installed nokogiri-1.4.4.1-x86-mingw32
@@ -114,7 +102,11 @@ A window with Internet Explorer should open. Let's tell it to go to watir.com wi
     irb(main):006:0> browser.goto "watir.com"
     => 2.218779
 
+![Internet Explorer 6 opened with Watir from IRB on Windows XP][xp-ie-irb]
+
 Watir.com should open in Internet Explorer.
+
+[xp-ie-irb]: images/xp-ie-irb.jpg
 
 ### Firefox with firewatir gem
 
