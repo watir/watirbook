@@ -6,17 +6,12 @@ I have already said that Watir is "just" a piece of software written in Ruby, so
 
 I am installing everything in VMware Fusion (Version 3.1.2 332101) virtual machines, except Mac OS, since it does not want to be virtualized. Host machine for VMware Fusion is MacBook Pro, Mac OS X 10.6.6, processor 2.4 GHz Intel Core 2 Duo, Memory 4 GB 667 MHz DDR2 SDRAM.
 
-## Windows XP
+It was easier for me to install Mac OS to a real machine instead to a virtual one, because Mac OS does not want to be virtualized. Host machine is Mac mini, processor 2 GHz Intel Core 2 Duo, memory 4 GB 1067 MHz DDR3. 
+
 ## Windows Vista
 ## Windows 7
 ## Mac OS X 10.5
-
-It was easier for me to install Mac OS to a real machine instead to a virtual one, because Mac OS does not want to be virtualized.
-
-Host machine is Mac mini, processor 2 GHz Intel Core 2 Duo, memory 4 GB 1067 MHz DDR3. 
-
 ## Mac OS X 10.6
-## Ubuntu Linux 10.10
 
 \newpage
 
