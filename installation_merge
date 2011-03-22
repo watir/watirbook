@@ -1,0 +1,1 @@
+cat LICENSE.md README.md installation.md installation-xp.md installation-ubuntu.md > installation_merge.md
