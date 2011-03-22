@@ -12,7 +12,7 @@ As I said, if you do not have Ruby installed, you have to install it. To check i
 
 Download the latest Ruby 1.8.7 from http://rubyinstaller.org/downloads. At the moment it is Ruby 1.8.7-p334 and it is approximately 10 MB. Execute the file.
 
-![Ruby installation][xp-ruby-install]
+![Ruby installation][xp-ruby-install]\
 
 You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check both *Add Ruby executables to your PATH* and *Associate .rb and .rbw files with this Ruby installation* checkboxes. Installation should take you just a few seconds.
 
@@ -102,7 +102,7 @@ A window with Internet Explorer should open. Let's tell it to go to watir.com wi
     irb(main):006:0> browser.goto "watir.com"
     => 2.218779
 
-![Internet Explorer 6 opened with Watir from IRB on Windows XP][xp-ie-irb]
+![Internet Explorer 6 opened with Watir from IRB on Windows XP][xp-ie-irb]\
 
 Watir.com should open in Internet Explorer.
 
@@ -174,15 +174,15 @@ To drive Firefox, it has to be installed. You can get it at http://www.mozilla.c
 
 You also need Firefox extension that allows firewatir gem to control Firefox. Go to http://watir.com/installation/ and click link *Windows plugin for Firefox 3.6* if you have Firefox 3.6, or appropriate link if you have other version. (There is no plugin for Firefox 4. Watir-webdriver gem can drive Firefox 4.)
 
-![Firefox prevented this site (watir.com) from asking you to install software on your computer.][xp-firefox-jssh]
+![Firefox prevented this site (watir.com) from asking you to install software on your computer.][xp-firefox-jssh]\
 
 Firefox will say *Firefox prevented this site (watir.com) from asking you to install software on your computer.* Click button *Allow* and then *Install Now*.
 
-![Install Now][xp-firefox-jssh-install]
+![Install Now][xp-firefox-jssh-install]\
 
 Firefox will now say *Restart Firefox to complete your changes.* Click button *Restart Firefox*. Close Firefox when it restarts.
 
-![Restart Firefox][xp-firefox-restart]
+![Restart Firefox][xp-firefox-restart]\
 
 This was a bit complicated then installing driver for Internet Explorer. Let's see if everything works. Open IRB with `irb`:
 
