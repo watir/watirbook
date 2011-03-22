@@ -162,25 +162,27 @@ C:\Documents and Settings\zeljko>gem list
 You do not have to install watir gem to drive Firefox. Watir gem drives Internet Explorer. We will install firewatir gem to drive Firefox with `gem install firewatir`:
 
     C:\Documents and Settings\zeljko>gem install firewatir --no-ri --no-rdoc
-    Fetching: xml-simple-1.0.14.gem (100%)
-    Fetching: rake-0.8.7.gem (100%)
-    Fetching: hoe-2.9.1.gem (100%)
-    Fetching: s4t-utils-1.0.4.gem (100%)
-    Fetching: builder-3.0.0.gem (100%)
-    Fetching: user-choices-1.1.6.1.gem (100%)
+    (...)
     Fetching: commonwatir-1.8.0.gem (100%)
     Fetching: firewatir-1.8.0.gem (100%)
-    Successfully installed xml-simple-1.0.14
-    Successfully installed rake-0.8.7
-    Successfully installed hoe-2.9.1
-    Successfully installed s4t-utils-1.0.4
-    Successfully installed builder-3.0.0
-    Successfully installed user-choices-1.1.6.1
+    (...)
     Successfully installed commonwatir-1.8.0
     Successfully installed firewatir-1.8.0
     8 gems installed
 
-To drive Firefox, it has to be installed. You can get it at http://www.mozilla.com/en-US/firefox. Current version is 3.6. You also need Firefox extension that allows firewatir gem to control Firefox. Go to http://watir.com/installation/ and click link *Windows plugin for Firefox 3.6* if you have Firefox 3.6, or appropriate link if you have other version. (There is no plugin for Firefox 4. Watir-webdriver gem can drive Firefox 4.) Firefox will say *Firefox prevented this site (watir.com) from asking you to install software on your computer.* Click button *Allow* and then *Install Now*. Firefox will now say *Restart Firefox to complete your changes.* Click button *Restart Firefox*. Close Firefox when it restarts.
+To drive Firefox, it has to be installed. You can get it at http://www.mozilla.com/en-US/firefox. Current version is 3.6.
+
+You also need Firefox extension that allows firewatir gem to control Firefox. Go to http://watir.com/installation/ and click link *Windows plugin for Firefox 3.6* if you have Firefox 3.6, or appropriate link if you have other version. (There is no plugin for Firefox 4. Watir-webdriver gem can drive Firefox 4.)
+
+![Firefox prevented this site (watir.com) from asking you to install software on your computer.][xp-firefox-jssh]
+
+Firefox will say *Firefox prevented this site (watir.com) from asking you to install software on your computer.* Click button *Allow* and then *Install Now*.
+
+![Install Now][xp-firefox-jssh-install]
+
+Firefox will now say *Restart Firefox to complete your changes.* Click button *Restart Firefox*. Close Firefox when it restarts.
+
+![Restart Firefox][xp-firefox-restart]
 
 This was a bit complicated then installing driver for Internet Explorer. Let's see if everything works. Open IRB with `irb`:
 
@@ -222,6 +224,10 @@ If you get error message like this, then you are out of luck. I have tried every
     from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:
       65:in `new'
     from (irb):3
+
+[xp-firefox-jssh]: images/xp-firefox-jssh.jpg
+[xp-firefox-jssh-install]: images/xp-firefox-jssh-install.jpg
+[xp-firefox-restart]: images/xp-firefox-restart.jpg
 
 ### Firefox, Chrome and Internet Explorer with watir-webdriver gem
 
