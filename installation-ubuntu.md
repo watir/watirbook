@@ -111,5 +111,86 @@ Firefox should open and navigate to watir.com.
 
 ### Firefox and Chrome with watir-webdriver gem
 
+I think that Watir-webdriver gem is the future of Watir. In short, it can drive both Firefox and Chrome.
+
+If you already have Ruby and RubyGems, install watir-webdriver gem with `sudo gem install watir-webdriver --no-ri --no-rdoc`.
+
+If you get `ERROR: Failed to build gem native extension.` error message, you do not have everything you need:
+
+    zeljko@ubuntu:~$ sudo gem1.8 install watir-webdriver --no-ri --no-rdoc
+    Fetching: json_pure-1.5.1.gem (100%)
+    Fetching: rubyzip-0.9.4.gem (100%)
+    Fetching: ffi-1.0.7.gem (100%)
+    Building native extensions.  This could take a while...
+    ERROR:  Error installing watir-webdriver:
+      ERROR: Failed to build gem native extension.
+
+            /usr/bin/ruby1.8 extconf.rb
+    extconf.rb:2:in `require': no such file to load -- mkmf (LoadError)
+      from extconf.rb:2
+
+
+    Gem files will remain installed in /usr/lib/ruby/gems/1.8/gems/ffi-1.0.7 for inspection.
+    Results logged to /usr/lib/ruby/gems/1.8/gems/ffi-1.0.7/ext/ffi_c/gem_make.out
+
+Fix the problem with `sudo apt-get install ruby-full`:
+
+    zeljko@ubuntu:~$ sudo apt-get install ruby-full
+    Reading package lists... Done
+    (...)
+    Setting up ruby-full (4.5) ...
+    Processing triggers for libc-bin ...
+    ldconfig deferred processing now taking place
+
+Try installing watir-webdriver now.
+
+    zeljko@ubuntu:~$ sudo gem1.8 install watir-webdriver --no-ri --no-rdoc
+    Building native extensions.  This could take a while...
+    Fetching: childprocess-0.1.8.gem (100%)
+    Fetching: selenium-webdriver-0.1.4.gem (100%)
+    Fetching: watir-webdriver-0.2.1.gem (100%)
+    Successfully installed ffi-1.0.7
+    Successfully installed childprocess-0.1.8
+    Successfully installed selenium-webdriver-0.1.4
+    Successfully installed watir-webdriver-0.2.1
+    4 gems installed
+
+Let's check if it can drive Firefox:
+
+    zeljko@ubuntu:~$ irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "watir-webdriver"
+    => true
+    irb(main):003:0> browser = Watir::Browser.new :ff
+    => #<Watir::Browser:0x..fb734a4d8 url="about:blank" title="">
+    irb(main):004:0> browser.goto "watir.com"
+    => "http://watir.com/"
+
+![Watir-webdriver drives Firefox on Ubuntu](images/ubuntu-webdriver-firefox.jpg)\
+
+*Watir-webdriver drives Firefox on Ubuntu*
+
+Wasn't that way easier than firewatir install?! I sure think so. Now, lets see if it can really drive Chrome too.
+
+Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from [google.com/chrome](http://www.google.com/chrome). After installation Chrome will appear at *Applications > Internet > Chrome*.
+
+And it really works!
+
+    zeljko@ubuntu:~$ irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "watir-webdriver"
+    => true
+    irb(main):003:0> browser = Watir::Browser.new :chrome
+    => #<Watir::Browser:0x..fb7453398 url="" title="">
+    irb(main):004:0> browser.goto "watir.com"
+    => "http://watir.com/"
+
+
+![Watir-webdriver drives Chrome on Ubuntu](images/ubuntu-webdriver-chrome.jpg)\
+
+*Watir-webdriver drives Chrome on Ubuntu*
+
 \newpage
 
