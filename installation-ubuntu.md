@@ -105,6 +105,10 @@ Install `Linux plugin for Firefox 3.6` from [Watir Installation][watir] page, re
 
 Firefox should open and navigate to watir.com.
 
+![Firewatir drives Firefox on Ubuntu](images/ubuntu-firewatir.jpg)\
+
+*Firewatir drives Firefox on Ubuntu*
+
 [137]: https://rubygems.org/gems/rubygems-update/versions
 [gems]: https://rubygems.org/pages/download
 [watir]: http://watir.com/installation/
@@ -124,12 +128,9 @@ If you get `ERROR: Failed to build gem native extension.` error message, you do 
     Building native extensions.  This could take a while...
     ERROR:  Error installing watir-webdriver:
       ERROR: Failed to build gem native extension.
-
             /usr/bin/ruby1.8 extconf.rb
     extconf.rb:2:in `require': no such file to load -- mkmf (LoadError)
       from extconf.rb:2
-
-
     Gem files will remain installed in /usr/lib/ruby/gems/1.8/gems/ffi-1.0.7 for inspection.
     Results logged to /usr/lib/ruby/gems/1.8/gems/ffi-1.0.7/ext/ffi_c/gem_make.out
 
