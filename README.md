@@ -1,12 +1,16 @@
 # About Me and the Book
 
+![Željko Filipin](images/zeljko.jpg)\
+
 Hi, my name is [Željko Filipin][zeljko]. I am a software tester, the [Watir][watir] community manager and host of the [Watir Podcast][watirpodcast]. I am also one of the organizers of [viaqa][viaqa] conference on software testing.
+
+![Watir Logo](images/watir_logo.jpg)\
 
 This is a [book on Watir][web]. It is not finished. I am working on it.
 
 The source ([markdown][markdown]) will always be free at [github.com/zeljkofilipin/watirbook][github], [pdf][pdf] and [epub][epub] versions are $9.
 
-0.1.3 version of the book is currently available for free as pdf and epub file at [github.com/zeljkofilipin/watirbook/downloads][downloads].
+A few versions of the book are currently available for free as pdf and epub files at [github.com/zeljkofilipin/watirbook/downloads][downloads].
 
 If you think there needs to be a book on Watir and I am the right person to write it, feel free to [buy the book][buy] now. You will get all updates to the book for free. I promise I will not take the money, spend it on beer and never write the book. :)
 
