@@ -227,15 +227,34 @@ If you get error message like this, then you are out of luck. I have tried every
 
 I think watir-webdriver gem is the future of Watir. It can drive Firefox, Chrome and Internet Explorer.
 
-After you have installed Ruby and upgraded RubyGems, install [RubyInstaller Development Kit (DevKit)][DevKit]. Current version is DevKit-tdm-32-4.5.1-20101214-1400-sfx.exe. Execute the file and when it asks where to extract, say to `C:\Ruby187\bin` if you have installed Ruby into `C:\Ruby187`. I guess every folder that is in your path will do.
-
-Problems again. You will probably get the error message for `gem install watir-webdriver` or `gem install watir-webdriver --no-ri --no-rdoc`:
+Make sure after you have installed Ruby and upgraded RubyGems, and you can install watir-webdriver gem:
 
     C:\Documents and Settings\zeljko>gem install watir-webdriver --no-ri --no-rdoc
-    ERROR:  While executing gem ... (ArgumentError)
-        marshal data too short
+    (...)
+    Fetching: selenium-webdriver-0.1.4.gem (100%)
+    Fetching: watir-webdriver-0.2.1.gem (100%)
+    (...)
+    Successfully installed selenium-webdriver-0.1.4
+    Successfully installed watir-webdriver-0.2.1
+    7 gems installed
 
-[DevKit]: http://rubyinstaller.org/downloads/
+Let's see if it can drive Internet Explorer:
+
+    C:\Documents and Settings\zeljko>irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "watir-webdriver"
+    => true
+    irb(main):003:0> browser = Watir::Browser.new :ie
+    => #<Watir::Browser:0x3293868 url="http://localhost:5555/" title="WebDriver">
+    irb(main):004:0> browser.goto "watir.com"
+    => "http://watir.com/"
+
+It really can!
+
+![watir-webdriver gem drives Internet Explorer 6 on Windows XP](images/xp-webdriver-ie.jpg)\
+
+*watir-webdriver gem drives Internet Explorer 6 on Windows XP*
 
 \newpage
 
