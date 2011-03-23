@@ -4,15 +4,17 @@ Machine is a clean installation of Microsoft Windows XP Professional, Version 20
 
 ### Ruby
 
-As I said, if you do not have Ruby installed, you have to install it. To check if Ruby is installed, open command prompt (Start > Run... > type cmd > Enter) and type `ruby -v`. (It means: "Ruby, please tell me your version". Ruby is really polite, it likes when you say please.) If you get something like this, you do not have Ruby installed:
+As I said, if you do not have Ruby installed, you have to install it. To check if Ruby is installed, open command prompt (*Start > Run... > type cmd > Enter*) and type `ruby -v`. (It means: "Ruby, please tell me your version". Ruby is really polite, it likes when you say please.) If you get something like this, you do not have Ruby installed:
 
     C:\Documents and Settings\zeljko>ruby -v
     'ruby' is not recognized as an internal or external command,
     operable program or batch file.
 
-Download the latest Ruby 1.8.7 from http://rubyinstaller.org/downloads. At the moment it is Ruby 1.8.7-p334 and it is approximately 10 MB. Execute the file.
+Download the latest Ruby 1.8.7 from [rubyinstaller.org/downloads](http://rubyinstaller.org/downloads). At the moment it is Ruby 1.8.7-p334 and it is approximately 10 MB. Execute the file.
 
-![Ruby installation][xp-ruby-install]\
+![Ruby Installation][xp-ruby-install]\
+
+*Ruby Installation*
 
 You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check both *Add Ruby executables to your PATH* and *Associate .rb and .rbw files with this Ruby installation* checkboxes. Installation should take you just a few seconds.
 
@@ -85,7 +87,7 @@ To use Watir in IRB or script, we first have to tell Ruby that we want to use it
             from (irb):2:in `require'
             from (irb):2
 
-Ruby complains with `no such file to load`. It want so tell you that it does not know nothing about Watir. It happens a lot, so I wanted to let you know how to fix it. Simply, type `require "rubygems"` and then `require "watir"`.
+Ruby complains with `no such file to load`. It means that Ruby does not know anything about that Watir thing. It happens a lot, so I wanted to let you know how to fix it. Simply, type `require "rubygems"` first and then `require "watir"`.
 
     irb(main):003:0> require "rubygems"
     => true
@@ -104,13 +106,13 @@ A window with Internet Explorer should open. Let's tell it to go to watir.com wi
 
 ![Internet Explorer 6 opened with Watir from IRB on Windows XP][xp-ie-irb]\
 
-Watir.com should open in Internet Explorer.
+*Watir gem drives Internet Explorer on Windows XP*
 
 [xp-ie-irb]: images/xp-ie-irb.jpg
 
 ### Firefox with firewatir gem
 
-If you are still in the IRB (command prompt starts with `irb`), type `exit` to return to normal command prompt.
+If you are still in the IRB (command prompt starts with `irb`), type `exit` to return to the normal command prompt.
 
     irb(main):007:0> exit
     C:\Documents and Settings\zeljko>
@@ -124,42 +126,28 @@ If you have already installed watir gem, firewatir got installed with it. You ca
     builder (3.0.0)
     commonwatir (1.8.0)
     firewatir (1.8.0)
-    hoe (2.9.1)
-    nokogiri (1.4.4.1 x86-mingw32)
-    rake (0.8.7)
-    rubygems-update (1.6.2)
-    s4t-utils (1.0.4)
-    user-choices (1.1.6.1)
+    (...)
     watir (1.8.0)
-    win32-api (1.4.8 x86-mingw32)
-    win32-process (0.6.5)
-    windows-api (0.4.0)
-    windows-pr (1.1.3)
-    xml-simple (1.0.14)
+    (...)
 
 If you only want to know if firewatir is installed, you can ask for it specifically with `gem list firewatir`. It is usefull when you have a lot of gems installed.
 
     C:\Documents and Settings\zeljko>gem list firewatir
-
     *** LOCAL GEMS ***
-
     firewatir (1.8.0)
 
 Great, firewatir is here.
 
 If you have only installed Ruby and updated RubyGems (and did not install watir gem), you will get this:
 
-C:\Documents and Settings\zeljko>gem list
-
+    C:\Documents and Settings\zeljko>gem list
     *** LOCAL GEMS ***
-
     rubygems-update (1.6.2)
 
     C:\Documents and Settings\zeljko>gem list firewatir
-
     *** LOCAL GEMS ***
 
-You do not have to install watir gem to drive Firefox. Watir gem drives Internet Explorer. We will install firewatir gem to drive Firefox with `gem install firewatir`:
+You do not have to install watir gem to drive Firefox. Watir gem drives Internet Explorer. We will install firewatir gem to drive Firefox with `gem install firewatir --no-ri --no-rdoc`:
 
     C:\Documents and Settings\zeljko>gem install firewatir --no-ri --no-rdoc
     (...)
@@ -170,19 +158,25 @@ You do not have to install watir gem to drive Firefox. Watir gem drives Internet
     Successfully installed firewatir-1.8.0
     8 gems installed
 
-To drive Firefox, it has to be installed. You can get it at http://www.mozilla.com/en-US/firefox. Current version is 3.6.
+To drive Firefox, it has to be installed. You can get it at [mozilla.com/en-US/firefox](http://www.mozilla.com/en-US/firefox). Current version is 3.6.
 
-You also need Firefox extension that allows firewatir gem to control Firefox. Go to http://watir.com/installation/ and click link *Windows plugin for Firefox 3.6* if you have Firefox 3.6, or appropriate link if you have other version. (There is no plugin for Firefox 4. Watir-webdriver gem can drive Firefox 4.)
+You also need Firefox extension that allows firewatir gem to control Firefox. Go to [watir.com/installation](http://watir.com/installation/) and click link *Windows plugin for Firefox 3.6* if you have Firefox 3.6, or appropriate link if you have other version. (There is no plugin for Firefox 4. Watir-webdriver gem can drive Firefox 4.)
 
 ![Firefox prevented this site (watir.com) from asking you to install software on your computer.][xp-firefox-jssh]\
+
+*Firefox prevented this site (watir.com) from asking you to install software on your computer*
 
 Firefox will say *Firefox prevented this site (watir.com) from asking you to install software on your computer.* Click button *Allow* and then *Install Now*.
 
 ![Install Now][xp-firefox-jssh-install]\
 
+*Restart Firefox to complete your changes*
+
 Firefox will now say *Restart Firefox to complete your changes.* Click button *Restart Firefox*. Close Firefox when it restarts.
 
 ![Restart Firefox][xp-firefox-restart]\
+
+*Restart Firefox*
 
 This was a bit complicated then installing driver for Internet Explorer. Let's see if everything works. Open IRB with `irb`:
 
