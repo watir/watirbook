@@ -33,7 +33,7 @@ Let's see the version of RubyGems we got with Ruby with `gem -v`:
      * rubygems1.9.1
     Try: sudo apt-get install <selected package>
 
-Looks like we did not get any version installed. You should skip installing Rubygems with apt-get, you will see in why in a minute. I will install rubygems1.8 with `sudo apt-get install rubygems1.8`:
+Looks like we did not get any version installed. You should skip installing Rubygems with apt-get, you will see in why in a minute. To show you what *not to do*, I will install rubygems1.8 with `sudo apt-get install rubygems1.8`:
 
     zeljko@ubuntu:~$ sudo apt-get install rubygems1.8
     Reading package lists... Done
@@ -52,7 +52,7 @@ RubyGems 1.3.7 is really old ([May 13, 2010][137]), I feel there will be problem
         gem update --system is disabled on Debian, because it will overwrite the content of the rubygems Debian package, and might break your Debian system in subtle ways. The Debian-supported way to update rubygems is through apt-get, using Debian official repositories.
     If you really know what you are doing, you can still update rubygems by setting the REALLY_GEM_UPDATE_SYSTEM environment variable, but please remember that this is completely unsupported by Debian.
 
-I will uninstall RubyGems with `sudo apt-get remove rubygems1.8` and install it from source:
+Since I do not *really* know what I am doing, I will uninstall RubyGems with `sudo apt-get remove rubygems1.8` and install it from source:
 
     zeljko@ubuntu:~$ sudo apt-get remove rubygems1.8
     Reading package lists... Done
@@ -70,30 +70,23 @@ Download RubyGems from [Download RubyGems][gems] page, extract it (right click >
 
 Let's check the version with `gem1.8 -v`:
 
-zeljko@ubuntu:~/Downloads/rubygems-1.6.2$ gem1.8 -v
-1.6.2
+    zeljko@ubuntu:~/Downloads/rubygems-1.6.2$ gem1.8 -v
+    1.6.2
+
+RubyGems 1.6.2, finally!
 
 ### Firefox with firewatir gem
 
 If you tried to install firewatir gem with RubyGems 1.3.7, you would get error message `hoe requires RubyGems version >= 1.4`. Firewatir gem needs hoe gem, and it needs Rubygems 1.4 or newer.
 
-Install firewatir gem with `sudo gem1.8 install firewatir` or `sudo gem1.8 install firewatir --no-ri --no-rdoc`:
+Install firewatir gem with `sudo gem1.8 install firewatir` or  
+`sudo gem1.8 install firewatir --no-ri --no-rdoc`:
 
     zeljko@ubuntu:~/Downloads/rubygems-1.6.2$ sudo gem1.8 install firewatir --no-ri --no-rdoc
-    Fetching: xml-simple-1.0.14.gem (100%)
-    Fetching: rake-0.8.7.gem (100%)
-    Fetching: hoe-2.9.1.gem (100%)
-    Fetching: s4t-utils-1.0.4.gem (100%)
-    Fetching: builder-3.0.0.gem (100%)
-    Fetching: user-choices-1.1.6.1.gem (100%)
+    (...)
     Fetching: commonwatir-1.8.0.gem (100%)
     Fetching: firewatir-1.8.0.gem (100%)
-    Successfully installed xml-simple-1.0.14
-    Successfully installed rake-0.8.7
-    Successfully installed hoe-2.9.1
-    Successfully installed s4t-utils-1.0.4
-    Successfully installed builder-3.0.0
-    Successfully installed user-choices-1.1.6.1
+    (...)
     Successfully installed commonwatir-1.8.0
     Successfully installed firewatir-1.8.0
     8 gems installed
@@ -112,11 +105,11 @@ Install `Linux plugin for Firefox 3.6` from [Watir Installation][watir] page, re
 
 Firefox should open and navigate to watir.com.
 
-### Firefox and Chrome with watir-webdriver gem
-
 [137]: https://rubygems.org/gems/rubygems-update/versions
 [gems]: https://rubygems.org/pages/download
 [watir]: http://watir.com/installation/
+
+### Firefox and Chrome with watir-webdriver gem
 
 \newpage
 
