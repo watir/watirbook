@@ -288,5 +288,88 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
 
 *watir-webdriver gem drives Chrome 10 on Windows XP on Windows XP*
 
+### JRuby
+
+You thought there is only one Ruby implementation out there? You were wrong. Until now, I only talked about Ruby, like there is only one, but there are a few of them. As far as Watir is concerned you will meet only one more, JRuby.
+
+If you already have Ruby installed, an easy way to install JRuby is with pik gem.
+
+    C:\Documents and Settings\zeljko>gem install pik --no-ri --no-rdoc
+    Fetching: pik-0.2.8.gem (100%)
+    (...)
+    Successfully installed pik-0.2.8
+    1 gem installed
+
+Now you have to install pik executable with `pik_install`. You should install it in a folder that is in your path, but not in `ruby\bin`. Check directories that are in your path with `path`:
+
+    C:\Documents and Settings\zeljko>path
+    PATH=C:\Ruby187\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem
+
+I can not install in `C:\Ruby187\bin`, and I do not want to mess with `C:\WINDOWS`. I will install to `C:\pik`. I just have to add that to path, `pik_install C:\pik` will create the folder automatically.
+
+Start > My computer > right click > Properties > Advanced > Environment Variables > System Variables > Path > Edit > Variable value: > add `;C:\pik` to the end > OK > OK > OK
+
+![Adding pik folder to Path is piece of cake](images/xp-path.jpg)\
+
+*Adding pik folder to Path is piece of cake*
+
+Check if `C:\pik` is added to Path with `path`. Make sure you open new command prompt, if you have one already opened it will not see the change.
+
+    C:\Documents and Settings\zeljko>path
+    PATH=C:\Ruby187\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\pik
+
+Everything looks fine. You can create the folder from command line:
+
+    C:\Documents and Settings\zeljko>pik_install C:\pik
+    Thank you for using pik.
+    mkdir -p C:\pik
+    mkdir -p C:\Documents and Settings\zeljko/.pik
+    Installing to C:\pik
+    (...)
+
+And now to install JRuby:
+
+    C:\Documents and Settings\zeljko>pik install jruby
+    ** Downloading:  http://jruby.org.s3.amazonaws.com/downloads/1.6.0/jruby-bin-1.6.0.zip
+    (...)
+    Cannot find Java 1.5 or higher.
+
+    There was an error.
+     Error: private method `gsub' called for nil:NilClass
+
+      in: pik/commands/command.rb:124:in `get_version'
+      in: pik/commands/add_command.rb:23:in `add'
+      in: pik/commands/add_command.rb:13:in `execute'
+      in: pik/implementations.rb:91:in `after_install'
+      in: pik/commands/install_command.rb:27:in `execute'
+      in: pik_runner:33
+
+Looks like we have to install Java separately. Download it from [java.com/download/](http://www.java.com/en/download/index.jsp). Let's try instaling JRuby now:
+
+    C:\Documents and Settings\zeljko>pik install jruby
+    ** Downloading:  http://jruby.org.s3.amazonaws.com/downloads/1.6.0/jruby-bin-1.6.0.zip
+    (...)
+    ** Adding:  160: jruby 1.6.0 (ruby 1.8.7 patchlevel 330) (2011-03-15 f3b6154) (Java HotSpot(TM) Client VM 1.6.0_24) [Windows XP-x86-java]
+     Located at:  C:\Documents and Settings\zeljko\.pik\rubies\JRuby-160\bin
+
+This time no errors. Now, tell pik to use JRuby:
+
+C:\Documents and Settings\zeljko>pik use jruby
+
+Time to install operawatir, finally:
+
+    C:\Documents and Settings\zeljko>jruby -S gem install operawatir --no-ri --no-rdoc
+    (...)
+    Fetching: operawatir-0.4-jruby.gem (100%)
+    (...)
+    Successfully installed operawatir-0.4-java
+    10 gems installed
+
+One last thing, you have to install [Microsoft Visual C++ 2010 Redistributable Package (x86)](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a7b7a05e-6de6-4d3a-a423-37bf0912db84).
+
+### Opera with operawatir gem
+
+If you do not have Opera installed, you can get it at [opera.com](http://www.opera.com/).
+
 \newpage
 
