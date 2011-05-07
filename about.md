@@ -41,3 +41,32 @@ There are a few frameworks that simplify writing Watir code: [taza], [watircraft
 [watircraft]: https://github.com/bret/watircraft/
 [watirloo]: https://rubygems.org/gems/watirloo
 [watirsplash]: https://rubygems.org/gems/watirsplash
+
+## Documentation
+
+The first significant [documentation] I could find in repository was made by Bret in April 2004. When I started using Watir (March 2005) it already had pretty good documentation. It had [user guide] written by Jonathan Kohl and RDoc documentation. [RDoc] documentation is now hosted at RubyDoc.info that auto-generates it with every new release.
+
+Internet Archive Wayback Machine says we had a [web site] since [February 2005], and around [August 2009] we moved the site to http://watir.com/. Paul Rogers registered watir.com [domain] in April 2005 (according to whois.net). Maybe [watir.org] would be better for open source project, but it was taken. Alister Scott did a great job with the web site. The plan is that all you need to know will be there, but not overwhelming like wiki. With time we were just adding more and more stuff there, maybe it is the time for a cleanup.
+
+I am also very proud that we do not have www in front of our domain at our web site. I even tried going to www.watir.com and it redirected to watir.com. I was so proud. If you do not know what I am talking about, take a look at http://no-www.org/.
+
+Wiki is an important part of our documentation. We had it in early stages of the project. The first web site had a link to [Web Testing with Ruby] wiki (still live, but obsolete, from [February 2004]). I do not remember having anything useful at the wiki while it was at RubyForge. We started working on the [wiki] when we moved to OpenQA. Alister did a lot of work on it, and I have moved the user guide there and renamed it to [tutorial]. We have a lot of documentation there at the moment, but it needs some love. A lot of stuff should be updated.
+
+We have a [bug tracker] at OpenQA. Previously it was at RubyForge, for firewatir at Google Code, and for safariwatir at GitHub. All of them are now at OpenQA.
+
+Since October 2007 we have [Google Custom Search] that searches all Watir related sites but nothing else. It was usually embedded or linked from our web page.
+
+[documentation]: https://github.com/bret/watir/commit/099d95c6189e1cec1bf010ead639f29191195ed4
+[RDoc]: http://rubydoc.info/gems/watir
+[user guide]: http://replay.waybackmachine.org/20050115054556/http://wtr.rubyforge.org/watir_user_guide.html
+[web site]: http://replay.waybackmachine.org/20050206120226/http://wtr.rubyforge.org/
+[February 2005]: http://waybackmachine.org/20050901000000*/http://wtr.rubyforge.org
+[August 2009]: http://watirpodcast.com/26-alister-scott-on-watir-com/
+[domain]: http://www.whois.net/whois/watir.com
+[watir.org]: http://www.whois.net/whois/watir.org
+[Web Testing with Ruby]: http://www.clabs.org/wtr/
+[February 2004]: http://web.archive.org/20040415000000*/http://www.clabs.org/wtr/
+[wiki]: http://wiki.openqa.org/display/WTR/Project+Home
+[tutorial]: http://wiki.openqa.org/display/WTR/Tutorial
+[bug tracker]: http://jira.openqa.org/browse/WTR
+[Google Custom Search]: http://bit.ly/watirsearch
