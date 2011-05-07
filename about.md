@@ -70,3 +70,47 @@ Since October 2007 we have [Google Custom Search] that searches all Watir relate
 [tutorial]: http://wiki.openqa.org/display/WTR/Tutorial
 [bug tracker]: http://jira.openqa.org/browse/WTR
 [Google Custom Search]: http://bit.ly/watirsearch
+
+## Community
+
+[Wtr-general] mailing list exists from October 2003, about the same time when the first commits were made to the code, but way back then the list was not about Watir as we know it today. It was about a larger topic, web testing in Ruby. We moved wtr-general from RubyForge to OpenQA, and from there to [Google Groups].
+
+Wtr-general says Watir project was stared by Chris Morris, Johnatan Kohl, Bret Pettichord and Paul Rogers.
+
+We also have [wtr-development] mailing list at RubyForge, and it is still there. One of the rare things we did not move around. We have even managed to make Jira bug tracker send mail to wtr-development when there is a change. I think it makes the developers more aware of the problems people have.
+
+We had [wtr-core] group at RubyForge for a while, but that is not active any more.
+
+I see spam at other lists from time to time, but I think we managed to keep our lists clean, polite and productive.
+
+In the past 2,5 years I have been pushing [Stack Overflow] as "the" place to get Watir support, but had little luck, up until recently. I think in the last few weeks or months, almost every day a new question is posted there. Some people also started participating, and I am really happy for that. We have also tried to create a separate [Watir Stack Exchange] site, but that failed. I think it was good that we have tried, at least we created some buzz around Stack Overflow/Exchange. There is 256 questions tagged Watir there. (Nice, round number.) We finally have enough active users to get the questions answered.
+
+I have started recording [Watir podcast] in May 2008, and that makes us one of the rare projects that has it's own podcast. It is hard to tell how much impact the podcast has. I like to think that it gives us a human face (well, human voice at least). So far I have recorded 44 episodes. I started using podtrac (for tracking how many times a podcast is downloaded) in December 2009 and since then we had about 300-400 downloads per episode. Episode [#26] with Alister (we were talking about moving our web site to watir.com) is interesting. I am not sure why, but it has about three times more unique and total downloads than any other show. I guess I will have to have him on the show more frequently. I am not sure what I will do with the podcast in the future. My current plan is to reduce the size of the episodes to 5-15 minutes. Also, it is interesting that old episodes are still downloaded, even the very first one.
+
+One of the first "real" marketing adventures was free ad at stackoverflow.com. It is hard to measure how successful it was. We did it two times ([January 2010] and [June 2010]) I could not find the numbers, but additional exposure could not hurt. The [third round] is up right now, but I did not have the time to create an ad yet.
+
+We also have #watir [IRC] channel at freenode, but I never got used to hanging out there. When I have the time, nobody is there. When I have to work I usually shut down mail, messengers and stuff like that to reduce distractions.
+
+People have been [blogging] about Watir. We have a list of people that mostly blog about Watir at our web site.
+
+I remember seeing articles about Watir in print magazines, I wrote one for a local computer [magazine].
+
+I am sure I am not the only one that speaks about Watir at local [conferences] and meet-ups. We even organized a few conferences specifically about Watir: [AWTA] in Austin, Texas (2000-2009); [Watir Day] in San Francisco, California (2011).
+
+[Wtr-general]: http://rubyforge.org/pipermail/wtr-general/
+[Google Groups]: http://groups.google.com/group/watir-general/
+[wtr-development]: http://rubyforge.org/pipermail/wtr-development/
+[wtr-core]: http://rubyforge.org/pipermail/wtr-core/
+[Stack Overflow]: http://stackoverflow.com/tags/watir
+[Watir Stack Exchange]: http://watirpodcast.com/35-zeljko-filipin-on-watir-stack-exchange-site/
+[Watir podcast]: http://watirpodcast.com/
+[#26]: http://watirpodcast.com/26-alister-scott-on-watir-com/
+[January 2010]: http://meta.stackoverflow.com/questions/31913/open-source-advertising-sidebar-1h-2010/38414#38414
+[June 2010]: http://meta.stackoverflow.com/questions/53346/open-source-advertising-sidebar-2h-2010/53544#53544
+[third round]: http://meta.stackoverflow.com/questions/74983/open-source-advertising-sidebar-1h-2011
+[IRC]: http://wiki.openqa.org/display/WTR/The+IRC+Channel
+[blogging]: http://watir.com/blogs/
+[magazine]: http://www.vidilab.com/digitalvidi/arhiva/vidi158/index.php
+[conferences]: http://zeljkofilipin.com/category/self-education/events/
+[AWTA]: http://awta.wikispaces.com/AWTA
+[Watir Day]: http://watir.com/watir-day/
