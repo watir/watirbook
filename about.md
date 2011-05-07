@@ -16,7 +16,7 @@ As far as I can tell, the code was first in SVN repository at RubyForge, then mo
 
 License it an important part of every open source project. The very first commit had the license, and as far as I can tell, it was BSD, although it was not explicitly stated.
 
-In January 2005, when [the first version of Watir] (1.0.1) was released (according to RubyForge) as a zip file we had some code. Zip file? Really?! Really.
+In January 2005, when [the first version of Watir], 1.0.1, was released (according to RubyForge) as a zip file we had some code. Zip file? Really?! Really.
 
 Watir 1.4.1 (August 2005) was a big success, downloaded almost 45k times. That was also the first version that was available as both a gem and exe file. Watir is [23rd] on the list of top RubyForge downloads, if that means anything these days.
 
