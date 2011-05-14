@@ -8,13 +8,5 @@ I am installing everything in VMware Fusion virtual machines (Version 3.1.2 3321
 
 It was easier for me to install Mac OS to a real machine instead to a virtual one. The machine is Mac mini, processor 2 GHz Intel Core 2 Duo, memory 4 GB 1067 MHz DDR3. 
 
-## Windows 7
-
-Not written yet.
-
-## Mac OS X 10.5
-
-Not written yet.
-
 \newpage
 

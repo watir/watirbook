@@ -369,6 +369,8 @@ One last thing, you have to install [Microsoft Visual C++ 2010 Redistributable P
 
 ### Opera with operawatir gem
 
+Not written yet.
+
 If you do not have Opera installed, you can get it at [opera.com](http://www.opera.com/).
 
 \newpage
