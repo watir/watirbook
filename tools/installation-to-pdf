@@ -1,1 +1,1 @@
-markdown2pdf --toc ./tools/installation_merge.md -o installation_0_3.pdf
+markdown2pdf --toc ./tools/installation-merge.md -o installation-0-3.pdf

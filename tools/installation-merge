@@ -1,1 +1,1 @@
-cat ../LICENSE.md ../README.md ../installation/installation.md ../installation/xp.md ../installation/ubuntu-10-10.md > ../installation-merge.md
+cat ../LICENSE.md ../README.md ../installation/installation.md ../installation/xp.md ../mac-10-6.md ../installation/ubuntu-10-10.md > ../installation-merge.md
