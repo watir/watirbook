@@ -1,1 +1,1 @@
-pandoc --toc installation_merge.md -o installation_0_2.epub
+pandoc --toc installation_merge.md -o installation_0_3.epub
