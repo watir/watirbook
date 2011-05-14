@@ -1,1 +1,1 @@
-pandoc --toc watirbook.md -o watirbook.epub
+pandoc --toc book-merge.md -o watirbook-0-2.epub
