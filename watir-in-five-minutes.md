@@ -79,7 +79,7 @@ And google.com opens.
 
 Before we click another link, I want to show off one of Watir's killer features. It is called `flash`. Real world web applications are complex, and sometimes when you are developing a new test or debugging an existing one, you want to make sure you are interacting with the correct element. Try this (and look at `Images` link in the top-left corner of google.com):
 
-    browser.link(:text, "Images").flash
+    browser.link(:text => "Images").flash
     => 10
 
 ![`Images` link with normal background](images/flash-1.png)\
@@ -91,94 +91,58 @@ Did you see the link flashing? It's background color changes to red a few times.
 
 If you did not see it (it flashes just a short time), try a few more times.
 
-It is time to really click the link:
+It is time to click the link:
 
-    >> browser.link(:text, "Books").click
-    => nil
+    browser.link(:text => "Images").click
+    => []
 
 This time, let's check the page title.
 
-    >> browser.title
-    => "The Pragmatic Bookshelf | Our Titles"
+    browser.title
+    => "Google Images"
 
 We got back the string with the page title.
 
-I want books to be sorted by category, so I have to click `By Category`. It is hard to say how it is implemented by just looking at it. It is the time to fire up your favorite page inspector tool. If you are using Safari on Mac, you already have one installed.
+Let's search for something. This will enter `book` in search text field:
 
-Right click `By Category` and select `Inspect Element` from context menu. This line will be highlighted in Inspector:
+    browser.text_field(:name => "q").set "book"
+    => ["book"]
 
-    <span>By Category</span>
+Now, click `Search Images` button:
 
-That means we need to click a span with text `By Category`.
+    browser.button(:value => "Search Images").click
+    => []
 
-    >> browser.span(:text, "By Category").click
-    => nil
+Page with search results will open. Let's check how many images are on the page.
 
-Just for a second, take a closer look at two commands that we used to click the link and the span:
+    browser.images.size
+    => 242
 
-    browser.link(:text, "Books"      ).click
-    browser.span(:text, "By Category").click
+This will close the browser.
 
-They are almost identical. The string (in double quotes) that we used to identify the link and the span are, of course, different. In the first example there is `link`, in the second one, there is `span`. The rest is the same. That is on purpose. You will appreciate that later.
-
-Let's try to find all Ruby related books. There is a search box. Right click on it and select `Inspect Element` from the context menu. This line will be highlighted in the Inspector:
-
-    <input class="textbox narrow" id="q" name="q" type="text">
-
-So it is a textbox and its id attribute is `q`. If an element has an id attribute, you should use it.
-
-    >> browser.text_field(:id, "q").set "ruby"
-    => :missing_value
-
-You can even see how Watir is typing each letter. Watir is just great in impressing people.
-
-To perform the search, we have to click on `Go`. Right click on it and select `Inspect Element`. I guess you already know what to do next. You will see:
-
-    <button class="go" type="submit">
-
-No id this time, but there is a class attribute. Watir is just great with real world web applications. If developers can create an element, Watir will have a way to access it.
-
-    >> browser.button(:class, "go").click
-    => nil
-
-This time, let's check a lot of stuff. Is there the text `151 results matching 'ruby'` on the page?
-
-    >> browser.text.include?("151 results matching 'ruby'")
+    browser.close
     => true
 
-We asked Ruby if the page text included a string, and it said `true`. It is its cute way of saying `yes`.
+Well, that was a lot of fun. But you do not want to type into IRB all the time. You want to run the tests and do something else while it runs. As for almost everything else in Ruby and Watir, there is a simple solution. Paste all code you have entered in IRB in a text file, and save it with `rb` extension. IRB is used only for development or debugging, so do not paste `irb` as the first line of the file. The file should look like this:
 
-Is the text we have entered in the search box at the previous page still there (this feature is not implemented for Safari yet. It works in Internet Explorer and Firefox. It should be implemented for Safari soon)?
-
-    >> browser.text_field(:id, "q").value
-    => "ruby"
-
-Ruby returned the text from the text field. It is the same text we entered, so everything is fine.
-
-Let's check if there is a link to `Programming Ruby: The Pragmatic Programmers' Guide, Second Edition`:
-
-    >> browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").exists?
-    => true
-
-Well, that was a lot of fun. But you do not want to type into IRB all the time. You want to run the tests and do something else while it runs. As for almost everything else in Ruby and Watir, there is a simple solution. Paste all code you have entered in IRB in a file, and save it with `rb` extension. IRB is used only for development or debugging, so do not paste `irb` as the first line of the file. If you are using Internet Explorer driver you should have this in the file:
-
-    require "watir"
-    browser = Watir::IE.new
-    browser.goto "http://www.pragprog.com"
+    require "rubygems"
+    require "watir-webdriver"
+    browser = Watir::Browser.new :ff
+    browser.goto "http://www.google.com/"
     browser.url
-    browser.link(:text, "Books").flash
-    browser.link(:text, "Books").click
+    browser.link(:text => "Google.com in English").click
+    browser.link(:text => "Images").click
     browser.title
-    browser.span(:text, "By Category").click
-    browser.text_field(:id, "q").set "ruby"
-    browser.button(:class, "go").click
-    browser.text.include?("151 results matching 'ruby'")
-    browser.text_field(:id, "q").value
-    browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").exists?
+    browser.text_field(:name => "q").set "book"
+    browser.button(:value => "Search Images").click
+    browser.images.size
+    browser.close
 
-Save it as `pragprog.rb`. To run it navigate in command prompt to the folder where you have saved it and type `ruby pragprog.rb`.
+Save it as `watir5.rb`. To run it navigate in command prompt to the folder where you have saved it and type `ruby watir5.rb`. If IRB is still running in your command prompt, enter `exit` to return to normal command prompt, or open a new command prompt.
 
-Go run it. Smile while the browser clicks around.
+You can remove clicking `Google.com in English` link if Firefox opens google.com automatically for you.
+
+Execute `watir5.rb`. Smile while the browser clicks around.
 
 What is the output in the command prompt? Nothing? Yes, nothing. IRB displays values that Ruby returns, but when you execute it from the command line, nothing is displayed. You have to explicitly say to Ruby that you want them displayed. It is as easy as adding `puts` in front of the command. Modify the script to look like this (you can add puts in front of every command, but you really should not care about what some commands return):
 
