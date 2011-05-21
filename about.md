@@ -131,3 +131,23 @@ Jari Bakken, creator of watir-webdriver gem, also created celerity gem. If you h
 Andreas Tolf Tolfsen, lead developer of operawatir gem says Opera should be supported via watir-webdriver gem in the near future. Until then, if you need to drive Opera, use operawatir, but have in mind that you might need to move to watir-webdriver soon.
 
 Safariwatir was created by Dave Hoover in July 2006. Tom Copeland (of RubyForge fame) took over the project in October 2009. Safariwatir was never really popular, but it was there, waiting for somebody to take care of it. If you need to drive Safari on Mac (safariwatir does not work on Windows) give it a try. There is a rumor that watir-webdriver will be able to drive Safari in the future.
+
+## Community
+
+We have created [watir] account at twitter.com (June 2009). It is pretty active. Alister and I post there when there is something significant, like new releases or blog posts. I also used it to link to new Stack Overflow questions, but not any more. It has 242 followers at the moment. We used to display tweets with [#watir] hash tag at the Watir web site, but it got flooded with _a lot_ of posts in some strange language. At the moment, all posts containing [@watir] will appear in the sidebar of watir.com.
+
+We had a [LinkedIn] group for some time (April 2008) with 554 members, but just recently I started posting relevant Watir links there. Usually the same stuff as Twitter account.
+
+Since all the cool kids are at Facebook, so are we. I have created the account a few months ago but I did not have the time to start using it since this February (2011). I wanted facebook.com/watir url, but it is taken, so I took facebook.com/[watirproject]. Usually the same stuff gets posted there as all other social media we use. 82 likes so far.
+
+I was hoping we would get some interaction at Twitter, LinkedIn and Facebook, but it is pretty quiet so far.
+
+We started receiving donations at watir.com via PayPal since 2009 and via [Pledgie] since at least January 2010. Andreas suggested we start using [Flattr] in March 2011. We have received about $1000 in donations.
+
+[watir]: https://twitter.com/#!/watir
+[#watir]: https://twitter.com/#!/search/%23watir
+[@watir]: https://twitter.com/#!/search/%40watir
+[LinkedIn]: http://www.linkedin.com/groups?about=&gid=88535&trk=anet_ug_grppro
+[watirproject]: https://www.facebook.com/watirproject
+[Pledgie]: http://pledgie.com/campaigns/2982
+[Flattr]: https://flattr.com/thing/141470/Watir
