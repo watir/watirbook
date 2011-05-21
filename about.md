@@ -2,7 +2,7 @@
 
 What is this thing Watir, that I have decided to write a book about? The answer used to be pretty simple a few years ago, but it is not any more. Bret Pettichord (Watir co-creator) would say that it is family of Ruby libraries that drive browsers. (Ruby is a programming language, if you did not hear about it so far.) I would add to that that Watir is an [open source] project. If you do not know what open source is, for now it is enough that you know that you do not have to pay anything to use it. Really, anything.
 
-I was thinking about Watir project, and I have asked myself: "So, what is an open source project, after all?"  After a lot of thinking (and a few beers) I think I know the answer. Open source project is code, documentation and community. So simple.
+I was thinking about open source, and I have asked myself: "So, what is an open source project, after all?"  After a lot of thinking (and a few beers) I think I know the answer. Open source project is code, documentation and community. So simple.
 
 [open source]: http://en.wikipedia.org/wiki/Open_source
 
@@ -12,11 +12,11 @@ I was thinking about Watir project, and I have asked myself: "So, what is an ope
 
 Watir is fairly old project. According to github.com, [the first commit] containing Ruby code was made in October 2003. That is almost 8 years ago. In internet years, it is almost a century.
 
-As far as I can tell, the code was first in SVN repository at RubyForge, then moved to [OpenQA] and now is at [GitHub].
+As far as I can tell, the code was first in SVN repository at RubyForge, then moved to SVN repository at [OpenQA] and now is git repository at [GitHub].
 
 License it an important part of every open source project. The very first commit had the license, and as far as I can tell, it was BSD, although it was not explicitly stated.
 
-In January 2005, when [the first version of Watir], 1.0.1, was released (according to RubyForge) as a zip file we had some code. Zip file? Really?! Really.
+In January 2005, when [the first version of Watir], 1.0.1, was released as a zip file (according to RubyForge) we had some code. Zip file? Really?! Really. RubyGems did not exist back then. And you thought I was joking when I sad it is almost a century in internet years.
 
 Watir 1.4.1 (August 2005) was a big success, downloaded almost 45k times. That was also the first version that was available as both a gem and exe file. Watir is [23rd] on the list of top RubyForge downloads, if that means anything these days.
 
@@ -50,7 +50,7 @@ Internet Archive Wayback Machine says we had a [web site] since [February 2005],
 
 I am also very proud that we do not have www in front of our domain at our web site. I even tried going to www.watir.com and it redirected to watir.com. I was so proud. If you do not know what I am talking about, take a look at http://no-www.org/.
 
-Wiki is an important part of our documentation. We had it in early stages of the project. The first web site had a link to [Web Testing with Ruby] wiki (still live, but obsolete, from [February 2004]). I do not remember having anything useful at the wiki while it was at RubyForge. We started working on the [wiki] when we moved to OpenQA. Alister did a lot of work on it, and I have moved the user guide there and renamed it to [tutorial]. We have a lot of documentation there at the moment, but it needs some love. A lot of stuff should be updated.
+Wiki is an important part of our documentation. We had it in early stages of the project. The first web site had a link to [Web Testing with Ruby] wiki (still live, but obsolete, from [February 2004]). I do not remember there was anything useful at the wiki while it was at RubyForge. We started working on the [wiki] when we moved to OpenQA. Alister did a lot of work on it, and I have moved the user guide there and renamed it to [tutorial]. We have a lot of documentation there at the moment, but it needs some love. A lot of stuff should be updated.
 
 We have a [bug tracker] at OpenQA. Previously it was at RubyForge, for firewatir at Google Code, and for safariwatir at GitHub. All of them are now at OpenQA.
 
@@ -77,7 +77,7 @@ Since October 2007 we have [Google Custom Search] that searches all Watir relate
 
 Wtr-general says Watir project was stared by Chris Morris, Johnatan Kohl, Bret Pettichord and Paul Rogers.
 
-We also have [wtr-development] mailing list at RubyForge, and it is still there. One of the rare things we did not move around. We have even managed to make Jira bug tracker send mail to wtr-development when there is a change. I think it makes the developers more aware of the problems people have.
+We also have [wtr-development] mailing list at RubyForge, and it is still there. One of the rare things we did not move around. We have even managed to make Jira bug tracker send mail to wtr-development when any ticket is created or changed. I think it makes the developers more aware of the problems people have.
 
 We had [wtr-core] group at RubyForge for a while, but that is not active any more.
 
@@ -87,7 +87,7 @@ In the past 2,5 years I have been pushing [Stack Overflow] as "the" place to get
 
 I have started recording [Watir podcast] in May 2008, and that makes us one of the rare projects that has it's own podcast. It is hard to tell how much impact the podcast has. I like to think that it gives us a human face (well, human voice at least). So far I have recorded 44 episodes. I started using podtrac (for tracking how many times a podcast is downloaded) in December 2009 and since then we had about 300-400 downloads per episode. Episode [#26] with Alister (we were talking about moving our web site to watir.com) is interesting. I am not sure why, but it has about three times more unique and total downloads than any other show. I guess I will have to have him on the show more frequently. I am not sure what I will do with the podcast in the future. My current plan is to reduce the size of the episodes to 5-15 minutes. Also, it is interesting that old episodes are still downloaded, even the very first one.
 
-One of the first "real" marketing adventures was free ad at stackoverflow.com. It is hard to measure how successful it was. We did it two times ([January 2010] and [June 2010]) I could not find the numbers, but additional exposure could not hurt. The [third round] is up right now, but I did not have the time to create an ad yet.
+One of the first "real" marketing adventures was free ad at stackoverflow.com. It is hard to measure how successful it was. We did it two times ([January 2010] and [June 2010]). I could not find any numbers on how successful the ad was, but additional exposure could not hurt. The [third round] is up right now, but I did not have the time to create an ad yet.
 
 We also have #watir [IRC] channel at freenode, but I never got used to hanging out there. When I have the time, nobody is there. When I have to work I usually shut down mail, messengers and stuff like that to reduce distractions.
 
