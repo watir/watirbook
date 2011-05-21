@@ -24,6 +24,8 @@ Watir 1.4.1 (August 2005) was a big success, downloaded almost 45k times. That w
 
 There are a few frameworks that simplify writing Watir code: [taza], [watircraft], [watirloo], and [watirsplash], but only the last one is updated.
 
+There is even one fork of Watir project, [Vapir]. Ethan (he never said his last name) created a fork in May 2010.
+
 [the first commit]: https://github.com/bret/watir/commit/aca359922c6b3db2ec8329ea0b26c186b00e0bb5
 [OpenQA]: http://svn.openqa.org/fisheye/browse/watir
 [GitHub]: https://github.com/bret/watir
@@ -41,6 +43,7 @@ There are a few frameworks that simplify writing Watir code: [taza], [watircraft
 [watircraft]: https://github.com/bret/watircraft/
 [watirloo]: https://rubygems.org/gems/watirloo
 [watirsplash]: https://rubygems.org/gems/watirsplash
+[Vapir]: http://vapir.org/
 
 ## Documentation
 
