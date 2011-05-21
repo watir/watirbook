@@ -117,3 +117,17 @@ I am sure I am not the only one that speaks about Watir at local [conferences] a
 [conferences]: http://zeljkofilipin.com/category/self-education/events/
 [AWTA]: http://awta.wikispaces.com/AWTA
 [Watir Day]: http://watir.com/watir-day/
+
+# Today
+
+## Code
+
+If you are just starting using Watir, I would suggest that you start with watir-webdriver gem. I think it is the future of Watir project. Some time in the future we will probably no longer develop other gems, just watir-webdriver. It will probably not happen soon (in the next few months), but it might be sooner than you expect.
+
+If you are already using Watir, you can continue to use the gem(s) you have used so far. The only exception is firewatir gem. It can not drive Firefox 4. Good new is that watir-webdriver gem can. So, if you have to drive Firefox 4, start moving your tests to watir-webdriver. If you are still using Firefox 3, you can use either firewatir or watir-webdriver.
+
+Jari Bakken, creator of watir-webdriver gem, also created celerity gem. If you have a need for headless browser driver, take a look at celerity. There is also headless driver in watir-webdriver, but I did not have the time to play with it so far, so I could not recommend it. My guess is that it is pretty usable, but that is only a guess.
+
+Andreas Tolf Tolfsen, lead developer of operawatir gem says Opera should be supported via watir-webdriver gem in the near future. Until then, if you need to drive Opera, use operawatir, but have in mind that you might need to move to watir-webdriver soon.
+
+Safariwatir was created by Dave Hoover in July 2006. Tom Copeland (of RubyForge fame) took over the project in October 2009. Safariwatir was never really popular, but it was there, waiting for somebody to take care of it. If you need to drive Safari on Mac (safariwatir does not work on Windows) give it a try. There is a rumor that watir-webdriver will be able to drive Safari in the future.
