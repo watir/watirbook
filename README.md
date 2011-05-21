@@ -22,8 +22,6 @@ You can discuss the book at [groups.google.com/group/watirbook][google]. Anybody
 
 The next chapter will probably be installation, since a lot of people have problems with it. The next format will probably be [mobi][mobi].
 
-If you are reading this at Github, [Contents][contents] page links to finished chapters. If you are reading pdf or epub version, just read on.
-
 [buy]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WVJATC56MJS3N
 [contents]: https://github.com/zeljkofilipin/watirbook/blob/master/contents.md
 [downloads]: https://github.com/zeljkofilipin/watirbook/downloads
