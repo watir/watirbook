@@ -132,6 +132,10 @@ Andreas Tolf Tolfsen, lead developer of operawatir gem says Opera should be supp
 
 Safariwatir was created by Dave Hoover in July 2006. Tom Copeland (of RubyForge fame) took over the project in October 2009. Safariwatir was never really popular, but it was there, waiting for somebody to take care of it. If you need to drive Safari on Mac (safariwatir does not work on Windows) give it a try. There is a rumor that watir-webdriver will be able to drive Safari in the future.
 
+## Documentation
+
+There is only one thing going on regarding documentation of Watir project. This book. If you think it is a good idea to write a book about Watir, please let me know. Sometimes I am wondering if it was a good idea to start writing the book.
+
 ## Community
 
 We have created [watir] account at twitter.com (June 2009). It is pretty active. Alister and I post there when there is something significant, like new releases or blog posts. I also used it to link to new Stack Overflow questions, but not any more. It has 242 followers at the moment. We used to display tweets with [#watir] hash tag at the Watir web site, but it got flooded with _a lot_ of posts in some strange language. At the moment, all posts containing [@watir] will appear in the sidebar of watir.com.
