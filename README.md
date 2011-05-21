@@ -10,7 +10,7 @@ This is a [book on Watir][web]. It is not finished. I am working on it.
 
 The source ([markdown][markdown]) will always be free at [github.com/zeljkofilipin/watirbook][github], [pdf][pdf] and [epub][epub] versions are $9.
 
-A few versions of the book are currently available for free as pdf and epub files at [github.com/zeljkofilipin/watirbook/downloads][downloads].
+The latest version of the book is currently available for free as pdf and epub file at [github.com/zeljkofilipin/watirbook/downloads][downloads].
 
 If you think there needs to be a book on Watir and I am the right person to write it, feel free to [buy the book][buy] now. You will get all updates to the book for free. I promise I will not take the money, spend it on beer and never write the book. :)
 
