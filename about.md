@@ -155,3 +155,34 @@ We started receiving donations at watir.com via PayPal since 2009 and via [Pledg
 [watirproject]: https://www.facebook.com/watirproject
 [Pledgie]: http://pledgie.com/campaigns/2982
 [Flattr]: https://flattr.com/thing/141470/Watir
+
+# Future
+
+## Code
+
+What would I like to see happening in the (near) future, regarding Watir code, you ask? In no particular order:
+
+- Watirspec is "the" test suite for all Watir implementations. Each gem has a score and you can see what fails and what works.
+- Watir-webdriver is the only driver, and it can drive all popular browsers on all popular platforms.
+- One (or more) Watir frameworks that is up to date.
+- Watir participates in [Google Summer of Code].
+- I hope we will raise some money so we could fund further development.
+
+[Google Summer of Code]: http://code.google.com/soc/
+
+## Documentation
+
+I guess every project needs (more) books, updated web site and wiki, and in case of Watir, updated RDoc would be nice too.
+
+## Community
+
+Watir community is a topic I think a lot. There a few things I think we should do in the near future:
+
+- Joining [Software Freedom Conservancy] and moving all of our stuff there (domain, money, trademark...).
+- We regularly create Stack Overflow ads, when ever the have a new round.
+- It would be great if more people were writing about Watir, especially on their blogs.
+- I think meeting regularly (at least once a year) is really important. We could meet at conferences that attract Watir users anyway, like Selenium Conference (may be renamed to Browser Automation Conference in the future). Organizing our own conferences and meetups is also important. Viaqa Watir Day in Zagreb, Croatia will be in June 2011.
+- It would be great if I could get some funding. It would really help me with working on documentation, podcast, this book...
+
+[Software Freedom Conservancy]: http://sfconservancy.org/
+[Viaqa Watir Day]: http://viaqa.mobi/watir-day/
