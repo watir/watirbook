@@ -41,6 +41,10 @@ And now the magic starts. With just one command you will open Firefox.
 
     browser = Watir::Browser.new :ff
 
+![watir-webdriver driving Firefox 4 on Mac OS 10.6](images/mac-10-6-webdriver-firefox-watir5.png)\
+
+*watir-webdriver driving Firefox 4 on Mac OS 10.6*
+
 When I saw the browser magically appearing for the first time, I started singing (with apologies to [Foreigner]): _I've been waiting for a tool like you to come into my life..._
 
 Please open just one browser. It will be enough. You can play with other browsers later.
@@ -89,7 +93,7 @@ Before we click another link, I want to show off one of Watir's killer features.
 
 Did you see the link flashing? It's background color changes to red a few times. Isn't that cool? I use it all the time when I present Watir at conferences. I think Watir is just great for presentations. It is very visual.
 
-If you did not see it (it flashes just a short time), try a few more times.
+If you did not see it (it flashes just for a short time), execute the command a few more times. To execute the same command in command prompt again, just click up arrow key on your keyboard and the last command that you have typed will appear.
 
 It is time to click the link:
 
@@ -108,6 +112,8 @@ Let's search for something. This will enter `book` in search text field:
     browser.text_field(:name => "q").set "book"
     => ["book"]
 
+Maybe you are wondering how I knew the text field had the value of `name` attribute set to `q` (I am talking about `:name => "q"`). If you do not know how to inspect pages, read on. I will explain it later.
+
 Now, click `Search Images` button:
 
     browser.button(:value => "Search Images").click
@@ -118,7 +124,7 @@ Page with search results will open. Let's check how many images are on the page.
     browser.images.size
     => 242
 
-This will close the browser.
+And finally, let's close the browser.
 
     browser.close
     => true
@@ -138,48 +144,42 @@ Well, that was a lot of fun. But you do not want to type into IRB all the time. 
     browser.images.size
     browser.close
 
-Save it as `watir5.rb`. To run it navigate in command prompt to the folder where you have saved it and type `ruby watir5.rb`. If IRB is still running in your command prompt, enter `exit` to return to normal command prompt, or open a new command prompt.
+You can use any text editor to edit the file. I use [NetBeans].
+
+Save the file as `watir5.rb`. To run it, navigate in command prompt to the folder where you have saved it and type `ruby watir5.rb`. If IRB is still running in your command prompt, enter `exit` to return to normal command prompt, or open a new command prompt.
 
 You can remove clicking `Google.com in English` link if Firefox opens google.com automatically for you.
 
 Execute `watir5.rb`. Smile while the browser clicks around.
 
-What is the output in the command prompt? Nothing? Yes, nothing. IRB displays values that Ruby returns, but when you execute it from the command line, nothing is displayed. You have to explicitly say to Ruby that you want them displayed. It is as easy as adding `puts` in front of the command. Modify the script to look like this (you can add puts in front of every command, but you really should not care about what some commands return):
+What is the output in the command prompt? Nothing? Yes, nothing. IRB displays values that Ruby returns, but when you execute Ruby file from the command line, it does not display the values Ruby returns. You have to explicitly say to Ruby that you want them displayed. It is as easy as adding `puts` in front of the command. Modify the script to look like this (you can add puts in front of every command, but you really do not care about what some commands return):
 
-    require "watir"
-    browser = Watir::IE.new
-    browser.goto "http://www.pragprog.com"
+    require "rubygems"
+    require "watir-webdriver"
+    browser = Watir::Browser.new :ff
+    browser.goto "http://www.google.com/"
     puts browser.url
-    browser.link(:text, "Books").flash
-    browser.link(:text, "Books").click
+    browser.link(:text => "Google.com in English").click
+    browser.link(:text => "Images").click
     puts browser.title
-    browser.span(:text, "By Category").click
-    browser.text_field(:id, "q").set "ruby"
-    browser.button(:class, "go").click
-    puts browser.text.include?("151 results matching 'ruby'")
-    puts browser.text_field(:id, "q").value
-    puts browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").exists?
+    browser.text_field(:name => "q").set "book"
+    browser.button(:value => "Search Images").click
+    puts browser.images.size
+    browser.close
 
 Run the script. This time the output should look like this:
 
-    $ruby pragprog.rb
-    http://www.pragprog.com/
-    The Pragmatic Bookshelf | Our Titles
-    true
-    ruby
-    true
+    $ ruby watir5.rb
+    http://www.google.hr/
+    Google Images
+    246
 
 Later I will show you how to make cool looking reports.
 
-If you want to make the script a bit faster, delete this line:
-
-    browser.link(:text, "Books").flash
-
-It really does not do anything, we just used it for identifying the element while developing the script.
-
-If you are not impressed by now, you probably never will. But wait, it is time to bring on heavy artillery. Let's go deeper.
+If you are not impressed by now, you probably never will. If you liked what you saw so far, it is time to bring on heavy artillery. Let's go deeper.
 
 [Foreigner]: http://www.youtube.com/watch?v=BrzzR-3PPqw
+[NetBeans]: http://netbeans.org/
 
 \newpage
 
