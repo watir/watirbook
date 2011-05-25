@@ -6,9 +6,9 @@ I was thinking about open source, and I have asked myself: "So, what is an open 
 
 [open source]: http://en.wikipedia.org/wiki/Open_source
 
-# History
+## History
 
-## Code
+### Code
 
 Watir is fairly old project. According to github.com, [the first commit] containing Ruby code was made in October 2003. That is almost 8 years ago. In internet years, it is almost a century.
 
@@ -45,7 +45,7 @@ There is even one fork of Watir project, [Vapir]. Ethan (he never said his last 
 [watirsplash]: https://rubygems.org/gems/watirsplash
 [Vapir]: http://vapir.org/
 
-## Documentation
+### Documentation
 
 The first significant [documentation] I could find in repository was made by Bret in April 2004. When I started using Watir (March 2005) it already had pretty good documentation. It had [user guide] written by Jonathan Kohl and RDoc documentation. [RDoc] documentation is now hosted at RubyDoc.info that auto-generates it with every new release.
 
@@ -74,7 +74,7 @@ Since October 2007 we have [Google Custom Search] that searches all Watir relate
 [bug tracker]: http://jira.openqa.org/browse/WTR
 [Google Custom Search]: http://bit.ly/watirsearch
 
-## Community
+### Community
 
 [Wtr-general] mailing list exists from October 2003, about the same time when the first commits were made to the code, but way back then the list was not about Watir as we know it today. It was about a larger topic, web testing in Ruby. We moved wtr-general from RubyForge to OpenQA, and from there to [Google Groups].
 
@@ -118,9 +118,9 @@ I am sure I am not the only one that speaks about Watir at local [conferences] a
 [AWTA]: http://awta.wikispaces.com/AWTA
 [Watir Day]: http://watir.com/watir-day/
 
-# Today
+## Today
 
-## Code
+### Code
 
 If you are just starting using Watir, I would suggest that you start with watir-webdriver gem. I think it is the future of Watir project. Some time in the future we will probably no longer develop other gems, just watir-webdriver. It will probably not happen soon (in the next few months), but it might be sooner than you expect.
 
@@ -132,11 +132,11 @@ Andreas Tolf Tolfsen, lead developer of operawatir gem says Opera should be supp
 
 Safariwatir was created by Dave Hoover in July 2006. Tom Copeland (of RubyForge fame) took over the project in October 2009. Safariwatir was never really popular, but it was there, waiting for somebody to take care of it. If you need to drive Safari on Mac (safariwatir does not work on Windows) give it a try. There is a rumor that watir-webdriver will be able to drive Safari in the future.
 
-## Documentation
+### Documentation
 
 There is only one thing going on regarding documentation of Watir project. This book. If you think it is a good idea to write a book about Watir, please let me know. Sometimes I am wondering if it was a good idea to start writing the book.
 
-## Community
+### Community
 
 We have created [watir] account at twitter.com (June 2009). It is pretty active. Alister and I post there when there is something significant, like new releases or blog posts. I also used it to link to new Stack Overflow questions, but not any more. It has 242 followers at the moment. We used to display tweets with [#watir] hash tag at the Watir web site, but it got flooded with _a lot_ of posts in some strange language. At the moment, all posts containing [@watir] will appear in the sidebar of watir.com.
 
@@ -156,9 +156,9 @@ We started receiving donations at watir.com via PayPal since 2009 and via [Pledg
 [Pledgie]: http://pledgie.com/campaigns/2982
 [Flattr]: https://flattr.com/thing/141470/Watir
 
-# Future
+## Future
 
-## Code
+### Code
 
 What would I like to see happening in the (near) future, regarding Watir code, you ask? In no particular order:
 
@@ -170,11 +170,11 @@ What would I like to see happening in the (near) future, regarding Watir code, y
 
 [Google Summer of Code]: http://code.google.com/soc/
 
-## Documentation
+### Documentation
 
 I guess every project needs (more) books, updated web site and wiki, and in case of Watir, updated RDoc would be nice too.
 
-## Community
+### Community
 
 Watir community is a topic I think a lot. There a few things I think we should do in the near future:
 
@@ -186,3 +186,6 @@ Watir community is a topic I think a lot. There a few things I think we should d
 
 [Software Freedom Conservancy]: http://sfconservancy.org/
 [Viaqa Watir Day]: http://viaqa.mobi/watir-day/
+
+\newpage
+
