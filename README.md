@@ -8,9 +8,9 @@ Hi, my name is [Željko Filipin][zeljko]. I am a software tester, the [Watir][wa
 
 This is a [book on Watir][web]. It is not finished. I am working on it.
 
-The source ([markdown][markdown]) will always be free at [github.com/zeljkofilipin/watirbook][github], [pdf][pdf] and [epub][epub] versions are $9.
+The source ([markdown][markdown]) will always be free at [github.com/zeljkofilipin/watirbook][github]; [pdf], [epub] and [mobi] versions are $9.
 
-The latest version of the book is currently available for free as pdf and epub file at [github.com/zeljkofilipin/watirbook/downloads][downloads].
+The latest version of the book is currently available for free as pdf, epub (iPad, iPhone, iPod) and mobi (Kindle) file at [github.com/zeljkofilipin/watirbook/downloads][downloads].
 
 If you think there needs to be a book on Watir and I am the right person to write it, feel free to [buy the book][buy] now. You will get all updates to the book for free. I promise I will not take the money, spend it on beer and never write the book. :)
 
@@ -18,9 +18,9 @@ If the book is not finished in the near future, I will return the money. Also, i
 
 If you like the idea, but do not have $9, feel free to send any amount to zeljko.filipin at gmail.com via [Paypal][paypal]. You can also donate to the book via [Flattr][flattr]. Any amount is appreciated.
 
-You can discuss the book at [groups.google.com/group/watirbook][google]. Anybody can suggest book format (currently pdf and epub, but almost anything is possible) and which chapter to write next. Of course, if you buy the book and then suggest a format/chapter, your vote will count more.
+You can discuss the book at [groups.google.com/group/watirbook][google]. Anybody can suggest book format (currently pdf, epub and mobi, but almost anything is possible) and which chapter to write next. Of course, if you buy the book and then suggest a format/chapter, your vote will count more.
 
-The next chapter will probably be installation, since a lot of people have problems with it. The next format will probably be [mobi][mobi].
+The next chapter will probably be installation, since a lot of people have problems with it.
 
 [buy]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WVJATC56MJS3N
 [contents]: https://github.com/zeljkofilipin/watirbook/blob/master/contents.md
