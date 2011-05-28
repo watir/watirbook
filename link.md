@@ -1,61 +1,103 @@
 # Link
 
-Let's take a closer look at one element. I think you will use links the most, so it would be just fair to start there.
+All examples in this chapter are tried on Mac OS 10.6.7, Ruby 1.9.2p180, RubyGems 1.8.4 and watir-webdriver 0.2.3.
 
-Usually, you can recognize a link on a web page because its text is underlined:
+Let's take a closer look at one HTML element. Links are probably the most popular of all HTML elements, so it would be just fair to start there. Usually, you can recognize a link on a web page because it's text is underlined.
 
-    Programming Ruby: The Pragmatic Programmers' Guide, Second Edition
-
-HTML code of a link could look something like this:
-
-    <a href="http://www.pragprog.com/titles/ruby/programming-ruby">Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+There are two ways of accessing the link, `browser.link` and `browser.a`. Both of them do the same thing, but `browser.a` works only in watir-webdriver gem. Since `browser.link` works in all other gems, we will use it in this example.
 
 You could access the link in a lot of ways (alphabetically):
 
-    after?
-    class
-    href
-    url
-    html
-    id
-    index
-    name
-    text
-    xpath
+    Watir method         Example
+    -------------------  -----------------------------------------------------
+    after?               browser.link(:after? => browser.link(:text => "buy"))
+    class                browser.link(:class => "header")
+    css                  browser.link(:css => "a test")
+    href                 browser.link(:href => "http://watir.com")
+    html                 browser.link(:html => /test/)
+    id                   browser.link(:id => "footer")
+    index                browser.link(:index => 1)
+    multiple attributes  browser.link(:text => "click me", index => 2)
+    name                 browser.link(:name => "sidebar)
+    text                 browser.link(:text => "click me")
+    url                  browser.link(:url => /watir/)
+    xpath                browser.link(:xpath => "xpath")
 
-and multiple attributes.
+First, create a simple HTML file with only one link in it. Open your favorite text editor, enter the following line in it and save it as `link.htm`:
 
-Since this link has text and href attributes, we will start there.
+    <a href="http://watir.com/">click me</a>
+
+You can save the file anywhere, but I suggest that you save it to desktop, it will be easy to find there. Double click the file and it should open in your default browser, in my case Firefox.
+
+![A simple web page with only one link.](images/link/text.png)\
+
+*A simple web page with only one link.*
+
+Copy URL from the address bar and paste it somewhere safe, in another file, for example. In my case, URL was `file:///Users/zeljko/Desktop/link.htm`, since I have saved the file to my desktop. We will need the URL to open the same HTML page later with Watir. Close the browser.
+
+Open command prompt application and open IRB:
+
+$ irb
+>
+
+Let IRB know that you plan to use RubyGems and watir-webdriver gem:
+
+    require "rubygems"
+    require "watir-webdriver"
+
+The output should look similar to this:
+
+    require "rubygems"
+    => false
+    require "watir-webdriver"
+    => true
+
+In following code examples, do not type lines that start with `=>`. That represents value that Ruby returned. You can ignore those lines, until I say differently.
+
+Open Firefox browser:
+
+    browser = Watir::Browser.new :ff
+    => #<Watir::Browser:0x2b6d7f970192e212 url="about:blank" title="">
+
+Go to `link.htm`:
+
+    browser.goto "file:///Users/zeljko/Desktop/link.htm"
+    => "file:///Users/zeljko/Desktop/link.htm"
+
+We are ready now to play with the link.
 
 ## Text
 
-For this example, we are interested only in the text of the link.
+We will start with accessing links via `text`, since it is the most common way of accessing links. Our link looks like this:
 
-    <a>Programming Ruby: The Pragmatic Programmers' Guide, Second Edition</a>
+    <a href="http://watir.com/">click me</a>
+
+There is two ways to access the link, using the exact text, and only part of the text.
 
 ### Text and String
 
-Let's start with the original Watir way, `link` method accepting two parameters. The first parameter is a symbol, the second one is a string. You will know something is a symbol because it starts with a colon, like `:text`. For now, consider a symbol to be nothing more than a string written in a strange way.
+Since we know the exact text of the link, we can click it using string. But before we click the link, let's flash it:
 
-    browser.link(:text, "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+    browser.link(:text, "click me").flash
+    => 10
 
-`link` method also accepts a hash. A hash consists of two parts: key and value. In this case the key is a symbol and the value is a string. Between them is that familiar arrow from IRB.
+Link's background should change from white to red and back to white.
 
-    browser.link(:text => "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition").click
+Let's finally click the link:
 
-So, the only thing that is different between the two ways is that in the first example there is a comma between symbol and string, and in the second example there is an arrow. Later, I will explain why the arrow is introduced.
+    browser.link(:text, "click me").click
+    => []
 
-There is also a slightly more verbose way to write a hash (please notice the curly braces):
+Watir home page (watir.com) should open. Tell the browser to go back to `link.htm`, we have more exercises to finish there:
 
-    browser.link({:text => "Programming Ruby: The Pragmatic Programmers' Guide, Second Edition"}).click
+    browser.back
+    => ""
 
-In all examples we have used a string to locate the link. We could do that because we knew the complete text of the link.
+Browser should go back to `link.htm`.
 
 ### Text and Regular expression
 
-If you know only a portion of a string, you can use regular expressions.
-
-For now, think of regular expressions as a string with a strange syntax. It looks like this: `/Programming Ruby/`. Please notice the slashes.
+If you know only a portion of a string, you can use regular expressions. For now, think of regular expressions as a string with a strange syntax. It looks like this: `/click/`. Please notice the slashes.
 
 When would you use regular expressions? For example, you want to click on a discussion on a forum by its title, but the title changes form `On Dogs (1)` to `On Dogs (2)` after the first reply is posted.
 
@@ -65,11 +107,15 @@ You could use `"On Dogs (1)"` to locate the link the first time, but when link t
 
 In that case, you could tell Watir: `Well, I know the portion of the string.` and it will happily look at all strings until it finds the one that matches the portion you have provided.
 
-In our example, we will use `/Programming Ruby/`. To click on a link that has the `Programming Ruby` text, use one of the following (for now we do not care if there is any text before or after `Programming Ruby`):
+In our example, we will use `/click/`. First, we will flash the link, and then click it. In this example we do not care if there is any text before or after `click`.
 
-    browser.link(:text, /Programming Ruby/).click
-    browser.link(:text => /Programming Ruby/).click
-    browser.link({:text => /Programming Ruby/}).click
+    > browser.link(:text => /click/).flash
+    => 10
+
+    > browser.link(:text => /click/).click
+    => []
+
+Of course, tell the browser to go back to `link.htm` with `browser.back`
 
 ## Href
 
