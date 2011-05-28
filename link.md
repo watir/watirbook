@@ -115,51 +115,49 @@ In our example, we will use `/click/`. First, we will flash the link, and then c
     > browser.link(:text => /click/).click
     => []
 
-Of course, tell the browser to go back to `link.htm` with `browser.back`
+Of course, tell the browser to go back to `link.htm` with `browser.back`. From now on, each time watir.com opens, tell the browser to go back to `link.htm`.
 
 ## Href
 
 For this example, let's look only at the link's href attribute.
 
-    <a href="http://www.pragprog.com/titles/ruby/programming-ruby"></a>
+    <a href="http://watir.com/">click me</a>
 
 ### Href and String
 
-If you know the full value of link's href attribute, you could use `:href` symbol and a string to click the link. One of these should do it:
+If you know the full value of link's href attribute, you could use string to click the link. Of course, flash the link first, to see if everything works, then click it.
 
-    browser.link(:href, "http://www.pragprog.com/titles/ruby/programming-ruby").click
-    browser.link(:href => "http://www.pragprog.com/titles/ruby/programming-ruby").click
-    browser.link({:href => "http://www.pragprog.com/titles/ruby/programming-ruby"}).click
+    browser.link(:href => "http://watir.com/").flash
+    => 10
+
+    browser.link(:href => "http://watir.com/").click
+    => []
+
+Did you remember to tell tell the browser to go back to `link.htm` with `browser.back`?
 
 ### Href and Regular Expression
 
-If you know only a portion of href attribute, you will still use `:href` to locate the link, but this time with a regular expression instead of a string:
+If you know only a portion of href attribute, you will still use `:href` to locate the link, but this time with a regular expression instead of a string. The usual story: flash, click, back to `link.htm`.
 
-    browser.link(:href, /programming-ruby/).click
-    browser.link(:href => /programming-ruby/).click
-    browser.link({:href => /programming-ruby/}).click
+    browser.link(:href => /watir/).flash
+    => 10
+    browser.link(:href => /watir/).click
+    => []
 
 ## URL
 
-Since the href attribute points to an URL, you can use `:url` instead of `:href`. We will use the same HTML as in the previous example:
+`:url` is alias for `:href`. So, everything I said about `:href` is true for `:url` also. Well, not everything. If you try any of the following with watir-webdriver:
 
-    <a href="http://www.pragprog.com/titles/ruby/programming-ruby"></a>
+    browser.link(:url => "http://watir.com/").flash
+    browser.link(:url => "http://watir.com/").click
+    browser.link(:url => "http://watir.com/").flash
+    browser.link(:url => "http://watir.com/").click
 
-### URL and String
+you would get this error message:
 
-One of these would click the above link if you know the entire value of link's href attribute:
+    Watir::Exception::MissingWayOfFindingObjectException: invalid attribute: :url
 
-    browser.link(:url, "http://www.pragprog.com/titles/ruby/programming-ruby").click
-    browser.link(:url => "http://www.pragprog.com/titles/ruby/programming-ruby").click
-    browser.link({:url => "http://www.pragprog.com/titles/ruby/programming-ruby"}).click
-
-### URL and Regular Expression
-
-One of these would click the above link if you know only the portion of the link's href attribute:
-
-    browser.link(:url, /programming-ruby/).click
-    browser.link(:url => /programming-ruby/).click
-    browser.link({:url => /programming-ruby/}).click
+Watir-webdriver wants to tell you that it does not support accessing links via `url` attribute. Other gems support it. Since it is just an alias for `href`, I would recommend that you use `href` everywhere.
 
 ## ID
 
