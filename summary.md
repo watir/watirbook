@@ -1,11 +1,7 @@
 # Summary
 
-- [Introduction][introduction]
-- [Prerequisites][prerequisites]
-- [Installation][installation]
-- [Watir in Five Minutes][watir_in_five_minutes]
-- [HTML Elements Supported by Watir][html_elements_supported_by_watir]
-  - [Link][link]
+- HTML Elements Supported by Watir
+  - Link
   - (other elements from HTML Elements Supported by Watir)
 - Pop Ups
 
@@ -52,6 +48,14 @@
   Contributing code is not the only way you can help. You can answer Watir related questions at Stack Overflow, Google Groups or IRC channel, submit bugs, fix, update or create documentation, to name a few.
 
 - Tools
+  - IRB
+  - Text Editors
+  - IDEs
+  - Version Control
+     - SVN
+     - Git
+  - Internet Explorer Developer Toolbar
+  - Firebug
 
   You need tools to help you test. You already know about Ruby, IRB and Watir. In this chapter I will talk about browser extensions, text editors and IDEs and everything else that will make you life easier.
 
@@ -60,18 +64,12 @@
   - RSpec
   - WatirCraft
   - Taza
+  - Rasta
+  - Watirloo
 
 - Other Tools for Testing Web Applications
 
   In this chapter I will briefly mention other tools that can be used to test web applications.
-
-[summary]: https://github.com/zeljkofilipin/watirbook/blob/master/summary.md
-[introduction]: https://github.com/zeljkofilipin/watirbook/blob/master/introduction.md
-[prerequisites]: https://github.com/zeljkofilipin/watirbook/blob/master/prerequisites.md
-[installation]: https://github.com/zeljkofilipin/watirbook/blob/master/installation.md
-[watir_in_five_minutes]: https://github.com/zeljkofilipin/watirbook/blob/master/watir_in_five_minutes.md
-[html_elements_supported_by_watir]: https://github.com/zeljkofilipin/watirbook/blob/master/html_elements_supported_by_watir.md
-[link]: https://github.com/zeljkofilipin/watirbook/blob/master/link.md
 
 \newpage
 
