@@ -23,7 +23,6 @@ You can discuss the book at [groups.google.com/group/watirbook][google]. Anybody
 The next chapter will probably be installation, since a lot of people have problems with it.
 
 [buy]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WVJATC56MJS3N
-[contents]: https://github.com/zeljkofilipin/watirbook/blob/master/contents.md
 [downloads]: https://github.com/zeljkofilipin/watirbook/downloads
 [epub]: http://en.wikipedia.org/wiki/EPUB
 [flattr]: https://flattr.com/thing/147956/Watir-Book
