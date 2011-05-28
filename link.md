@@ -52,7 +52,7 @@ The output should look similar to this:
     require "watir-webdriver"
     => true
 
-In following code examples, do not type lines that start with `=>`. That represents value that Ruby returned. You can ignore those lines, until I say differently.
+In following code examples, do not type lines that start with `=>` (`=> true` for example). That represents value that Ruby returned. You can ignore those lines, until I say differently.
 
 Open Firefox browser:
 
@@ -68,7 +68,7 @@ We are ready now to play with the link.
 
 ## Text
 
-We will start with accessing links via `text`, since it is the most common way of accessing links. Our link looks like this:
+We will start with accessing the link via `text`, since it is the most common way of accessing links. Our link looks like this:
 
     <a href="http://watir.com/">click me</a>
 
@@ -97,7 +97,7 @@ Browser should go back to `link.htm`.
 
 ### Text and Regular expression
 
-If you know only a portion of a string, you can use regular expressions. For now, think of regular expressions as a string with a strange syntax. It looks like this: `/click/`. Please notice the slashes.
+If you know only a portion of a string, you can use regular expressions. For now, think of regular expressions as a string with a strange syntax. It looks like this: `/click/`. Please notice the slashes instead of quotes.
 
 When would you use regular expressions? For example, you want to click on a discussion on a forum by its title, but the title changes form `On Dogs (1)` to `On Dogs (2)` after the first reply is posted.
 
