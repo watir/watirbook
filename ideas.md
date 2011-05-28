@@ -1,4 +1,4 @@
-# Summary
+# Ideas
 
 - HTML Elements Supported by Watir
   - Link
