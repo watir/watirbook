@@ -1,1 +1,0 @@
-cat installation/installation.md installation/windows-7.md installation/windows-xp.md installation/mac-10-6.md installation/mac-10-5.md installation/ubuntu-11-4.md installation/ubuntu-10-10.md > installation-merge.md
