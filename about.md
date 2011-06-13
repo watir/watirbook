@@ -30,13 +30,13 @@ I was thinking about open source, and I have asked myself: "So, what is an open 
 
 Watir is fairly old project. According to github.com, [the first commit] containing Ruby code was made in October 2003. That is almost 8 years ago. In internet years, it is almost a century.
 
-As far as I can tell, the code was first in SVN repository at RubyForge, then moved to SVN repository at [OpenQA] and now is git repository at [GitHub].
+I thought the code was first in SVN repository at RubyForge. Bret commented on the early draft of the book: "Actually started in CVS, then was ported to SVN and then Git. Nobody was using SVN in Oct 2003." From RubyForge it moved to SVN repository at [OpenQA] and now is git repository at [GitHub].
 
 License it an important part of every open source project. The very first commit had the license, and as far as I can tell, it was BSD, although it was not explicitly stated.
 
 In January 2005, when [the first version of Watir], 1.0.1, was released as a zip file (according to RubyForge) we had some code. Zip file? Really?! Really. RubyGems did not exist back then. And you thought I was joking when I sad it is almost a century in internet years.
 
-Watir 1.4.1 (August 2005) was a big success, downloaded almost 45k times. That was also the first version that was available as both a gem and exe file. Watir is [23rd] on the list of top RubyForge downloads, if that means anything these days.
+Watir 1.4.1 (August 2005) was a big success, downloaded almost 45k times. That was also the first version that was available as both a gem and exe file. Watir is [23rd] on the list of top RubyForge downloads, if that means anything these days. Bret commented on the early draft of the book: "Back then Watir was one of the top 5 downloads on Rubyforge. That was before rails."
 
 [Watir gem] is now hosted at RubyGems.org, all gems have over 55k downloads, and the current version (1.8.1) over 2k downloads. Watir gem is not the only gem included in the Watir project, there is also [firewatir], [commonwatir], [safariwatir], [celerity], [watir-webdriver] and the youngest one, [operawatir]. There used to be [chromewatir] gem too, but it is replaced with watir-webdriver.
 
