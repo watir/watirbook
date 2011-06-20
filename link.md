@@ -246,7 +246,7 @@ If you have no other way, but you know the link's position on the page, you coul
 
     browser.link(:index => 0).click
 
-Please note that watir-webdriver gem counts from 0 (0, 1, 2É). That is called zero-based indexing. other watir gems count from 1 (1, 2, 3...). That is called one-based indexing. It is usual in programming that the first element is the number zero (hence zero-based indexing). Watir will use zero-based indexing in all it's gems in the future.
+Please note that watir-webdriver gem counts from 0 (0, 1, 2...). That is called zero-based indexing. other watir gems count from 1 (1, 2, 3...). That is called one-based indexing. It is usual in programming that the first element is the number zero (hence zero-based indexing). Watir will use zero-based indexing in all it's gems in the future.
 
 Do you see anything strange in the above code? Take a look. I will wait.
 
