@@ -1,5 +1,10 @@
 ## Windows XP
 
+
+![Windows XP default desktop](images/installation/windows-xp/windows-xp-desktop.png)\
+
+*Windows XP default desktop*
+
 Machine is a clean installation of Microsoft Windows XP Professional, Version 2002, Service Pack 3, 512 MB RAM. Fully patched, except it left Internet Explorer on version 6.
 
 ### Ruby
