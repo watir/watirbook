@@ -208,7 +208,7 @@ You can also require watir gem to drive Firefox (if you have watir gem installed
     => "firefox"
     irb(main):004:0> browser = Watir::Browser.new
 
-If you get error message like this, then you are out of luck. I have tried every fix I could find online and could not get it fixed. I will try again later.
+If you get error message like this, then you are out of luck. I have tried every fix I could find online and could not get it fixed. I will try again later. One work around for this error is to make sure Firefox is started with -jssh option before running your Watir script, this could be achieved by writing a batch file to start Firefox then run your script.
 
     irb(main):003:0> browser = Watir::Browser.new
     Watir::Exception::UnableToStartJSShException: Unable to connect to machine :
