@@ -1,6 +1,7 @@
+- windows 7
+  - fix opera with webdriver
 - windows xp
   - opera with webdriver
-  - celerity
 - mac 10.7
   - buy
 - mac 10.6
@@ -10,4 +11,5 @@
 - ubuntu 11.04
   - everything
 - ubuntu 10.10
-  - move webdriver to the top
+  - opera with webdriver
+- should I describe how to install celerity?
