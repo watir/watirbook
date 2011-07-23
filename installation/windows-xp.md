@@ -295,7 +295,7 @@ If you get error message like this, then you are out of luck. I have tried every
 [xp-firefox-jssh-install]: images/xp-firefox-jssh-install.jpg
 [xp-firefox-restart]: images/xp-firefox-restart.jpg
 
-### JRuby
+### JRuby with pik gem
 
 You thought there is only one Ruby implementation out there? You were wrong. Until now, I only talked about Ruby, like there is only one, but there are a few of them. As far as Watir is concerned you will meet only one more, JRuby.
 
