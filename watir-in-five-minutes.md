@@ -19,7 +19,7 @@ To start IRB, just type `irb` in command line. You will see something like this 
     $ irb
     >> 
 
-I should look similar on Windows or Linux.
+It should look similar on Windows or Linux.
 
 Now you can enter any Ruby command and you will immediately get a result. We will start with telling Ruby that we want to use RubyGems and watir-webdriver gem:
 
