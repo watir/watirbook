@@ -75,44 +75,6 @@ Let's check the version with `gem1.8 -v`:
 
 RubyGems 1.6.2, finally!
 
-### Firefox with firewatir gem
-
-If you tried to install firewatir gem with RubyGems 1.3.7, you would get error message `hoe requires RubyGems version >= 1.4`. Firewatir gem needs hoe gem, and it needs Rubygems 1.4 or newer.
-
-Install firewatir gem with `sudo gem1.8 install firewatir` or  
-`sudo gem1.8 install firewatir --no-ri --no-rdoc`:
-
-    zeljko@ubuntu:~/Downloads/rubygems-1.6.2$ sudo gem1.8 install firewatir --no-ri --no-rdoc
-    (...)
-    Fetching: commonwatir-1.8.0.gem (100%)
-    Fetching: firewatir-1.8.0.gem (100%)
-    (...)
-    Successfully installed commonwatir-1.8.0
-    Successfully installed firewatir-1.8.0
-    8 gems installed
-
-Install `Linux plugin for Firefox 3.6` from [Watir Installation][watir] page, restart Firefox, and close it when it restarts. It is important to restart it and then close. Check if everything works:
-
-    zeljko@ubuntu:~/Downloads/rubygems-1.6.2$ irb
-    irb(main):001:0> require "rubygems"
-    => true
-    irb(main):002:0> require "firewatir"
-    => true
-    irb(main):003:0> browser = Watir::Browser.new
-    => #<FireWatir::Firefox:0x..fb7434718 url="about:home" title="Ubuntu Start Page">
-    irb(main):004:0> browser.goto "watir.com"
-    => #<FireWatir::Firefox:0x..fb7434718 url="http://watir.com/" title="Watir">
-
-Firefox should open and navigate to watir.com.
-
-![Firewatir drives Firefox on Ubuntu](images/ubuntu-firewatir.jpg)\
-
-*Firewatir drives Firefox on Ubuntu*
-
-[137]: https://rubygems.org/gems/rubygems-update/versions
-[gems]: https://rubygems.org/pages/download
-[watir]: http://watir.com/installation/
-
 ### Firefox and Chrome with watir-webdriver gem
 
 I think that Watir-webdriver gem is the future of Watir. In short, it can drive both Firefox and Chrome.
@@ -192,6 +154,44 @@ And it really works!
 ![Watir-webdriver drives Chrome on Ubuntu](images/ubuntu-webdriver-chrome.jpg)\
 
 *Watir-webdriver drives Chrome on Ubuntu*
+
+### Firefox with firewatir gem
+
+If you tried to install firewatir gem with RubyGems 1.3.7, you would get error message `hoe requires RubyGems version >= 1.4`. Firewatir gem needs hoe gem, and it needs Rubygems 1.4 or newer.
+
+Install firewatir gem with `sudo gem1.8 install firewatir` or
+`sudo gem1.8 install firewatir --no-ri --no-rdoc`:
+
+    zeljko@ubuntu:~/Downloads/rubygems-1.6.2$ sudo gem1.8 install firewatir --no-ri --no-rdoc
+    (...)
+    Fetching: commonwatir-1.8.0.gem (100%)
+    Fetching: firewatir-1.8.0.gem (100%)
+    (...)
+    Successfully installed commonwatir-1.8.0
+    Successfully installed firewatir-1.8.0
+    8 gems installed
+
+Install `Linux plugin for Firefox 3.6` from [Watir Installation][watir] page, restart Firefox, and close it when it restarts. It is important to restart it and then close. Check if everything works:
+
+    zeljko@ubuntu:~/Downloads/rubygems-1.6.2$ irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "firewatir"
+    => true
+    irb(main):003:0> browser = Watir::Browser.new
+    => #<FireWatir::Firefox:0x..fb7434718 url="about:home" title="Ubuntu Start Page">
+    irb(main):004:0> browser.goto "watir.com"
+    => #<FireWatir::Firefox:0x..fb7434718 url="http://watir.com/" title="Watir">
+
+Firefox should open and navigate to watir.com.
+
+![Firewatir drives Firefox on Ubuntu](images/ubuntu-firewatir.jpg)\
+
+*Firewatir drives Firefox on Ubuntu*
+
+[137]: https://rubygems.org/gems/rubygems-update/versions
+[gems]: https://rubygems.org/pages/download
+[watir]: http://watir.com/installation/
 
 \newpage
 
