@@ -363,5 +363,9 @@ This time no errors. Now, tell pik to use JRuby:
 
 C:\Documents and Settings\zeljko>pik use jruby
 
+### Headless browser with celerity gem
+
+Not written yet.
+
 \newpage
 
