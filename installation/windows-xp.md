@@ -54,6 +54,71 @@ Ask RubyGems again for it's version:
     C:\Documents and Settings\zeljko>gem -v
     1.6.2
 
+### Firefox, Chrome and Internet Explorer with watir-webdriver gem
+
+I think watir-webdriver gem is the future of Watir. It can drive Firefox, Chrome and Internet Explorer.
+
+Make sure after you have installed Ruby and upgraded RubyGems, and you can install watir-webdriver gem:
+
+    C:\Documents and Settings\zeljko>gem install watir-webdriver --no-ri --no-rdoc
+    (...)
+    Fetching: selenium-webdriver-0.1.4.gem (100%)
+    Fetching: watir-webdriver-0.2.1.gem (100%)
+    (...)
+    Successfully installed selenium-webdriver-0.1.4
+    Successfully installed watir-webdriver-0.2.1
+    7 gems installed
+
+Let's see if it can drive Internet Explorer:
+
+    C:\Documents and Settings\zeljko>irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "watir-webdriver"
+    => true
+    irb(main):003:0> browser = Watir::Browser.new :ie
+    => #<Watir::Browser:0x3293868 url="http://localhost:5555/" title="WebDriver">
+    irb(main):004:0> browser.goto "watir.com"
+    => "http://watir.com/"
+
+It really can!
+
+![watir-webdriver gem drives Internet Explorer 6 on Windows XP](images/xp-webdriver-ie.jpg)\
+
+*watir-webdriver gem drives Internet Explorer 6 on Windows XP*
+
+Can it drive Firefox? It can! (If you do not have it installed, download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).)
+
+    C:\Documents and Settings\zeljko>irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "watir-webdriver"
+    => true
+    irb(main):003:0> browser = Watir::Browser.new :ff
+    => #<Watir::Browser:0x32948d0 url="about:blank" title="">
+    irb(main):004:0> browser.goto "watir.com"
+    => "http://watir.com/"
+
+![watir-webdriver gem drives Firefox 4 on Windows XP](images/xp-webdriver-ff.jpg)\
+
+*watir-webdriver gem drives Firefox 4 on Windows XP on Windows XP*
+
+Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at [google.com/chrome](http://www.google.com/chrome).)
+
+    C:\Documents and Settings\zeljko>irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "watir-webdriver"
+    => true
+    irb(main):003:0> browser = Watir::Browser.new :chrome
+    => #<Watir::Browser:0x327e178 url="" title="">
+    irb(main):004:0> browser.goto "watir.com"
+    => "http://watir.com/"
+
+![watir-webdriver gem drives Chrome 10 on Windows XP](images/xp-webdriver-chrome.jpg)\
+
+*watir-webdriver gem drives Chrome 10 on Windows XP on Windows XP*
+
 ### Internet Explorer with watir gem
 
 Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
@@ -227,71 +292,6 @@ If you get error message like this, then you are out of luck. I have tried every
 [xp-firefox-jssh]: images/xp-firefox-jssh.jpg
 [xp-firefox-jssh-install]: images/xp-firefox-jssh-install.jpg
 [xp-firefox-restart]: images/xp-firefox-restart.jpg
-
-### Firefox, Chrome and Internet Explorer with watir-webdriver gem
-
-I think watir-webdriver gem is the future of Watir. It can drive Firefox, Chrome and Internet Explorer.
-
-Make sure after you have installed Ruby and upgraded RubyGems, and you can install watir-webdriver gem:
-
-    C:\Documents and Settings\zeljko>gem install watir-webdriver --no-ri --no-rdoc
-    (...)
-    Fetching: selenium-webdriver-0.1.4.gem (100%)
-    Fetching: watir-webdriver-0.2.1.gem (100%)
-    (...)
-    Successfully installed selenium-webdriver-0.1.4
-    Successfully installed watir-webdriver-0.2.1
-    7 gems installed
-
-Let's see if it can drive Internet Explorer:
-
-    C:\Documents and Settings\zeljko>irb
-    irb(main):001:0> require "rubygems"
-    => true
-    irb(main):002:0> require "watir-webdriver"
-    => true
-    irb(main):003:0> browser = Watir::Browser.new :ie
-    => #<Watir::Browser:0x3293868 url="http://localhost:5555/" title="WebDriver">
-    irb(main):004:0> browser.goto "watir.com"
-    => "http://watir.com/"
-
-It really can!
-
-![watir-webdriver gem drives Internet Explorer 6 on Windows XP](images/xp-webdriver-ie.jpg)\
-
-*watir-webdriver gem drives Internet Explorer 6 on Windows XP*
-
-Can it drive Firefox? It can! (If you do not have it installed, download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).)
-
-    C:\Documents and Settings\zeljko>irb
-    irb(main):001:0> require "rubygems"
-    => true
-    irb(main):002:0> require "watir-webdriver"
-    => true
-    irb(main):003:0> browser = Watir::Browser.new :ff
-    => #<Watir::Browser:0x32948d0 url="about:blank" title="">
-    irb(main):004:0> browser.goto "watir.com"
-    => "http://watir.com/"
-
-![watir-webdriver gem drives Firefox 4 on Windows XP](images/xp-webdriver-ff.jpg)\
-
-*watir-webdriver gem drives Firefox 4 on Windows XP on Windows XP*
-
-Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at [google.com/chrome](http://www.google.com/chrome).)
-
-    C:\Documents and Settings\zeljko>irb
-    irb(main):001:0> require "rubygems"
-    => true
-    irb(main):002:0> require "watir-webdriver"
-    => true
-    irb(main):003:0> browser = Watir::Browser.new :chrome
-    => #<Watir::Browser:0x327e178 url="" title="">
-    irb(main):004:0> browser.goto "watir.com"
-    => "http://watir.com/"
-
-![watir-webdriver gem drives Chrome 10 on Windows XP](images/xp-webdriver-chrome.jpg)\
-
-*watir-webdriver gem drives Chrome 10 on Windows XP on Windows XP*
 
 ### JRuby
 
