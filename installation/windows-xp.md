@@ -363,16 +363,5 @@ This time no errors. Now, tell pik to use JRuby:
 
 C:\Documents and Settings\zeljko>pik use jruby
 
-Time to install operawatir, finally:
-
-    C:\Documents and Settings\zeljko>jruby -S gem install operawatir --no-ri --no-rdoc
-    (...)
-    Fetching: operawatir-0.4-jruby.gem (100%)
-    (...)
-    Successfully installed operawatir-0.4-java
-    10 gems installed
-
-One last thing, you have to install [Microsoft Visual C++ 2010 Redistributable Package (x86)](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a7b7a05e-6de6-4d3a-a423-37bf0912db84).
-
 \newpage
 
