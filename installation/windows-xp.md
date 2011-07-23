@@ -119,6 +119,8 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
 
 *watir-webdriver gem drives Chrome 10 on Windows XP on Windows XP*
 
+If you do not have Opera installed, you can get it at [opera.com](http://www.opera.com/).
+
 ### Internet Explorer with watir gem
 
 Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
@@ -371,12 +373,6 @@ Time to install operawatir, finally:
     10 gems installed
 
 One last thing, you have to install [Microsoft Visual C++ 2010 Redistributable Package (x86)](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a7b7a05e-6de6-4d3a-a423-37bf0912db84).
-
-### Opera with operawatir gem
-
-Not written yet.
-
-If you do not have Opera installed, you can get it at [opera.com](http://www.opera.com/).
 
 \newpage
 
