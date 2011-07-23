@@ -297,6 +297,8 @@ If you get error message like this, then you are out of luck. I have tried every
 
 ### JRuby with pik gem
 
+*Feel free to skip JRuby chapter. At the moment, it is not used later in the book. I left it here in case I decide to write about Celerity gem.*
+
 You thought there is only one Ruby implementation out there? You were wrong. Until now, I only talked about Ruby, like there is only one, but there are a few of them. As far as Watir is concerned you will meet only one more, JRuby.
 
 If you already have Ruby installed, an easy way to install JRuby is with pik gem.
