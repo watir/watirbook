@@ -224,6 +224,14 @@ If you get error message like this, then you are out of luck. I have tried every
       65:in `new'
     from (irb):3
 
+There is a possible work around of creating a batch file which starts Firefox with JSSh enabled then runs your Ruby script. Here is a simple version of such a batch file, it assumes that Firefox is installed at the default location and that the ruby executable is on the path.
+
+    @echo off
+    "c:\Program Files\Mozilla Firefox\firefox.exe" - jssh
+    ruby %1
+
+If this is saved as "ffjssh.bat" to run your script you would have to type `ffjssh myRubyScript.rb`
+
 [xp-firefox-jssh]: images/xp-firefox-jssh.jpg
 [xp-firefox-jssh-install]: images/xp-firefox-jssh-install.jpg
 [xp-firefox-restart]: images/xp-firefox-restart.jpg
