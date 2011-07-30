@@ -73,6 +73,10 @@ Since Firefox is installed by default on Ubuntu, all you have to do is install w
 
 ### Firefox with watir-webdriver
 
+![Firefox on Ubuntu 11.04](images/installation/ubuntu-11-04/firefox.png)\
+
+*Firefox on Ubuntu 11.04*
+
 Let's check if it can drive Firefox:
 
     $ irb
@@ -89,11 +93,15 @@ Let's check if it can drive Firefox:
     > browser.goto "watir.com"
     => "http://watir.com/"
 
-![Watir-webdriver drives Firefox on Ubuntu](images/installation/ubuntu-11-04/webdriver-ff.png)\
+![Watir-webdriver drives Firefox on Ubuntu 11.04](images/installation/ubuntu-11-04/webdriver-ff.png)\
 
-*Watir-webdriver drives Firefox on Ubuntu*
+*Watir-webdriver drives Firefox on Ubuntu 11.04*
 
 ### Chrome with watir-webdriver
+
+![Chrome on Ubuntu 11.04](images/installation/ubuntu-11-04/chrome.png)\
+
+*Chrome on Ubuntu 11.04*
 
 Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from [google.com/chrome](http://www.google.com/chrome). After installation Chrome will appear at *Applications > Internet > Chrome*.
 
@@ -150,9 +158,19 @@ Let's drive Chrome, finally:
 
 And it really works!
 
-![Watir-webdriver drives Chrome on Ubuntu](images/installation/ubuntu-11-04/webdriver-chrome.png)\
+![Watir-webdriver drives Chrome on Ubuntu 11.04](images/installation/ubuntu-11-04/webdriver-chrome.png)\
 
-*Watir-webdriver drives Chrome on Ubuntu*
+*Watir-webdriver drives Chrome on Ubuntu 11.04*
+
+### Opera with watir-webdriver
+
+![Opera on Ubuntu 11.04](images/installation/ubuntu-11-04/opera.png)\
+
+*Opera on Ubuntu 11.04*
+
+To drive [[Opera] make sure you have it installed.
+
+[Opera]: http://www.opera.com/
 
 \newpage
 
