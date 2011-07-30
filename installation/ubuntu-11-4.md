@@ -32,5 +32,35 @@ Check the version with `ruby -v`:
 
 Ruby 1.8.7 is pretty good, but 1.9.2 would be better. Since we just want to get Watir installed the easiest possible way, we will user Ruby 1.8.7.
 
+### RubyGems
+
+Let's see the version of RubyGems we got with Ruby with `gem -v`:
+
+    $ gem -v
+    The program 'gem' is currently not installed.  You can install it by typing:
+    sudo apt-get install rubygems1.8
+
+Looks like we did not get any version installed. We will install RubyGems with apt-get, since that is the easiest way:
+
+    $ sudo apt-get install rubygems1.8
+    (...)
+    Setting up ruby1.8-dev (1.8.7.302-2) ...
+    Setting up rubygems1.8 (1.3.7-3) ...
+
+
+Ask RubyGems for it's version with `gem -v`:
+
+    zeljko@ubuntu:~$ gem -v
+    1.3.7
+
+RubyGems 1.3.7 is really old ([May 13, 2010](https://rubygems.org/gems/rubygems-update/versions)). Let's try to update it the usual way, with `gem update --system`:
+
+    zeljko@ubuntu:~$ gem update --system
+    ERROR:  While executing gem ... (RuntimeError)
+        gem update --system is disabled on Debian, because it will overwrite the content of the rubygems Debian package, and might break your Debian system in subtle ways. The Debian-supported way to update rubygems is through apt-get, using Debian official repositories.
+    If you really know what you are doing, you can still update rubygems by setting the REALLY_GEM_UPDATE_SYSTEM environment variable, but please remember that this is completely unsupported by Debian.
+
+Since I do not *really* know what I am doing, I will leave RubyGems at version 1.3.7 and hope everything will work.
+
 \newpage
 
