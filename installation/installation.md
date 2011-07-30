@@ -6,5 +6,7 @@ I have already said that Watir is "just" a piece of software written in Ruby, so
 
 I am installing everything in VMware Fusion virtual machines (Version 3.1.2 332101), except Mac OS, since it does not want to be virtualized. Host OS for VMware Fusion is Mac OS X 10.6.7.
 
+You will probably be bored to tears if you read all installation chapters. A lot of stuff is repeated. I suggest that you read only the chapters you need. Feel free to read the rest of the book in the whole.
+
 \newpage
 
