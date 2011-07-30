@@ -77,7 +77,7 @@ Let's check the version with `gem1.8 -v`:
 
 RubyGems 1.6.2, finally!
 
-### Firefox and Chrome with watir-webdriver gem
+### watir-webdriver
 
 I think that Watir-webdriver gem is the future of Watir. In short, it can drive both Firefox and Chrome.
 
@@ -120,6 +120,8 @@ Try installing watir-webdriver now.
     Successfully installed watir-webdriver-0.2.1
     4 gems installed
 
+### Firefox with watir-webdriver
+
 Let's check if it can drive Firefox:
 
     zeljko@ubuntu:~$ irb
@@ -136,9 +138,11 @@ Let's check if it can drive Firefox:
 
 *Watir-webdriver drives Firefox on Ubuntu*
 
-Wasn't that way easier than firewatir install?! I sure think so. Now, lets see if it can really drive Chrome too.
+Wasn't that way easier than firewatir install?! I sure think so.
 
-Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from [google.com/chrome](http://www.google.com/chrome). After installation Chrome will appear at *Applications > Internet > Chrome*.
+### Chrome with watir-webdriver
+
+Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from [google.com/chrome](http://www.google.com/chrome). After installation Chrome will appear at *Applications > Internet > Chrome*.
 
 And it really works!
 
@@ -157,7 +161,7 @@ And it really works!
 
 *Watir-webdriver drives Chrome on Ubuntu*
 
-### Firefox with firewatir gem
+### Firefox with firewatir
 
 > *Chapter on firewatir will not be updated, since I consider firewatir dead. All updates go to watir-webdriver chapter. I did not delete this chapter because it could help somebody, sometime, maybe.*
 

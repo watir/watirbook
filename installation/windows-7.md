@@ -54,7 +54,7 @@ Ask RubyGems again for it's version, just to make sure:
     C:\Users\zeljko>gem -v
     1.8.5
 
-### Chrome, Firefox, Internet Explorer and Opera with watir-webdriver gem
+### watir-webdriver
 
 If you are just starting with Watir, start with watir-webdriver gem. It can drive (alphabetically) Chrome, Firefox, Internet Explorer and Opera.
 
@@ -66,6 +66,8 @@ Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
     (...)
     Successfully installed watir-webdriver-0.2.6
     6 gems installed
+
+### Internet Explorer with watir-webdriver
 
 Let's see if it can drive Internet Explorer:
 
@@ -107,6 +109,8 @@ It works!
 
 *watir-webdriver gem drives Internet Explorer 9 on Windows 7*
 
+### Firefox with watir-webdriver
+
 Can it drive Firefox? It can! (If you do not have it installed, download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).)
 
     C:\Users\zeljko>irb
@@ -120,6 +124,8 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
 ![watir-webdriver gem drives Firefox 5 on Windows 7](images/installation/windows-7/webdriver-ff.png)\
 
 *watir-webdriver gem drives Firefox 5 on Windows 7*
+
+### Chrome with watir-webdriver
 
 Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at [google.com/chrome](http://www.google.com/chrome).)
 
@@ -152,6 +158,8 @@ Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I w
 *watir-webdriver gem drives Chrome 12 on Windows 7*
 
 I got Windows Firewall popup again letting me know that it has blocked `C:\ruby192\bin\chromedriver.exe`. Just close it for now, I have no idea what to do with it.
+
+### Opera with watir-webdriver
 
 And finally, let's drive Opera. If you do not have it installed, you can get it at [opera.com](http://www.opera.com/).
 

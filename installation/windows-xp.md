@@ -54,7 +54,7 @@ Ask RubyGems again for it's version:
     C:\Documents and Settings\zeljko>gem -v
     1.6.2
 
-### Firefox, Chrome and Internet Explorer with watir-webdriver gem
+### watir-webdriver
 
 I think watir-webdriver gem is the future of Watir. It can drive Firefox, Chrome and Internet Explorer.
 
@@ -68,6 +68,8 @@ Make sure after you have installed Ruby and upgraded RubyGems, and you can insta
     Successfully installed selenium-webdriver-0.1.4
     Successfully installed watir-webdriver-0.2.1
     7 gems installed
+
+### Internet Explorer with watir-webdriver
 
 Let's see if it can drive Internet Explorer:
 
@@ -87,6 +89,8 @@ It really can!
 
 *watir-webdriver gem drives Internet Explorer 6 on Windows XP*
 
+### Firefox with watir-webdriver
+
 Can it drive Firefox? It can! (If you do not have it installed, download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).)
 
     C:\Documents and Settings\zeljko>irb
@@ -102,6 +106,8 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
 ![watir-webdriver gem drives Firefox 4 on Windows XP](images/xp-webdriver-ff.jpg)\
 
 *watir-webdriver gem drives Firefox 4 on Windows XP on Windows XP*
+
+### Chrome with watir-webdriver
 
 Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at [google.com/chrome](http://www.google.com/chrome).)
 
@@ -121,7 +127,7 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
 
 If you do not have Opera installed, you can get it at [opera.com](http://www.opera.com/).
 
-### Internet Explorer with watir gem
+### Internet Explorer with watir
 
 Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
 
@@ -182,7 +188,7 @@ A window with Internet Explorer should open. Let's tell it to go to watir.com wi
 
 [xp-ie-irb]: images/xp-ie-irb.jpg
 
-### Firefox with firewatir gem
+### Firefox with firewatir
 
 > *Chapter on firewatir will not be updated, since I consider firewatir dead. All updates go to watir-webdriver chapter. I did not delete this chapter because it could help somebody, sometime, maybe.*
 
@@ -297,9 +303,9 @@ If you get error message like this, then you are out of luck. I have tried every
 [xp-firefox-jssh-install]: images/xp-firefox-jssh-install.jpg
 [xp-firefox-restart]: images/xp-firefox-restart.jpg
 
-### JRuby with pik gem
+### JRuby with pik
 
-*Feel free to skip JRuby chapter. At the moment, it is not used later in the book. I left it here in case I decide to write about Celerity gem.*
+> *Feel free to skip JRuby chapter. At the moment, it is not used later in the book. I left it here in case I decide to write about Celerity gem.*
 
 You thought there is only one Ruby implementation out there? You were wrong. Until now, I only talked about Ruby, like there is only one, but there are a few of them. As far as Watir is concerned you will meet only one more, JRuby.
 
