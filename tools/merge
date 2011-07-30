@@ -1,1 +1,1 @@
-cat LICENSE.md README.md prerequisites.md about.md installation/installation.md installation/windows-7.md installation/windows-xp.md installation/mac-10-6.md installation/mac-10-5.md installation/ubuntu-11-4.md installation/ubuntu-10-10.md watir-in-five-minutes.md link.md > watirbook.md
+cat LICENSE.md README.md prerequisites.md about.md installation/installation.md installation/windows-7.md installation/windows-xp.md installation/mac-10-6.md installation/mac-10-5.md installation/ubuntu-11-04.md installation/ubuntu-10-10.md watir-in-five-minutes.md link.md > watirbook.md
