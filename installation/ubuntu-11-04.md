@@ -171,6 +171,37 @@ And it really works!
 
 *Watir-webdriver drives Chrome on Ubuntu 11.04*
 
+### Java
+
+To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
+
+    $ java
+    The program 'java' can be found in the following packages:
+     * gcj-4.4-jre-headless
+     * gcj-4.5-jre-headless
+     * openjdk-6-jre-headless
+    Try: sudo apt-get install <selected package>
+
+Looks like we will have to install Java. Install it with `sudo apt-get install openjdk-6-jre-headless`:
+
+    $ sudo apt-get install openjdk-6-jre-headless
+    (...)
+    Setting up openjdk-6-jre-lib (6b22-1.10.2-0ubuntu1~11.04.1) ...
+    Setting up icedtea-6-jre-cacao (6b22-1.10.2-0ubuntu1~11.04.1) ...
+    Setting up icedtea-6-jre-jamvm (6b22-1.10.2-0ubuntu1~11.04.1) ...
+    Setting up ca-certificates-java (20100412) ...
+    creating /etc/ssl/certs/java/cacerts...
+    done.
+
+Let's check if Java is really installed with `java -version`:
+
+    $ java -version
+    java version "1.6.0_22"
+    OpenJDK Runtime Environment (IcedTea6 1.10.2) (6b22-1.10.2-0ubuntu1~11.04.1)
+    OpenJDK Client VM (build 20.0-b11, mixed mode, sharing)
+
+Looks good to me!
+
 ### Opera with watir-webdriver
 
 ![Opera on Ubuntu 11.04](images/installation/ubuntu-11-04/opera.png)\
