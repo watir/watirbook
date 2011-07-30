@@ -60,7 +60,7 @@ RubyGems 1.3.7 is really old ([May 13, 2010](https://rubygems.org/gems/rubygems-
 
 Since I do not *really* know what I am doing, I will leave RubyGems at version 1.3.7 and hope everything will work.
 
-### Firefox, Chrome and Opera with watir-webdriver gem
+### Watir-webdriver
 
 I think that Watir-webdriver gem is the future of Watir. In short, it can drive both Firefox, Chrome and Opera.
 
@@ -70,6 +70,8 @@ Since Firefox is installed by default on Ubuntu, all you have to do is install w
     (...)
     Successfully installed watir-webdriver-0.2.8
     4 gems installed
+
+### Firefox with Watir-webdriver
 
 Let's check if it can drive Firefox:
 
@@ -86,6 +88,8 @@ Let's check if it can drive Firefox:
 ![Watir-webdriver drives Firefox on Ubuntu](images/installation/ubuntu-11-04/webdriver-ff.png)\
 
 *Watir-webdriver drives Firefox on Ubuntu*
+
+### Chrome with watir-webdriver
 
 Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from [google.com/chrome](http://www.google.com/chrome). After installation Chrome will appear at *Applications > Internet > Chrome*.
 
