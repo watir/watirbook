@@ -4,7 +4,7 @@
 
 *Ubuntu Linux 11.04 default desktop*
 
-Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM.
+Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM. Firefox 5.0, Chrome 12
 
 ### Ruby
 
@@ -86,6 +86,62 @@ Let's check if it can drive Firefox:
 ![Watir-webdriver drives Firefox on Ubuntu](images/installation/ubuntu-11-04/webdriver-ff.png)\
 
 *Watir-webdriver drives Firefox on Ubuntu*
+
+Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from [google.com/chrome](http://www.google.com/chrome). After installation Chrome will appear at *Applications > Internet > Chrome*.
+
+    zeljko@ubuntu:~$ irb
+    irb(main):001:0> require "rubygems"
+    => true
+    irb(main):002:0> require "watir-webdriver"
+    => true
+    irb(main):003:0> browser = Watir::Browser.new :chrome
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromium/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
+    (...)
+
+Looks like we have to install something called chromedriver executable. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (ChromeDriver server for linux32) from http://code.google.com/p/chromium/downloads/list and unzip it (mouse right click and then `Extract Here`, for example). You will get a file named `chromedriver`. Put it "somewhere on your PATH", as the error message said. If you have no idea what that means, read on. To find out where to put `chromedriver` file, type `echo $PATH` in Terminal:
+
+    $ echo $PATH
+    /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+So, in my case, these folders are on my PATH: `/usr/local/sbin`, `/usr/local/bin`, `/usr/sbin` `/usr/bin`, `/sbin`, `/bin` and `/usr/games`.
+
+ `/usr/games` looked like a good place to put the file. (Sounds like `chromedriver` will have the most fun there.) You can copy the file from Terminal, or with Nautilus (default Ubuntu file manager). To open the folder in Nautilus, go to *Places > Computer > File System > usr > games*. But Nautilus complained when I tried to copy the file there. It said: `Error while moving "chromedriver". There was an error moving the file into /usr/games.` and *Show more details* said `Error moving file: Permission denied`. But, I could not find a way to provide root password. So, I have tried to copy the file to all other folders in my PATH. Can you guess what happened? Yes, `Error moving file: Permission denied`.
+
+Terminal to the rescue! `chromedriver` file is at my Desktop folder, and to copy it to, go to Desktop in Terminal and use this (you will have to provide root password):
+
+    $ sudo cp chromedriver /usr/games/
+
+Just to see if it would work, I tried to execute it with `/usr/games/chromedriver`:
+
+    $ /usr/games/chromedriver
+    bash: /usr/games/chromedriver: Permission denied
+
+But, as you can see, I got `Permission denied` error message. The only thing left is to add a folder to the PATH that is accessible without using `sudo`. The easiest way to do it on Ubuntu is to create a folder called `bin` in your home folder (`/home/zeljko/bin` in my case). You have to reboot (or at least log out and then log in, but I have not checked that) and by some magic (provided by /home/zeljko/.profile file in my case) `/home/zeljko/bin` will appear in your PATH:
+
+    $ echo $PATH
+    /home/zeljko/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+Let's drive Chrome, finally:
+
+    $ irb
+
+    > require "rubygems"
+    => true
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :chrome
+    => #<Watir::Browser:0x..fb743b7d4 url="about:blank" title="about:blank">
+
+    > browser.goto "watir.com"
+    => "http://watir.com/"
+
+And it really works!
+
+![Watir-webdriver drives Chrome on Ubuntu](images/installation/ubuntu-11-04/webdriver-chrome.png)\
+
+*Watir-webdriver drives Chrome on Ubuntu*
 
 \newpage
 
