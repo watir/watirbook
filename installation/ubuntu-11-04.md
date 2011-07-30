@@ -4,7 +4,7 @@
 
 *Ubuntu Linux 11.04 default desktop*
 
-Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM. Firefox 5.0, Chrome 12
+Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM. Firefox 5.0, Chrome 12, Opera 11.50.
 
 ### Ruby
 
@@ -53,10 +53,15 @@ Ask RubyGems for it's version with `gem -v`:
 
 RubyGems 1.3.7 is really old ([May 13, 2010](https://rubygems.org/gems/rubygems-update/versions)). Let's try to update it the usual way, with `gem update --system`:
 
-    zeljko@ubuntu:~$ gem update --system
+    $ gem update --system
     ERROR:  While executing gem ... (RuntimeError)
-        gem update --system is disabled on Debian, because it will overwrite the content of the rubygems Debian package, and might break your Debian system in subtle ways. The Debian-supported way to update rubygems is through apt-get, using Debian official repositories.
-    If you really know what you are doing, you can still update rubygems by setting the REALLY_GEM_UPDATE_SYSTEM environment variable, but please remember that this is completely unsupported by Debian.
+    gem update --system is disabled on Debian, because it will overwrite the content of the
+    rubygems Debian package, and might break your Debian system in subtle ways. The
+    Debian-supported way to update rubygems is through apt-get, using Debian official
+    repositories.
+    If you really know what you are doing, you can still update rubygems by setting the
+    REALLY_GEM_UPDATE_SYSTEM environment variable, but please remember that this is completely
+    unsupported by Debian.
 
 Since I do not *really* know what I am doing, I will leave RubyGems at version 1.3.7 and hope everything will work.
 
@@ -97,6 +102,8 @@ Let's check if it can drive Firefox:
 
 *Watir-webdriver drives Firefox on Ubuntu 11.04*
 
+No problems here, works just fine.
+
 ### Chrome with watir-webdriver
 
 ![Chrome on Ubuntu 11.04](images/installation/ubuntu-11-04/chrome.png)\
@@ -114,7 +121,9 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
     => true
 
     > browser = Watir::Browser.new :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromium/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable.
+    Please download the server from http://code.google.com/p/chromium/downloads/list and place
+    it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
 Looks like we have to install something called chromedriver executable. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (ChromeDriver server for linux32) from http://code.google.com/p/chromium/downloads/list and unzip it (mouse right click and then `Extract Here`, for example). You will get a file named `chromedriver`. Put it "somewhere on your PATH", as the error message said. If you have no idea what that means, read on. To find out where to put `chromedriver` file, type `echo $PATH` in Terminal:
@@ -124,7 +133,7 @@ Looks like we have to install something called chromedriver executable. Fortunat
 
 So, in my case, these folders are on my PATH: `/usr/local/sbin`, `/usr/local/bin`, `/usr/sbin` `/usr/bin`, `/sbin`, `/bin` and `/usr/games`.
 
- `/usr/games` looked like a good place to put the file. (Sounds like `chromedriver` will have the most fun there.) You can copy the file from Terminal, or with Nautilus (default Ubuntu file manager). To open the folder in Nautilus, go to *Places > Computer > File System > usr > games*. But Nautilus complained when I tried to copy the file there. It said: `Error while moving "chromedriver". There was an error moving the file into /usr/games.` and *Show more details* said `Error moving file: Permission denied`. But, I could not find a way to provide root password. So, I have tried to copy the file to all other folders in my PATH. Can you guess what happened? Yes, `Error moving file: Permission denied`.
+ `/usr/games` looked like a good place to put the file. (Sounds like `chromedriver` will have the most fun there.) You can copy the file from Terminal, or with Nautilus (default Ubuntu file manager). To open the folder in Nautilus, go to *Places > Computer > File System > usr > games*. But Nautilus complained when I tried to copy the file there. It said: `Error while moving "chromedriver"` and `There was an error moving the file into /usr/games` and *Show more details* said `Error moving file: Permission denied`. But, I could not find a way to provide root password. So, I have tried to copy the file to all other folders in my PATH. Can you guess what happened? Yes, `Error moving file: Permission denied`.
 
 Terminal to the rescue! `chromedriver` file is at my Desktop folder, and to copy it to, go to Desktop in Terminal and use this (you will have to provide root password):
 
