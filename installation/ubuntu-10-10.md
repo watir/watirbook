@@ -159,6 +159,8 @@ And it really works!
 
 ### Firefox with firewatir gem
 
+> *Chapter on firewatir will not be updated, since I consider firewatir dead. All updates go to watir-webdriver chapter. I did not delete this chapter because it could help somebody, sometime, maybe.*
+
 If you tried to install firewatir gem with RubyGems 1.3.7, you would get error message `hoe requires RubyGems version >= 1.4`. Firewatir gem needs hoe gem, and it needs Rubygems 1.4 or newer.
 
 Install firewatir gem with `sudo gem1.8 install firewatir` or

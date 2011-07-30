@@ -184,6 +184,8 @@ A window with Internet Explorer should open. Let's tell it to go to watir.com wi
 
 ### Firefox with firewatir gem
 
+> *Chapter on firewatir will not be updated, since I consider firewatir dead. All updates go to watir-webdriver chapter. I did not delete this chapter because it could help somebody, sometime, maybe.*
+
 If you are still in the IRB (command prompt starts with `irb`), type `exit` to return to the normal command prompt.
 
     irb(main):007:0> exit
