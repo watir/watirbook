@@ -208,9 +208,56 @@ Looks good to me!
 
 *Opera on Ubuntu 11.04*
 
-To drive [[Opera] make sure you have it installed.
+To drive [Opera](http://www.opera.com/) make sure you have it installed.
 
-[Opera]: http://www.opera.com/
+Let's see how it drives Opera. Open our old friend, IRB:
+
+    $ irb
+
+    > require "rubygems"
+    => true
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :opera
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.
+    Please download the standalone server from http://code.google.com/p/selenium/downloads/list
+    and set the SELENIUM_SERVER_JAR environmental variable to its location.
+    More info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    (...)
+
+Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to http://code.google.com/p/selenium/downloads/list and download `selenium-server-standalone-2.2.0.jar`. Since I have put `chromedriver` file in `/home/zeljko/bin`, I will put this file there too.
+
+The last step is setting SELENIUM_SERVER_JAR environmental variable. If you just got lost, I have step by step guide how to do it. Open Nautilus and go to your home folder: *Places > Home Folder*. You want to edit `.bashrc` file, but by default files that have names starting with dot are not displayed. To see the file go to *View > Show Hidden Files*. Doubleclick `.bashrc` file (it will open the file in gedit editor). Add this line to the file:
+
+     export SELENIUM_SERVER_JAR=~/bin/selenium-server-standalone-2.2.0.jar
+
+Save the file and close all Terminal windows. Open terminal again. To check if the variable is set, try `printenv | grep SELENIUM`:
+
+    $ printenv | grep SELENIUM
+    SELENIUM_SERVER_JAR=/home/zeljko/bin/selenium-server-standalone-2.2.0.jar
+
+Looks good to me!  After all this work, enjoy driving Opera:
+
+    $ irb
+
+    > require "rubygems"
+    => true
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :opera
+    => #<Watir::Browser:0x..fb72fd854 url="http://watir.com/" title="Watir">
+
+    > browser.goto "watir.com"
+    => "http://watir.com/"
+
+
+![Watir-webdriver drives Opera on Ubuntu 11.04](images/installation/ubuntu-11-04/webdriver-opera.png)\
+
+*Watir-webdriver drives Opera on Ubuntu 11.04*
 
 \newpage
 
