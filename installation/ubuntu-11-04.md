@@ -75,14 +75,18 @@ Since Firefox is installed by default on Ubuntu, all you have to do is install w
 
 Let's check if it can drive Firefox:
 
-    zeljko@ubuntu:~$ irb
-    irb(main):001:0> require "rubygems"
+    $ irb
+
+    > require "rubygems"
     => true
-    irb(main):002:0> require "watir-webdriver"
+
+    > require "watir-webdriver"
     => true
-    irb(main):003:0> browser = Watir::Browser.new :ff
+
+    > browser = Watir::Browser.new :ff
     => #<Watir::Browser:0x..fb734a4d8 url="about:blank" title="">
-    irb(main):004:0> browser.goto "watir.com"
+
+    > browser.goto "watir.com"
     => "http://watir.com/"
 
 ![Watir-webdriver drives Firefox on Ubuntu](images/installation/ubuntu-11-04/webdriver-ff.png)\
@@ -93,12 +97,15 @@ Let's check if it can drive Firefox:
 
 Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from [google.com/chrome](http://www.google.com/chrome). After installation Chrome will appear at *Applications > Internet > Chrome*.
 
-    zeljko@ubuntu:~$ irb
-    irb(main):001:0> require "rubygems"
+    $ irb
+
+    > require "rubygems"
     => true
-    irb(main):002:0> require "watir-webdriver"
+
+    > require "watir-webdriver"
     => true
-    irb(main):003:0> browser = Watir::Browser.new :chrome
+
+    > browser = Watir::Browser.new :chrome
     Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromium/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
