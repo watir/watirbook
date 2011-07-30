@@ -1,5 +1,7 @@
 ## Ubuntu Linux 10.10
 
+> *Chapter on Ubuntu Linux 10.10 will not be updated. All updates go to Ubuntu Linux 11.04 chapter. I did not delete this chapter because it could help somebody, sometime, maybe.*
+
 Machine is a clean installation of Ubuntu Linux 10.10, fully patched, with Firefox 3.6.15 and 512 MB RAM.
 
 ### Ruby
