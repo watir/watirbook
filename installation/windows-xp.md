@@ -371,7 +371,7 @@ Looks like we have to install Java separately. Download it from [java.com/downlo
 
 This time no errors. Now, tell pik to use JRuby:
 
-C:\Documents and Settings\zeljko>pik use jruby
+    C:\Documents and Settings\zeljko>pik use jruby
 
 \newpage
 
