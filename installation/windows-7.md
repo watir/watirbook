@@ -1,6 +1,6 @@
 ## Windows 7
 
-![Windows 7 default desktop](images/installation/windows-7/windows-7-desktop.png)\
+![Windows 7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/windows-7-desktop.png)\
 
 *Windows 7 default desktop*
 
@@ -18,7 +18,7 @@ If you get the same thing as I did, you do not have Ruby installed.
 
 Download the latest Ruby 1.9. from [rubyinstaller.org/downloads](http://rubyinstaller.org/downloads). At the moment it is Ruby 1.9.2-p290 and it is approximately 14 MB. Execute the file.
 
-![Ruby Installation](images/installation/windows-7/windows-7-ruby-installation.png)\
+![Ruby Installation](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/windows-7-ruby-installation.png)\
 
 *Ruby Installation*
 
@@ -80,7 +80,7 @@ Let's see if it can drive Internet Explorer:
 
 I got `Protected Mode must be set to the same value (enabled or disabled) for all zones` error message and Windows Firewall popup appeared letting me know that it has blocked `C:\ruby192\bin\ruby.exe`.
 
-![Windows Firewall has blocked some features of this program](images/installation/windows-7/firewall.png)\
+![Windows Firewall has blocked some features of this program](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/firewall.png)\
 
 *Windows Firewall has blocked some features of this program*
 
@@ -88,7 +88,7 @@ For now just close the popup, let's see how to fix the error message.
 
 Open Internet Explorer > wrench > Internet Options > Security. There are four zones: Internet, Local intranet, Trusted sites and Restricted sites. Protected Mode is enabled by default in Internet and Restricted sites. Enable it for Local intranet and Trusted sites and close the browser.
 
-![Enable Protected Mode for all zones](images/installation/windows-7/protected-mode.png)\
+![Enable Protected Mode for all zones](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/protected-mode.png)\
 
 *Enable Protected Mode for all zones*
 
@@ -105,7 +105,7 @@ Let' try again:
 
 It works!
 
-![watir-webdriver gem drives Internet Explorer 9 on Windows 7](images/installation/windows-7/webdriver-ie.png)\
+![watir-webdriver gem drives Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/webdriver-ie.png)\
 
 *watir-webdriver gem drives Internet Explorer 9 on Windows 7*
 
@@ -121,7 +121,7 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
     irb(main):003:0> browser.goto "watir.com"
     => "http://watir.com/"
 
-![watir-webdriver gem drives Firefox 5 on Windows 7](images/installation/windows-7/webdriver-ff.png)\
+![watir-webdriver gem drives Firefox 5 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/webdriver-ff.png)\
 
 *watir-webdriver gem drives Firefox 5 on Windows 7*
 
@@ -153,7 +153,7 @@ Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I w
     irb(main):003:0> browser.goto "watir.com"
     => "http://watir.com/"
 
-![watir-webdriver gem drives Chrome 12 on Windows 7](images/installation/windows-7/webdriver-chrome.png)\
+![watir-webdriver gem drives Chrome 12 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/webdriver-chrome.png)\
 
 *watir-webdriver gem drives Chrome 12 on Windows 7*
 

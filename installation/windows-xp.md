@@ -1,7 +1,7 @@
 ## Windows XP
 
 
-![Windows XP default desktop](images/installation/windows-xp/windows-xp-desktop.png)\
+![Windows XP default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-xp/windows-xp-desktop.png)\
 
 *Windows XP default desktop*
 
@@ -85,7 +85,7 @@ Let's see if it can drive Internet Explorer:
 
 It really can!
 
-![watir-webdriver gem drives Internet Explorer 6 on Windows XP](images/xp-webdriver-ie.jpg)\
+![watir-webdriver gem drives Internet Explorer 6 on Windows XP](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-webdriver-ie.jpg)\
 
 *watir-webdriver gem drives Internet Explorer 6 on Windows XP*
 
@@ -103,7 +103,7 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
     irb(main):004:0> browser.goto "watir.com"
     => "http://watir.com/"
 
-![watir-webdriver gem drives Firefox 4 on Windows XP](images/xp-webdriver-ff.jpg)\
+![watir-webdriver gem drives Firefox 4 on Windows XP](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-webdriver-ff.jpg)\
 
 *watir-webdriver gem drives Firefox 4 on Windows XP on Windows XP*
 
@@ -121,7 +121,7 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
     irb(main):004:0> browser.goto "watir.com"
     => "http://watir.com/"
 
-![watir-webdriver gem drives Chrome 10 on Windows XP](images/xp-webdriver-chrome.jpg)\
+![watir-webdriver gem drives Chrome 10 on Windows XP](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-webdriver-chrome.jpg)\
 
 *watir-webdriver gem drives Chrome 10 on Windows XP on Windows XP*
 
@@ -326,7 +326,7 @@ I can not install in `C:\Ruby187\bin`, and I do not want to mess with `C:\WINDOW
 
 Start > My computer > right click > Properties > Advanced > Environment Variables > System Variables > Path > Edit > Variable value: > add `;C:\pik` to the end > OK > OK > OK
 
-![Adding pik folder to Path is piece of cake](images/xp-path.jpg)\
+![Adding pik folder to Path is piece of cake](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-path.jpg)\
 
 *Adding pik folder to Path is piece of cake*
 

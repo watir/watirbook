@@ -1,10 +1,10 @@
 # About Me and the Book
 
-![Željko Filipin](images/zeljko.jpg)\
+![Željko Filipin](https://github.com/zeljkofilipin/watirbook/raw/master/images/zeljko.jpg)\
 
 Hi, my name is [Željko Filipin][zeljko]. I am a software tester, the [Watir][watir] community manager and host of the [Watir Podcast][watirpodcast]. I am also one of the organizers of [viaqa][viaqa] conference on software testing.
 
-![Watir Logo](images/watir-logo.jpg)\
+![Watir Logo](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-logo.jpg)\
 
 This is a [book on Watir][web]. It is not finished. I am working on it.
 

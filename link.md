@@ -29,7 +29,7 @@ First, create a simple HTML file with only one link in it. Open your favorite te
 
 You can save the file anywhere, but I suggest that you save it to desktop, it will be easy to find there. Double click the file and it should open in your default browser, in my case Firefox.
 
-![A simple web page with only one link.](images/link/text.png)\
+![A simple web page with only one link.](https://github.com/zeljkofilipin/watirbook/raw/master/images/link/text.png)\
 
 *A simple web page with only one link.*
 

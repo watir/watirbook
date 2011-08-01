@@ -134,7 +134,7 @@ Let's check if it can drive Firefox:
     irb(main):004:0> browser.goto "watir.com"
     => "http://watir.com/"
 
-![Watir-webdriver drives Firefox on Ubuntu](images/ubuntu-webdriver-firefox.jpg)\
+![Watir-webdriver drives Firefox on Ubuntu](https://github.com/zeljkofilipin/watirbook/raw/master/images/ubuntu-webdriver-firefox.jpg)\
 
 *Watir-webdriver drives Firefox on Ubuntu*
 
@@ -157,7 +157,7 @@ And it really works!
     => "http://watir.com/"
 
 
-![Watir-webdriver drives Chrome on Ubuntu](images/ubuntu-webdriver-chrome.jpg)\
+![Watir-webdriver drives Chrome on Ubuntu](https://github.com/zeljkofilipin/watirbook/raw/master/images/ubuntu-webdriver-chrome.jpg)\
 
 *Watir-webdriver drives Chrome on Ubuntu*
 
@@ -193,7 +193,7 @@ Install `Linux plugin for Firefox 3.6` from [Watir Installation][watir] page, re
 
 Firefox should open and navigate to watir.com.
 
-![Firewatir drives Firefox on Ubuntu](images/ubuntu-firewatir.jpg)\
+![Firewatir drives Firefox on Ubuntu](https://github.com/zeljkofilipin/watirbook/raw/master/images/ubuntu-firewatir.jpg)\
 
 *Firewatir drives Firefox on Ubuntu*
 
