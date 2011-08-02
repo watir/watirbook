@@ -17,7 +17,7 @@ As I said, if you do not have Ruby installed, you have to install it. To check i
 
 Download the latest Ruby 1.8.7 from [rubyinstaller.org/downloads](http://rubyinstaller.org/downloads). At the moment it is Ruby 1.8.7-p334 and it is approximately 10 MB. Execute the file.
 
-![Ruby Installation][xp-ruby-install]\
+![Ruby Installation](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-ruby-install.jpg)\
 
 *Ruby Installation*
 
@@ -29,8 +29,6 @@ Let's check if Ruby is installed. You will have to open another command prompt, 
     ruby 1.8.7 (2011-02-18 patchlevel 334) [i386-mingw32]
 
 Ruby says it is version 1.8.7, and some other stuff we do not care about at the moment.
-
-[xp-ruby-install]: images/xp-ruby-install.jpg
 
 ### RubyGems
 
@@ -182,11 +180,9 @@ A window with Internet Explorer should open. Let's tell it to go to watir.com wi
     irb(main):006:0> browser.goto "watir.com"
     => 2.218779
 
-![Internet Explorer 6 opened with Watir from IRB on Windows XP][xp-ie-irb]\
+![Internet Explorer 6 opened with Watir from IRB on Windows XP](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-ie-irb.jpg)\
 
 *Watir gem drives Internet Explorer on Windows XP*
-
-[xp-ie-irb]: images/xp-ie-irb.jpg
 
 ### Firefox with firewatir
 
@@ -242,19 +238,19 @@ To drive Firefox, it has to be installed. You can get it at [mozilla.com/en-US/f
 
 You also need Firefox extension that allows firewatir gem to control Firefox. Go to [watir.com/installation](http://watir.com/installation/) and click link *Windows plugin for Firefox 3.6* if you have Firefox 3.6, or appropriate link if you have other version. (There is no plugin for Firefox 4. Watir-webdriver gem can drive Firefox 4.)
 
-![Firefox prevented this site (watir.com) from asking you to install software on your computer.][xp-firefox-jssh]\
+![Firefox prevented this site (watir.com) from asking you to install software on your computer.](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-firefox-jssh.jpg)\
 
 *Firefox prevented this site (watir.com) from asking you to install software on your computer*
 
 Firefox will say *Firefox prevented this site (watir.com) from asking you to install software on your computer.* Click button *Allow* and then *Install Now*.
 
-![Install Now][xp-firefox-jssh-install]\
+![Install Now](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-firefox-jssh-install.jpg)\
 
 *Restart Firefox to complete your changes*
 
 Firefox will now say *Restart Firefox to complete your changes.* Click button *Restart Firefox*. Close Firefox when it restarts.
 
-![Restart Firefox][xp-firefox-restart]\
+![Restart Firefox](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-firefox-restart.jpg)\
 
 *Restart Firefox*
 
@@ -298,10 +294,6 @@ If you get error message like this, then you are out of luck. I have tried every
     from C:/Ruby187/lib/ruby/gems/1.8/gems/commonwatir-1.8.0/lib/watir/browser.rb:
       65:in `new'
     from (irb):3
-
-[xp-firefox-jssh]: images/xp-firefox-jssh.jpg
-[xp-firefox-jssh-install]: images/xp-firefox-jssh-install.jpg
-[xp-firefox-restart]: images/xp-firefox-restart.jpg
 
 ### JRuby with pik
 
