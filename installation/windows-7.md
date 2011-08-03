@@ -136,7 +136,7 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
     Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromium/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` from http://code.google.com/p/chromium/downloads/list. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
+Looks like there is a problem. You have to download chromedriver_win32_14.0.836.0.zip` from http://code.google.com/p/chromium/downloads/list. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
 
     C:\Users\zeljko>path
     PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Ruby192\bin
@@ -169,28 +169,17 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     irb(main):002:0> browser = Watir::Browser.new :opera
     Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.  Please download the standalone server from http://code.google.com/p/selenium/downloads/list and set the SELENIUM_SERVER_JAR environmental variable to its location.  More info at http://code.google.com/p/selenium/wiki/OperaDriver.
 
-Download `selenium-server-standalone-2.0.0.jar` from http://code.google.com/p/selenium/downloads/list and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.0.0.jar`. To create environmental variable right click computer and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.0.0.jar > OK > OK > OK`.
-
-Still no luck. This is what I get:
+Download `selenium-server-standalone-2.3.0.jar` from http://code.google.com/p/selenium/downloads/list and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar`. To create environmental variable right click computer and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar > OK > OK > OK`.
 
     C:\Users\zeljko>irb
     irb(main):001:0> require "watir-webdriver"
     => true
     irb(main):002:0> browser = Watir::Browser.new :opera
-    ChildProcess::Error: The system cannot find the file specified.
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/childprocess-0.1.9/lib/childprocess/windows/functions.rb:40:in `create_proc'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/childprocess-0.1.9/lib/childprocess/windows/process.rb:58:in `launch_process'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/childprocess-0.1.9/lib/childprocess/abstract_process.rb:52:in `start'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/selenium-webdriver-2.0.1/lib/selenium/server.rb:27:in `start'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/selenium-webdriver-2.0.1/lib/selenium/webdriver/opera/service.rb:37:in `start'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/selenium-webdriver-2.0.1/lib/selenium/webdriver/opera/bridge.rb:21:in `initialize'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/selenium-webdriver-2.0.1/lib/selenium/webdriver/common/driver.rb:39:in `new'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/selenium-webdriver-2.0.1/lib/selenium/webdriver/common/driver.rb:39:in `for'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/selenium-webdriver-2.0.1/lib/selenium/webdriver.rb:76:in `for'
-    from C:/Ruby192/lib/ruby/gems/1.9.1/gems/watir-webdriver-0.2.6/lib/watir-webdriver/browser.rb:35:in `initialize'
-    from (irb):2:in `new'
-    from (irb):2
-    from C:/Ruby192/bin/irb:12:in `<main>'
+    => #<Watir::Browser:0x..fc551772 url="http://watir.com/" title="Watir">
+    irb(main):003:0> browser.goto "watir.com"
+    => "http://watir.com/"
+
+Works on my machine!
 
 \newpage
 
