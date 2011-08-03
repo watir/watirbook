@@ -86,7 +86,7 @@ I got `Protected Mode must be set to the same value (enabled or disabled) for al
 
 For now just close the popup, let's see how to fix the error message.
 
-Open Internet Explorer > wrench > Internet Options > Security. There are four zones: Internet, Local intranet, Trusted sites and Restricted sites. Protected Mode is enabled by default in Internet and Restricted sites. Enable it for Local intranet and Trusted sites and close the browser.
+Open *Internet Explorer > wrench > Internet Options > Security*. There are four zones: Internet, Local intranet, Trusted sites and Restricted sites. Protected Mode is enabled by default in Internet and Restricted sites. Enable it for Local intranet and Trusted sites and close the browser.
 
 ![Enable Protected Mode for all zones](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/protected-mode.png)\
 
@@ -136,7 +136,7 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
     Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromium/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like there is a problem. You have to download chromedriver_win32_13.0.775.0.zip from http://code.google.com/p/selenium/downloads/list. Unzip the file (you will get chromedriver.exe) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
+Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` from http://code.google.com/p/chromium/downloads/list. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
 
     C:\Users\zeljko>path
     PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Ruby192\bin
