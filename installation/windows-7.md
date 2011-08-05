@@ -159,27 +159,65 @@ Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I w
 
 I got Windows Firewall popup again letting me know that it has blocked `C:\ruby192\bin\chromedriver.exe`. Just close it for now, I have no idea what to do with it.
 
+### Java
+
+To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
+
+    >java -version
+    'java' is not recognized as an internal or external command,
+    operable program or batch file.
+
+Looks like we will have to install Java. There is big *Free Java Download* button at http://www.java.com/en/download. Execute download file and install Java. Let's check if Java is really installed with `java -version`:
+
+    >java -version
+    java version "1.6.0_26"
+    Java(TM) SE Runtime Environment (build 1.6.0_26-b03)
+    Java HotSpot(TM) Client VM (build 20.1-b02, mixed mode, sharing)
+
+Looks good to me!
+
 ### Opera with watir-webdriver
+
+![Opera on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/opera.png)\
+
+*Opera on Windows 7*
 
 And finally, let's drive Opera. If you do not have it installed, you can get it at [opera.com](http://www.opera.com/).
 
-    C:\Users\zeljko>irb
-    irb(main):001:0> require "watir-webdriver"
+    >irb
+
+    > require "watir-webdriver"
     => true
-    irb(main):002:0> browser = Watir::Browser.new :opera
+
+    > browser = Watir::Browser.new :opera
     Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.  Please download the standalone server from http://code.google.com/p/selenium/downloads/list and set the SELENIUM_SERVER_JAR environmental variable to its location.  More info at http://code.google.com/p/selenium/wiki/OperaDriver.
 
 Download `selenium-server-standalone-2.3.0.jar` from http://code.google.com/p/selenium/downloads/list and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar`. To create environmental variable right click computer and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar > OK > OK > OK`.
 
-    C:\Users\zeljko>irb
-    irb(main):001:0> require "watir-webdriver"
-    => true
-    irb(main):002:0> browser = Watir::Browser.new :opera
-    => #<Watir::Browser:0x..fc551772 url="http://watir.com/" title="Watir">
-    irb(main):003:0> browser.goto "watir.com"
-    => "http://watir.com/"
+    >irb
 
-Works on my machine!
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :opera
+    Selenium::WebDriver::Error::UnhandledError: No response in a timely fashion.
+    Build info: version: '2.3.0', revision: '13158', time: '2011-08-01 18:13:39'
+    System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_26'
+    Driver info: driver.version: OperaDriver (com.opera.core.systems.scope.exceptions.ResponseNotReceivedException)
+
+All kinds of problems happened, but luckily I know how to fix them. First, IRB said `No response in a timely fashion`. Then I got Windows Firewall popup. Since I do not know what to do with it, I just close it.
+
+![Windows Firewall blocking Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/java.png)\
+
+*Windows Firewall blocking Java*
+
+And finally I got Opera startup error popup saying: `Opera has failed to access or upgrade your profile. This may have occurred because your computer has insufficient resources available or because some files are locked by other applications. You may have to restart your computer before Opera will start again.`
+
+![Opera startup error](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/opera-startup-error.png)\
+
+*Opera startup error*
+
+Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). Will try later.
 
 \newpage
 
