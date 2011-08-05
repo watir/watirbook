@@ -8,7 +8,7 @@ Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM
 
 ### Ruby
 
-Let's see if Ubuntu comes with Ruby installed. Open Terminal (Applications > Accessories > Terminal) and type `ruby -v`:
+Let's see if Ubuntu comes with Ruby installed. Open Terminal (*Applications > Accessories > Terminal*) and type `ruby -v`:
 
     $ ruby -v
     The program 'ruby' is currently not installed.  You can install it by typing:
