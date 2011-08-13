@@ -35,6 +35,7 @@
   - Opera with watir-webdriver
   - (Mac) Safari with safariwatir
 
+- unit tests/watirspec
 - celerity?
 - chromium?
 - https://github.com/kennethreitz/osx-gcc-installer instead of xcode?
