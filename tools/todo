@@ -1,13 +1,40 @@
 - windows 7
+  - Internet Explorer with watir
   - fix opera with webdriver
+
+- windows vista
+  - everything
+
 - windows xp
+  - java
   - opera with webdriver
+
 - mac 10.7
   - buy
+
 - mac 10.6
+  - java
   - chrome with webdriver
   - opera with webdriver
+
 - mac 10.5
+  - java
   - fix firefox with webdriver
   - fix opera with webdriver
-- should I describe how to install celerity?
+
+- Installation
+  - Ruby
+  - RubyGems
+  - (Windows) Internet Explorer with watir
+  - (Mac) Xcode
+  - watir-webdriver
+  - (Windows) Internet Explorer with watir-webdriver
+  - Firefox with watir-webdriver
+  - Chrome with watir-webdriver
+  - Java
+  - Opera with watir-webdriver
+  - (Mac) Safari with safariwatir
+
+- celerity?
+- chromium?
+- https://github.com/kennethreitz/osx-gcc-installer instead of xcode?
