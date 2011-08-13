@@ -6,6 +6,10 @@
 
 Machine is a clean installation of Microsoft 7 Professional 32-bit, Service Pack 1, 1 GB RAM. Fully patched with Internet Explorer 9.
 
+
+
+
+
 ### Ruby
 
 You probably do not have Ruby installed. To make sure, open command prompt (*Start > Search programs and files > type: cmd > Enter*) and type `ruby -v`.
@@ -31,6 +35,10 @@ Let's check if Ruby is installed. You will have to open another command prompt, 
 
 Congratulations! You now have the latest and greatest Ruby, 1.9.2!
 
+
+
+
+
 ### RubyGems
 
 Software written in Ruby is usually distributed as RubyGems (colloquial name is *gem*), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we get it's version with `gem -v`.
@@ -54,6 +62,10 @@ Ask RubyGems again for it's version, just to make sure:
     >gem -v
     1.8.5
 
+
+
+
+
 ### watir-webdriver
 
 If you are just starting with Watir, start with watir-webdriver gem. It can drive Internet Explorer, Firefox, Chrome, and Opera.
@@ -66,6 +78,10 @@ Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
     (...)
     Successfully installed watir-webdriver-0.2.6
     6 gems installed
+
+
+
+
 
 ### Internet Explorer with watir-webdriver
 
@@ -113,6 +129,10 @@ It works!
 
 *watir-webdriver gem drives Internet Explorer 9 on Windows 7*
 
+
+
+
+
 ### Firefox with watir-webdriver
 
 Can it drive Firefox? It can! (If you do not have it installed, download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).)
@@ -131,6 +151,10 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
 ![watir-webdriver gem drives Firefox 5 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/webdriver-ff.png)\
 
 *watir-webdriver gem drives Firefox 5 on Windows 7*
+
+
+
+
 
 ### Chrome with watir-webdriver
 
@@ -171,6 +195,10 @@ Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I w
 
 I got Windows Firewall popup again letting me know that it has blocked `C:\ruby192\bin\chromedriver.exe`. Just close it for now, I have no idea what to do with it.
 
+
+
+
+
 ### Java
 
 To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
@@ -187,6 +215,10 @@ Looks like we will have to install Java. There is big *Free Java Download* butto
     Java HotSpot(TM) Client VM (build 20.1-b02, mixed mode, sharing)
 
 Looks good to me!
+
+
+
+
 
 ### Opera with watir-webdriver
 
