@@ -1,4 +1,4 @@
-## Windows 7
+## Windows 7 ##
 
 ![Windows 7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/windows-7-desktop.png)\
 
@@ -10,7 +10,7 @@ Machine is a clean installation of Microsoft 7 Professional 32-bit, Service Pack
 
 
 
-### Ruby
+### Ruby ###
 
 You probably do not have Ruby installed. To make sure, open command prompt (*Start > Search programs and files > type: cmd > Enter*) and type `ruby -v`.
 
@@ -39,7 +39,7 @@ Congratulations! You now have the latest and greatest Ruby, 1.9.2!
 
 
 
-### RubyGems
+### RubyGems ###
 
 Software written in Ruby is usually distributed as RubyGems (colloquial name is *gem*), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we get it's version with `gem -v`.
 
@@ -66,7 +66,7 @@ Ask RubyGems again for it's version, just to make sure:
 
 
 
-### watir-webdriver
+### watir-webdriver ###
 
 If you are just starting with Watir, start with watir-webdriver gem. It can drive Internet Explorer, Firefox, Chrome, and Opera.
 
@@ -83,7 +83,7 @@ Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
 
 
 
-### Internet Explorer with watir-webdriver
+### Internet Explorer with watir-webdriver ###
 
 Since Internet Explorer is already installed, we will start with it. Let's see if watir-webdriver can drive Internet Explorer:
 
@@ -133,7 +133,7 @@ It works!
 
 
 
-### Firefox with watir-webdriver
+### Firefox with watir-webdriver ###
 
 Can it drive Firefox? It can! (If you do not have it installed, download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).)
 
@@ -156,7 +156,7 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
 
 
 
-### Chrome with watir-webdriver
+### Chrome with watir-webdriver ###
 
 Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at [google.com/chrome](http://www.google.com/chrome).)
 
@@ -199,7 +199,7 @@ I got Windows Firewall popup again letting me know that it has blocked `C:\ruby1
 
 
 
-### Java
+### Java ###
 
 To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
 
@@ -220,7 +220,7 @@ Looks good to me!
 
 
 
-### Opera with watir-webdriver
+### Opera with watir-webdriver ###
 
 ![Opera on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/opera.png)\
 
