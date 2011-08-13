@@ -85,6 +85,10 @@ Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
 
 ### Internet Explorer with watir-webdriver ###
 
+![Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/ie.png)\
+
+*Internet Explorer 9 on Windows 7*
+
 Since Internet Explorer is already installed, we will start with it. Let's see if watir-webdriver can drive Internet Explorer:
 
     >irb
@@ -93,7 +97,9 @@ Since Internet Explorer is already installed, we will start with it. Let's see i
     => true
 
     > browser = Watir::Browser.new :ie
-    Selenium::WebDriver::Error::NoSuchDriverError: Unexpected error launching Internet Explorer. Protected Mode must be set to the same value (enabled or disabled) for all zones.
+    Selenium::WebDriver::Error::NoSuchDriverError: Unexpected error
+    launching Internet Explorer. Protected Mode must be set to the
+    same value (enabled or disabled) for all zones.
     (...)
 
 I got `Protected Mode must be set to the same value (enabled or disabled) for all zones` error message and Windows Firewall popup appeared letting me know that it has blocked `C:\ruby192\bin\ruby.exe`.
@@ -118,7 +124,8 @@ Let' try again:
     => true
 
     > browser = Watir::Browser.new :ie
-    => #<Watir::Browser:0x..fcf3d4bb8 url="http://localhost:5555/" title="WebDriver">
+    => #<Watir::Browser:0x..fcf3d4bb8 url="http://localhost:5555/"
+    title="WebDriver">
 
     > browser.goto "watir.com"
     => "http://watir.com/"
@@ -135,7 +142,11 @@ It works!
 
 ### Firefox with watir-webdriver ###
 
-Can it drive Firefox? It can! (If you do not have it installed, download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).)
+![Firefox 5 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/firefox.png)\
+
+*Firefox 5 on Windows 7*
+
+Can it drive Firefox? It can! (If you do not have it installed, download it from *[mozilla.com/firefox](http://www.mozilla.com/firefox/)*.)
 
     >irb
 
@@ -158,7 +169,11 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
 
 ### Chrome with watir-webdriver ###
 
-Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at [google.com/chrome](http://www.google.com/chrome).)
+![Chrome 13 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/chrome.png)\
+
+*Chrome 13 on Windows 7*
+
+Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at *[google.com/chrome](http://www.google.com/chrome)*.)
 
     >irb
 
@@ -166,15 +181,20 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
     => true
 
     > browser = Watir::Browser.new :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromium/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the
+    chromedriver executable. Please download the server from
+    http://code.google.com/p/chromium/downloads/list and place it
+    somewhere on your PATH. More info at
+    http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like there is a problem. You have to download chromedriver_win32_14.0.836.0.zip` from http://code.google.com/p/chromium/downloads/list. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
+Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` from *http://code.google.com/p/chromium/downloads/list*. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
 
-    C:\Users\zeljko>path
-    PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Ruby192\bin
+    >path
+    PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;
+    C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Ruby192\bin
 
-Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I will put `chromedriver.exe there. Let's try again:
+Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I will put `chromedriver.exe` there. Let's try again:
 
     >irb
 
@@ -207,7 +227,7 @@ To drive Opera, you will have to install Java first. Let's check if Java is alre
     'java' is not recognized as an internal or external command,
     operable program or batch file.
 
-Looks like we will have to install Java. There is big *Free Java Download* button at http://www.java.com/en/download. Execute download file and install Java. Let's check if Java is really installed with `java -version`:
+Looks like we will have to install Java. There is big *Free Java Download* button at *http://www.java.com/en/download*. Execute download file and install Java. Let's check if Java is really installed with `java -version`:
 
     >java -version
     java version "1.6.0_26"
@@ -226,7 +246,7 @@ Looks good to me!
 
 *Opera on Windows 7*
 
-And finally, let's drive Opera. If you do not have it installed, you can get it at [opera.com](http://www.opera.com/).
+And finally, let's drive Opera. If you do not have it installed, you can get it at *[opera.com](http://www.opera.com/)*.
 
     >irb
 
@@ -234,9 +254,13 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     => true
 
     > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.  Please download the standalone server from http://code.google.com/p/selenium/downloads/list and set the SELENIUM_SERVER_JAR environmental variable to its location.  More info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the
+    Selenium server jar.  Please download the standalone server from
+    http://code.google.com/p/selenium/downloads/list and set the
+    SELENIUM_SERVER_JAR environmental variable to its location.  More
+    info at http://code.google.com/p/selenium/wiki/OperaDriver.
 
-Download `selenium-server-standalone-2.3.0.jar` from http://code.google.com/p/selenium/downloads/list and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar`. To create environmental variable right click computer and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar > OK > OK > OK`.
+Download `selenium-server-standalone-2.3.0.jar` from *http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar`. To create environmental variable right click computer and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar > OK > OK > OK`.
 
     >irb
 
