@@ -10,13 +10,13 @@ Machine is a clean installation of Microsoft 7 Professional 32-bit, Service Pack
 
 You probably do not have Ruby installed. To make sure, open command prompt (*Start > Search programs and files > type: cmd > Enter*) and type `ruby -v`.
 
-    C:\Users\zeljko>ruby -v
+    >ruby -v
     'ruby' is not recognized as an internal or external command,
     operable program or batch file.
 
 If you get the same thing as I did, you do not have Ruby installed.
 
-Download the latest Ruby 1.9. from [rubyinstaller.org/downloads](http://rubyinstaller.org/downloads). At the moment it is Ruby 1.9.2-p290 and it is approximately 14 MB. Execute the file.
+Download the latest Ruby 1.9. from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 1.9.2-p290* and it is approximately 14 MB. Execute the file.
 
 ![Ruby Installation](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/windows-7-ruby-installation.png)\
 
@@ -26,21 +26,21 @@ You can leave all settings at default values, except at the *Installation Destin
 
 Let's check if Ruby is installed. You will have to open another command prompt, because the one you have opened does not see Ruby.
 
-    C:\Users\zeljko>ruby -v
+    >ruby -v
     ruby 1.9.2p290 (2011-07-09) [i386-mingw32]
 
 Congratulations! You now have the latest and greatest Ruby, 1.9.2!
 
 ### RubyGems
 
-Software written in Ruby is usually distributed as RubyGems (colloquial name is gem), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we can ask it for it's version with `gem -v`.
+Software written in Ruby is usually distributed as RubyGems (colloquial name is *gem*), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we get it's version with `gem -v`.
 
-    C:\Users\zeljko>gem -v
+    >gem -v
     1.7.2
 
 You should update it with `gem update --system`:
 
-    C:\Users\zeljko>gem update --system
+    >gem update --system
     Updating rubygems-update
     Fetching: rubygems-update-1.8.5.gem (100%)
     Successfully installed rubygems-update-1.8.5
@@ -51,16 +51,16 @@ You should update it with `gem update --system`:
 
 Ask RubyGems again for it's version, just to make sure:
 
-    C:\Users\zeljko>gem -v
+    >gem -v
     1.8.5
 
 ### watir-webdriver
 
-If you are just starting with Watir, start with watir-webdriver gem. It can drive (alphabetically) Chrome, Firefox, Internet Explorer and Opera.
+If you are just starting with Watir, start with watir-webdriver gem. It can drive Internet Explorer, Firefox, Chrome, and Opera.
 
 Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
 
-    C:\Users\zeljko>gem install watir-webdriver --no-ri --no-rdoc
+    >gem install watir-webdriver --no-ri --no-rdoc
     (...)
     Fetching: watir-webdriver-0.2.6.gem (100%)
     (...)
@@ -69,12 +69,14 @@ Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
 
 ### Internet Explorer with watir-webdriver
 
-Let's see if it can drive Internet Explorer:
+Since Internet Explorer is already installed, we will start with it. Let's see if watir-webdriver can drive Internet Explorer:
 
-    C:\Users\zeljko>irb
-    irb(main):001:0> require "watir-webdriver"
+    >irb
+
+    > require "watir-webdriver"
     => true
-    irb(main):002:0> browser = Watir::Browser.new :ie
+
+    > browser = Watir::Browser.new :ie
     Selenium::WebDriver::Error::NoSuchDriverError: Unexpected error launching Internet Explorer. Protected Mode must be set to the same value (enabled or disabled) for all zones.
     (...)
 
@@ -94,14 +96,16 @@ Open *Internet Explorer > wrench > Internet Options > Security*. There are four 
 
 Let' try again:
 
-    C:\Users\zeljko>irb
-    irb(main):001:0> require "watir-webdriver"
+    >irb
+
+    > require "watir-webdriver"
     => true
-    irb(main):002:0> browser = Watir::Browser.new :ie
+
+    > browser = Watir::Browser.new :ie
     => #<Watir::Browser:0x..fcf3d4bb8 url="http://localhost:5555/" title="WebDriver">
-    irb(main):003:0> browser.goto "watir.com"
+
+    > browser.goto "watir.com"
     => "http://watir.com/"
-    irb(main):004:0>
 
 It works!
 
@@ -113,12 +117,15 @@ It works!
 
 Can it drive Firefox? It can! (If you do not have it installed, download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).)
 
-    C:\Users\zeljko>irb
-    irb(main):001:0> require "watir-webdriver"
+    >irb
+
+    > require "watir-webdriver"
     => true
-    irb(main):002:0> browser = Watir::Browser.new :ff
+
+    > browser = Watir::Browser.new :ff
     => #<Watir::Browser:0x62d8c4a6 url="about:blank" title="">
-    irb(main):003:0> browser.goto "watir.com"
+
+    > browser.goto "watir.com"
     => "http://watir.com/"
 
 ![watir-webdriver gem drives Firefox 5 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/webdriver-ff.png)\
@@ -129,10 +136,12 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
 
 Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at [google.com/chrome](http://www.google.com/chrome).)
 
-    C:\Users\zeljko>irb
-    irb(main):001:0> require "watir-webdriver"
+    >irb
+
+    > require "watir-webdriver"
     => true
-    irb(main):002:0> browser = Watir::Browser.new :chrome
+
+    > browser = Watir::Browser.new :chrome
     Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromium/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
@@ -143,14 +152,17 @@ Looks like there is a problem. You have to download chromedriver_win32_14.0.836.
 
 Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I will put `chromedriver.exe there. Let's try again:
 
-    C:\Users\zeljko>irb
-    irb(main):001:0> require "watir-webdriver"
+    >irb
+
+    > require "watir-webdriver"
     => true
-    irb(main):002:0> browser = Watir::Browser.new :chrome
+
+    > browser = Watir::Browser.new :chrome
     Started ChromeDriver
     port=49522
     => #<Watir::Browser:0x..fdbf27548 url="about:blank" title="about:blank">
-    irb(main):003:0> browser.goto "watir.com"
+
+    > browser.goto "watir.com"
     => "http://watir.com/"
 
 ![watir-webdriver gem drives Chrome 12 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/webdriver-chrome.png)\
