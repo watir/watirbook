@@ -301,5 +301,36 @@ Finally, let's drive Opera:
 
 *watir-webdriver gem drives Opera 11.50 on Windows 7*
 
+
+
+
+
+### Internet Explorer with watir
+
+Watir gem (the whole Watir project got named after this gem) can also drive Internet Explorer. It has better Internet Explorer support than watir-webdriver gem. Install it with `gem install watir --no-ri --no-rdoc`.
+
+    >gem install watir --no-ri --no-rdoc
+    (...)
+    Successfully installed watir-2.0.1
+    13 gems installed
+
+Let's drive Internet Explorer with it:
+
+
+    >irb
+
+    > require "watir"
+    => true
+
+    > browser = Watir::Browser.new
+    => #<Watir::IE:0x..f8169d746 url="about:blank" title="">
+
+    > browser.goto "watir.com"
+    => 16.998912
+
+![watir gem drives Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/watir-ie.png)\
+
+*watir gem drives Internet Explorer 9 on Windows 7*
+
 \newpage
 
