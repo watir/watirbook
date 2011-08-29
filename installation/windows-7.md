@@ -49,18 +49,13 @@ Software written in Ruby is usually distributed as RubyGems (colloquial name is 
 You should update it with `gem update --system`:
 
     >gem update --system
-    Updating rubygems-update
-    Fetching: rubygems-update-1.8.5.gem (100%)
-    Successfully installed rubygems-update-1.8.5
-    Installing RubyGems 1.8.5
-    RubyGems 1.8.5 installed
     (...)
     RubyGems system software updated
 
 Ask RubyGems again for it's version, just to make sure:
 
     >gem -v
-    1.8.5
+    1.8.10
 
 
 
@@ -74,9 +69,7 @@ Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
 
     >gem install watir-webdriver --no-ri --no-rdoc
     (...)
-    Fetching: watir-webdriver-0.2.6.gem (100%)
-    (...)
-    Successfully installed watir-webdriver-0.2.6
+    Successfully installed watir-webdriver-0.3.2
     6 gems installed
 
 
@@ -188,7 +181,7 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` from *http://code.google.com/p/chromium/downloads/list*. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
+Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` (or newer version) from *http://code.google.com/p/chromium/downloads/list*. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
 
     >path
     PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;
@@ -260,7 +253,7 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     SELENIUM_SERVER_JAR environmental variable to its location.  More
     info at http://code.google.com/p/selenium/wiki/OperaDriver.
 
-Download `selenium-server-standalone-2.3.0.jar` from *http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar`. To create environmental variable right click computer and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar > OK > OK > OK`.
+Download `selenium-server-standalone-2.5.0.jar` (or newer version) from *http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.3.0.jar`. To create environmental variable right click computer and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`.
 
     >irb
 
