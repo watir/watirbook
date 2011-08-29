@@ -278,7 +278,28 @@ And finally I got Opera startup error popup saying: `Opera has failed to access 
 
 *Opera startup error*
 
-Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). Will try later.
+Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). What did help is running command prompt as administrator. So, instead of *Start > Search programs and files > cmd > Enter*, right click *cmd* and select *Run as administrator*.
+
+![Run command prompt as administrator](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/cmd-as-administrator.png)\
+
+*Run command prompt as administrator*
+
+Finally, let's drive Opera:
+
+    >irb
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :opera
+    => #<Watir::Browser:0x..fef436832 url="http://www.google.hr/" title="Google">
+
+    > browser.goto "watir.com"
+    => "http://watir.com/"
+
+![watir-webdriver gem drives Opera 11.50 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/webdriver-opera.png)\
+
+*watir-webdriver gem drives Opera 11.50 on Windows 7*
 
 \newpage
 
