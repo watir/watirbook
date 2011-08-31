@@ -278,7 +278,7 @@ And finally I got Opera startup error popup saying: `Opera has failed to access 
 
 *Opera startup error*
 
-Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). What did help is running command prompt as administrator. So, instead of *Start > Search programs and files > cmd > Enter*, right click *cmd* and select *Run as administrator*. (Well, that worked on Windows 7, but failed with `No response in a timely fashion` error messages on Windows Vista.)
+Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). What did help is running command prompt as administrator. So, instead of *Start > Search programs and files > cmd > Enter*, right click *cmd* and select *Run as administrator*.
 
 ![Run command prompt as administrator](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/cmd-as-administrator.png)\
 
