@@ -1,10 +1,10 @@
-## Windows 7 ##
+## Windows 7 and Vista ##
 
 ![Windows 7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/windows-7-desktop.png)\
 
 *Windows 7 default desktop*
 
-Machine is a clean installation of Microsoft 7 Professional 32-bit, Service Pack 1, 1 GB RAM. Fully patched with Internet Explorer 9.
+Machine is a clean installation of Microsoft 7 Professional 32-bit, Service Pack 1 or Microsoft Windows Vista Ultimate 32-bit, Service Pack 1. Both machines have 1 GB RAM and are fully patched, including Internet Explorer 9. I did not notice any difference in installing or using Watir with Windows 7 or Vista, so I have decided to put them in one chapter.
 
 
 
