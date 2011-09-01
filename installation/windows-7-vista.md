@@ -263,12 +263,30 @@ Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable
     => true
 
     > browser = Watir::Browser.new :opera
+
+Windows 7 and Vista said:
+
     Selenium::WebDriver::Error::UnhandledError: No response in a timely fashion.
     Build info: version: '2.3.0', revision: '13158', time: '2011-08-01 18:13:39'
-    System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_26'
-    Driver info: driver.version: OperaDriver (com.opera.core.systems.scope.exceptions.ResponseNotReceivedException)
+    System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1',
+      java.version: '1.6.0_26'
+    Driver info: driver.version: OperaDriver
+      (com.opera.core.systems.scope.exceptions.ResponseNotReceivedException)
 
-All kinds of problems happened, but luckily I know how to fix them. First, IRB said `No response in a timely fashion`. Then I got Windows Firewall popup. Since I do not know what to do with it, I just close it.
+Windows XP said:
+
+    Selenium::WebDriver::Error::UnhandledError: Could not start the process:
+    Cannot run program
+    "C:\Documents and Settings\zeljko\.launcher\launcher-win32-i86pc.exe":
+    CreateProcess error=14001, This application has failed to start because the
+    application configuration is incorrect. Reinstalling the application may fix
+    this problem
+    Build info: version: '2.5.0', revision: '13516', time: '2011-08-23 18:29:57'
+    System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1',
+      java.version: '1.6.0_26'
+    Driver info: driver.version: OperaDriver (org.openqa.selenium.WebDriverException)
+
+On Windows 7 and Vista, IRB said `No response in a timely fashion`. Then I got Windows Firewall popup. Since I do not know what to do with it, I just close it.
 
 ![Windows Firewall blocking Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/java.png)\
 
@@ -286,7 +304,9 @@ Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). 
 
 *Run command prompt as administrator*
 
-Finally, let's drive Opera:
+On Windows XP I got `This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem` error message. Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). I am stuck at the moment.
+
+Finally, let's drive Opera (on 7 and Vista):
 
     >irb
 
