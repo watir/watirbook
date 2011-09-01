@@ -1,4 +1,4 @@
-## Ubuntu Linux 11.04
+## Ubuntu Linux 11.04 ##
 
 ![Ubuntu Linux 11.04 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu-11-04/ubuntu-11-04-desktop.png)\
 
@@ -6,7 +6,11 @@
 
 Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM. Firefox 5.0, Chrome 12, Opera 11.50.
 
-### Ruby
+
+
+
+
+### Ruby ###
 
 Let's see if Ubuntu comes with Ruby installed. Open Terminal (*Applications > Accessories > Terminal*) and type `ruby -v`:
 
@@ -30,7 +34,11 @@ Check the version with `ruby -v`:
 
 Ruby 1.8.7 is pretty good, but 1.9.2 would be better. Since we just want to get Watir installed the easiest possible way, we will user Ruby 1.8.7.
 
-### RubyGems
+
+
+
+
+### RubyGems ###
 
 Let's see the version of RubyGems we got with Ruby with `gem -v`:
 
@@ -65,7 +73,11 @@ RubyGems 1.3.7 is really old ([May 13, 2010](https://rubygems.org/gems/rubygems-
 
 Since I do not *really* know what I am doing, I will leave RubyGems at version 1.3.7 and hope everything will work.
 
-### watir-webdriver
+
+
+
+
+### watir-webdriver ###
 
 I think that Watir-webdriver gem is the future of Watir. In short, it can drive Firefox, Chrome and Opera.
 
@@ -76,7 +88,11 @@ Install watir-webdriver gem with `sudo gem install watir-webdriver --no-ri --no-
     Successfully installed watir-webdriver-0.2.8
     4 gems installed
 
-### Firefox with watir-webdriver
+
+
+
+
+### Firefox with watir-webdriver ###
 
 ![Firefox on Ubuntu 11.04](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu-11-04/firefox.png)\
 
@@ -106,7 +122,11 @@ Let's check if it can drive Firefox:
 
 No problem here, works just fine.
 
-### Chrome with watir-webdriver
+
+
+
+
+### Chrome with watir-webdriver ###
 
 ![Chrome on Ubuntu 11.04](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu-11-04/chrome.png)\
 
@@ -157,7 +177,11 @@ And it really works!
 
 *Watir-webdriver drives Chrome on Ubuntu 11.04*
 
-### Java
+
+
+
+
+### Java ###
 
 To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
 
@@ -188,7 +212,11 @@ Let's check if Java is really installed with `java -version`:
 
 Looks good to me!
 
-### Opera with watir-webdriver
+
+
+
+
+### Opera with watir-webdriver ###
 
 ![Opera on Ubuntu 11.04](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu-11-04/opera.png)\
 
