@@ -95,7 +95,7 @@ Since Internet Explorer is already installed, we will start with it. Let's see i
     same value (enabled or disabled) for all zones.
     (...)
 
-I got `Protected Mode must be set to the same value (enabled or disabled) for all zones` error message and Windows Firewall popup appeared letting me know that it has blocked `C:\ruby192\bin\ruby.exe`.
+I got `Protected Mode must be set to the same value (enabled or disabled) for all zones` error message (does not appear for Internet Explorer 6 on Windows XP) and Windows Firewall popup appeared letting me know that it has blocked `C:\ruby192\bin\ruby.exe`.
 
 ![Windows Firewall has blocked some features of this program](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/firewall.png)\
 
