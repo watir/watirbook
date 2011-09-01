@@ -384,10 +384,6 @@ I can not install in `C:\Ruby187\bin`, and I do not want to mess with `C:\WINDOW
 
 Start > My computer > right click > Properties > Advanced > Environment Variables > System Variables > Path > Edit > Variable value: > add `;C:\pik` to the end > OK > OK > OK
 
-![Adding pik folder to Path is piece of cake](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-path.jpg)\
-
-*Adding pik folder to Path is piece of cake*
-
 Check if `C:\pik` is added to Path with `path`. Make sure you open new command prompt, if you have one already opened it will not see the change.
 
     C:\Documents and Settings\zeljko>path
