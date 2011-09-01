@@ -63,6 +63,39 @@ Ask RubyGems again for it's version, just to make sure:
 
 
 
+### Internet Explorer with watir ###
+
+Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
+
+Watir gem (the whole Watir project got named after this gem) can also drive Internet Explorer. It has better Internet Explorer support than watir-webdriver gem. Install it with `gem install watir --no-ri --no-rdoc`.
+
+    >gem install watir --no-ri --no-rdoc
+    (...)
+    Successfully installed watir-2.0.1
+    13 gems installed
+
+Let's drive Internet Explorer with it:
+
+
+    >irb
+
+    > require "watir"
+    => true
+
+    > browser = Watir::Browser.new
+    => #<Watir::IE:0x..f8169d746 url="about:blank" title="">
+
+    > browser.goto "watir.com"
+    => 16.998912
+
+![watir gem drives Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/watir-ie.png)\
+
+*watir gem drives Internet Explorer 9 on Windows 7*
+
+
+
+
+
 ### watir-webdriver ###
 
 If you are just starting with Watir, start with watir-webdriver gem. It can drive Internet Explorer, Firefox, Chrome, and Opera.
@@ -329,40 +362,7 @@ Finally, let's drive Opera (on 7 and Vista):
 
 
 
-### Internet Explorer with watir
-
-Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
-
-Watir gem (the whole Watir project got named after this gem) can also drive Internet Explorer. It has better Internet Explorer support than watir-webdriver gem. Install it with `gem install watir --no-ri --no-rdoc`.
-
-    >gem install watir --no-ri --no-rdoc
-    (...)
-    Successfully installed watir-2.0.1
-    13 gems installed
-
-Let's drive Internet Explorer with it:
-
-
-    >irb
-
-    > require "watir"
-    => true
-
-    > browser = Watir::Browser.new
-    => #<Watir::IE:0x..f8169d746 url="about:blank" title="">
-
-    > browser.goto "watir.com"
-    => 16.998912
-
-![watir gem drives Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/watir-ie.png)\
-
-*watir gem drives Internet Explorer 9 on Windows 7*
-
-
-
-
-
-### JRuby with pik
+### JRuby with pik ###
 
 > *Feel free to skip JRuby chapter. At the moment, it is not used later in the book. I left it here in case I decide to write about Celerity gem.*
 
