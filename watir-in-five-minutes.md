@@ -41,7 +41,7 @@ And now the magic starts. With just one command you will open Firefox.
 
     browser = Watir::Browser.new :ff
 
-![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/mac-10-6-webdriver-firefox-watir5.png)\
+![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/webdriver-firefox-watir5.png)\
 
 *watir-webdriver driving Firefox 4 on Mac OS 10.6*
 
