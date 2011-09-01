@@ -19,13 +19,13 @@
   - RubyGems
   - (Windows) Internet Explorer with watir
   - (Mac) Xcode
+  - (Mac) Safari with safariwatir
   - watir-webdriver
   - (Windows) Internet Explorer with watir-webdriver
   - Firefox with watir-webdriver
   - Chrome with watir-webdriver
   - Java
   - Opera with watir-webdriver
-  - (Mac) Safari with safariwatir
 
 - unit tests/watirspec
 - celerity?
