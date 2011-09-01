@@ -1,10 +1,12 @@
-## Windows 7 and Vista ##
+## Windows 7, Vista and XP ##
 
 ![Windows 7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/windows-7-desktop.png)\
 
 *Windows 7 default desktop*
 
-Machine is a clean installation of Microsoft 7 Professional 32-bit, Service Pack 1 or Microsoft Windows Vista Ultimate 32-bit, Service Pack 1. Both machines have 1 GB RAM and are fully patched, including Internet Explorer 9. I did not notice any difference in installing or using Watir with Windows 7 or Vista, so I have decided to put them in one chapter.
+Machine is a clean installation of Microsoft Windows 7 Professional 32-bit, Service Pack 1; Microsoft Windows Vista Ultimate 32-bit, Service Pack 1; Microsoft Windows XP Professional, Version 2002, Service Pack 3. Windows 7 and Vista machines have 1 GB RAM, XP has 512 MB. All machinges are fully patched, including Internet Explorer 9 on 7 and Vista. I left Internet Explorer on version 6 at XP machine, just for fun.
+
+I did not notice any difference in installing or using Watir on any version on Windows, so I have decided to put them in one chapter.
 
 
 
@@ -12,7 +14,7 @@ Machine is a clean installation of Microsoft 7 Professional 32-bit, Service Pack
 
 ### Ruby ###
 
-You probably do not have Ruby installed. To make sure, open command prompt (*Start > Search programs and files > type: cmd > Enter*) and type `ruby -v`.
+You probably do not have Ruby installed. To make sure, open command prompt and type `ruby -v`. On 7 and Vista open command prompt with *Start > Search programs and files > type: cmd > Enter*, and on XP with *Start > Run... > type cmd > Enter*.
 
     >ruby -v
     'ruby' is not recognized as an internal or external command,
@@ -329,6 +331,8 @@ Finally, let's drive Opera (on 7 and Vista):
 
 ### Internet Explorer with watir
 
+Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
+
 Watir gem (the whole Watir project got named after this gem) can also drive Internet Explorer. It has better Internet Explorer support than watir-webdriver gem. Install it with `gem install watir --no-ri --no-rdoc`.
 
     >gem install watir --no-ri --no-rdoc
@@ -353,6 +357,79 @@ Let's drive Internet Explorer with it:
 ![watir gem drives Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows-7/watir-ie.png)\
 
 *watir gem drives Internet Explorer 9 on Windows 7*
+
+
+
+
+
+### JRuby with pik
+
+> *Feel free to skip JRuby chapter. At the moment, it is not used later in the book. I left it here in case I decide to write about Celerity gem.*
+
+You thought there is only one Ruby implementation out there? You were wrong. Until now, I only talked about Ruby, like there is only one, but there are a few of them. As far as Watir is concerned you will meet only one more, JRuby.
+
+If you already have Ruby installed, an easy way to install JRuby is with pik gem.
+
+    >gem install pik --no-ri --no-rdoc
+    (...)
+    Successfully installed pik-0.2.8
+    1 gem installed
+
+Now you have to install pik executable with `pik_install`. You should install it in a folder that is in your path, but not in `ruby\bin`. Check directories that are in your path with `path`:
+
+    >path
+    PATH=C:\Ruby187\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem
+
+I can not install in `C:\Ruby187\bin`, and I do not want to mess with `C:\WINDOWS`. I will install to `C:\pik`. I just have to add that to path, `pik_install C:\pik` will create the folder automatically.
+
+Start > My computer > right click > Properties > Advanced > Environment Variables > System Variables > Path > Edit > Variable value: > add `;C:\pik` to the end > OK > OK > OK
+
+![Adding pik folder to Path is piece of cake](https://github.com/zeljkofilipin/watirbook/raw/master/images/xp-path.jpg)\
+
+*Adding pik folder to Path is piece of cake*
+
+Check if `C:\pik` is added to Path with `path`. Make sure you open new command prompt, if you have one already opened it will not see the change.
+
+    C:\Documents and Settings\zeljko>path
+    PATH=C:\Ruby187\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\pik
+
+Everything looks fine. You can create the folder from command line:
+
+    C:\Documents and Settings\zeljko>pik_install C:\pik
+    Thank you for using pik.
+    mkdir -p C:\pik
+    mkdir -p C:\Documents and Settings\zeljko/.pik
+    Installing to C:\pik
+    (...)
+
+And now to install JRuby:
+
+    C:\Documents and Settings\zeljko>pik install jruby
+    ** Downloading:  http://jruby.org.s3.amazonaws.com/downloads/1.6.0/jruby-bin-1.6.0.zip
+    (...)
+    Cannot find Java 1.5 or higher.
+
+    There was an error.
+     Error: private method `gsub' called for nil:NilClass
+
+      in: pik/commands/command.rb:124:in `get_version'
+      in: pik/commands/add_command.rb:23:in `add'
+      in: pik/commands/add_command.rb:13:in `execute'
+      in: pik/implementations.rb:91:in `after_install'
+      in: pik/commands/install_command.rb:27:in `execute'
+      in: pik_runner:33
+
+Looks like we have to install Java separately. Download it from [java.com/download/](http://www.java.com/en/download/index.jsp). Let's try instaling JRuby now:
+
+    C:\Documents and Settings\zeljko>pik install jruby
+    ** Downloading:  http://jruby.org.s3.amazonaws.com/downloads/1.6.0/jruby-bin-1.6.0.zip
+    (...)
+    ** Adding:  160: jruby 1.6.0 (ruby 1.8.7 patchlevel 330) (2011-03-15 f3b6154) (Java HotSpot(TM) Client VM 1.6.0_24) [Windows XP-x86-java]
+     Located at:  C:\Documents and Settings\zeljko\.pik\rubies\JRuby-160\bin
+
+This time no errors. Now, tell pik to use JRuby:
+
+    C:\Documents and Settings\zeljko>pik use jruby
 
 \newpage
 
