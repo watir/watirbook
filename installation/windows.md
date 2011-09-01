@@ -1,6 +1,6 @@
 ## Windows 7, Vista and XP ##
 
-![Windows 7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/windows-7-desktop.png)\
+![Windows 7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/desktop.png)\
 
 *Windows 7 default desktop*
 
@@ -24,7 +24,7 @@ If you get the same thing as I did, you do not have Ruby installed.
 
 Download the latest Ruby 1.9. from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 1.9.2-p290* and it is approximately 14 MB. Execute the file.
 
-![Ruby Installation](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/windows-7-ruby-installation.png)\
+![Ruby Installation](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/ruby.png)\
 
 *Ruby Installation*
 
@@ -187,7 +187,7 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
     > browser.goto "watir.com"
     => "http://watir.com/"
 
-![watir-webdriver gem drives Firefox 5 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/webdriver-ff.png)\
+![watir-webdriver gem drives Firefox 5 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/webdriver-firefox.png)\
 
 *watir-webdriver gem drives Firefox 5 on Windows 7*
 

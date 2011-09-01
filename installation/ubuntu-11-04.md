@@ -1,6 +1,6 @@
 ## Ubuntu Linux 11.04 ##
 
-![Ubuntu Linux 11.04 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu-11-04/ubuntu-11-04-desktop.png)\
+![Ubuntu Linux 11.04 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu-11-04/desktop.png)\
 
 *Ubuntu Linux 11.04 default desktop*
 
@@ -116,7 +116,7 @@ Let's check if it can drive Firefox:
     > browser.goto "watir.com"
     => "http://watir.com/"
 
-![Watir-webdriver drives Firefox on Ubuntu 11.04](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu-11-04/webdriver-ff.png)\
+![Watir-webdriver drives Firefox on Ubuntu 11.04](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu-11-04/webdriver-firefox.png)\
 
 *Watir-webdriver drives Firefox on Ubuntu 11.04*
 
