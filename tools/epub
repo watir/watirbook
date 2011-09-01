@@ -1,1 +1,1 @@
-pandoc --toc --epub-metadata=tools/metadata.xml -o watirbook-0-6.epub title.txt watirbook.md
+pandoc --toc --epub-metadata=tools/metadata.xml -o watirbook-0-7.epub title.txt watirbook.md
