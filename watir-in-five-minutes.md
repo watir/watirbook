@@ -86,8 +86,8 @@ Before we click another link, I want to show off one of Watir's killer features.
     browser.link(:text => "Images").flash
     => 10
 
-![`Images` link with normal background](https://github.com/zeljkofilipin/watirbook/raw/master/images/flash-1.png)\
-![`Images` link with red background](https://github.com/zeljkofilipin/watirbook/raw/master/images/flash-2.png)\
+![`Images` link with normal background](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-in-five-minutes/flash-1.png)\
+![`Images` link with red background](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-in-five-minutes/flash-2.png)\
 
 *`Images` link changes background from white to red a few times.*
 
