@@ -1,6 +1,6 @@
 ## Mac OS X 10.6 ##
 
-![Mac OS X 10.6 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/desktop.png)\
+![Mac OS X 10.6 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/desktop.png)\
 
 *Mac OS X 10.6 default desktop*
 
@@ -49,7 +49,7 @@ You will need Xcode from Apple if you want to install watir-webdriver or safariw
 
 The easiest way to install Xcode is from Mac OS DVD. Insert the DVD, go to *Optional Installs* folder and double click *Xcode.mpkg* file.
 
-![Install Xcode 3.2 from Mac OS DVD](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/xcode-dvd.png)\
+![Install Xcode 3.2 from Mac OS DVD](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/xcode-dvd.png)\
 
 *Install Xcode 3.2 from Mac OS DVD*
 
@@ -73,7 +73,7 @@ According to Xcode site, Xcode 4 "is a free download for all members of the iOS 
 
 ### Safari with safariwatir ###
 
-![Safari 5.1 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/safari.png)\
+![Safari 5.1 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/safari.png)\
 
 *Safari 5.1 on Mac 10.6*
 
@@ -123,7 +123,7 @@ Let's try safariwatir.
 
 It works! :)
 
-![safariwatir gem driving Safari 5 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/safariwatir.png)\
+![safariwatir gem driving Safari 5 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/safariwatir.png)\
 
 *safariwatir gem driving Safari 5 on Mac OS 10.6*
 
@@ -168,7 +168,7 @@ Try again:
 
 ### Firefox with watir-webdriver ###
 
-![Firefox 6 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/firefox.png)\
+![Firefox 6 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/firefox.png)\
 
 *Firefox 6 on Mac OS 10.6*
 
@@ -187,7 +187,7 @@ Let's try to drive Firefox! To drive [Firefox], make sure you have it installed.
 
 Great! We can drive Firefox.
 
-![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/webdriver-firefox.png)\
+![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-firefox.png)\
 
 *watir-webdriver driving Firefox 4 on Mac OS 10.6*
 
@@ -199,7 +199,7 @@ Great! We can drive Firefox.
 
 ### Chrome with watir-webdriver ###
 
-![Chrome 13 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/chrome.png)\
+![Chrome 13 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/chrome.png)\
 
 *Chrome 13 on Mac OS 10.6*
 
@@ -264,7 +264,7 @@ To drive Opera, you need Java. Fortunatelly, it is already installed. All you ha
 
 ### Opera with watir-webdriver ###
 
-![Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/opera.png)\
+![Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/opera.png)\
 
 *Opera 11.51 on Mac 10.6*
 
@@ -313,7 +313,7 @@ Let's drive Opera, finally! Open new Terminal window or tab (this is important, 
     > browser = Watir::Browser.new :opera
     #<Watir::Browser:0x1017f6a28 url="opera:debug" title="Connect to Debugger">
 
-![watir-webdriver gem drives Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-6/webdriver-opera.png)\
+![watir-webdriver gem drives Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-opera.png)\
 
 *watir-webdriver gem drives Opera 11.51 on Mac 10.6*
 
