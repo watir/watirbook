@@ -239,7 +239,7 @@ Let's try again:
 
 Finally! It works!
 
-![watir-webdriver driving Chrome 12 on Mac OS 10.5](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-5/webdriver-chrome.png)\
+![watir-webdriver driving Chrome 12 on Mac OS 10.5](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-chrome.png)\
 
 *watir-webdriver driving Chrome 12 on Mac OS 10.5*
 
@@ -294,7 +294,7 @@ If you just got lost, I have step by step guide how to do it. Open new Terminal 
 
 GNU nano text editor will open. Paste (cmd-v) `export SELENIUM_SERVER_JAR...` line. Exit GNU nano and save the file with *control+x*, press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?` and press *Enter* when it displays `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?`.
 
-![GNU nano asking should it save changes to `.bash_profile` file](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac-10-5/nano.png)\
+![GNU nano asking should it save changes to `.bash_profile` file](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/nano.png)\
 
 *GNU nano asking should it save changes to `.bash_profile` file*
 
