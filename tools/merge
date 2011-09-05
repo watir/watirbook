@@ -1,1 +1,0 @@
-cat LICENSE.md README.md prerequisites.md about.md installation/installation.md installation/windows.md installation/mac.md installation/ubuntu.md watir-in-five-minutes.md link.md about_extended.md > watirbook1.md
