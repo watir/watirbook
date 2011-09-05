@@ -4,7 +4,13 @@
 
 *Windows 7 default desktop*
 
-Machine is a clean installation of Microsoft Windows 7 Professional 32-bit, Service Pack 1; Microsoft Windows Vista Ultimate 32-bit, Service Pack 1; Microsoft Windows XP Professional, Version 2002, Service Pack 3. Windows 7 and Vista machines have 1 GB RAM, XP has 512 MB. All machinges are fully patched, including Internet Explorer 9 on 7 and Vista. I left Internet Explorer on version 6 at XP machine, just for fun.
+Machine is a clean installation of:
+
+ - Microsoft Windows 7 Professional 32-bit, Service Pack 1,
+ - Microsoft Windows Vista Ultimate 32-bit, Service Pack 1,
+ - Microsoft Windows XP Professional, Version 2002, Service Pack 3.
+
+Windows 7 and Vista machines have 1 GB RAM, XP has 512 MB. All machines are fully patched, including Internet Explorer 9 on Windows 7 and Vista. I left Internet Explorer on version 6 at XP machine, just for fun.
 
 I did not notice any difference in installing or using Watir on any version on Windows, so I have decided to put them in one chapter.
 
@@ -14,7 +20,7 @@ I did not notice any difference in installing or using Watir on any version on W
 
 ### Ruby ###
 
-You probably do not have Ruby installed. To make sure, open command prompt and type `ruby -v`. On 7 and Vista open command prompt with *Start > Search programs and files > type: cmd > Enter*, and on XP with *Start > Run... > type cmd > Enter*.
+You probably do not have Ruby installed. To make sure, open command prompt and type `ruby -v`. On 7 and Vista open command prompt with *Start > Search programs and files > cmd > Enter*, and on XP with *Start > Run... > cmd > Enter*.
 
     >ruby -v
     'ruby' is not recognized as an internal or external command,
@@ -22,7 +28,7 @@ You probably do not have Ruby installed. To make sure, open command prompt and t
 
 If you get the same thing as I did, you do not have Ruby installed.
 
-Download the latest Ruby 1.9. from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 1.9.2-p290* and it is approximately 14 MB. Execute the file.
+Download the latest Ruby 1.9. from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 1.9.2-p290*. Execute the file.
 
 ![Ruby Installation](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/ruby.png)\
 
@@ -130,7 +136,7 @@ Since Internet Explorer is already installed, we will start with it. Let's see i
     same value (enabled or disabled) for all zones.
     (...)
 
-I got `Protected Mode must be set to the same value (enabled or disabled) for all zones` error message (does not appear for Internet Explorer 6 on Windows XP) and Windows Firewall popup appeared letting me know that it has blocked `C:\ruby192\bin\ruby.exe`.
+On 7 and Vista I got `Protected Mode must be set to the same value (enabled or disabled) for all zones` error message (does not appear for Internet Explorer 6 on Windows XP) and Windows Firewall popup appeared letting me know that it has blocked `C:\ruby192\bin\ruby.exe`. So, XP/IE6 users can skip enabling protected mode.
 
 ![Windows Firewall has blocked some features of this program](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/firewall.png)\
 
@@ -216,7 +222,7 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` (or newer version) from *http://code.google.com/p/chromium/downloads/list*. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your PATH. To check which folders are in PATH, open command prompt and type `path`:
+Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` (or newer version) from *http://code.google.com/p/chromium/downloads/list*. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your `PATH`. To check which folders are in `PATH`, open command prompt and type `path`:
 
     >path
     PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;
@@ -232,7 +238,8 @@ Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I w
     > browser = Watir::Browser.new :chrome
     Started ChromeDriver
     port=49522
-    => #<Watir::Browser:0x..fdbf27548 url="about:blank" title="about:blank">
+    => #<Watir::Browser:0x..fdbf27548 url="about:blank"
+    title="about:blank">
 
     > browser.goto "watir.com"
     => "http://watir.com/"
@@ -268,7 +275,7 @@ Looks good to me!
 
 
 
-### Opera with watir-webdriver ###
+### Opera with watir-webdriver on 7 and Vista###
 
 ![Opera on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/opera.png)\
 
@@ -288,7 +295,7 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     SELENIUM_SERVER_JAR environmental variable to its location.  More
     info at http://code.google.com/p/selenium/wiki/OperaDriver.
 
-Download `selenium-server-standalone-2.5.0.jar` (or newer version) from *http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar`. To create environmental variable on Windows 7 and Vista, right click *computer* and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`. On Windows XP right click *My Computer* and then `Properties > Advanced > Environment Variables > User variables > New > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`
+Download `selenium-server-standalone-2.5.0.jar` (or newer version) from *http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar`. To create environmental variable, right click *computer* and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`.
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
 
@@ -298,9 +305,6 @@ Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable
     => true
 
     > browser = Watir::Browser.new :opera
-
-Windows 7 and Vista said:
-
     Selenium::WebDriver::Error::UnhandledError: No response in a timely fashion.
     Build info: version: '2.3.0', revision: '13158', time: '2011-08-01 18:13:39'
     System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1',
@@ -308,20 +312,7 @@ Windows 7 and Vista said:
     Driver info: driver.version: OperaDriver
       (com.opera.core.systems.scope.exceptions.ResponseNotReceivedException)
 
-Windows XP said:
-
-    Selenium::WebDriver::Error::UnhandledError: Could not start the process:
-    Cannot run program
-    "C:\Documents and Settings\zeljko\.launcher\launcher-win32-i86pc.exe":
-    CreateProcess error=14001, This application has failed to start because the
-    application configuration is incorrect. Reinstalling the application may fix
-    this problem
-    Build info: version: '2.5.0', revision: '13516', time: '2011-08-23 18:29:57'
-    System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1',
-      java.version: '1.6.0_26'
-    Driver info: driver.version: OperaDriver (org.openqa.selenium.WebDriverException)
-
-On Windows 7 and Vista, IRB said `No response in a timely fashion`. Then I got Windows Firewall popup. Since I do not know what to do with it, I just close it.
+IRB said `No response in a timely fashion`. Then I got Windows Firewall popup. Since I do not know what to do with it, just close the popup.
 
 ![Windows Firewall blocking Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/java.png)\
 
@@ -339,9 +330,7 @@ Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). 
 
 *Run command prompt as administrator*
 
-On Windows XP I got `This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem` error message. Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). I am stuck at the moment.
-
-Finally, let's drive Opera (on 7 and Vista):
+Finally, let's drive Opera:
 
     >irb
 
@@ -357,6 +346,61 @@ Finally, let's drive Opera (on 7 and Vista):
 ![watir-webdriver gem drives Opera 11.50 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/webdriver-opera.png)\
 
 *watir-webdriver gem drives Opera 11.50 on Windows 7*
+
+
+
+
+
+
+
+
+
+
+
+### Opera with watir-webdriver on XP ###
+
+And finally, let's drive Opera. If you do not have it installed, you can get it at *[opera.com](http://www.opera.com/)*.
+
+    >irb
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :opera
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the
+    Selenium server jar.  Please download the standalone server from
+    http://code.google.com/p/selenium/downloads/list and set the
+    SELENIUM_SERVER_JAR environmental variable to its location.  More
+    info at http://code.google.com/p/selenium/wiki/OperaDriver.
+
+Download `selenium-server-standalone-2.5.0.jar` (or newer version) from *http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make SELENIUM_SERVER_JAR environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar`. To create environmental variable right click *My Computer* and then `Properties > Advanced > Environment Variables > User variables > New > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`
+
+Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
+
+    >irb
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :opera
+    Selenium::WebDriver::Error::UnhandledError: Could not start the process:
+    Cannot run program
+    "C:\Documents and Settings\zeljko\.launcher\launcher-win32-i86pc.exe":
+    CreateProcess error=14001, This application has failed to start because the
+    application configuration is incorrect. Reinstalling the application may fix
+    this problem
+    Build info: version: '2.5.0', revision: '13516', time: '2011-08-23 18:29:57'
+    System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1',
+      java.version: '1.6.0_26'
+    Driver info: driver.version: OperaDriver (org.openqa.selenium.WebDriverException)
+
+I got Windows Firewall popup. Since I do not know what to do with it, just close the popup.
+
+![Windows Firewall blocking Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/java.png)\
+
+*Windows Firewall blocking Java*
+
+I also got `This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem` error message. Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). I am stuck at the moment.
 
 \newpage
 
