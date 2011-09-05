@@ -1,3 +1,5 @@
+version = "0-7"
+
 task :default => [:pdf]
 
 task :merge do
@@ -7,15 +9,15 @@ task :merge do
 end
 
 task :pdf => [:merge] do
-  `markdown2pdf --toc watirbook.md -o watirbook-0-7.pdf`
+  `markdown2pdf --toc watirbook.md -o watirbook-#{version}.pdf`
 end
 
 task :epub => [:merge] do
-  `pandoc --toc --epub-metadata=tools/metadata.xml -o watirbook-0-7.epub title.txt watirbook.md`
+  `pandoc --toc --epub-metadata=tools/metadata.xml -o watirbook-#{version}.epub title.txt watirbook.md`
 end
 
 task :mobi => [:merge] do
-  `/Applications/KindleGen_Mac_i386_v1.2/kindlegen watirbook-0-7.epub`
+  `/Applications/KindleGen_Mac_i386_v1.2/kindlegen watirbook-#{version}.epub`
 end
 
 task :all => [:merge, :pdf, :epub, :mobi]
