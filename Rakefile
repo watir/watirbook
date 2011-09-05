@@ -17,3 +17,5 @@ end
 task :mobi => [:merge] do
   `/Applications/KindleGen_Mac_i386_v1.2/kindlegen watirbook-0-7.epub`
 end
+
+task :all => [:merge, :pdf, :epub, :mobi]
