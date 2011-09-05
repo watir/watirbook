@@ -8,7 +8,7 @@ The answer used to be pretty simple a few years ago, but it is not any more. Bre
 
 Watir project is a collection of open source tools (RubyGems) that drive browsers and help you automate boring and repetitive parts of functional testing of web applications, so you have more time to test with your brain.
 
-It can drive Microsoft Internet Explorer, Mozilla Firefox, Apple Safari, Google Chrome and Opera. Watir works on all major operating systems: Microsoft Windows, Apple Mac OS X and Linux. At the moment most Watir gems run on Ruby MRI (or CRuby), and Celerity and OperaWatir run on JRuby.
+It can drive Microsoft Internet Explorer, Mozilla Firefox, Apple Safari, Google Chrome and Opera. Watir works on all major operating systems: Microsoft Windows, Apple Mac OS X and Linux. At the moment most Watir gems run on Ruby MRI (or CRuby), and Celerity runs on JRuby.
 
 Celerity is the only gem that does not drive a real browser, it emulates one. That means that it is way faster but does not use your application in a way a real user would. You should make the decision if speed or accuracy is more important to you. Of course, you can always have some tests in a real browser and some in Celerity.
 
