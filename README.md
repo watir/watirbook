@@ -4,8 +4,6 @@
 
 Hi, my name is [Željko Filipin][zeljko]. I am a software tester, the [Watir][watir] community manager and host of the [Watir Podcast][watirpodcast]. I am also one of the organizers of [viaqa][viaqa] conference on software testing.
 
-![Watir Logo](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-logo-web.jpg)\
-
 This is a [book on Watir][web]. It is not finished. I am working on it.
 
 The source ([markdown][markdown]) will always be free at [github.com/zeljkofilipin/watirbook][github]; [pdf], [epub] and [mobi] versions are $9.

@@ -1,5 +1,7 @@
 # About Watir
 
+![Watir Logo](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-logo-web.jpg)\
+
 What is this thing Watir, that I have decided to write a book about?
 
 The answer used to be pretty simple a few years ago, but it is not any more. Bret Pettichord (Watir co-creator) would say that it is family of Ruby libraries that drive browsers. (Ruby is a programming language, if you did not hear about it so far.)
