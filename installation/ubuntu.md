@@ -15,7 +15,8 @@ Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM
 Let's see if Ubuntu comes with Ruby installed. Open Terminal (*Applications > Accessories > Terminal*) and type `ruby -v`:
 
     $ ruby -v
-    The program 'ruby' is currently not installed.  You can install it by typing:
+    The program 'ruby' is currently not installed. You can install it
+    by typing:
     sudo apt-get install ruby
 
 Install it with `sudo apt-get install ruby`:
@@ -43,7 +44,8 @@ Ruby 1.8.7 is pretty good, but 1.9.2 would be better. Since we just want to get 
 Let's see the version of RubyGems we got with Ruby with `gem -v`:
 
     $ gem -v
-    The program 'gem' is currently not installed.  You can install it by typing:
+    The program 'gem' is currently not installed. You can install it
+    by typing:
     sudo apt-get install rubygems1.8
 
 Looks like we did not get any version installed. We will install RubyGems with `apt-get`, since that is the easiest way:
@@ -63,13 +65,14 @@ RubyGems 1.3.7 is really old ([May 13, 2010](https://rubygems.org/gems/rubygems-
 
     $ gem update --system
     ERROR:  While executing gem ... (RuntimeError)
-    gem update --system is disabled on Debian, because it will overwrite the content of the
-    rubygems Debian package, and might break your Debian system in subtle ways. The
-    Debian-supported way to update rubygems is through apt-get, using Debian official
-    repositories.
-    If you really know what you are doing, you can still update rubygems by setting the
-    REALLY_GEM_UPDATE_SYSTEM environment variable, but please remember that this is completely
-    unsupported by Debian.
+    gem update --system is disabled on Debian, because it will
+    overwrite the content of the rubygems Debian package, and
+    might break your Debian system in subtle ways. The
+    Debian-supported way to update rubygems is through apt-get,
+    using Debian official repositories. If you really know what
+    you are doing, you can still update rubygems by setting the
+    REALLY_GEM_UPDATE_SYSTEM environment variable, but please
+    remember that this is completely unsupported by Debian.
 
 Since I do not *really* know what I am doing, I will leave RubyGems at version 1.3.7 and hope everything will work.
 
@@ -148,9 +151,9 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
     it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for linux32*) from *http://code.google.com/p/chromium/downloads/list* and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your PATH*, as the error message said.
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for linux32*) from *http://code.google.com/p/chromium/downloads/list* and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
 
-The easiest way to do it on Ubuntu is to create a folder called `bin` in your home folder (`/home/zeljko/bin` in my case). You have to reboot (or at least log out and then log in, but I have not checked that) and by some magic (provided by `/home/zeljko/.profile` file in my case) `/home/zeljko/bin` folder will appear in your PATH:
+The easiest way to do it on Ubuntu is to create a folder called `bin` in your home folder (`/home/zeljko/bin` in my case). You have to reboot (or at least log out and then log in, but I have not checked that) and by some magic (provided by `/home/zeljko/.profile` file in my case) `/home/zeljko/bin` folder will appear in your `PATH`:
 
     $ echo $PATH
     /home/zeljko/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games

@@ -4,7 +4,7 @@
 
 *Mac OS X 10.6 default desktop*
 
-Machine is a clean installation of Mac OS X 10.6.8, fully patched, with 4 GB RAM. Safari 5.1 (6534.50), Firefox 6.0.1, Chrome 13.0.782.218, Opera 11.51. All browsers are English (US) version. Mac OS X 10.5.8 has Safari 5.0.6
+Machine is a clean installation of Mac OS X 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.6 has Safari 5.1 (6534.50) and 10.5 has Safari 5.0.6. Firefox is 6.0.1, Chrome 13.0.782.218, Opera 11.51. All browsers are English (US) version.
 
 
 
@@ -12,7 +12,7 @@ Machine is a clean installation of Mac OS X 10.6.8, fully patched, with 4 GB RAM
 
 ### Ruby ###
 
-Regarding installing Ruby on Mac, I have good news and bad news. Good news is that Ruby is already installed by default, so you can skip this step if you just want to try Watir. Bad news is that you have an old version of Ruby installed. It will be good enough for trying Watir, but if you decide you want to use it, you will probably want to install a newer version of Ruby. So, for now, I will skip Ruby installation. I will cover it later.
+Regarding installing Ruby on Mac, I have good news and bad news. Good news is that Ruby is already installed by default, so you can skip this step if you just want to try Watir. Bad news is that you have an old version of Ruby installed. It will be good enough for trying Watir, but if you decide you want to use it, you will probably want to install a newer version. So, for now, I will skip Ruby installation. I will cover it later.
 
 To check if Ruby is installed on your Mac, open Terminal application (located in `/Applications/Utilities`) any type `ruby -v`.
 
@@ -67,7 +67,7 @@ RubyGems 1.0.1 is pretty old. Watir needs never version. Fortunately, it should 
     ERROR:  While executing gem ... (Gem::RemoteSourceException)
     HTTP Response 302 fetching http://gems.rubyforge.org/yaml
 
-Now you see why I said "should be easy". RubyGems 1.0.1 is so old, it could not even be updated the easy way. See how lucky you are to have this book? Of course there is a way to upgrade to the newer version of RubyGems. The latest version I could install or Ruby 1.8.6 is RubyGems 1.4.2. Download [rubygems-update 1.4.2 gem] (click *Download* link), open Terminal window in folder where you have downloaded it (`/Users/zeljko/Downloads` in my case) and install it:
+Now you see why I said "should be easy". RubyGems 1.0.1 is so old, it could not even be updated the easy way. See how lucky you are to have this book? Of course there is a way to upgrade to the newer version of RubyGems. The latest version I could install or Ruby 1.8.6 is RubyGems 1.4.2. Download [rubygems-update-1.4.2.gem] (click *Download* link), open Terminal window in folder where you have downloaded it (`/Users/zeljko/Downloads` in my case) and install it:
 
     $ sudo gem install -l rubygems-update-1.4.2.gem
     Successfully installed rubygems-update-1.4.2
@@ -79,14 +79,14 @@ Now you see why I said "should be easy". RubyGems 1.0.1 is so old, it could not 
     RubyGems 1.4.2 installed
     File not found: README
 
-Ignore `File not found: README`. Check if RubyGems is updated:
+Ignore `File not found: README` error message. Check if RubyGems is updated:
 
     $ gem -v
     1.4.2
 
 Everything is as it should be.
 
-[rubygems-update 1.4.2 gem]: https://rubygems.org/gems/rubygems-update/versions/1.4.2
+[rubygems-update-1.4.2.gem]: https://rubygems.org/gems/rubygems-update/versions/1.4.2
 
 
 
@@ -108,6 +108,8 @@ You can get a newer version from Apple web site. You will need Apple ID. It is u
 
 You can get the newest Xcode 3.2 without Apple ID and without downloading 4 GB file. Install Xcode 3.2 from Mac OS DVD and run Software Update. It will update Xcode to 3.2.6, and downloaded file will be "just" about 600 MB.
 
+[Xcode]: http://developer.apple.com/xcode/
+
 
 
 
@@ -126,6 +128,8 @@ The easiest way to install Xcode is from Mac OS DVD. Insert the DVD, go to *Opti
 
 Optionally, after Xcode is installed, run Software Update. At the moment, there is no update.
 
+If you do not have Mac OS 10.5 DVD, you can download Xcode 3.1.4 from Apple. Log in to http://connect.apple.com/ with your Apple ID. Click *Developer Tools* link (at the right hand side, under *Downloads*) and download *Xcode 3.1.4 Developer DVD (Disk Image)*. Please note it is 993 MB.
+
 
 
 
@@ -135,8 +139,6 @@ Optionally, after Xcode is installed, run Software Update. At the moment, there 
 *Xcode 4 does not work on Mac OS 10.5. It works on 10.6.*
 
 According to Xcode site, Xcode 4 "is a free download for all members of the iOS and Mac Developer Programs". Both programs are $99/year. If you are not a member of mentioned programs (I am not), you can buy it from Mac App Store for $4.99. But, since you can install Xcode 3 for free, there is no need to buy anything.
-
-[Xcode]: http://developer.apple.com/xcode/
 
 
 
@@ -158,14 +160,14 @@ If you do not have Xcode installed, you will get this error message if you try t
     Building native extensions.  This could take a while...
     ERROR:  Error installing safariwatir:
     ERROR: Failed to build gem native extension.
-    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
-      extconf.rb
-    mkmf.rb can't find header files for ruby at
-      /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/ruby.h
-    Gem files will remain installed in
-      /Library/Ruby/Gems/1.8/gems/rb-appscript-0.6.1 for inspection.
-    Results logged to
-      /Library/Ruby/Gems/1.8/gems/rb-appscript-0.6.1/./gem_make.out
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/
+    ruby extconf.rb
+    mkmf.rb can't find header files for ruby at /System/Library/
+    Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/ruby.h
+    Gem files will remain installed in /Library/Ruby/Gems/1.8/gems/
+    rb-appscript-0.6.1 for inspection.
+    Results logged to /Library/Ruby/Gems/1.8/gems/rb-appscript-0.6.1/
+    ./gem_make.out
 
 Install Xcode 3 or 4 and try again:
 
@@ -204,7 +206,7 @@ It works! :)
 
 ### watir-webdriver ###
 
-Let's try watir-webdriver gem. For now it can drive Firefox, Chrome and Opera on Mac. It should also be able to drive Safari in the future. Install it with `sudo gem install watir-webdriver --no-ri --no-rdoc`.
+Let's try watir-webdriver gem. For now it can drive Firefox, Chrome and Opera. It should also be able to drive Safari in the future. Install it with `sudo gem install watir-webdriver --no-ri --no-rdoc`.
 
 If you did not install Xcode, you will get this:
 
@@ -288,12 +290,12 @@ Let's see if it can really drive Chrome too. To drive [Chrome], make sure you ha
     somewhere on your PATH. More info at
     http://code.google.com/p/selenium/wiki/ChromeDriver.
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_mac_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for Mac OS X*) from *http://code.google.com/p/chromium/downloads/list* and unzip it (with mouse double-click, for example). You will get a file named `chromedriver`. Put it *somewhere on your PATH*, as the error message said. If you have no idea what that means, read on. To find out where to put `chromedriver` file, type this in Terminal:
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_mac_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for Mac OS X*) from *http://code.google.com/p/chromium/downloads/list* and unzip it (with mouse double-click, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said. If you have no idea what that means, read on. To find out where to put `chromedriver` file, type this in Terminal:
 
     $ echo $PATH
     /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
-So, in my case, these folders are on my PATH: `/usr/bin`, `/bin`, `/usr/sbin`, `/sbin`, `/usr/local/bin` and `/usr/X11/bin`. `usr/bin` looks like a good place to put `chromedriver` file. To open the folder, go to *Finder > Go > Go to Folder > /usr/bin > Go*. Copy the file there. You will have to provide admin password.
+So, in my case, these folders are on my `PATH`: `/usr/bin`, `/bin`, `/usr/sbin`, `/sbin`, `/usr/local/bin` and `/usr/X11/bin`. `usr/bin` looks like a good place to put `chromedriver` file. To open the folder, go to *Finder > Go > Go to Folder > /usr/bin > Go*. Copy the file there. You will have to provide admin password.
 
 Let's try again:
 
@@ -355,15 +357,15 @@ Let's see how it drives Opera. To drive [Opera], make sure you have it installed
 
 Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `selenium-server-standalone-2.5.0.jar` (or newer version). Since I have put `chromedriver` file in `/usr/bin`, I will put `selenium-server-standalone-2.5.0.jar` file there too. You will have to provide admin password when copying the file.
 
-The last step is setting SELENIUM_SERVER_JAR environmental variable. Create (if the file does not exist) or edit `.bash_profile` file in your home folder (`/Users/zeljko` in my case) with your favorite text editor. Add this line to the file:
+The last step is setting `SELENIUM_SERVER_JAR` environmental variable. Create (if the file does not exist) or edit `.bash_profile` file in your home folder (`/Users/zeljko` in my case) with your favorite text editor. Add this line to the file:
 
      export SELENIUM_SERVER_JAR=/usr/bin/selenium-server-standalone-2.5.0.jar
 
-If you just got lost, I have step by step guide how to do it. Open new Terminal tab or window and type `nano .bash_profile`:
+If you just got lost, I have step by step guide how to do it. Open new Terminal tab or window (it should open in your home folder by default, `/Users/zeljko` in my case) and type `nano .bash_profile`:
 
     $ nano .bash_profile
 
-GNU nano text editor will open. Paste (cmd-v) `export SELENIUM_SERVER_JAR...` line. Exit GNU nano and save the file with *control+x*, press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?` and press *Enter* when it displays `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?`.
+*GNU nano* text editor will open. Paste (cmd-v) `export SELENIUM_SERVER_JAR...` line. Exit *GNU nano* and save the file with *control+x*. Press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` and press *Enter* when it displays `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?`.
 
 ![GNU nano asking should it save changes to `.bash_profile` file](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/nano.png)\
 
