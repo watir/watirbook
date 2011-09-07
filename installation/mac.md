@@ -4,7 +4,7 @@
 
 *Mac OS X 10.6 default desktop*
 
-Machine is a clean installation of Mac OS X 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.6 has Safari 5.1 (6534.50) and 10.5 has Safari 5.0.6. Firefox is 6.0.1, Chrome 13.0.782.218, Opera 11.51. All browsers are English (US) version.
+Machine is a clean installation of Mac OS X 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.6 has Safari 5.1 and 10.5 has Safari 5.0.6. Firefox is 6.0.1, Chrome 13, Opera 11.51. All browsers are English (US) version.
 
 
 
@@ -191,7 +191,7 @@ Let's try safariwatir.
       @document=app("/Applications/Safari.app").documents[1],
       @appname="Safari">>
 
-    > browser.goto "http://google.com"
+    > browser.goto "http://watir.com"
     => nil
 
 It works! :)
@@ -239,7 +239,7 @@ Try again:
 
 
 
-### Firefox with watir-webdriver ###
+### Firefox with watir-webdriver on 10.6 ###
 
 ![Firefox 6 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/firefox.png)\
 
@@ -263,6 +263,27 @@ Great! We can drive Firefox.
 ![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-firefox.png)\
 
 *watir-webdriver driving Firefox 4 on Mac OS 10.6*
+
+
+
+
+
+### Firefox with watir-webdriver on 10.5 ###
+
+There is a problem with driving Firefox 4+ on 10.5:
+
+    $ irb
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :ff
+    Selenium::WebDriver::Error::WebDriverError: unable to start Firefox cleanly, args: ["-silent"]
+    (...)
+
+Take a look at https://github.com/jnicklas/capybara/issues/313 for more detail.
+
+The easiest way to fix it is to uninstall the current version of Firefox, and install Firefox 3.6.22. I could not find how to download Firefox 4 or 5, so I did not test with them.
 
 [Firefox]: http://www.mozilla.com/en-US/firefox/new/
 
@@ -326,16 +347,24 @@ Finally! It works!
 
 To drive Opera, you need Java. Fortunatelly, it is already installed. All you have to do is check if it is installed with `java -version`:
 
+On 10.6 you should get this:
+
     $ java -version
     java version "1.6.0_26"
     Java(TM) SE Runtime Environment (build 1.6.0_26-b03-384-10M3425)
     Java HotSpot(TM) 64-Bit Server VM (build 20.1-b02-384, mixed mode)
 
+On 10.5 you should get this:
+
+    java version "1.5.0_30"
+    Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_30-b03-389-9M3425)
+    Java HotSpot(TM) Client VM (build 1.5.0_30-161, mixed mode)
 
 
 
 
-### Opera with watir-webdriver ###
+
+### Opera with watir-webdriver on 10.6 ###
 
 ![Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/opera.png)\
 
@@ -365,7 +394,7 @@ If you just got lost, I have step by step guide how to do it. Open new Terminal 
 
     $ nano .bash_profile
 
-*GNU nano* text editor will open. Paste (cmd-v) `export SELENIUM_SERVER_JAR...` line. Exit *GNU nano* and save the file with *control+x*. Press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` and press *Enter* when it displays `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?`.
+*GNU nano* text editor will open. Paste (cmd-v, for example) `export SELENIUM_SERVER_JAR...` line. Exit *GNU nano* and save the file with *control+x*. Press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` and press *Enter* when it displays `File Name to Write: .bash_profile` or `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` (text is different if the file already exists or not).
 
 ![GNU nano asking should it save changes to `.bash_profile` file](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/nano.png)\
 
@@ -391,6 +420,433 @@ Let's drive Opera, finally! Open new Terminal window or tab (this is important, 
 *watir-webdriver gem drives Opera 11.51 on Mac 10.6*
 
 [Opera]: http://www.opera.com/
+
+
+
+
+
+### Opera with watir-webdriver on 10.5 ###
+
+There is a problem with driving Opera on 10.5:
+
+    $ irb
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :opera
+    RuntimeError: remote server not launched in 30 seconds
+    (...)
+
+   More details:
+
+    >> $DEBUG = true
+    => true
+
+    >> b = Watir::Browser.new :opera
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Sep 7, 2011 4:32:48 PM org.openqa.grid.selenium.GridLauncher main
+    INFO: Launching a standalone server
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    16:32:50.365 INFO - Java: Apple Inc. 1.5.0_30-161
+    16:32:50.366 INFO - OS: Mac OS X 10.5.8 i386
+    16:32:50.376 INFO - v2.5.0, with Core v2.5.0. Built from revision 13516
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception in thread "main" java.lang.UnsupportedClassVersionError: Bad version number in .class file
+    	at java.lang.ClassLoader.defineClass1(Native Method)
+    	at java.lang.ClassLoader.defineClass(ClassLoader.java:676)
+    	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:124)
+    	at java.net.URLClassLoader.defineClass(URLClassLoader.java:260)
+    	at java.net.URLClassLoader.access$100(URLClassLoader.java:56)
+    	at java.net.URLClassLoader$1.run(URLClassLoader.java:195)
+    	at java.security.AccessController.doPrivileged(Native Method)
+    	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+    	at java.lang.ClassLoader.loadClass(ClassLoader.java:317)
+    	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:280)
+    	at java.lang.ClassLoader.loadClass(ClassLoader.java:252)
+    	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:375)
+    	at java.lang.Class.forName0(Native Method)
+    	at java.lang.Class.forName(Class.java:164)
+    	at org.openqa.selenium.remote.server.DefaultDriverSessions.registerDriver(DefaultDriverSessions.java:76)
+    	at org.openqa.selenium.remote.server.DefaultDriverSessions.registerDefaults(DefaultDriverSessions.java:67)
+    	at org.openqa.selenium.remote.server.DefaultDriverSessions.<init>(DefaultDriverSessions.java:56)
+    	at org.openqa.selenium.remote.server.DefaultDriverSessions.<init>(DefaultDriverSessions.java:51)
+    	at org.openqa.selenium.server.SeleniumServer.createWebDriverRemoteContext(SeleniumServer.java:313)
+    	at org.openqa.selenium.server.SeleniumServer.assembleHandlers(SeleniumServer.java:299)
+    	at org.openqa.selenium.server.SeleniumServer.createJettyServer(SeleniumServer.java:258)
+    	at org.openqa.selenium.server.SeleniumServer.<init>(SeleniumServer.java:231)
+    	at org.openqa.selenium.server.SeleniumServer.main(SeleniumServer.java:200)
+    	at org.openqa.grid.selenium.GridLauncher.main(GridLauncher.java:40)
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `Errno::EINPROGRESS' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Operation now in progress - connect(2)
+    Exception `Errno::ECONNREFUSED' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/socket_poller.rb:63 - Connection refused - connect(2)
+    ["127.0.0.1", 49987]
+    Exception `RuntimeError' at /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/server.rb:99 - remote server not launched in 30 seconds
+    Exception `RuntimeError' at /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb/workspace.rb:81 - remote server not launched in 30 seconds
+    RuntimeError: remote server not launched in 30 seconds
+    	from /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/server.rb:99:in `poll_for_service'
+    	from /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/server.rb:28:in `start'
+    	from /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/opera/service.rb:37:in `start'
+    	from /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/opera/bridge.rb:21:in `initialize'
+    	from /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/driver.rb:41:in `new'
+    	from /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver/common/driver.rb:41:in `for'
+    	from /Library/Ruby/Gems/1.8/gems/selenium-webdriver-2.5.0/lib/selenium/webdriver.rb:81:in `for'
+    	from /Library/Ruby/Gems/1.8/gems/watir-webdriver-0.3.2/lib/watir-webdriver/browser.rb:35:in `initialize'
+    	from (irb):4:in `new'
+    	from (irb):4
 
 \newpage
 
