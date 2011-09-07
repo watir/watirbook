@@ -350,7 +350,7 @@ Let's see how it drives Opera. To drive [Opera], make sure you have it installed
 
     > browser = Watir::Browser.new :opera
     Selenium::WebDriver::Error::WebDriverError: Unable to find the
-    Selenium server jar.  Please download the standalone server from
+    Selenium server jar. Please download the standalone server from
     http://code.google.com/p/selenium/downloads/list and set the
     SELENIUM_SERVER_JAR environmental variable to its location.
     More info at http://code.google.com/p/selenium/wiki/OperaDriver.

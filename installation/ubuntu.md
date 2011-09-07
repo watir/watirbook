@@ -146,9 +146,11 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
     => true
 
     > browser = Watir::Browser.new :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable.
-    Please download the server from http://code.google.com/p/chromium/downloads/list and place
-    it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the
+    chromedriver executable. Please download the server from
+    http://code.google.com/p/chromium/downloads/list and place it
+    somewhere on your PATH. More info at
+    http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
 Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for linux32*) from *http://code.google.com/p/chromium/downloads/list* and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
@@ -156,7 +158,8 @@ Looks like we have to install something called *chromedriver executable*. Fortun
 The easiest way to do it on Ubuntu is to create a folder called `bin` in your home folder (`/home/zeljko/bin` in my case). You have to reboot (or at least log out and then log in, but I have not checked that) and by some magic (provided by `/home/zeljko/.profile` file in my case) `/home/zeljko/bin` folder will appear in your `PATH`:
 
     $ echo $PATH
-    /home/zeljko/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+    /home/zeljko/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:
+    /sbin:/bin:/usr/games
 
 Let's drive Chrome, finally:
 
@@ -210,7 +213,8 @@ Let's check if Java is really installed with `java -version`:
 
     $ java -version
     java version "1.6.0_22"
-    OpenJDK Runtime Environment (IcedTea6 1.10.2) (6b22-1.10.2-0ubuntu1~11.04.1)
+    OpenJDK Runtime Environment (IcedTea6 1.10.2)
+    (6b22-1.10.2-0ubuntu1~11.04.1)
     OpenJDK Client VM (build 20.0-b11, mixed mode, sharing)
 
 Looks good to me!
@@ -238,22 +242,23 @@ Let's see how it drives Opera. Open our old friend, IRB:
     => true
 
     > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.
-    Please download the standalone server from http://code.google.com/p/selenium/downloads/list
-    and set the SELENIUM_SERVER_JAR environmental variable to its location.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the
+    Selenium server jar. Please download the standalone server from
+    http://code.google.com/p/selenium/downloads/list and set the
+    SELENIUM_SERVER_JAR environmental variable to its location.
     More info at http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
-Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `selenium-server-standalone-2.2.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*). Since I have put `chromedriver` file in `/home/zeljko/bin`, I will put this file there too.
+Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `selenium-server-standalone-2.5.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*). Since I have put `chromedriver` file in `/home/zeljko/bin`, I will put this file there too.
 
-The last step is setting SELENIUM_SERVER_JAR environmental variable. If you just got lost, I have step by step guide how to do it. Open Nautilus and go to your home folder: *Places > Home Folder*. You want to edit `.bashrc` file, but by default files that have names starting with dot are not displayed. To see the file go to *View > Show Hidden Files*. Doubleclick `.bashrc` file (it will open the file in gedit editor). Add this line to the file:
+The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just got lost, I have step by step guide how to do it. Open Nautilus and go to your home folder: *Places > Home Folder*. You want to edit `.bashrc` file, but by default files that have names starting with dot are not displayed. To see the file go to *View > Show Hidden Files*. Doubleclick `.bashrc` file (it will open the file in *gedit* editor). Add this line to the file:
 
-     export SELENIUM_SERVER_JAR=~/bin/selenium-server-standalone-2.2.0.jar
+    export SELENIUM_SERVER_JAR=~/bin/selenium-server-standalone-2.5.0.jar
 
 Save the file and close all Terminal windows. Open Terminal again. To check if the variable is set, try `printenv | grep SELENIUM`:
 
     $ printenv | grep SELENIUM
-    SELENIUM_SERVER_JAR=/home/zeljko/bin/selenium-server-standalone-2.2.0.jar
+    SELENIUM_SERVER_JAR=/home/zeljko/bin/selenium-server-standalone-2.5.0.jar
 
 Looks good to me!  After all this work, enjoy driving Opera:
 
