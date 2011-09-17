@@ -5,20 +5,7 @@
   - buy
 
 - mac 10.5
-  - fix opera with webdriver
-
-- Installation
-  - Ruby
-  - RubyGems
-  - (Windows) Internet Explorer with watir
-  - (Mac) Xcode
-  - (Mac) Safari with safariwatir
-  - watir-webdriver
-  - (Windows) Internet Explorer with watir-webdriver
-  - Firefox with watir-webdriver
-  - Chrome with watir-webdriver
-  - Java
-  - Opera with watir-webdriver
+  - fix opera
 
 - unit tests/watirspec
 - celerity?
