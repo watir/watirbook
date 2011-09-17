@@ -400,7 +400,20 @@ I got Windows Firewall popup. Since I do not know what to do with it, just close
 
 *Windows Firewall blocking Java*
 
-I also got `This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem` error message. Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). I am stuck at the moment.
+I also got `This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem` error message. Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). What did help is installing [Microsoft Visual C++ 2008 Redistributable Package (x86)](http://www.microsoft.com/download/en/details.aspx?id=29).
+
+Finally, let's drive Opera:
+
+    >irb
+
+    > require "watir-webdriver"
+    => true
+
+    > browser = Watir::Browser.new :opera
+    => #<Watir::Browser:0x..fef436832 url="http://www.google.hr/" title="Google">
+
+    > browser.goto "watir.com"
+    => "http://watir.com/"
 
 \newpage
 
