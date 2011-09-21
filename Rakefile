@@ -1,4 +1,4 @@
-version = "0-7"
+version = "0-7-1"
 type = :paid
 
 task :default => [:pdf]
