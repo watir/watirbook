@@ -1,10 +1,10 @@
 # Link
 
-All examples in this chapter are tried on Mac OS 10.6.7, Ruby 1.9.2p180, RubyGems 1.8.4 and watir-webdriver 0.2.3.
+*All examples in this chapter are tried on Mac OS 10.6.8, Firefox 6.0.2, Ruby 1.9.2p290, RubyGems 1.8.10 and watir-webdriver 0.3.4.*
 
 Let's take a closer look at one HTML element. Links are probably the most popular of all HTML elements, so it would be just fair to start there. Usually, you can recognize a link on a web page because it's text is underlined.
 
-There are two ways of accessing the link, `browser.link` and `browser.a`. Both of them do the same thing, but `browser.a` works only in watir-webdriver gem. Since `browser.link` works in all other gems, we will use it in this example.
+There are two ways of accessing the link, `browser.link` and `browser.a`. Both of them do the same thing, but `browser.a` is not supported in older Watir gems. Since `browser.link` works in all gems, we will use it in this example.
 
 You could access the link in a lot of ways (alphabetically):
 
@@ -21,7 +21,7 @@ You could access the link in a lot of ways (alphabetically):
     name                 browser.link(:name => "sidebar)
     text                 browser.link(:text => "click me")
     url                  browser.link(:url => /watir/)
-    xpath                browser.link(:xpath => "xpath")
+    xpath                browser.link(:xpath => "//a[@href='http://watir.com/']/").click
 
 First, create a simple HTML file with only one link in it. Open your favorite text editor, enter the following line in it and save it as `link.htm`:
 
@@ -37,19 +37,31 @@ Copy URL from the address bar and paste it somewhere safe, in another file, for 
 
 Open command prompt application and open IRB:
 
-$ irb
->
+    $ irb
+    >
 
-Let IRB know that you plan to use RubyGems and watir-webdriver gem:
+Let IRB know that you plan to use watir-webdriver gem:
 
-    require "rubygems"
     require "watir-webdriver"
 
 The output should look similar to this:
 
-    require "rubygems"
-    => false
-    require "watir-webdriver"
+    > require "watir-webdriver"
+    => true
+
+If you get something like this, do not panic:
+
+    > require "watir-webdriver"
+    LoadError: no such file to load -- watir-webdriver
+    from (irb):1:in `require'
+    from (irb):1
+
+It just means you have to require RubyGems first. In that case, do this:
+
+    > require "rubygems"
+    => true
+
+    > require "watir-webdriver"
     => true
 
 In following code examples, do not type lines that start with `=>` (`=> true` for example). That represents value that Ruby returned. You can ignore those lines, until I say differently.
@@ -66,46 +78,53 @@ Go to `link.htm`:
 
 We are ready now to play with the link.
 
+
+
+
+
+
 ## Text
 
 We will start with accessing the link via `text`, since it is the most common way of accessing links. Our link looks like this:
 
     <a href="http://watir.com/">click me</a>
 
-There is two ways to access the link, using the exact text, and only part of the text.
+There is two ways to access the link, using the exact `text`, and only part of the `text`.
+
+
 
 ### Text and String
 
-Since we know the exact text of the link, we can click it using string. But before we click the link, let's flash it:
+Since we know the exact `text` of the link, we can click it using string. But before we click the link, let's flash it, just to make sure we are interacting with the right link:
 
     browser.link(:text, "click me").flash
     => 10
-
-Link's background should change from white to red and back to white.
 
 Let's finally click the link:
 
     browser.link(:text, "click me").click
     => []
 
-Watir home page (watir.com) should open. Tell the browser to go back to `link.htm`, we have more exercises to finish there:
+Watir home page (*watir.com*) should open. Tell the browser to go back to `link.htm`, we have more exercises to finish there:
 
     browser.back
     => ""
 
 Browser should go back to `link.htm`.
 
+
+
 ### Text and Regular expression
 
 If you know only a portion of a string, you can use regular expressions. For now, think of regular expressions as a string with a strange syntax. It looks like this: `/click/`. Please notice the slashes instead of quotes.
 
-When would you use regular expressions? For example, you want to click on a discussion on a forum by its title, but the title changes form `On Dogs (1)` to `On Dogs (2)` after the first reply is posted.
+When would you use regular expressions? For example, you want to click on a discussion on a forum by its title, but the title changes form *On Dogs (1)* to *On Dogs (2)* after the first reply is posted.
 
-You could not use `"On Dogs"` to locate the link, because link text is `On Dogs (1)` and Watir will complain that it could not find it.
+You could not use `"On Dogs"` to locate the link, because link text is *On Dogs (1)* and Watir will complain that it could not find it.
 
-You could use `"On Dogs (1)"` to locate the link the first time, but when link text changes to `On Dogs (2)`, Watir will no longer be able to find the link.
+You could use `"On Dogs (1)"` to locate the link the first time, but when link text changes to *On Dogs (2)*, Watir will no longer be able to find the link.
 
-In that case, you could tell Watir: `Well, I know the portion of the string.` and it will happily look at all strings until it finds the one that matches the portion you have provided.
+In that case, you could tell Watir: *Well, I know just one part of the string.* and it will happily look at all strings until it finds the one that matches the portion you have provided.
 
 In our example, we will use `/click/`. First, we will flash the link, and then click it. In this example we do not care if there is any text before or after `click`.
 
@@ -115,17 +134,23 @@ In our example, we will use `/click/`. First, we will flash the link, and then c
     > browser.link(:text => /click/).click
     => []
 
-Of course, tell the browser to go back to `link.htm` with `browser.back`. From now on, each time watir.com opens, tell the browser to go back to `link.htm`.
+Of course, tell the browser to go back to `link.htm` with `browser.back`. From now on, each time *watir.com* opens, tell the browser to go back to `link.htm`.
+
+
+
+
 
 ## Href
 
-For this example, let's look only at the link's href attribute.
+For this example, let's look only at the link's `href` attribute.
 
     <a href="http://watir.com/">click me</a>
 
+
+
 ### Href and String
 
-If you know the full value of link's href attribute, you could use string to click the link. Of course, flash the link first, to see if everything works, then click it.
+If you know the full value of link's `href` attribute, you could use string to click the link. Of course, flash the link first, to see if everything works, then click it.
 
     browser.link(:href => "http://watir.com/").flash
     => 10
@@ -135,18 +160,24 @@ If you know the full value of link's href attribute, you could use string to cli
 
 Did you remember to tell tell the browser to go back to `link.htm` with `browser.back`?
 
+
+
 ### Href and Regular Expression
 
-If you know only a portion of href attribute, you will still use `:href` to locate the link, but this time with a regular expression instead of a string. The usual story: flash, click, back to `link.htm`.
+If you know only a portion of `href` attribute, you will still use `href` to locate the link, but this time with a regular expression instead of a string. The usual story: flash, click, back to `link.htm`.
 
     browser.link(:href => /watir/).flash
     => 10
     browser.link(:href => /watir/).click
     => []
 
+
+
+
+
 ## URL
 
-`:url` is alias for `:href`. So, everything I said about `:href` is true for `:url` also. Well, not everything. If you try any of the following with watir-webdriver:
+`url` is alias for `href`. So, everything I said about `href` is true for `url` also. Well, not everything. If you try any of the following with watir-webdriver:
 
     browser.link(:url => "http://watir.com/").flash
     browser.link(:url => "http://watir.com/").click
@@ -155,13 +186,18 @@ If you know only a portion of href attribute, you will still use `:href` to loca
 
 you would get this error message:
 
-    Watir::Exception::MissingWayOfFindingObjectException: invalid attribute: :url
+    Watir::Exception::MissingWayOfFindingObjectException:
+    invalid attribute: :url
 
 Watir-webdriver wants to tell you that it does not support accessing links via `url` attribute. Other gems support it. Since it is just an alias for `href`, I would recommend that you use `href` everywhere.
 
+
+
+
+
 ## ID
 
-According to the HTML specification, almost all HTML elements can have an id, and each id should be unique on the page. Uniqueness makes ids very convenient for us. All other element attributes can appear more than once on the page and Watir will locate only the first element with the specified attribute, and maybe you want the second or the third one. (There is a workaround for that problem, keep on reading.)
+According to the HTML specification, almost all HTML elements can have an `id`, and each `id` should be unique on the page. Uniqueness makes `id` very convenient for us. All other element attributes can appear more than once on the page and Watir will locate only the first element with the specified attribute, and maybe you want the second or the third one. (There is a workaround for that problem, keep on reading.)
 
 Open `link.htm` in your favorite text editor and change the text to this, and save the file:
 
@@ -172,6 +208,8 @@ Refresh the page in the browser to make sure the latest version of `link.htm` is
     browser.refresh
     => []
 
+
+
 ### ID and String
 
 If you know the entire id:
@@ -180,6 +218,8 @@ If you know the entire id:
     => 10
     browser.link(:id => "watir-home-page").click
     => []
+
+
 
 ### ID and Regular Expression
 
@@ -192,11 +232,17 @@ If our example, we will use `/watir/`.
     browser.link(:id => /watir/).click
     => []
 
+
+
+
+
 ## Name
 
-Another attribute that almost all HTML elements can have is `name`. It is not supposed to be unique on the page. It is very common that elements that are somehow related on the page have the same name. Change `link.htm` to this, and reload the page in the browser:
+Another attribute that almost all HTML elements can have is `name`. It is not supposed to be unique on the page. It is very common that elements that are somehow related on the page have the same `name`. Change `link.htm` to this, and reload the page in the browser:
 
     <a href="http://watir.com/" name="watir-home-page">click me</a>
+
+
 
 ### Name and String
 
@@ -207,6 +253,8 @@ If you know the entire `name`:
     browser.link(:name => "watir-home-page").click
     => []
 
+
+
 ### Name and Regular expression
 
 If you know the portion of `name`:
@@ -216,11 +264,17 @@ If you know the portion of `name`:
     browser.link(:name => /watir/).click
     => []
 
+
+
+
+
 ## Class
 
-It is also very common for an HTML element to have a class attribute. Change `link.htm` to this, and reload the page in the browser:
+It is also very common for an HTML element to have a `class` attribute. Change `link.htm` to this, and reload the page in the browser:
 
     <a href="http://watir.com/" class="watir-home-page">click me</a>
+
+
 
 ### Class and String
 
@@ -231,6 +285,8 @@ If you know the entire `class`:
     browser.link(:class => "watir-home-page").click
     => []
 
+
+
 ### Class and Regular Expression
 
 If you know the portion of `class`:
@@ -240,17 +296,25 @@ If you know the portion of `class`:
     browser.link(:class => /watir/).click
     => []
 
+
+
+
+
 ## Index
 
-If you have no other way, but you know the link's position on the page, you could use it's index. In this example, it is the first link.
+If you have no other way, but you know the link's position on the page, you could use it's `index`. In this example, it is the first link.
 
     browser.link(:index => 0).click
 
-Please note that watir-webdriver gem counts from 0 (0, 1, 2...). That is called zero-based indexing. other watir gems count from 1 (1, 2, 3...). That is called one-based indexing. It is usual in programming that the first element is the number zero (hence zero-based indexing). Watir will use zero-based indexing in all it's gems in the future.
+Please note that watir and watir-webdriver gems counts from 0 (0, 1, 2...). That is called zero-based indexing. Safariwatir counts from 1 (1, 2, 3...). That is called one-based indexing. (Watir gem used one-based indexing until versinon 2.0.) It is usual in programming that the first element is the number zero (hence zero-based indexing).
 
 Do you see anything strange in the above code? Take a look. I will wait.
 
 Maybe you have noticed that this is the first time we did not use a string (double quotes around the text, remember?) or a regular expression (slashes around the text). We have used just the number one. Such numbers are called integers. Watir uses integers only with `:index`.
+
+
+
+
 
 ## After
 
@@ -272,6 +336,10 @@ We told Watir that we want to click a link after a div that has `id` attribute s
 
 Do you see something strange in the above code? This is the first time we have used a page element as the second parameter (instead of string, regular expression or integer).
 
+
+
+
+
 ## HTML
 
 If the link you want to access does not have any usual attributes that could uniquely identify it, Watir can handle that too. For example, you need to click the second link:
@@ -279,15 +347,19 @@ If the link you want to access does not have any usual attributes that could uni
     <a onclick="new Ajax.Request('007')">click me</a>
     <a onclick="new Ajax.Request('42')">click me</a>
 
-One of the really elegant ways to do it is by using `:html`:
+One of the really elegant ways to do it is by using `html`:
 
     browser.link(:html => /007/).click
 
 In above example, we have used a regular expression as the second parameter, but I am sure you have already gotten used to them. I am also sure you are already convinced that regular expressions are very useful.
 
+
+
+
+
 ## XPath
 
-XPath was not in Watir from the beginning. It was added by Angrez Singh. He also created Watir's Firefox driver. Aidy Lewis moved Watir's XPath implementation from REXML to Nokogiri, and now it is faster. XPath is really powerful. Most times you can just use `:html`, but if it does not solve the problem, try XPath.
+XPath was not in Watir from the beginning. It was added by Angrez Singh. He also created Watir's Firefox driver. Aidy Lewis moved Watir's XPath implementation from REXML to Nokogiri, and now it is faster. XPath is really powerful. Most times you can just use `html`, but if it does not solve the problem, try XPath.
 
 If you have a link:
 
@@ -309,7 +381,15 @@ but this would not:
 
     browser.frame(:xpath => "//frame[@name='one']/")
 
+
+
+
+
 ## Nested Elements
+
+
+
+
 
 ### Simple Nesting
 
@@ -348,6 +428,10 @@ This time we told Watir that we want it to click the first link in a specific di
 
 There are endless options how to click on an element on a page, and this book will try to teach you all of them.
 
+
+
+
+
 ### More nesting
 
 If for some reason you want to be very specific about where the element is located in the page, Watir can handle that too. For example, if you had something like this:
@@ -366,6 +450,10 @@ So, there is a browser, then a div, another div and the link we are looking for.
 
 The nesting can go as deep as you like.
 
+
+
+
+
 ## Multiple Attributes
 
 Accessing an element using multiple attributes was not in Watir from the start. This is a killer feature, as you will see. For example, if you have two completely identical links on the same page, and you want to click the second one:
@@ -379,9 +467,13 @@ you could do it like this:
 
 The above code will click the second link with text `click me`.
 
+
+
+
+
 ## Collections
 
-You can even do stuff with all elements of a particular kind on a page. If you want to display href attributes of all links in the page, this will do it:
+You can even do stuff with all elements of a particular kind on a page. If you want to display `href` attributes of all links in the page, this will do it:
 
     browser.links.each do |link|
       puts link.href
