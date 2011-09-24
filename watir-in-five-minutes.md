@@ -163,7 +163,7 @@ To run the file, navigate in command prompt to the folder where you have saved i
 
 Smile while the browser clicks around.
 
-What is the output in the command prompt? Nothing? Yes, nothing. IRB displays values that Ruby returns, but when you execute Ruby file from the command line, it does not display the values Ruby returns. You have to explicitly say to Ruby that you want them displayed. It is as easy as adding `puts` in front of the command. Modify the script to look like this (you can add puts in front of every command, but you really do not care about what some commands return):
+What is the output in the command prompt? Nothing? Yes, nothing. IRB displays values that Ruby returns, but when you execute Ruby file from the command line, it does not display the values Ruby returns. You have to explicitly say to Ruby that you want them displayed. It is as easy as adding `puts` in front of the command. Add `puts` in front of three lines. Modify the script to look like this. You can add puts in front of every command, but you really do not care about what some commands return:
 
     require "watir-webdriver"
     browser = Watir::Browser.new :ff
