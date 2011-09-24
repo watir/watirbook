@@ -4,7 +4,7 @@
 
 Let's take a closer look at one HTML element. Links are probably the most popular of all HTML elements, so it would be just fair to start there. Usually, you can recognize a link on a web page because it's text is underlined.
 
-There are two ways of accessing the link, `browser.link` and `browser.a`. Both of them do the same thing, but `browser.a` is not supported in older Watir gems. Since `browser.link` works in all gems, we will use it in this example.
+There are two ways of accessing the link, `browser.link` and `browser.a`. Both of them do the same thing, but `browser.a` is not supported in older Watir gems. Since `browser.link` works everywhere, we will use it in this example.
 
 You could access the link in a lot of ways (alphabetically):
 
@@ -82,7 +82,6 @@ We are ready now to play with the link.
 
 
 
-
 ## Text
 
 We will start with accessing the link via `text`, since it is the most common way of accessing links. Our link looks like this:
@@ -136,6 +135,9 @@ In our example, we will use `/click/`. First, we will flash the link, and then c
 
 Of course, tell the browser to go back to `link.htm` with `browser.back`. From now on, each time *watir.com* opens, tell the browser to go back to `link.htm`.
 
+    browser.back
+    => ""
+
 
 
 
@@ -160,6 +162,9 @@ If you know the full value of link's `href` attribute, you could use string to c
 
 Did you remember to tell tell the browser to go back to `link.htm` with `browser.back`?
 
+    browser.back
+    => ""
+
 
 
 ### Href and Regular Expression
@@ -168,8 +173,12 @@ If you know only a portion of `href` attribute, you will still use `href` to loc
 
     browser.link(:href => /watir/).flash
     => 10
+
     browser.link(:href => /watir/).click
     => []
+
+    browser.back
+    => ""
 
 
 
@@ -181,13 +190,15 @@ If you know only a portion of `href` attribute, you will still use `href` to loc
 
     browser.link(:url => "http://watir.com/").flash
     browser.link(:url => "http://watir.com/").click
-    browser.link(:url => "http://watir.com/").flash
-    browser.link(:url => "http://watir.com/").click
+
+    browser.link(:url => /watir/).flash
+    browser.link(:url => /watir/).click
 
 you would get this error message:
 
     Watir::Exception::MissingWayOfFindingObjectException:
     invalid attribute: :url
+    ...
 
 Watir-webdriver wants to tell you that it does not support accessing links via `url` attribute. Other gems support it. Since it is just an alias for `href`, I would recommend that you use `href` everywhere.
 
@@ -216,8 +227,12 @@ If you know the entire id:
 
     browser.link(:id => "watir-home-page").flash
     => 10
+
     browser.link(:id => "watir-home-page").click
     => []
+
+    browser.back
+    => ""
 
 
 
@@ -229,8 +244,12 @@ If our example, we will use `/watir/`.
 
     browser.link(:id => /watir/).flash
     => 10
+
     browser.link(:id => /watir/).click
     => []
+
+    browser.back
+    => ""
 
 
 
@@ -242,6 +261,9 @@ Another attribute that almost all HTML elements can have is `name`. It is not su
 
     <a href="http://watir.com/" name="watir-home-page">click me</a>
 
+    browser.refresh
+    => []
+
 
 
 ### Name and String
@@ -250,8 +272,12 @@ If you know the entire `name`:
 
     browser.link(:name => "watir-home-page").flash
     => 10
+
     browser.link(:name => "watir-home-page").click
     => []
+
+    browser.back
+    => ""
 
 
 
@@ -261,8 +287,12 @@ If you know the portion of `name`:
 
     browser.link(:name => /watir/).flash
     => 10
+
     browser.link(:name => /watir/).click
     => []
+
+    browser.back
+    => ""
 
 
 
@@ -274,6 +304,9 @@ It is also very common for an HTML element to have a `class` attribute. Change `
 
     <a href="http://watir.com/" class="watir-home-page">click me</a>
 
+    browser.refresh
+    => []
+
 
 
 ### Class and String
@@ -282,8 +315,12 @@ If you know the entire `class`:
 
     browser.link(:class => "watir-home-page").flash
     => 10
+
     browser.link(:class => "watir-home-page").click
     => []
+
+    browser.back
+    => ""
 
 
 
@@ -293,8 +330,12 @@ If you know the portion of `class`:
 
     browser.link(:class => /watir/).flash
     => 10
+    
     browser.link(:class => /watir/).click
     => []
+
+    browser.back
+    => ""
 
 
 
@@ -302,15 +343,39 @@ If you know the portion of `class`:
 
 ## Index
 
+### Explicit Index
+
 If you have no other way, but you know the link's position on the page, you could use it's `index`. In this example, it is the first link.
 
-    browser.link(:index => 0).click
+    browser.link(:index => 0).flash
+    => 10
 
-Please note that watir and watir-webdriver gems counts from 0 (0, 1, 2...). That is called zero-based indexing. Safariwatir counts from 1 (1, 2, 3...). That is called one-based indexing. (Watir gem used one-based indexing until versinon 2.0.) It is usual in programming that the first element is the number zero (hence zero-based indexing).
+    browser.link(:index => 0).click
+    => []
+
+    browser.back
+    => ""
 
 Do you see anything strange in the above code? Take a look. I will wait.
 
-Maybe you have noticed that this is the first time we did not use a string (double quotes around the text, remember?) or a regular expression (slashes around the text). We have used just the number one. Such numbers are called integers. Watir uses integers only with `:index`.
+Maybe you have noticed that this is the first time we did not use a string (double quotes around the text, remember?) or a regular expression (slashes around the text). We have used just the number one. Such numbers are called integers. Watir uses integers only with `index`.
+
+Please note that watir and watir-webdriver gems counts from 0 (0, 1, 2...). That is called zero-based indexing. Safariwatir counts from 1 (1, 2, 3...). That is called one-based indexing. (Watir gem used one-based indexing until versinon 2.0.) It is usual in programming that the first element is the number zero (hence zero-based indexing).
+
+### Implicit Index
+
+This will do the same thing.
+
+    browser.link.flash
+    => 10
+
+    browser.link.click
+    => []
+
+    browser.back
+    => ""
+
+So, if you do not provide any arguments to `link` method, it will just click the first link it finds.
 
 
 
