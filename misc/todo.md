@@ -1,4 +1,17 @@
-# Ideas
+# TODO
+
+- mac 10.7
+  - buy
+
+- unit tests/watirspec
+- celerity?
+- chromium?
+- https://github.com/kennethreitz/osx-gcc-installer instead of xcode?
+- editors/IDEs
+  - scite
+  - textpad
+  - netbeans
+  - rubymine
 
 - HTML Elements Supported by Watir
   - Link
