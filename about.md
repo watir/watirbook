@@ -40,6 +40,8 @@ Watir-webdriver gem is new and shiny. It uses WebDriver (part of Selenium projec
 
 Operawatir is the newest gem. It is developed by Opera Software, the same company that develops Opera browser. It works on Windows, Mac and Linux and can drive Opera. It needs JRuby to run, so it complicates installation a bit. If you already have Ruby MRI installed and you want to drive Opera, I would recommend watir-webdriver gem.
 
+In short: if you want to drive Internet Explorer, use watir gem; if you want to drive Safari, use safariwatir gem; if you want to drive Firefox, Chrome or Opera, use watir-webdriver gem.
+
 ## Alternatives
 
 If you like the idea of testing web applications by driving real browsers, but for some reason just can not use Ruby (or you do not want to), I have good news. The success of Watir project has inspired people to create similar projects using different programming languages:
