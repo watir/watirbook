@@ -5,6 +5,11 @@
 - mac 10.7
   - buy
 
+- installation
+  - watir
+    - from behind a proxy
+    - from behind a firewall
+
 - unit tests/watirspec
 - celerity?
 - chromium?
