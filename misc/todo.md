@@ -20,6 +20,14 @@
   - netbeans
   - rubymine
 
+- foreword
+- preface
+  - audience
+  - book layout
+  - font conventions
+  - command-line convetions
+- contributors
+
 - HTML Elements Supported by Watir
   - Link
   - (other elements from HTML Elements Supported by Watir)
