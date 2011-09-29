@@ -17,7 +17,7 @@ task :pdf => [:merge] do
 end
 
 task :epub => [:merge] do
-  `pandoc --toc --epub-metadata=tools/metadata.xml -o watirbook-#{version}-#{type}.epub title.txt watirbook-#{type}.md`
+  `pandoc --toc --epub-metadata=misc/metadata.xml -o watirbook-#{version}-#{type}.epub title.txt watirbook-#{type}.md`
 end
 
 task :mobi => [:merge] do
