@@ -1,5 +1,7 @@
 # TODO
 
+- create books in bin folder, for example, not in project root
+
 - link#after and later
 
 - mac 10.7
