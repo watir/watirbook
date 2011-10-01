@@ -22,6 +22,10 @@ Watir can do almost anything that user can manually do with the browser. Open a 
 
 It is important to say that Watir CAN NOT control browser plugins like Java applets, Adobe Flash or Microsoft Silverlight. There are open source projects that can control some browser plugins.
 
+## Recorders
+
+Let's make it explicit at the very beginning of the book. Watir project does not have a recorder. You will even find that Watir community does not like recorders. **Really** does not like recorders. There are a few recorders available that will create Watir code, but none of them does a great job, and therefore none of them is included in the Watir project. If you are using a recorder and you have a problem, the problem is most likely in the recorder, and not in Watir. Please report all such problems to the recorder support forum or mailing list.
+
 ## Gems
 
 Software written in Ruby is usually distributed as RubyGems file. You can just call it a gem. Watir project is consisted of a few gems.
