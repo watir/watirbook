@@ -415,13 +415,22 @@ Sometimes the only way to identify the element is to say that it should be after
     <a href="http://watir.com/" id="watir-home-page">click me</a>
     <a href="http://watir.com/">click me</a>
 
-This will click the first link, but we want to click the third one:
+Save the above HTML as `link.htm`, and reload the page in the browser:
 
-    browser.link(:href => /watir/).click
+    browser.refresh
+    => []
 
-One of the ways you could do it is:
+This will flash the first link, but we want to flash the third one:
 
-    browser.link(:after? => browser.link(:id => "watir-home-page")).click
+    browser.link(:href => /watir/).flash
+
+One of the ways you could do it is, but looks like watir-webdriver does not support `after`:
+
+    browser.link(:after? => browser.link(:id => "watir-home-page")).flash
+    TypeError: expected one of [String, Regexp],
+    got #<Watir::Anchor:0x3308eea0e6878cb6 located=false
+    selector={:id=>"watir-home-page", :tag_name=>"a"}>:Watir::Anchor
+    ...
 
 We told Watir that we want to click a link after a div that has `id` attribute set to `watir-home-page`. I rarely use it, but there are times when it is really handy.
 
