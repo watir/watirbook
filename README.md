@@ -10,13 +10,13 @@ The source ([markdown](http://en.wikipedia.org/wiki/Markdown)) will always be fr
 
 The full version of the book in PDF, EPUB and MOBI format is $9.
 
-If you think there needs to be a book on Watir and I am the right person to write it, feel free to [buy the book](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WVJATC56MJS3N) now. You will get all updates to the book for free. I promise I will not take the money, spend it on beer and never write the book. :)
+If you think there needs to be a book on Watir and I am the right person to write it, feel free to **[buy the book](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WVJATC56MJS3N)** now. You will get all updates to the book for free. I promise I will not take the money, spend it on beer and never write the book. :)
 
 If the book is not finished in the near future, I will return the money. Also, if you buy the book and you do not like it, I will return the money.
 
 If you like the idea, but do not have $9, feel free to send any amount to zeljko.filipin at gmail.com via [Paypal](https://www.paypal.com/). You can also donate to the book via [Flattr](https://flattr.com/thing/147956/Watir-Book). Any amount is appreciated.
 
-You can discuss the book at [groups.google.com/group/watirbook](http://groups.google.com/group/watirbook/). Anybody can suggest book format (currently pdf, epub and mobi, but almost anything is possible) and which chapter to write next. Of course, if you buy the book and then suggest a format/chapter, your vote will count more.
+You can discuss the book at [groups.google.com/group/watirbook](http://groups.google.com/group/watirbook/). Anybody can suggest book format (currently PDF, EPUB and MOBI, but almost anything is possible) and which chapter to write next. Of course, if you buy the book and then suggest a format/chapter, your vote will count more.
 
 \newpage
 
