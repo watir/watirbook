@@ -3,7 +3,7 @@ type = :paid
 
 task :default => [:pdf, :cleanup]
 
-task :all => [:merge, :pdf, :epub, :mobi]
+task :all => [:merge, :pdf, :epub, :mobi, :cleanup]
 
 task :free do
   type = :free
