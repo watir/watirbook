@@ -1,7 +1,7 @@
 version = "0-7-1"
 type = :paid
 
-task :default => [:pdf]
+task :default => [:pdf, :cleanup]
 
 task :merge do
   chapters = "LICENSE.md README.md prerequisites.md about.md installation/installation.md installation/windows.md installation/mac.md installation/ubuntu.md watir-in-five-minutes.md"
@@ -29,4 +29,8 @@ task :all => [:merge, :pdf, :epub, :mobi]
 task :free do
   type = :free
   Rake::Task[:all].invoke
+end
+
+task :cleanup do
+  `rm watirbook-#{type}.md watirbook-1-#{type}.md watirbook-2-#{type}.md`
 end
