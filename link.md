@@ -343,9 +343,11 @@ If you know the portion of `class`:
 
 ## Index
 
+
+
 ### Explicit Index
 
-If you have no other way, but you know the link's position on the page, you could use it's `index`. In this example, it is the first link.
+If the element does not have any attributes that would differentiate it from the other links on the page, but you know the link's position on the page, you could use it's `index`. In this example, it is the first link.
 
     browser.link(:index => 0).flash
     => 10
@@ -362,6 +364,8 @@ Maybe you have noticed that this is the first time we did not use a string (doub
 
 Please note that watir and watir-webdriver gems counts from 0 (0, 1, 2...). That is called zero-based indexing. Safariwatir counts from 1 (1, 2, 3...). That is called one-based indexing. (Watir gem used one-based indexing until versinon 2.0.) It is usual in programming that the first element is the number zero (hence zero-based indexing).
 
+
+
 ### Implicit Index
 
 This will do the same thing.
@@ -375,7 +379,29 @@ This will do the same thing.
     browser.back
     => ""
 
-So, if you do not provide any arguments to `link` method, it will just click the first link it finds.
+So, if you do not provide any arguments to `link` method, it will just click the first link it finds. It is very useful.
+
+It is time for and example. If you know that the link is the first (or even the only) link inside a specific div:
+
+    <div id="42">
+      <a href="http://watir.com/">click me</a>
+    </div>
+
+Save the above HTML as `link.htm`, and reload the page in the browser:
+
+    browser.refresh
+    => []
+
+Then try this:
+
+    browser.div(:id => "42").link.flash
+    => 10
+
+    browser.div(:id => "42").link.click
+    => []
+
+    browser.back
+    => ""
 
 
 
