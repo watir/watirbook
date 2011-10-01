@@ -14,7 +14,7 @@ If you think there needs to be a book on Watir and I am the right person to writ
 
 If the book is not finished in the near future, I will return the money. Also, if you buy the book and you do not like it, I will return the money.
 
-If you like the idea, but do not have $9, feel free to send any amount to zeljko.filipin at gmail.com via [Paypal](https://www.paypal.com/). You can also donate to the book via [Flattr](https://flattr.com/thing/147956/Watir-Book). Any amount is appreciated.
+If you like the idea, but do not have $9, feel free to send any amount to zeljko.filipin at gmail.com via [Paypal](https://www.paypal.com/). You can also [donate to the book via Flattr](https://flattr.com/thing/147956/Watir-Book). Any amount is appreciated.
 
 You can discuss the book at [groups.google.com/group/watirbook](http://groups.google.com/group/watirbook/). Anybody can suggest book format (currently PDF, EPUB and MOBI, but almost anything is possible) and which chapter to write next. Of course, if you buy the book and then suggest a format/chapter, your vote will count more.
 
