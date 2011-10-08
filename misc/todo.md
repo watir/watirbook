@@ -3,6 +3,7 @@
 - create books in bin folder, for example, not in project root
 
 - link#after and later
+- link#css
 
 - mac 10.7
   - buy
