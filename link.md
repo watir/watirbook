@@ -13,22 +13,25 @@ Let's take a closer look at one HTML element. Links are probably the most popula
 
 There are two ways of accessing the link, `browser.link` and `browser.a`. Both of them do the same thing, but `browser.a` is not supported in older Watir gems. Since `browser.link` works everywhere, we will use it in this example.
 
-You could access the link in a lot of ways (alphabetically):
+You could access the link in a lot of ways (alphabetically): `after?`, `class`, `css`, `href`, `html`, `id`, `index`, `name`, `text`, `url`, `xpath` and multiple attributes.
 
-    Watir method         Example
-    -------------------  -----------------------------------------------------
-    after?               browser.link(:after? => browser.link(:text => "buy"))
-    class                browser.link(:class => "header")
-    css                  browser.link(:css => "a test")
-    href                 browser.link(:href => "http://watir.com")
-    html                 browser.link(:html => /test/)
-    id                   browser.link(:id => "footer")
-    index                browser.link(:index => 1)
-    multiple attributes  browser.link(:text => "click me", index => 2)
-    name                 browser.link(:name => "sidebar)
-    text                 browser.link(:text => "click me")
-    url                  browser.link(:url => /watir/)
-    xpath                browser.link(:xpath => "//a[@href='http://watir.com/']/").click
+Examples:
+
+    browser.link(:after? => browser.link(:text => "buy"))
+    browser.link(:class => "header")
+    browser.link(:css => "a test")
+    browser.link(:href => "http://watir.com")
+    browser.link(:html => /test/)
+    browser.link(:id => "footer")
+    browser.link(:index => 1)
+    browser.link(:name => "sidebar)
+    browser.link(:text => "click me")
+    browser.link(:url => /watir/)
+    browser.link(:xpath => "//a[@href='http://watir.com/']/").click
+
+and multiple attributes:
+
+    browser.link(:text => "click me", index => 2)
 
 First, create a simple HTML file with only one link in it. Open your favorite text editor, enter the following line in it and save it as `link.htm`:
 
