@@ -500,6 +500,23 @@ but this would not:
 
 
 
+## Multiple Attributes
+
+Accessing an element using multiple attributes was not in Watir from the start. This is a killer feature, as you will see. For example, if you have two completely identical links on the same page, and you want to click the second one:
+
+      <a href="http://watir.com/">click me</a>
+      <a href="http://watir.com/">click me</a>
+
+you could do it like this:
+
+    browser.link(:text => "click me", :index => 1).click
+
+The above code will click the second link with text `click me`.
+
+
+
+
+
 ## Nested Elements
 
 
@@ -564,23 +581,6 @@ You could click the link with:
 So, there is a browser, then a div, another div and the link we are looking for.
 
 The nesting can go as deep as you like.
-
-
-
-
-
-## Multiple Attributes
-
-Accessing an element using multiple attributes was not in Watir from the start. This is a killer feature, as you will see. For example, if you have two completely identical links on the same page, and you want to click the second one:
-
-      <a href="http://watir.com/">click me</a>
-      <a href="http://watir.com/">click me</a>
-
-you could do it like this:
-
-    browser.link(:text => "click me", :index => 1).click
-
-The above code will click the second link with text `click me`.
 
 
 
