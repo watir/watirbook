@@ -1,6 +1,13 @@
 # Link
 
-*All examples in this chapter are tried on Mac OS 10.6.8, Firefox 7.0.1, Ruby 1.9.2p290, RubyGems 1.8.10 and watir-webdriver 0.3.4.*
+*All examples in this chapter are tried on Ruby 1.9.2p290, RubyGems 1.8.11:*
+
+- *Mac OS 10.6.8:*
+
+>  - *Firefox 7.0.1 and watir-webdriver 0.3.5*
+>  - *Safari 5.1 and safariwatir 0.4.0*
+
+- *Microsoft Windows 7 Professional 32-bit, Service Pack 1, Internet Explorer 9 and watir 2.0.2*
 
 Let's take a closer look at one HTML element. Links are probably the most popular of all HTML elements, so it would be just fair to start there. Usually, you can recognize a link on a web page because it's text is underlined.
 
