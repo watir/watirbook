@@ -1,5 +1,7 @@
 # TODO
 
+- you (do/do not) need internet for this chapter
+
 - create books in bin folder, for example, not in project root
 
 - link#after and later
