@@ -7,6 +7,8 @@
 - link#after and later
 - link#css
 
+- ubuntu 11.10
+
 - mac 10.7
   - buy
 
