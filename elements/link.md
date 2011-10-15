@@ -522,6 +522,18 @@ The above code will click the second link with text `click me`.
 
 
 
+## Collections
+
+You can even do stuff with all elements of a particular kind on a page. If you want to display `href` attributes of all links in the page, this will do it:
+
+    browser.links.each do |link|
+      puts link.href
+    end
+
+
+
+
+
 ## Nested Elements
 
 
@@ -586,18 +598,6 @@ You could click the link with:
 So, there is a browser, then a div, another div and the link we are looking for.
 
 The nesting can go as deep as you like.
-
-
-
-
-
-## Collections
-
-You can even do stuff with all elements of a particular kind on a page. If you want to display `href` attributes of all links in the page, this will do it:
-
-    browser.links.each do |link|
-      puts link.href
-    end
 
 \newpage
 
