@@ -3,10 +3,14 @@
 
 require 'watir/ie'
 
-def is_element_subclass? klass
+def is_subclass_of_watir_element? klass
   while klass = klass.superclass
     return true if klass == Watir::Element
   end
 end
 
-ObjectSpace.each_object(Class){|c| puts c if is_element_subclass?(c)}
+elements = []
+
+ObjectSpace.each_object(Class) {|klass| elements << klass.to_s.sub("Watir::", "") if is_subclass_of_watir_element?(klass)}
+
+puts elements.sort
