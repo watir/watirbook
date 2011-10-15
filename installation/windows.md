@@ -1,5 +1,7 @@
 ## Windows 7, Vista and XP ##
 
+*You will need internet access if you want to follow examples in this chapter.*
+
 ![Windows 7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/desktop.png)\
 
 *Windows 7 default desktop*

@@ -1,7 +1,5 @@
 # TODO
 
-- you (do/do not) need internet for this chapter
-
 - create books in bin folder, for example, not in project root
 
 - all links in pdf should be in the footer

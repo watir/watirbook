@@ -1,5 +1,7 @@
 # Watir in Five Minutes
 
+*You will need internet access if you want to follow examples in this chapter.*
+
 In this chapter I assume you have Ruby, RubyGems, watir-webdriver gem and Firefox browser installed, since that is the combination available on all operating systems. If you do not have them installed, please see *Installation* chapter.
 
 *An example would be handy right about now* Brian Marick would say. Five minutes from now, you will be crazy about Watir. If not, maybe it is not the right tool for you. Even then, if you continue reading the book, I hope you will grow to like it the more you know about it.

@@ -1,5 +1,7 @@
 # Link
 
+*You will need internet access if you want to follow examples in this chapter.*
+
 *All examples in this chapter are tried on Ruby 1.9.2p290, RubyGems 1.8.11:*
 
 - *Mac OS 10.6.8:*

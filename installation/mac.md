@@ -1,5 +1,7 @@
 ## Mac OS X 10.6 and 10.5 ##
 
+*You will need internet access if you want to follow examples in this chapter.*
+
 ![Mac OS X 10.6 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/desktop.png)\
 
 *Mac OS X 10.6 default desktop*

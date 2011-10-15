@@ -1,5 +1,7 @@
 ## Ubuntu Linux 11.04 ##
 
+*You will need internet access if you want to follow examples in this chapter.*
+
 ![Ubuntu Linux 11.04 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/ubuntu/desktop.png)\
 
 *Ubuntu Linux 11.04 default desktop*
