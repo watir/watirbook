@@ -2,7 +2,7 @@
 
 Different Watir gems support different HTML elements. For example, watir-webdriver gem supports all elements. Yes, all of them. Watir gem supports the most common ones, but as you will see later in the book, it is easy to extend it to support more elements.
 
-Watir gem (tested with version 2.0.2) supports following HTML elements:
+Watir gem 2.0.2 supports following HTML elements:
 
     Area
     Button
@@ -47,6 +47,122 @@ Watir gem (tested with version 2.0.2) supports following HTML elements:
     TableBody
     TableCell
     TableRow
+    TextField
+    Ul
+
+Watir-webdriver gem 0.3.5 supports following HTML elements:
+
+    Anchor
+    Applet
+    Area
+    Audio
+    BR
+    Base
+    BaseFont
+    Body
+    Button
+    Canvas
+    CheckBox
+    Command
+    DList
+    DataList
+    Details
+    Directory
+    Div
+    Embed
+    FieldSet
+    FileField
+    Font
+    Form
+    Frame
+    FrameSet
+    HR
+    HTMLElement
+    Head
+    Heading
+    Hidden
+    Html
+    IFrame
+    Image
+    Input
+    Keygen
+    LI
+    Label
+    Legend
+    Map
+    Marquee
+    Media
+    Menu
+    Meta
+    Meter
+    Mod
+    OList
+    Object
+    OptGroup
+    Option
+    Output
+    Paragraph
+    Param
+    Pre
+    Progress
+    Quote
+    Radio
+    Script
+    Select
+    Source
+    Span
+    Style
+    Table
+    TableCaption
+    TableCell
+    TableCol
+    TableDataCell
+    TableHeaderCell
+    TableRow
+    TableSection
+    TextArea
+    TextField
+    Time
+    Title
+    Track
+    UList
+    Unknown
+    Video
+
+safariwatir gem 0.4.0 supports following HTML elements:
+
+    Area
+    Button
+    Checkbox
+    ContentElement
+    Dd
+    Div
+    Dl
+    Dt
+    Em
+    FileField
+    Form
+    FrameElement
+    Header
+    Image
+    InputElement
+    Label
+    Li
+    Link
+    Map
+    Ol
+    Option
+    P
+    Password
+    Pre
+    Radio
+    SelectList
+    Span
+    Strong
+    Table
+    TableCell
+    TableRow
+    TextArea
     TextField
     Ul
 
