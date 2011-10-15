@@ -5,8 +5,8 @@ def subclass_of?(klass, parent)
     return true if klass == parent
   end
 end
-def subclasses_of(parent)
+def subclasses_of(parent, in_module)
   elements = []
-  ObjectSpace.each_object(Class) {|klass| elements << klass.to_s.sub("Watir::", "") if subclass_of?(klass, parent)}
+  ObjectSpace.each_object(Class) {|klass| elements << klass.to_s.sub("#{in_module}::", "") if subclass_of?(klass, parent)}
   elements.sort
 end

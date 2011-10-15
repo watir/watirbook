@@ -3,6 +3,6 @@
 require "watir/ie"
 require "./subclasses_of"
 
-puts subclasses_of(Watir::Element)
+puts subclasses_of(Watir::Element, "Watir")
 puts
-puts subclasses_of(Watir::ElementCollections)
+puts subclasses_of(Watir::ElementCollections, "Watir")
