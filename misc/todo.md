@@ -12,6 +12,8 @@
 - mac 10.7
   - buy
 
+- https://github.com/zeljkofilipin/pacman
+
 - installation
   - watir
     - from behind a proxy
