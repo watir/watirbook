@@ -27,7 +27,7 @@ def data
   [:datalist, :datalists, true, true, false, false, true, false, false],
   [:dd, :dds, true, true, true, true, true, true, false],
   [:del, :dels, true, true, true, false, true, true, false],
-  [:details, nil, true, true, false, false, true, false, false],
+  [:details, nil, true, true, false, false, false, false, false],
   [:dfn, :dfns, true, true, false, false, true, false, false],
   [:div, :divs, true, true, true, true, true, true, false],
   [:dl, :dls, true, true, true, true, true, true, false],
