@@ -12,6 +12,8 @@
 - mac 10.7
   - buy
 
+- ie 7/8 on xp
+
 - https://github.com/zeljkofilipin/pacman
 
 - installation
