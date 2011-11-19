@@ -86,14 +86,14 @@ It really works! Ruby returned a string (the thing in double quotes) that contai
 
 Time to click on a link. It is easy to explicitly say which link to click on. Right now I want to click on a link with the text *Google.com in English*. It gets just a bit more complicated if there are two links with the same text on the page, but we will deal with that later. If your browser already opened *google.com*, ignore this step.
 
-    > browser.link(:text => "Google.com in English").click
+    > browser.a(:text => "Google.com in English").click
     => []
 
 And *google.com* opens.
 
 Before we click another link, I want to show off one of Watir's killer features. It is called *flash*. Real world web applications are complex, and sometimes when you are developing a new test or debugging an existing one, you want to make sure you are interacting with the correct element. Try this (and look at *Images* link in the top-left corner of *google.com*):
 
-    > browser.link(:text => "Images").flash
+    > browser.a(:text => "Images").flash
     => 10
 
 ![Link Images with normal background](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-in-five-minutes/flash-1.png)\
@@ -107,7 +107,7 @@ If you did not see the flash (it flashes just for a short time), execute the com
 
 It is time to click the link:
 
-    > browser.link(:text => "Images").click
+    > browser.a(:text => "Images").click
     => []
 
 This time, let's check the page title.
@@ -145,8 +145,8 @@ Well, that was a lot of fun. But you do not want to type into IRB all the time. 
     browser = Watir::Browser.new :ff
     browser.goto "http://www.google.com/"
     browser.url
-    browser.link(:text => "Google.com in English").click
-    browser.link(:text => "Images").click
+    browser.a(:text => "Google.com in English").click
+    browser.a(:text => "Images").click
     browser.title
     browser.text_field(:name => "q").set "book"
     browser.button(:value => "Search Images").click
@@ -171,8 +171,8 @@ What is the output in the command prompt? Nothing? Yes, nothing. IRB displays va
     browser = Watir::Browser.new :ff
     browser.goto "http://www.google.com/"
     puts browser.url
-    browser.link(:text => "Google.com in English").click
-    browser.link(:text => "Images").click
+    browser.a(:text => "Google.com in English").click
+    browser.a(:text => "Images").click
     puts browser.title
     browser.text_field(:name => "q").set "book"
     browser.button(:value => "Search Images").click

@@ -17,11 +17,11 @@ Sometimes the only way to uniquely identify a link is to specify one or more of 
 
 This will click on the first link, but we want to click on the second one:
 
-    browser.link(:text => "click me").click
+    browser.a(:text => "click me").click
 
 This will work, but it is really fragile:
 
-    browser.link(:index => 1).click
+    browser.a(:index => 1).click
 
 If in further development a link (or more) is added between the two links we have so far, the code above will click on whatever link was the second, and that is not what we want.
 
