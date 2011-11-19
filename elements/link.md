@@ -11,7 +11,7 @@
 
 Let's take a closer look at one HTML element. Links are probably the most popular of all HTML elements, so it would be just fair to start there. Usually, you can recognize a link on a web page because it's text is underlined.
 
-There are two ways of accessing the link, `browser.a` and `browser.link`. Both of them do the same thing, but `browser.a` is not supported in older Watir gems and in safariwatir.
+There are two ways of accessing the link, `browser.a` and `browser.link`. Both of them do the same thing, but `browser.a` is not supported in older versions of watir gem and in safariwatir.
 
 You could access the link in a lot of ways (alphabetically): `after?`, `class`, `css`, `href`, `html`, `id`, `index`, `name`, `text`, `url`, `xpath` and multiple attributes.
 
@@ -49,14 +49,18 @@ You can save the files anywhere (make sure both files are in the same folder), b
 
 Copy URL from the address bar and paste it somewhere safe, in another file, for example. In my case, URL was `file:///Users/zeljko/Desktop/link.htm`, since I have saved the file to my desktop. We will need the URL to open the same HTML page later with Watir. Close the browser.
 
-Open command prompt application and open IRB:
+Open command prompt application and open IRB (make sure you are opening command prompt as administrator if you are on Windows):
 
     $ irb
     >
 
-Let IRB know that you plan to use watir-webdriver gem:
+Let IRB know that you plan to use watir-webdriver or watir gem:
 
     require "watir-webdriver"
+
+or
+
+    require "watir"
 
 The output should look similar to this:
 
@@ -80,9 +84,9 @@ It just means you have to require RubyGems first. In that case, do this:
 
 In following code examples, do not type lines that start with `=>` (`=> true` for example). That represents value that Ruby returned. You can ignore those lines, until I say differently.
 
-If you are using watir-webdriver gem, open Firefox browser:
+Open the browser (the following code will open Firefox if you are using watir-webdriver gem, and Internet Explorer if you are using watir gem):
 
-    browser = Watir::Browser.new :ff
+    browser = Watir::Browser.new
     => #<Watir::Browser:0x2b6d7f970192e212 url="about:blank" title="">
 
 Go to `link.htm`:
@@ -172,8 +176,20 @@ If you know the full value of link's `href` attribute, you could use string to c
     browser.a(:href => "clicked.htm").flash
     => 10
 
+The above code will not work in watir gem, but this one will:
+
+    browser.a(:href => "file:///Users/zeljko/Desktop/clicked.htm").flash
+    => nil
+
+Click it with
+
     browser.a(:href => "clicked.htm").click
     => []
+
+or
+
+    browser.a(:href => "file:///Users/zeljko/Desktop/clicked.htm").click
+    => 0.078119
 
 Did you remember to tell tell the browser to go back to `link.htm` with `browser.back`?
 
@@ -205,10 +221,7 @@ If you know only a portion of `href` attribute, you will still use `href` to loc
 
 `url` is alias for `href`. So, everything I said about `href` is true for `url` also. Well, not everything. If you try any of the following with watir-webdriver:
 
-    browser.a(:url => "clicked.htm").flash
     browser.a(:url => "clicked.htm").click
-
-    browser.a(:url => /clicked/).flash
     browser.a(:url => /clicked/).click
 
 you would get this error message:
@@ -493,6 +506,10 @@ For example, if you have a link:
 
 you could click it with
 
+    browser.a(:css => "a").flash
+
+or, if you prefer to be more explicit:
+
     browser.a(:css => "[id=click-me]").click
 
 
@@ -507,25 +524,27 @@ XPath was not in Watir from the beginning. It was added by Angrez Singh. He also
 
 If you have a link:
 
-    <a href="clicked.htm">click me</a>
+    <a href="clicked.htm" id="click-me">click me</a>
 
 You could click it with:
 
-    browser.a(:xpath => "//a").flash
+    browser.a(:xpath => "//a").click
 
 Or, if you would like to be more explicit:
 
-    browser.a(:xpath => "//a[@href='clicked.htm']/").click
+    browser.a(:xpath => "//a[@id='click-me']").click
 
 ### Element_by_xpath
 
+*Note: watir gem does not support `flash` with `element_by_xpath`.*
+
 Another way, especially useful if the element you are trying to access is not supported by Watir:
 
-    browser.element_by_xpath("//a").flash
+    browser.element_by_xpath("//a").click
 
 Or, the more explicit way:
 
-    browser.element_by_xpath("//a[@href='clicked.htm']/").click
+    browser.element_by_xpath("//a[@id='click-me']").click
 
 ### Frames
 
