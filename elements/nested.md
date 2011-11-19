@@ -9,10 +9,10 @@
 Sometimes the only way to uniquely identify a link is to specify one or more of its parent elements. How would you click the second link in this example?
 
     <div id="one">
-      <a href="http://watir.com/">click me</a>
+      <a href="clicked.htm">click me</a>
     </div>
     <div id="two">
-      <a href="http://watir.com/">click me</a>
+      <a href="clicked.htm">click me</a>
     </div>
 
 This will click on the first link, but we want to click on the second one:
@@ -51,7 +51,7 @@ If for some reason you want to be very specific about where the element is locat
 
     <div id="one">
       <div id="two">
-        <a href="http://watir.com/">click me</a>
+        <a href="clicked.htm">click me</a>
       </div>
     </div>
 

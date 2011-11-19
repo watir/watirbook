@@ -22,24 +22,28 @@ Examples:
     browser.link(:after? => browser.link(:text => "buy"))
     browser.link(:class => "header")
     browser.link(:css => "a test")
-    browser.link(:href => "http://watir.com")
+    browser.link(:href => "clicked.htm")
     browser.link(:html => /test/)
     browser.link(:id => "footer")
     browser.link(:index => 1)
     browser.link(:name => "sidebar)
     browser.link(:text => "click me")
     browser.link(:url => /watir/)
-    browser.link(:xpath => "//a[@href='http://watir.com/']/").click
+    browser.link(:xpath => "//a[@href='clicked.htm']/").click
 
 and multiple attributes:
 
     browser.link(:text => "click me", index => 2)
 
+To make sure you could do the exercises from this chapter even without internet access, we will create two HTML files, and create a link from one to the other.
+
 First, create a simple HTML file with only one link in it. Open your favorite text editor, enter the following line in it and save it as `link.htm`:
 
-    <a href="http://watir.com/">click me</a>
+    <a href="clicked.htm">click me</a>
 
-You can save the file anywhere, but I suggest that you save it to desktop, it will be easy to find there. Double click the file and it should open in your default browser, in my case Firefox.
+Then create another file, `clicked.htm` and put it in the same folder as `link.htm`. You can put anything in `clicked.htm` file, for example just this `Clicked!`.
+
+You can save the files anywhere (make sure both files are in the same folder), but I suggest that you save it to desktop, it will be easy to find there. Open `link.htm` with Firefox.
 
 ![A simple web page with only one link.](https://github.com/zeljkofilipin/watirbook/raw/master/images/link/text.png)\
 
@@ -98,7 +102,7 @@ We are ready now to play with the link.
 
 We will start with accessing the link via `text`, since it is the most common way of accessing links. Our link looks like this:
 
-    <a href="http://watir.com/">click me</a>
+    <a href="clicked.htm">click me</a>
 
 There is two ways to access the link, using the exact `text`, and only part of the `text`.
 
@@ -116,7 +120,7 @@ Let's finally click the link:
     browser.link(:text, "click me").click
     => []
 
-Watir home page (*watir.com*) should open. Tell the browser to go back to `link.htm`, we have more exercises to finish there:
+`clicked.htm` file should open. Tell the browser to go back to `link.htm`, we have more exercises to finish there:
 
     browser.back
     => ""
@@ -145,7 +149,7 @@ In our example, we will use `/click/`. First, we will flash the link, and then c
     > browser.link(:text => /click/).click
     => []
 
-Of course, tell the browser to go back to `link.htm` with `browser.back`. From now on, each time *watir.com* opens, tell the browser to go back to `link.htm`.
+Of course, tell the browser to go back to `link.htm` with `browser.back`. From now on, each time `clicked.htm` opens, tell the browser to go back to `link.htm`.
 
     browser.back
     => ""
@@ -158,7 +162,7 @@ Of course, tell the browser to go back to `link.htm` with `browser.back`. From n
 
 For this example, let's look only at the link's `href` attribute.
 
-    <a href="http://watir.com/">click me</a>
+    <a href="clicked.htm">click me</a>
 
 
 
@@ -166,10 +170,10 @@ For this example, let's look only at the link's `href` attribute.
 
 If you know the full value of link's `href` attribute, you could use string to click the link. Of course, flash the link first, to see if everything works, then click it.
 
-    browser.link(:href => "http://watir.com/").flash
+    browser.link(:href => "clicked.htm").flash
     => 10
 
-    browser.link(:href => "http://watir.com/").click
+    browser.link(:href => "clicked.htm").click
     => []
 
 Did you remember to tell tell the browser to go back to `link.htm` with `browser.back`?
@@ -183,10 +187,10 @@ Did you remember to tell tell the browser to go back to `link.htm` with `browser
 
 If you know only a portion of `href` attribute, you will still use `href` to locate the link, but this time with a regular expression instead of a string. The usual story: flash, click, back to `link.htm`.
 
-    browser.link(:href => /watir/).flash
+    browser.link(:href => /clicked/).flash
     => 10
 
-    browser.link(:href => /watir/).click
+    browser.link(:href => /clicked/).click
     => []
 
     browser.back
@@ -200,11 +204,11 @@ If you know only a portion of `href` attribute, you will still use `href` to loc
 
 `url` is alias for `href`. So, everything I said about `href` is true for `url` also. Well, not everything. If you try any of the following with watir-webdriver:
 
-    browser.link(:url => "http://watir.com/").flash
-    browser.link(:url => "http://watir.com/").click
+    browser.link(:url => "clicked.htm").flash
+    browser.link(:url => "clicked.htm").click
 
-    browser.link(:url => /watir/).flash
-    browser.link(:url => /watir/).click
+    browser.link(:url => /clicked/).flash
+    browser.link(:url => /clicked/).click
 
 you would get this error message:
 
@@ -224,7 +228,7 @@ According to the HTML specification, almost all HTML elements can have an `id`, 
 
 Open `link.htm` in your favorite text editor and change the text to this, and save the file:
 
-    <a href="http://watir.com/" id="watir-home-page">click me</a>
+    <a href="clicked.htm" id="click-me">click me</a>
 
 Refresh the page in the browser to make sure the latest version of `link.htm` is loaded:
 
@@ -237,10 +241,10 @@ Refresh the page in the browser to make sure the latest version of `link.htm` is
 
 If you know the entire id:
 
-    browser.link(:id => "watir-home-page").flash
+    browser.link(:id => "click-me").flash
     => 10
 
-    browser.link(:id => "watir-home-page").click
+    browser.link(:id => "click-me").click
     => []
 
     browser.back
@@ -254,10 +258,10 @@ Sometimes `ids` on a page are automatically generated by the framework developer
 
 If our example, we will use `/watir/`.
 
-    browser.link(:id => /watir/).flash
+    browser.link(:id => /click/).flash
     => 10
 
-    browser.link(:id => /watir/).click
+    browser.link(:id => /click/).click
     => []
 
     browser.back
@@ -271,7 +275,7 @@ If our example, we will use `/watir/`.
 
 Another attribute that almost all HTML elements can have is `name`. It is not supposed to be unique on the page. It is very common that elements that are somehow related on the page have the same `name`. Change `link.htm` to this, and reload the page in the browser:
 
-    <a href="http://watir.com/" name="watir-home-page">click me</a>
+    <a href="clicked.htm" name="click-me">click me</a>
 
     browser.refresh
     => []
@@ -282,10 +286,10 @@ Another attribute that almost all HTML elements can have is `name`. It is not su
 
 If you know the entire `name`:
 
-    browser.link(:name => "watir-home-page").flash
+    browser.link(:name => "click-me").flash
     => 10
 
-    browser.link(:name => "watir-home-page").click
+    browser.link(:name => "click-me").click
     => []
 
     browser.back
@@ -297,10 +301,10 @@ If you know the entire `name`:
 
 If you know the portion of `name`:
 
-    browser.link(:name => /watir/).flash
+    browser.link(:name => /click/).flash
     => 10
 
-    browser.link(:name => /watir/).click
+    browser.link(:name => /click/).click
     => []
 
     browser.back
@@ -314,7 +318,7 @@ If you know the portion of `name`:
 
 It is also very common for an HTML element to have a `class` attribute. Change `link.htm` to this, and reload the page in the browser:
 
-    <a href="http://watir.com/" class="watir-home-page">click me</a>
+    <a href="clicked.htm" class="click-me">click me</a>
 
     browser.refresh
     => []
@@ -325,10 +329,10 @@ It is also very common for an HTML element to have a `class` attribute. Change `
 
 If you know the entire `class`:
 
-    browser.link(:class => "watir-home-page").flash
+    browser.link(:class => "click-me").flash
     => 10
 
-    browser.link(:class => "watir-home-page").click
+    browser.link(:class => "click-me").click
     => []
 
     browser.back
@@ -340,10 +344,10 @@ If you know the entire `class`:
 
 If you know the portion of `class`:
 
-    browser.link(:class => /watir/).flash
+    browser.link(:class => /click/).flash
     => 10
-    
-    browser.link(:class => /watir/).click
+
+    browser.link(:class => /click/).click
     => []
 
     browser.back
@@ -396,7 +400,7 @@ So, if you do not provide any arguments to `link` method, it will just click the
 It is time for and example. If you know that the link is the first (or even the only) link inside a specific div:
 
     <div id="42">
-      <a href="http://watir.com/">click me</a>
+      <a href="clicked.htm">click me</a>
     </div>
 
 Save the above HTML as `link.htm`, and reload the page in the browser:
@@ -423,9 +427,9 @@ Then try this:
 
 Sometimes the only way to identify the element is to say that it should be after another element. Take a look at this example:
 
-    <a href="http://watir.com/">click me</a>
-    <a href="http://watir.com/" id="watir-home-page">click me</a>
-    <a href="http://watir.com/">click me</a>
+    <a href="clicked.htm">click me</a>
+    <a href="clicked.htm" id="click-me">click me</a>
+    <a href="clicked.htm">click me</a>
 
 Save the above HTML as `link.htm`, and reload the page in the browser:
 
@@ -438,13 +442,13 @@ This will flash the first link, but we want to flash the third one:
 
 One of the ways you could do it is, but looks like watir-webdriver does not support `after`:
 
-    browser.link(:after? => browser.link(:id => "watir-home-page")).flash
+    browser.link(:after? => browser.link(:id => "click-me")).flash
     TypeError: expected one of [String, Regexp],
     got #<Watir::Anchor:0x3308eea0e6878cb6 located=false
-    selector={:id=>"watir-home-page", :tag_name=>"a"}>:Watir::Anchor
+    selector={:id=>"click-me", :tag_name=>"a"}>:Watir::Anchor
     ...
 
-We told Watir that we want to click a link after a div that has `id` attribute set to `watir-home-page`. I rarely use it, but there are times when it is really handy.
+We told Watir that we want to click a link after a div that has `id` attribute set to `click-me`. I rarely use it, but there are times when it is really handy.
 
 Do you see something strange in the above code? This is the first time we have used a page element as the second parameter (instead of string, regular expression or integer).
 
@@ -483,19 +487,19 @@ XPath was not in Watir from the beginning. It was added by Angrez Singh. He also
 
 If you have a link:
 
-    <a href="http://watir.com/">click me</a>
+    <a href="clicked.htm">click me</a>
 
 You could click it with:
 
-    browser.link(:xpath => "//a[@href='http://watir.com/']/").click
+    browser.link(:xpath => "//a[@href='clicked.htm']/").click
 
 Another way, especially useful if the element you are trying to access in not directly supported by Watir:
 
-    browser.element_by_xpath("//a[@href='http://watir.com/']/").click
+    browser.element_by_xpath("//a[@href='clicked.htm']/").click
 
 At the moment, you can use XPath to access elements located in a frame, but you can not use XPath to access the frame itself. In another words, this would work:
 
-    browser.frame(:name => "one").link(:xpath => "//a[@href='http://watir.com/']/").click
+    browser.frame(:name => "one").link(:xpath => "//a[@href='clicked.htm']/").click
 
 but this would not:
 
@@ -509,8 +513,8 @@ but this would not:
 
 Accessing an element using multiple attributes was not in Watir from the start. This is a killer feature, as you will see. For example, if you have two completely identical links on the same page, and you want to click the second one:
 
-      <a href="http://watir.com/">click me</a>
-      <a href="http://watir.com/">click me</a>
+      <a href="clicked.htm">click me</a>
+      <a href="clicked.htm">click me</a>
 
 you could do it like this:
 
