@@ -31,6 +31,7 @@ def data
   [:dfn, :dfns, true, true, false, false, true, false, false],
   [:div, :divs, true, true, true, true, true, true, false],
   [:dl, :dls, true, true, true, true, true, true, false],
+
   [:dt, :dts, true, true, true, true, true, true, false],
   [:element, :elements, false, true, true, false, true, false, false],
   [:element_by_xpath, :elements_by_xpath, false, true, true, false, true, false, false],
@@ -61,6 +62,7 @@ def data
   [:image, :images, false, true, true, true, true, true, false],
   [:img, :imgs, true, true, true, true, true, true, false],
   [:input, :inputs, true, true, true, true, true, false, false],
+
   [:ins, :inses, true, true, true, false, true, true, false],
   [:kbd, :kbds, true, true, false, false, true, false, false],
   [:keygen, :keygens, true, true, false, false, true, false, false],
@@ -91,6 +93,7 @@ def data
   [:ruby, :rubies, true, true, false, false, true, false, false],
   [:s, :ss, true, true, false, false, true, false, false],
   [:samp, :samps, true, true, false, false, true, false, false],
+
   [:script, :scripts, true, true, false, false, true, false, false],
   [:section, :sections, true, true, false, false, true, false, false],
   [:select, :selects, true, true, true, true, true, false, false],
@@ -126,12 +129,14 @@ def create_html(body)
   header = "<html><head><title>HTML elements</title><style type=\"text/css\">.green {background-color:#adff2f;} .yellow {background-color:yellow;} th {width:5em;}</style></head><body><table border=\"1\"><tbody><tr><th>element</th><th>collection</th><th>html</th><th>watir-webdriver</th><th>watir</th><th>safariwatir</th>"
   footer = "</tbody></table></body></html>"
   table = header + body + footer
-  File.open("elements.html", "w") {|file| file.write(table)}
+  File.open("elements/elements.html", "w") {|file| file.write(table)}
 end
 
-def body
+def body(from, to)
   table = ""
-  data.each do |data|
+  data.each_with_index do |data, i|
+    next if i < from
+    break if i > to
     element = data[0]
     collection = data[1]
     has_default_html = data[2]
@@ -174,4 +179,4 @@ def body
   table
 end
 
-create_html(body)
+create_html(body(0,200))
