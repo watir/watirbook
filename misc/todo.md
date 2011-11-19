@@ -7,7 +7,6 @@
 - all links in pdf should be in the footer
 
 - link#after and later
-- link#css
 
 - ubuntu 11.10
 
