@@ -475,7 +475,15 @@ In above example, we have used a regular expression as the second parameter, but
 
 ## CSS
 
-Not written yet.
+CSS selectors are a pretty new addition to Watir, but a powerful one.
+
+For example, if you have a link:
+
+    <a href="clicked.htm" id="click-me">click me</a>
+
+you could click it with
+
+    browser.link(:css => "[id=click-me]").click
 
 
 
