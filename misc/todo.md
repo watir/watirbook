@@ -36,7 +36,7 @@
   - audience
   - book layout
   - font conventions
-  - command-line convetions
+  - command-line conventions
 - contributors
 
 - HTML Elements Supported by Watir
