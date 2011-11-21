@@ -516,6 +516,8 @@ or, if you prefer to be more explicit:
 
     browser.a(:css => "[id=click-me]").click
 
+This is just one example. There will be entire chapter on CSS selectors.
+
 
 
 
@@ -562,6 +564,8 @@ but this would not:
 
     browser.frame(:xpath => "//frame[@name='one']/")
 
+There will be entire chapter on XPath, so I will not go into a lot of detail here.
+
 
 
 
@@ -579,5 +583,6 @@ and you want to click the second one, you could do it like this:
 
     browser.a(:text => "click me", :index => 1).click
 
+This is just one example. There will be entire chapter on multiple attributes.
 \newpage
 
