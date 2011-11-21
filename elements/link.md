@@ -584,5 +584,30 @@ and you want to click the second one, you could do it like this:
     browser.a(:text => "click me", :index => 1).click
 
 This is just one example. There will be entire chapter on multiple attributes.
+
+
+
+
+
+## Collection
+
+You can even do stuff with all elements of a particular kind on a page. For example, if you have a page that looks like this:
+
+    <a href="clicked.htm">click me</a>
+    <a href="clicked.htm">click me</a>
+
+and you would want to display text of all links from the page, this will do it:
+
+    browser.as.each do |a|
+      puts a.text
+    end
+
+The output should look like this:
+
+    click me
+    click me
+
+This is just one example. There will be entire chapter on collections.
+
 \newpage
 
