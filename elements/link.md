@@ -17,7 +17,7 @@ Let's take a closer look at one HTML element. Links are probably the most popula
 
 There are two ways of accessing the link, `browser.a` and `browser.link`. Both of them do the same thing, but `browser.a` is not supported in older versions of watir gem and in safariwatir.
 
-You could access the link in a lot of ways (alphabetically): `after?`, `class`, `css`, `href`, `html`, `id`, `index`, `name`, `text`, `url`, `xpath` and multiple attributes.
+You could access the link in a lot of ways (alphabetically): `after?`, `class`, `css`, `href`, `html`, `id`, `index`, `name`, `text`, `title`, `url`, `xpath` and multiple attributes.
 
 Examples:
 
