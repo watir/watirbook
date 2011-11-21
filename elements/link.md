@@ -9,7 +9,11 @@
 
 *Note: safariwatir does not support a lot of features that are used in this chapter.*
 
-Let's take a closer look at one HTML element. Links are probably the most popular of all HTML elements, so it would be just fair to start there. Usually, you can recognize a link on a web page because it's text is underlined.
+## HTML tag
+
+Let's take a closer look at one HTML element. Links are probably the most popular of all HTML elements, so it would be just fair to start there. Usually, you can recognize a link on a web page because it's text is underlined. It's HTML looks like this:
+
+    <a href="clicked.htm">click me</a>
 
 There are two ways of accessing the link, `browser.a` and `browser.link`. Both of them do the same thing, but `browser.a` is not supported in older versions of watir gem and in safariwatir.
 
