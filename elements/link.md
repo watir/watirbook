@@ -30,6 +30,7 @@ Examples:
     browser.a(:index => 1)
     browser.a(:name => "sidebar)
     browser.a(:text => "click me")
+    browser.a(:title => "click me")
     browser.a(:url => /watir/)
     browser.a(:xpath => "//a[@href='clicked.htm']/").click
 
@@ -361,6 +362,45 @@ If you know the entire `class`:
 ### Class and Regular Expression
 
 If you know the portion of `class`:
+
+    browser.a(:class => /click/).flash
+    => 10
+
+    browser.a(:class => /click/).click
+    => []
+
+    browser.back
+    => ""
+
+
+
+
+
+## Title
+
+It is also very common for an HTML element to have a `title` attribute. Change `link.htm` to this, save the file and reload the page in the browser:
+
+    <a href="clicked.htm" title="click me">click me</a>
+
+    browser.refresh
+    => []
+
+### Title and String
+
+If you know the entire `title`:
+
+    browser.a(:class => "click me").flash
+    => 10
+
+    browser.a(:class => "click me").click
+    => []
+
+    browser.back
+    => ""
+
+### Title and Regular Expression
+
+If you know the portion of `title`:
 
     browser.a(:class => /click/).flash
     => 10
