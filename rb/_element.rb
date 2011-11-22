@@ -1,7 +1,6 @@
 simple_html_example = %{}
 
-{ simple_html_example: %{},
-  action: {
+{ action: {
     html: %{},
     regexp: %{},
     string: %{}},
