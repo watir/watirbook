@@ -1,7 +1,6 @@
 simple_html_example = %{<a href="clicked.htm">click me</a>}
 
-{ simple_html_example: simple_html_example,
-  action: false,
+{ action: false,
 
   after: {
     element: %{browser.a(:after? => browser.a(:id => "click-me")).flash},
