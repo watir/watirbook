@@ -1,78 +1,97 @@
 simple_html_example = %{}
 
 { action: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   after: {
     element: %{},
-    html: %{}},
+    html:    %{}},
+
   alt: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   class: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   css: {
-    html: %{},
+    html:   %{},
     string: %{}},
+
   for: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   href: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   html: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   id: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   index: {
-    html: %{},
+    html:     %{},
     implicit: %{},
-    integer: %{}},
+    integer:  %{}},
+
   method: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   name: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   src: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   text: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   title: {
     html:   %{},
     regexp: %{},
     string: %{}},
+
   url: {
     html:   %{},
     regexp: %{},
     string: %{}},
+
   value: {
-    html: %{},
+    html:   %{},
     regexp: %{},
     string: %{}},
+
   xpath:{
     element_by_xpath: %{},
-    html: %{},
-    xpath: %{}},
+    html:             %{},
+    xpath:            %{}},
+
   multiple_attributes: {
     hash: %{},
     html: %{}},
+
   collection: {
     example: %{},
-    html: %{}}}
+    html:    %{}}}
