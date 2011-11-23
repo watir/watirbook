@@ -24,7 +24,7 @@ def create_html(body)
   header = "<html><head><title>a element</title></head><body><h1>a element</h1><table border=\"1\"><tbody><tr><th>how</th><th>html</th><th>regexp</th><th>string</th><th>other</th>"
   footer = "</tbody></table></body></html>"
   table = header + body + footer
-  File.open("../reference/a.htm", "w") {|file| file.write(table)}
+  File.open("reference/a.htm", "w") {|file| file.write(table)}
 end
 def body
   table = ""

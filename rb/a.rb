@@ -1,4 +1,4 @@
-require "./create_element_table"
+require "./rb/create_element_table"
 
 def element
   {
