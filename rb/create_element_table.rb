@@ -28,7 +28,7 @@ def create_html(body)
 end
 def body
   table = ""
-  a.each do |how, data|
+  element.each do |how, data|
     if data
 
       html = ""
