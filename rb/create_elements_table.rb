@@ -129,7 +129,7 @@ def create_html(body)
   header = "<html><head><title>HTML elements</title><style type=\"text/css\">.green {background-color:#adff2f;} .yellow {background-color:yellow;} th {width:5em;}</style></head><body><table border=\"1\"><tbody><tr><th>element</th><th>collection</th><th>html</th><th>watir-webdriver</th><th>watir</th><th>safariwatir</th>"
   footer = "</tbody></table></body></html>"
   table = header + body + footer
-  File.open("elements/elements.html", "w") {|file| file.write(table)}
+  File.open("reference/elements.htm", "w") {|file| file.write(table)}
 end
 
 def body(from, to)
