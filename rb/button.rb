@@ -1,85 +1,96 @@
-simple_html_example = %{<button>click me</button>}
+require "./rb/create_element_table"
 
-{ action: false,
+def element
+  {
+  action: false,
 
   after: {
-    element: %{},
-    html:    %{}},
+    element: %{browser.button(:after? => #{string("button", :id)}).flash},
+    html:    %{#{html}<br>#{html_id}<br>#{html}}},
 
   alt: {
-    html:   %{},
-    regexp: %{},
-    string: %{}},
+    html:   %{<input type="image" alt="click-me">},
+    regexp: regexp("button", :alt),
+    string: string("button", :alt)},
 
   class: {
-    html:   %{<button class="click-me">click me</button>},
-    regexp: %{browser.button(:class => /click/).click},
-    string: %{browser.button(:class => "click-me").click}},
+    html:   html_class,
+    regexp: regexp("button", :class),
+    string: string("button", :class)},
 
   css: {
-    html:   %{},
-    string: %{}},
+    html:   html_id,
+    string: %{browser.button(:css => "[id=click-me]").click}},
+
+  element_by_xpath:{
+    html:   html_id,
+    string: %{browser.element_by_xpath("//button[@id='click-me']").click}},
 
   for: false,
 
   href: false,
 
   html: {
-    html:   %{},
-    regexp: %{},
-    string: %{}},
+    html:   %{<button onclick="new Ajax.Request('007')">click me</a><br><button onclick="new Ajax.Request('42')">click me</a>},
+    regexp: %{browser.button(:html => /007/).click},
+    string: %{TODO}},
 
   id: {
-    html:   %{<button id="click-me">click me</button>},
-    regexp: %{browser.button(:id => /click/).click},
-    string: %{browser.button(:id => "click-me").click}},
+    html:   html_id,
+    regexp: regexp("button", :id),
+    string: string("button", :id)},
 
   index: {
-    html:     simple_html_example,
-    implicit: %{browser.button.click},
+    html:     html,
+    none: %{browser.button.click},
     integer:  %{browser.button(:index => 0).click}},
 
   method: false,
 
   name: {
-    html:   %{<button name="click-me">click me</button>},
-    regexp: %{browser.button(:name => /click/).click},
-    string: %{browser.button(:name => "click-me").click}},
+    html:   html_name,
+    regexp: regexp("button", :name),
+    string: string("button", :name)},
 
   src: {
-    html:   %{},
-    regexp: %{},
-    string: %{}},
+    html:   %{<input type="image" src="click-me.png">},
+    regexp: regexp("button", :src),
+    string: %{browser.button(:src => "click-me.png").click}},
 
   text: {
-    html:   simple_html_example,
-    regexp: %{browser.button(:text => /click/).click},
-    string: %{browser.button(:text => "click-me").click}},
+    html:   html,
+    regexp: regexp("button", :text),
+    string: string("button", :text)},
 
   title: {
-    html:   %{<button title="click-me">click me</button>},
-    regexp: %{browser.button(:title => /click/).click},
-    string: %{browser.button(:title => "click-me").click}},
+    html:   html_title,
+    regexp: regexp("button", :title),
+    string: string("button", :title)},
 
-  url: {
-    html:   %{},
-    regexp: %{},
-    string: %{}},
+  url: false,
 
-  value: {
-    html:   %{<button value="click-me">click me</button>},
-    regexp: %{browser.button(:value => /click/).click},
-    string: %{browser.button(:value => "click-me").click}},
+  value:  {
+    html:   html_class,
+    regexp: regexp("button", :value),
+    string: string("button", :value)},
 
   xpath:{
-    element_by_xpath: %{},
-    html:             %{},
-    xpath:            %{}},
+    html:   html_id,
+    string: %{browser.button(:xpath => "//a[@id='click-me']").click}},
 
   multiple_attributes: {
-    hash: %{},
-    html: %{}},
+    hash: %{browser.button(:text => "click-me", :index => 1).click},
+    html: html_double},
 
   collection: {
-    example: %{},
-    html:    %{}}}
+    none: %{browser.buttons.each {|button| puts button.text}},
+    html:    html_double}
+  }
+end
+def html(attribute = nil)
+  %{<button#{attribute}>click-me</button>}
+end
+
+if __FILE__ == $0
+  create_html("button", body)
+end

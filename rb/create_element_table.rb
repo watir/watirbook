@@ -13,18 +13,18 @@ end
 def html_title
   html(%{ title="click-me"})
 end
-def regexp(how)
-  %{browser.a(#{how} => /click/).click}
+def regexp(element,how)
+  %{browser.#{element}(:#{how} => /click/).click}
 end
-def string(how)
-  %{browser.a(#{how} => "click-me").click}
+def string(element,how)
+  %{browser.#{element}(:#{how} => "click-me").click}
 end
 
-def create_html(body)
-  header = "<html><head><title>a element</title></head><body><h1>a element</h1><table border=\"1\"><tbody><tr><th>how</th><th>html</th><th>examples</th>"
+def create_html(element, body)
+  header = "<html><head><title>#{element} element</title></head><body><h1>#{element} element</h1><table border=\"1\"><tbody><tr><th>how</th><th>html</th><th>examples</th>"
   footer = "</tbody></table></body></html>"
   table = header + body + footer
-  File.open("reference/a.htm", "w") {|file| file.write(table)}
+  File.open("reference/#{element}.htm", "w") {|file| file.write(table)}
 end
 def body
   table = ""

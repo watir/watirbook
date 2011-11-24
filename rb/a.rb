@@ -5,15 +5,15 @@ def element
   action: false,
 
   after: {
-    element: %{browser.a(:after? => #{string(:id)}).flash},
+    element: %{browser.a(:after? => #{string("a", :id)}).flash},
     html:    %{#{html}<br>#{html_id}<br>#{html}}},
 
   alt: false,
 
   class: {
     html:   html_class,
-    regexp: regexp(:class),
-    string: string(:class)},
+    regexp: regexp("a", :class),
+    string: string("a", :class)},
 
   css: {
     html:   html_id,
@@ -27,7 +27,7 @@ def element
 
   href: {
     html:   html,
-    regexp: regexp(:href),
+    regexp: regexp("a", :href),
     string: %{browser.a(:href => "clicked.htm").click}},
 
   html: {
@@ -37,8 +37,8 @@ def element
 
   id: {
     html:   html_id,
-    regexp: regexp(:id),
-    string: string(:id)},
+    regexp: regexp("a", :id),
+    string: string("a", :id)},
 
   index: {
     html:     html,
@@ -49,24 +49,24 @@ def element
 
   name: {
     html:   html_name,
-    regexp: regexp(:name),
-    string: string(:name)},
+    regexp: regexp("a", :name),
+    string: string("a", :name)},
 
   src: false,
 
   text: {
     html:   html,
-    regexp: regexp(:text),
-    string: string(:text)},
+    regexp: regexp("a", :text),
+    string: string("a", :text)},
 
   title: {
     html:   html_title,
-    regexp: regexp(:title),
-    string: string(:title)},
+    regexp: regexp("a", :title),
+    string: string("a", :title)},
 
   url: {
     html:   html,
-    regexp: regexp(:url),
+    regexp: regexp("a", :url),
     string: %{browser.a(:url => "clicked.htm").click}},
 
   value: false,
@@ -76,7 +76,7 @@ def element
     string: %{browser.a(:xpath => "//a[@id='click-me']").click}},
 
   multiple_attributes: {
-    hash: %{browser.a(:text => "click me", :index => 1).click},
+    hash: %{browser.a(:text => "click-me", :index => 1).click},
     html: html_double},
 
   collection: {
@@ -85,9 +85,9 @@ def element
   }
 end
 def html(attribute = nil)
-  html = %{<a href="clicked.htm"#{attribute}>click me</a>}
+  html = %{<a href="clicked.htm"#{attribute}>click-me</a>}
 end
 
 if __FILE__ == $0
-  create_html(body)
+  create_html("a", body)
 end
