@@ -9,6 +9,10 @@
 - link#after and later
 
 - ubuntu 11.10
+- linux mint
+  - http://royal.pingdom.com/2011/11/23/ubuntu-linux-losing-popularity-fast-new-unity-interface-to-blame/
+  - http://www.linuxmint.com/edition.php?id=83
+  - Linux Mint 11 "Katya" - CD no codecs (32-bit)
 
 - mac 10.7
   - buy
