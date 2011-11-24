@@ -179,4 +179,6 @@ def body(from, to)
   table
 end
 
-create_html(body(0,200))
+if __FILE__ == $0
+  create_html(body(0,200))
+end
