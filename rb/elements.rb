@@ -1,3 +1,46 @@
+def body(from, to)
+  table = ""
+  data.each_with_index do |element, i|
+    next if i < from
+    break if i > to
+
+    empty_cell = "<td></td>"
+
+    default_html = "<td>&lt;#{element[:element]}&gt;</td>"
+    if element[:has_default_html]
+      html = default_html
+    else
+      html = empty_cell
+    end
+
+    green_cell = "<td class=\"green\">"
+    yellow_cell = "<td class=\"yellow\">"
+
+    gems = [[element[:watir_webdriver_supports_element], element[:watir_webdriver_supports_collection]], [element[:watir_supports_element], element[:watir_supports_collection]], [element[:safariwatir_supports_element], element[:safariwatir_supports_collection]]]
+    gem_cells = gems.collect do |gem|
+      gem_element = gem[0]
+      gem_collection = gem[1]
+      if gem_element and gem_collection
+        green_cell
+      elsif gem_element
+        yellow_cell
+      elsif gem_collection
+        puts "error"
+      else
+        empty_cell
+      end
+    end
+
+    table << "<tr><td>#{element[:element]}</td><td>#{element[:collection]}</td>#{html}#{gem_cells[0]}#{gem_cells[1]}#{gem_cells[2]}</tr>\n"
+  end
+  table
+end
+def create_html(body)
+  header = "<html><head><title>HTML elements</title><style type=\"text/css\">.green {background-color:#adff2f;} .yellow {background-color:yellow;} th {width:5em;}</style></head><body><table border=\"1\"><tbody><tr><th>element</th><th>collection</th><th>html</th><th>watir-webdriver</th><th>watir</th><th>safariwatir</th>"
+  footer = "</tbody></table></body></html>"
+  table = header + body + footer
+  File.open("reference/elements.htm", "w") {|file| file.write(table)}
+end
 def data
   [{element: :a,
   collection: :as,
@@ -1191,6 +1234,5 @@ def data
 end
 
 if __FILE__ == $0
-  require "pp"
-  pp data
+  create_html(body(0,200))
 end
