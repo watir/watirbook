@@ -10,8 +10,6 @@ task :free do
   Rake::Task[:all].invoke
 end
 
-
-
 task :merge do
   chapters = "LICENSE.md README.md prerequisites.md about.md installation/installation.md installation/windows.md installation/mac.md installation/ubuntu.md watir-in-five-minutes.md"
   chapters << " buy.md" if type == :free
@@ -31,6 +29,10 @@ end
 
 task :mobi => [:merge] do
   `/Applications/KindleGen_Mac_i386_v1.2/kindlegen watirbook-#{version}-#{type}.epub`
+end
+
+task :html => [:merge] do
+  `pandoc  watirbook-#{type}.md -s -o watirbook-#{version}-#{type}.htm`
 end
 
 task :cleanup do
