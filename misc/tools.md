@@ -1,0 +1,29 @@
+- epub
+  - pandoc
+  - http://code.google.com/p/pandoc/downloads/list
+  - pandoc-1.8.2.1.dmg
+  - install
+
+- mobi
+  - KindleGen for Mac OS 10.5 and above i386
+  - http://johnmacfarlane.net/pandoc/epub.html
+  - http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000234621
+  - extract and copy to /Applications/KindleGen_Mac_i386_v1.2/
+
+- pdf
+  - pandoc + markdown2pdf
+      - http://johnmacfarlane.net/pandoc/README.html
+      - TeX Live
+        - http://www.tug.org/texlive/acquire-netinstall.html
+        - download http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+        - unzip
+        - install with: sudo ./install-tl --gui=wizard
+        - it takes a really long time to install, it took me more than an hour
+      - MacTeX
+        - http://www.tug.org/mactex/
+  - Ruby
+      - Prawn
+        - http://prawn.majesticseacreature.com/
+        - https://github.com/sandal/prawn
+      - PDFKit
+        - https://github.com/jdpace/PDFKit
