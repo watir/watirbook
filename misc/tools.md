@@ -13,14 +13,12 @@
 - pdf
   - pandoc + markdown2pdf
       - http://johnmacfarlane.net/pandoc/README.html
-      - TeX Live
-        - http://www.tug.org/texlive/acquire-netinstall.html
-        - download http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-        - unzip
-        - install with: sudo ./install-tl --gui=wizard
-        - it takes a really long time to install, it took me more than an hour
       - MacTeX
         - http://www.tug.org/mactex/
+        - BasicTeX
+          - http://www.tug.org/mactex/2011/morepackages.html
+          - http://mirror.ctan.org/systems/mac/mactex/mactex-basic.pkg.zip
+          - install
   - Ruby
       - Prawn
         - http://prawn.majesticseacreature.com/
