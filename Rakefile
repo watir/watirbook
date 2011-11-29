@@ -14,34 +14,33 @@ task :merge do
   chapters = "LICENSE.md README.md prerequisites.md about.md installation/installation.md installation/windows.md installation/mac.md installation/ubuntu.md watir-in-five-minutes.md"
   chapters << " buy.md" if type == :free
   chapters << " elements/elements.md elements/link.md elements/collections.md elements/nested.md about_extended.md" if type == :paid
-  `cat #{chapters} > watirbook-1-#{type}.md`
-  `sed s_https://github.com/zeljkofilipin/watirbook/raw/master/__ watirbook-1-#{type}.md > watirbook-2-#{type}.md`
-  `sed s_watir-logo-web_watir-logo_ watirbook-2-#{type}.md > watirbook-#{type}.md`
+  `cat #{chapters} > book/watirbook-1-#{version}-#{type}.md`
+  `sed s_https://github.com/zeljkofilipin/watirbook/raw/master/__ book/watirbook-1-#{version}-#{type}.md > book/watirbook-2-#{version}-#{type}.md`
+  `sed s_watir-logo-web_watir-logo_ book/watirbook-2-#{version}-#{type}.md > book/watirbook-#{version}-#{type}.md`
 end
 
 task :pdf => [:merge] do
-  `markdown2pdf --toc watirbook-#{type}.md -o watirbook-#{version}-#{type}.pdf`
+  `markdown2pdf --toc book/watirbook-#{version}-#{type}.md -o book/watirbook-#{version}-#{type}.pdf`
 end
 
 task :epub => [:merge] do
-  `pandoc --toc --epub-metadata=misc/metadata.xml --epub-cover-image=images/watir-logo.jpg -o watirbook-#{version}-#{type}.epub title.txt watirbook-#{type}.md`
+  `pandoc --toc --epub-metadata=misc/metadata.xml --epub-cover-image=images/watir-logo.jpg -o book/watirbook-#{version}-#{type}.epub title.txt book/watirbook-#{version}-#{type}.md`
 end
 
-task :mobi => [:merge] do
-  `/Applications/KindleGen_Mac_i386_v1.2/kindlegen watirbook-#{version}-#{type}.epub`
+task :mobi => [:merge, :epub] do
+  `/Applications/KindleGen_Mac_i386_v1.2/kindlegen book/watirbook-#{version}-#{type}.epub`
 end
 
 task :html => [:merge] do
-  `pandoc  watirbook-#{type}.md -s -o watirbook-#{version}-#{type}.htm`
+  `pandoc book/watirbook-#{version}-#{type}.md -s -o book/watirbook-#{version}-#{type}.htm`
 end
 
-task :pdfkit do
-  `pandoc  installation/ubuntu.md -s -o book.htm`
+task :pdfkit => [:merge, :html] do
   require "pdfkit"
-  kit = PDFKit.new(File.new("book.htm"), :toc => true)
-  kit.to_file "book.pdf"
+  kit = PDFKit.new(File.new("watirbook-#{version}-#{type}.htm"), :toc => true)
+  kit.to_file "book/watirbook-#{version}-#{type}.pdf"
 end
 
 task :cleanup do
-  `rm watirbook-#{type}.md watirbook-1-#{type}.md watirbook-2-#{type}.md`
+  `rm book/*.md`
 end
