@@ -35,6 +35,13 @@ task :html => [:merge] do
   `pandoc  watirbook-#{type}.md -s -o watirbook-#{version}-#{type}.htm`
 end
 
+task :pdfkit do
+  `pandoc  installation/ubuntu.md -s -o book.htm`
+  require "pdfkit"
+  kit = PDFKit.new(File.new("book.htm"), :toc => true)
+  kit.to_file "book.pdf"
+end
+
 task :cleanup do
   `rm watirbook-#{type}.md watirbook-1-#{type}.md watirbook-2-#{type}.md`
 end
