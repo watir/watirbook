@@ -6,8 +6,6 @@ def body(from, to)
 
     if element[:html] == :default
       html = "<td>&lt;#{element[:element]}&gt;</td>"
-    elsif element[:html] == :todo
-      html = "<td>TODO</td>"
     elsif element[:html] == :na
       html = "<td>NA</td>"
     else
@@ -186,7 +184,7 @@ def data
 
   {element: :button,
   collection: :buttons,
-  html: :default,
+  html: %{button&gt;&lt;input type="button"&gt;&lt;input type="image"&gt;&lt;input type="reset"&gt;&lt;input type="submit"},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -212,6 +210,16 @@ def data
   safariwatir_supports_element: false,
   watir_webdriver_supports_collection: true,
   watir_supports_collection: false,
+  safariwatir_supports_collection: false},
+
+  {element: :cell,
+  collection: :cells,
+  html: %{td},
+  watir_webdriver_supports_element: false,
+  watir_supports_element: true,
+  safariwatir_supports_element: false,
+  watir_webdriver_supports_collection: false,
+  watir_supports_collection: true,
   safariwatir_supports_collection: false},
 
   {element: :checkbox,
@@ -466,7 +474,7 @@ def data
 
   {element: :frame,
   collection: :frames,
-  html: :default,
+  html: %{frame&gt;&lt;iframe},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -904,6 +912,16 @@ def data
   watir_supports_collection: true,
   safariwatir_supports_collection: false},
 
+  {element: :row,
+  collection: :rows,
+  html: %{tr},
+  watir_webdriver_supports_element: false,
+  watir_supports_element: true,
+  safariwatir_supports_element: true,
+  watir_webdriver_supports_collection: false,
+  watir_supports_collection: true,
+  safariwatir_supports_collection: false},
+
   {element: :rp,
   collection: :rps,
   html: :default,
@@ -1106,7 +1124,7 @@ def data
 
   {element: :text_field,
   collection: :text_fields,
-  html: :todo,
+  html: %{input type="password"&gt;&lt;input type="text"&gt;&lt;textarea},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
