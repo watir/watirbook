@@ -37,10 +37,11 @@ task :html do
    md_files.each do |md_file|
     html_file = md_file.gsub(".md", ".html")
     `pandoc #{md_file} -s -o #{html_file}`
+    mv html_file, "../watirbook-gh-pages/#{html_file}"
     links_to_html_files << %{<li><a href="#{html_file}">#{html_file}</a></li>}
   end
   links_to_html_files << "</ul>"
-  File.open("index.html", "w") {|file| file.puts links_to_html_files}
+  File.open("../watirbook-gh-pages/index.html", "w") {|file| file.puts links_to_html_files}
 end
 
 task :pdfkit => [:merge, :html] do
