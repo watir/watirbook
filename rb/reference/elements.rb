@@ -44,7 +44,7 @@ end
 def data
   [{element: :a,
   collection: :as,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -54,7 +54,7 @@ def data
 
   {element: :abbr,
   collection: :abbrs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -64,7 +64,7 @@ def data
 
   {element: :address,
   collection: :addresses,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -74,7 +74,7 @@ def data
 
   {element: :area,
   collection: :areas,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -84,7 +84,7 @@ def data
 
   {element: :article,
   collection: :articles,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -94,7 +94,7 @@ def data
 
   {element: :aside,
   collection: :asides,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -104,7 +104,7 @@ def data
 
   {element: :audio,
   collection: :audios,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -114,7 +114,7 @@ def data
 
   {element: :b,
   collection: :bs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -124,7 +124,7 @@ def data
 
   {element: :base,
   collection: :bases,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -134,7 +134,7 @@ def data
 
   {element: :bdi,
   collection: :bdis,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -144,7 +144,7 @@ def data
 
   {element: :bdo,
   collection: :bdos,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -154,7 +154,7 @@ def data
 
   {element: :blockquote,
   collection: :blockquotes,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -164,7 +164,7 @@ def data
 
   {element: :body,
   collection: :bodys,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -174,7 +174,7 @@ def data
 
   {element: :br,
   collection: :brs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -184,7 +184,7 @@ def data
 
   {element: :button,
   collection: :buttons,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -194,7 +194,7 @@ def data
 
   {element: :canvas,
   collection: :canvases,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -204,7 +204,7 @@ def data
 
   {element: :caption,
   collection: :captions,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -224,7 +224,7 @@ def data
 
   {element: :cite,
   collection: :cites,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -234,7 +234,7 @@ def data
 
   {element: :code,
   collection: :codes,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -244,7 +244,7 @@ def data
 
   {element: :col,
   collection: :cols,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -254,7 +254,7 @@ def data
 
   {element: :colgroup,
   collection: :colgroups,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -264,7 +264,7 @@ def data
 
   {element: :command,
   collection: :commands,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -274,7 +274,7 @@ def data
 
   {element: :datalist,
   collection: :datalists,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -284,7 +284,7 @@ def data
 
   {element: :dd,
   collection: :dds,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -294,7 +294,7 @@ def data
 
   {element: :del,
   collection: :dels,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -304,7 +304,7 @@ def data
 
   {element: :details,
   collection: :detailses,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -314,7 +314,7 @@ def data
 
   {element: :dfn,
   collection: :dfns,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -324,7 +324,7 @@ def data
 
   {element: :div,
   collection: :divs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -334,7 +334,7 @@ def data
 
   {element: :dl,
   collection: :dls,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -344,7 +344,7 @@ def data
 
   {element: :dt,
   collection: :dts,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -374,7 +374,7 @@ def data
 
   {element: :em,
   collection: :ems,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -384,7 +384,7 @@ def data
 
   {element: :embed,
   collection: :embeds,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -394,7 +394,7 @@ def data
 
   {element: :fieldset,
   collection: :fieldsets,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -404,7 +404,7 @@ def data
 
   {element: :figcaption,
   collection: :figcaptions,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -414,7 +414,7 @@ def data
 
   {element: :figure,
   collection: :figures,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -434,7 +434,7 @@ def data
 
   {element: :font,
   collection: :fonts,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -444,7 +444,7 @@ def data
 
   {element: :footer,
   collection: :footers,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -454,7 +454,7 @@ def data
 
   {element: :form,
   collection: :forms,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -464,7 +464,7 @@ def data
 
   {element: :frame,
   collection: :frames,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -474,7 +474,7 @@ def data
 
   {element: :h1,
   collection: :h1s,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -484,7 +484,7 @@ def data
 
   {element: :h2,
   collection: :h2s,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -494,7 +494,7 @@ def data
 
   {element: :h3,
   collection: :h3s,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -504,7 +504,7 @@ def data
 
   {element: :h4,
   collection: :h4s,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -514,7 +514,7 @@ def data
 
   {element: :h5,
   collection: :h5s,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -524,7 +524,7 @@ def data
 
   {element: :h6,
   collection: :h6s,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -534,7 +534,7 @@ def data
 
   {element: :head,
   collection: :heads,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -544,7 +544,7 @@ def data
 
   {element: :header,
   collection: :headers,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: true,
@@ -554,7 +554,7 @@ def data
 
   {element: :hgroup,
   collection: :hgroups,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -574,7 +574,7 @@ def data
 
   {element: :hr,
   collection: :hrs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -584,7 +584,7 @@ def data
 
   {element: :html,
   collection: :htmls,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -594,7 +594,7 @@ def data
 
   {element: :i,
   collection: :is,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -604,7 +604,7 @@ def data
 
   {element: :iframe,
   collection: :iframes,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -624,7 +624,7 @@ def data
 
   {element: :img,
   collection: :imgs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -634,7 +634,7 @@ def data
 
   {element: :input,
   collection: :inputs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -644,7 +644,7 @@ def data
 
   {element: :ins,
   collection: :inses,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -654,7 +654,7 @@ def data
 
   {element: :kbd,
   collection: :kbds,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -664,7 +664,7 @@ def data
 
   {element: :keygen,
   collection: :keygens,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -674,7 +674,7 @@ def data
 
   {element: :label,
   collection: :labels,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -684,7 +684,7 @@ def data
 
   {element: :legend,
   collection: :legends,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -694,7 +694,7 @@ def data
 
   {element: :li,
   collection: :lis,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -714,7 +714,7 @@ def data
 
   {element: :map,
   collection: :maps,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -724,7 +724,7 @@ def data
 
   {element: :mark,
   collection: :marks,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -734,7 +734,7 @@ def data
 
   {element: :menu,
   collection: :menus,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -744,7 +744,7 @@ def data
 
   {element: :meta,
   collection: :metas,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -754,7 +754,7 @@ def data
 
   {element: :meter,
   collection: :meters,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -764,7 +764,7 @@ def data
 
   {element: :nav,
   collection: :navs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -774,7 +774,7 @@ def data
 
   {element: :noscript,
   collection: :noscripts,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -784,7 +784,7 @@ def data
 
   {element: :object,
   collection: :objects,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -794,7 +794,7 @@ def data
 
   {element: :ol,
   collection: :ols,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -804,7 +804,7 @@ def data
 
   {element: :optgroup,
   collection: :optgroups,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -814,7 +814,7 @@ def data
 
   {element: :option,
   collection: :options,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: true,
@@ -824,7 +824,7 @@ def data
 
   {element: :output,
   collection: :outputs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -834,7 +834,7 @@ def data
 
   {element: :p,
   collection: :ps,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -844,7 +844,7 @@ def data
 
   {element: :param,
   collection: :params,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -854,7 +854,7 @@ def data
 
   {element: :pre,
   collection: :pres,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -864,7 +864,7 @@ def data
 
   {element: :progress,
   collection: :progresses,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -874,7 +874,7 @@ def data
 
   {element: :q,
   collection: :qs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -894,7 +894,7 @@ def data
 
   {element: :rp,
   collection: :rps,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -904,7 +904,7 @@ def data
 
   {element: :rt,
   collection: :rts,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -914,7 +914,7 @@ def data
 
   {element: :ruby,
   collection: :rubies,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -924,7 +924,7 @@ def data
 
   {element: :s,
   collection: :ss,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -934,7 +934,7 @@ def data
 
   {element: :samp,
   collection: :samps,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -944,7 +944,7 @@ def data
 
   {element: :script,
   collection: :scripts,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -954,7 +954,7 @@ def data
 
   {element: :section,
   collection: :sections,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -964,7 +964,7 @@ def data
 
   {element: :select,
   collection: :selects,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -984,7 +984,7 @@ def data
 
   {element: :small,
   collection: :smalls,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -994,7 +994,7 @@ def data
 
   {element: :source,
   collection: :sources,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1004,7 +1004,7 @@ def data
 
   {element: :span,
   collection: :spans,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -1014,7 +1014,7 @@ def data
 
   {element: :strong,
   collection: :strongs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -1024,7 +1024,7 @@ def data
 
   {element: :style,
   collection: :styles,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1034,7 +1034,7 @@ def data
 
   {element: :sub,
   collection: :subs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1044,7 +1044,7 @@ def data
 
   {element: :summary,
   collection: :summaries,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1054,7 +1054,7 @@ def data
 
   {element: :sup,
   collection: :sups,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1064,7 +1064,7 @@ def data
 
   {element: :table,
   collection: :tables,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -1074,7 +1074,7 @@ def data
 
   {element: :tbody,
   collection: :tbodys,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -1084,7 +1084,7 @@ def data
 
   {element: :td,
   collection: :tds,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -1104,7 +1104,7 @@ def data
 
   {element: :textarea,
   collection: :textareas,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -1114,7 +1114,7 @@ def data
 
   {element: :tfoot,
   collection: :tfoots,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1124,7 +1124,7 @@ def data
 
   {element: :th,
   collection: :ths,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1134,7 +1134,7 @@ def data
 
   {element: :thead,
   collection: :theads,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1144,7 +1144,7 @@ def data
 
   {element: :time,
   collection: :times,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1154,7 +1154,7 @@ def data
 
   {element: :title,
   collection: :titles,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1164,7 +1164,7 @@ def data
 
   {element: :tr,
   collection: :trs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -1174,7 +1174,7 @@ def data
 
   {element: :track,
   collection: :tracks,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1184,7 +1184,7 @@ def data
 
   {element: :u,
   collection: :us,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1194,7 +1194,7 @@ def data
 
   {element: :ul,
   collection: :uls,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -1204,7 +1204,7 @@ def data
 
   {element: :var,
   collection: :vars,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1214,7 +1214,7 @@ def data
 
   {element: :video,
   collection: :videos,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
@@ -1224,7 +1224,7 @@ def data
 
   {element: :wbr,
   collection: :wbrs,
-  has_default_html: true,
+  html: :default,
   watir_webdriver_supports_element: true,
   watir_supports_element: false,
   safariwatir_supports_element: false,
