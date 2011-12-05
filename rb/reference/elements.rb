@@ -4,14 +4,14 @@ def body(from, to)
     next if i < from
     break if i > to
 
-    default_html = "<td>&lt;#{element[:element]}&gt;</td>"
-    todo_html = "<td>TODO</td>"
     if element[:html] == :default
-      html = default_html
+      html = "<td>&lt;#{element[:element]}&gt;</td>"
     elsif element[:html] == :todo
-      html = todo_html
+      html = "<td>TODO</td>"
+    elsif element[:html] == :na
+      html = "<td>NA</td>"
     else
-      html = element[:html]
+      html = "<td>&lt;#{element[:html]}&gt;</td>"
     end
 
     empty_cell = "<td></td>"
@@ -216,7 +216,7 @@ def data
 
   {element: :checkbox,
   collection: :checkboxes,
-  html: :todo,
+  html: %{input type="checkbox"},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -356,7 +356,7 @@ def data
 
   {element: :element,
   collection: :elements,
-  html: :todo,
+  html: :na,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -366,7 +366,7 @@ def data
 
   {element: :element_by_xpath,
   collection: :elements_by_xpath,
-  html: :todo,
+  html: :na,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -426,7 +426,7 @@ def data
 
   {element: :file_field,
   collection: :file_fields,
-  html: :todo,
+  html: %{input type="file"},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -566,7 +566,7 @@ def data
 
   {element: :hidden,
   collection: :hiddens,
-  html: :todo,
+  html: %{input type="hidden"},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -616,7 +616,7 @@ def data
 
   {element: :image,
   collection: :images,
-  html: :todo,
+  html: %{img},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -706,7 +706,7 @@ def data
 
   {element: :link,
   collection: :links,
-  html: :todo,
+  html: %{a},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -854,6 +854,16 @@ def data
   watir_supports_collection: false,
   safariwatir_supports_collection: false},
 
+  {element: :password,
+  collection: :passwords,
+  html: %{input type="password"},
+  watir_webdriver_supports_element: false,
+  watir_supports_element: false,
+  safariwatir_supports_element: true,
+  watir_webdriver_supports_collection: false,
+  watir_supports_collection: false,
+  safariwatir_supports_collection: false},
+
   {element: :pre,
   collection: :pres,
   html: :default,
@@ -886,7 +896,7 @@ def data
 
   {element: :radio,
   collection: :radios,
-  html: :todo,
+  html: %{input type="radio"},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -976,7 +986,7 @@ def data
 
   {element: :select_list,
   collection: :select_lists,
-  html: :todo,
+  html: %{select},
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
