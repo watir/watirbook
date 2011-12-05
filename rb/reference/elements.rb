@@ -4,15 +4,17 @@ def body(from, to)
     next if i < from
     break if i > to
 
-    empty_cell = "<td></td>"
-
     default_html = "<td>&lt;#{element[:element]}&gt;</td>"
-    if element[:has_default_html]
+    todo_html = "<td>TODO</td>"
+    if element[:html] == :default
       html = default_html
+    elsif element[:html] == :todo
+      html = todo_html
     else
-      html = empty_cell
+      html = element[:html]
     end
 
+    empty_cell = "<td></td>"
     green_cell = "<td class=\"green\">"
     yellow_cell = "<td class=\"yellow\">"
 
