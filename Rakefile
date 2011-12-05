@@ -31,8 +31,16 @@ task :mobi => [:merge, :epub] do
   `/Applications/KindleGen_Mac_i386_v1.2/kindlegen book/watirbook-#{version}-#{type}.epub`
 end
 
-task :html => [:merge] do
-  `pandoc book/watirbook-#{version}-#{type}.md -s -o book/watirbook-#{version}-#{type}.htm`
+task :html do
+  md_files = Dir.glob("**/*.md")
+  links_to_all_files = "<ul>"
+   md_files.each do |md_file|
+    html_file = md_file.gsub(".md", ".html")
+    `pandoc #{md_file} -s -o #{html_file}`
+    links_to_all_files << %{<li><a href="#{html_file}">#{html_file}</a></li>}
+  end
+  links_to_all_files << "</ul>"
+  File.open("index.html", "w") {|file| file.puts links_to_all_files }
 end
 
 task :pdfkit => [:merge, :html] do
