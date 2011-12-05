@@ -36,7 +36,7 @@ def body(from, to)
   table
 end
 def create_html(body)
-  header = %{<html><head><title>HTML elements</title><style type="text/css">.green {background-color:#adff2f;} .yellow {background-color:yellow;} th {width:5em;} table, th, td {border-radius: 5px;}</style></head><body><table border="1"><tbody><tr><th>element</th><th>collection</th><th>html</th><th>watir-webdriver</th><th>watir</th><th>safariwatir</th></tr>}
+  header = %{<!DOCTYPE html><html><head><meta charset='utf-8'><title>HTML elements</title><style type="text/css">.green {background-color:#adff2f;} .yellow {background-color:yellow;} th {width:5em;} table, th, td {border-radius: 5px;}</style></head><body><table border="1"><tbody><tr><th>element</th><th>collection</th><th>html</th><th>watir-webdriver</th><th>watir</th><th>safariwatir</th></tr>}
   footer = "</tbody></table></body></html>"
   table = header + body + footer
   File.open("reference/elements.htm", "w") {|file| file.write(table)}
