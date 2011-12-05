@@ -214,7 +214,7 @@ def data
 
   {element: :checkbox,
   collection: :checkboxes,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -354,7 +354,7 @@ def data
 
   {element: :element,
   collection: :elements,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -364,7 +364,7 @@ def data
 
   {element: :element_by_xpath,
   collection: :elements_by_xpath,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -424,7 +424,7 @@ def data
 
   {element: :file_field,
   collection: :file_fields,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -564,7 +564,7 @@ def data
 
   {element: :hidden,
   collection: :hiddens,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: false,
@@ -614,7 +614,7 @@ def data
 
   {element: :image,
   collection: :images,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -704,7 +704,7 @@ def data
 
   {element: :link,
   collection: :links,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -884,7 +884,7 @@ def data
 
   {element: :radio,
   collection: :radios,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -974,7 +974,7 @@ def data
 
   {element: :select_list,
   collection: :select_lists,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
@@ -1094,7 +1094,7 @@ def data
 
   {element: :text_field,
   collection: :text_fields,
-  has_default_html: false,
+  html: :todo,
   watir_webdriver_supports_element: true,
   watir_supports_element: true,
   safariwatir_supports_element: true,
