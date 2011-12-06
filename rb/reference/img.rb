@@ -1,4 +1,4 @@
-require "./rb/create_element_table"
+require_relative "element"
 
 def element
   {
@@ -57,10 +57,7 @@ def element
     regexp: regexp("img", :src),
     string: %{browser.img(:src => "click-me.png").click}},
 
-  text: {
-    html:   html,
-    regexp: regexp("img", :text),
-    string: string("img", :text)},
+  text: false,
 
   title: {
     html:   html_title,
@@ -85,7 +82,7 @@ def element
   }
 end
 def html(attribute = nil)
-  %{<img src="click-me.png #{attribute}>}
+  %{<img src="click-me.png"#{attribute}>}
 end
 
 if __FILE__ == $0
