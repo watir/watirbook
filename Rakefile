@@ -13,7 +13,7 @@ end
 task :merge do
   chapters = "LICENSE.md README.md prerequisites.md about.md installation/installation.md installation/windows.md installation/mac.md installation/ubuntu.md watir-in-five-minutes.md"
   chapters << " buy.md" if type == :free
-  chapters << " elements/elements.md elements/link.md elements/collections.md elements/nested.md about_extended.md" if type == :paid
+  chapters << " elements/elements.md elements/link.md elements/button.md elements/collections.md elements/nested.md about_extended.md" if type == :paid
   `cat #{chapters} > book/watirbook-1-#{version}-#{type}.md`
   `sed s_https://github.com/zeljkofilipin/watirbook/raw/master/__ book/watirbook-1-#{version}-#{type}.md > book/watirbook-2-#{version}-#{type}.md`
   `sed s_watir-logo-web_watir-logo_ book/watirbook-2-#{version}-#{type}.md > book/watirbook-#{version}-#{type}.md`
