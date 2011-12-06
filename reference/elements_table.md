@@ -1,0 +1,123 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>HTML elements</title><style type="text/css">.green {background-color:#adff2f;} .yellow {background-color:yellow;} th {width:5em;} table, th, td {border-radius: 5px;}</style></head><body><table border="1"><tbody><tr><th>element</th><th>collection</th><th>html</th><th>watir-webdriver</th><th>watir</th><th>safariwatir</th></tr><tr><td>a</td><td>as</td><td>&lt;a&gt;</td><td class="green"><td class="yellow"><td class="yellow"></tr>
+<tr><td>abbr</td><td>abbrs</td><td>&lt;abbr&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>address</td><td>addresses</td><td>&lt;address&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>area</td><td>areas</td><td>&lt;area&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>article</td><td>articles</td><td>&lt;article&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>aside</td><td>asides</td><td>&lt;aside&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>audio</td><td>audios</td><td>&lt;audio&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>b</td><td>bs</td><td>&lt;b&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>base</td><td>bases</td><td>&lt;base&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>bdi</td><td>bdis</td><td>&lt;bdi&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>bdo</td><td>bdos</td><td>&lt;bdo&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>blockquote</td><td>blockquotes</td><td>&lt;blockquote&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>body</td><td>bodys</td><td>&lt;body&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>br</td><td>brs</td><td>&lt;br&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>button</td><td>buttons</td><td>&lt;button&gt;&lt;input type="button"&gt;&lt;input type="image"&gt;&lt;input type="reset"&gt;&lt;input type="submit"&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>canvas</td><td>canvases</td><td>&lt;canvas&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>caption</td><td>captions</td><td>&lt;caption&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>cell</td><td>cells</td><td>&lt;td&gt;</td><td></td><td class="green"><td></td></tr>
+<tr><td>checkbox</td><td>checkboxes</td><td>&lt;input type="checkbox"&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>cite</td><td>cites</td><td>&lt;cite&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>code</td><td>codes</td><td>&lt;code&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>col</td><td>cols</td><td>&lt;col&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>colgroup</td><td>colgroups</td><td>&lt;colgroup&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>command</td><td>commands</td><td>&lt;command&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>datalist</td><td>datalists</td><td>&lt;datalist&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>dd</td><td>dds</td><td>&lt;dd&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>del</td><td>dels</td><td>&lt;del&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>details</td><td>detailses</td><td>&lt;details&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>dfn</td><td>dfns</td><td>&lt;dfn&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>div</td><td>divs</td><td>&lt;div&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>dl</td><td>dls</td><td>&lt;dl&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>dt</td><td>dts</td><td>&lt;dt&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>element</td><td>elements</td><td>NA</td><td class="green"><td class="yellow"><td></td></tr>
+<tr><td>element_by_xpath</td><td>elements_by_xpath</td><td>NA</td><td class="green"><td class="yellow"><td></td></tr>
+<tr><td>em</td><td>ems</td><td>&lt;em&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>embed</td><td>embeds</td><td>&lt;embed&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>fieldset</td><td>fieldsets</td><td>&lt;fieldset&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>figcaption</td><td>figcaptions</td><td>&lt;figcaption&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>figure</td><td>figures</td><td>&lt;figure&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>file_field</td><td>file_fields</td><td>&lt;input type="file"&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>font</td><td>fonts</td><td>&lt;font&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>footer</td><td>footers</td><td>&lt;footer&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>form</td><td>forms</td><td>&lt;form&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>frame</td><td>frames</td><td>&lt;frame&gt;&lt;iframe&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>h1</td><td>h1s</td><td>&lt;h1&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>h2</td><td>h2s</td><td>&lt;h2&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>h3</td><td>h3s</td><td>&lt;h3&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>h4</td><td>h4s</td><td>&lt;h4&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>h5</td><td>h5s</td><td>&lt;h5&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>h6</td><td>h6s</td><td>&lt;h6&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>head</td><td>heads</td><td>&lt;head&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>header</td><td>headers</td><td>&lt;header&gt;</td><td class="green"><td></td><td class="yellow"></tr>
+<tr><td>hgroup</td><td>hgroups</td><td>&lt;hgroup&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>hidden</td><td>hiddens</td><td>&lt;input type="hidden"&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>hr</td><td>hrs</td><td>&lt;hr&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>html</td><td>htmls</td><td>&lt;html&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>i</td><td>is</td><td>&lt;i&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>iframe</td><td>iframes</td><td>&lt;iframe&gt;</td><td class="green"><td class="yellow"><td class="yellow"></tr>
+<tr><td>image</td><td>images</td><td>&lt;img&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>img</td><td>imgs</td><td>&lt;img&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>input</td><td>inputs</td><td>&lt;input&gt;</td><td class="green"><td class="yellow"><td class="yellow"></tr>
+<tr><td>ins</td><td>inses</td><td>&lt;ins&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>kbd</td><td>kbds</td><td>&lt;kbd&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>keygen</td><td>keygens</td><td>&lt;keygen&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>label</td><td>labels</td><td>&lt;label&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>legend</td><td>legends</td><td>&lt;legend&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>li</td><td>lis</td><td>&lt;li&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>link</td><td>links</td><td>&lt;a&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>map</td><td>maps</td><td>&lt;map&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>mark</td><td>marks</td><td>&lt;mark&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>menu</td><td>menus</td><td>&lt;menu&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>meta</td><td>metas</td><td>&lt;meta&gt;</td><td class="green"><td class="green"><td></td></tr>
+<tr><td>meter</td><td>meters</td><td>&lt;meter&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>nav</td><td>navs</td><td>&lt;nav&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>noscript</td><td>noscripts</td><td>&lt;noscript&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>object</td><td>objects</td><td>&lt;object&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>ol</td><td>ols</td><td>&lt;ol&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>optgroup</td><td>optgroups</td><td>&lt;optgroup&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>option</td><td>options</td><td>&lt;option&gt;</td><td class="green"><td></td><td class="yellow"></tr>
+<tr><td>output</td><td>outputs</td><td>&lt;output&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>p</td><td>ps</td><td>&lt;p&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>param</td><td>params</td><td>&lt;param&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>password</td><td>passwords</td><td>&lt;input type="password"&gt;</td><td></td><td></td><td class="yellow"></tr>
+<tr><td>pre</td><td>pres</td><td>&lt;pre&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>progress</td><td>progresses</td><td>&lt;progress&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>q</td><td>qs</td><td>&lt;q&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>radio</td><td>radios</td><td>&lt;input type="radio"&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>row</td><td>rows</td><td>&lt;tr&gt;</td><td></td><td class="green"><td class="yellow"></tr>
+<tr><td>rp</td><td>rps</td><td>&lt;rp&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>rt</td><td>rts</td><td>&lt;rt&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>ruby</td><td>rubies</td><td>&lt;ruby&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>s</td><td>ss</td><td>&lt;s&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>samp</td><td>samps</td><td>&lt;samp&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>script</td><td>scripts</td><td>&lt;script&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>section</td><td>sections</td><td>&lt;section&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>select</td><td>selects</td><td>&lt;select&gt;</td><td class="green"><td class="yellow"><td class="yellow"></tr>
+<tr><td>select_list</td><td>select_lists</td><td>&lt;select&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>small</td><td>smalls</td><td>&lt;small&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>source</td><td>sources</td><td>&lt;source&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>span</td><td>spans</td><td>&lt;span&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>strong</td><td>strongs</td><td>&lt;strong&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>style</td><td>styles</td><td>&lt;style&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>sub</td><td>subs</td><td>&lt;sub&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>summary</td><td>summaries</td><td>&lt;summary&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>sup</td><td>sups</td><td>&lt;sup&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>table</td><td>tables</td><td>&lt;table&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>tbody</td><td>tbodys</td><td>&lt;tbody&gt;</td><td class="green"><td class="yellow"><td></td></tr>
+<tr><td>td</td><td>tds</td><td>&lt;td&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>text_field</td><td>text_fields</td><td>&lt;input type="password"&gt;&lt;input type="text"&gt;&lt;textarea&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>textarea</td><td>textareas</td><td>&lt;textarea&gt;</td><td class="green"><td class="yellow"><td class="yellow"></tr>
+<tr><td>tfoot</td><td>tfoots</td><td>&lt;tfoot&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>th</td><td>ths</td><td>&lt;th&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>thead</td><td>theads</td><td>&lt;thead&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>time</td><td>times</td><td>&lt;time&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>title</td><td>titles</td><td>&lt;title&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>tr</td><td>trs</td><td>&lt;tr&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>track</td><td>tracks</td><td>&lt;track&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>u</td><td>us</td><td>&lt;u&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>ul</td><td>uls</td><td>&lt;ul&gt;</td><td class="green"><td class="green"><td class="yellow"></tr>
+<tr><td>var</td><td>vars</td><td>&lt;var&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>video</td><td>videos</td><td>&lt;video&gt;</td><td class="green"><td></td><td></td></tr>
+<tr><td>wbr</td><td>wbrs</td><td>&lt;wbr&gt;</td><td class="green"><td></td><td></td></tr>
+</tbody></table></body></html>
