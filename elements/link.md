@@ -389,10 +389,10 @@ It is also very common for an HTML element to have a `title` attribute. Change `
 
 If you know the entire `title`:
 
-    browser.a(:class => "click me").flash
+    browser.a(:title => "click me").flash
     => 10
 
-    browser.a(:class => "click me").click
+    browser.a(:title => "click me").click
     => []
 
     browser.back
@@ -402,10 +402,10 @@ If you know the entire `title`:
 
 If you know the portion of `title`:
 
-    browser.a(:class => /click/).flash
+    browser.a(:title => /click/).flash
     => 10
 
-    browser.a(:class => /click/).click
+    browser.a(:title => /click/).click
     => []
 
     browser.back
