@@ -26,7 +26,7 @@ To make sure you could do the exercises from this chapter even without internet 
     onclick="document.getElementById('click-me').innerHTML='clicked';">
     click me</button>
 
-The `onclick` part makes sure the button changes it's text from *click me* to *clicked* when it is clicked, so you can see if the code you are trying out actually works.
+The `onclick` part makes sure the button changes it's text from *click me* to *clicked* when clicked, so you can see if the code you are trying out actually works.
 
 Open IRB, require watir-webdriver, open the browser and open `button.htm`. If you do not know how to do that, please read *Link* chapter. I have explained it there. Since I have also gone into great detail there how to access links, I will assume that you are familiar with all that stuff, and here I will just talk about things that are different for buttons. Take a look at *Button* table in *Reference* chapter for more examples.
 
