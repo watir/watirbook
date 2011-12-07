@@ -16,7 +16,7 @@ The *how* part can be (alphabetically): `after?`, `class`, `css`, `html`, `id`, 
 
 Since I have gone into great detail there how to access links in the *Link* chapter, I will assume that you are familiar with all that stuff, and here I will just talk about things that are different for checkboxes. Take a look at *Checkbox* table in *Reference* chapter for more examples.
 
-Create a simple HTML file with only one image in it. Open your favorite text editor, enter the following line in it and save it as `checkbox.htm`:
+Create a simple HTML file with only one checkbox in it. Open your favorite text editor, enter the following line in it and save it as `checkbox.htm`:
 
     <input type="checkbox" id="click-me">
 
