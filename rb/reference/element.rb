@@ -44,7 +44,7 @@ def body
 
       table << "<tr><td>#{how}</td><td>#{html}</td><td>#{examples}</td></tr>"
     else
-      table << "<tr><td>#{how}</td><td colspan='2'>not supported</td></tr>"
+      table << %{<tr><td colspan="3"><em>#{how} not supported</em></td></tr>}
     end
   end
   table
