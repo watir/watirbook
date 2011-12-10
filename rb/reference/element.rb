@@ -21,7 +21,7 @@ def string(element,how)
 end
 
 def create_html(element, body)
-  header = "<html><head><title>#{element} element</title></head><body><h1>#{element} element</h1><table border=\"1\"><tbody><tr><th>how</th><th>html</th><th>examples</th>"
+  header = %{<!DOCTYPE html><html><head><meta charset="utf-8"><title>#{element} element</title><style type="text/css">table, td {border-style:solid; border-width:1px; border-radius: 10px;}</style></head><body><h1>#{element} element</h1><table><tbody><tr><th>how</th><th>html</th><th>examples</th>}
   footer = "</tbody></table></body></html>"
   table = header + body + footer
   File.open("reference/#{element}.htm", "w") {|file| file.write(table)}
