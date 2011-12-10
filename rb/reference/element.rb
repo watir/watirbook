@@ -14,10 +14,10 @@ def html_title
   html(%{ title="click-me"})
 end
 def regexp(element,how)
-  %{browser.#{element}(:#{how} => /click/).click}
+  %{browser.#{element}(:#{how} => /click/)}
 end
 def string(element,how)
-  %{browser.#{element}(:#{how} => "click-me").click}
+  %{browser.#{element}(:#{how} => "click-me")}
 end
 
 def create_html(element, body)

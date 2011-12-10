@@ -5,7 +5,7 @@ def element
   action: false,
 
   after: {
-    element: %{browser.a(:after? => #{string("a", :id)}).flash},
+    element: %{browser.a(:after? => #{string("a", :id)})},
     html:    %{#{html}<br>#{html_id}<br>#{html}}},
 
   alt: false,
@@ -17,22 +17,22 @@ def element
 
   css: {
     html:   html_id,
-    string: %{browser.a(:css => "[id=click-me]").click}},
+    string: %{browser.a(:css => "[id=click-me]")}},
 
   element_by_xpath:{
     html:   html_id,
-    string: %{browser.element_by_xpath("//a[@id='click-me']").click}},
+    string: %{browser.element_by_xpath("//a[@id='click-me']")}},
 
   for: false,
 
   href: {
     html:   html,
     regexp: regexp("a", :href),
-    string: %{browser.a(:href => "clicked.htm").click}},
+    string: %{browser.a(:href => "clicked.htm")}},
 
   html: {
     html:   %{<a href="clicked.htm" onclick="new Ajax.Request('007')">click me</a><br><a href="clicked.htm" onclick="new Ajax.Request('42')">click me</a>},
-    regexp: %{browser.a(:html => /007/).click},
+    regexp: %{browser.a(:html => /007/)},
     string: %{TODO}},
 
   id: {
@@ -42,8 +42,8 @@ def element
 
   index: {
     html:     html,
-    none: %{browser.a.click},
-    integer:  %{browser.a(:index => 0).click}},
+    none: %{browser.a},
+    integer:  %{browser.a(:index => 0)}},
 
   method: false,
 
@@ -67,16 +67,16 @@ def element
   url: {
     html:   html,
     regexp: regexp("a", :url),
-    string: %{browser.a(:url => "clicked.htm").click}},
+    string: %{browser.a(:url => "clicked.htm")}},
 
   value: false,
 
   xpath:{
     html:   html_id,
-    string: %{browser.a(:xpath => "//a[@id='click-me']").click}},
+    string: %{browser.a(:xpath => "//a[@id='click-me']")}},
 
   multiple_attributes: {
-    hash: %{browser.a(:text => "click-me", :index => 1).click},
+    hash: %{browser.a(:text => "click-me", :index => 1)},
     html: html_double},
 
   collection: {
