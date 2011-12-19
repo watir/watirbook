@@ -94,6 +94,16 @@ Everything is as it should be.
 
 
 
+### OSX GCC Installer ###
+
+You will need OSX GCC Installer or Xcode if you want to install watir-webdriver gem. OSX GCC Installer is way smaller than Xcode (287 MB instead of 1.68 GB for 10.7, 180 MB instead of 4.1 GB for 10.6). If you want to install safariwatir gem, OSX GCC Installer is not enough, you will have to install Xcode. There is no OSX GCC Installer for 10.5, you will have to install Xcode 3.1 ("just" 1 GB).
+
+Download OSX GCC Installer from https://github.com/kennethreitz/osx-gcc-installer and install it.
+
+
+
+
+
 ### Xcode 3.2 for 10.6 ###
 
 *Xcode 3.2 does not work on Mac OS 10.5. It works on 10.6.*
