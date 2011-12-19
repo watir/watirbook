@@ -120,8 +120,8 @@ Watir gem (the whole Watir project got named after this gem) can drive Internet 
 
     >gem install watir --no-ri --no-rdoc
     (...)
-    Successfully installed watir-2.0.1
-    13 gems installed
+    Successfully installed watir-2.0.4
+    (...)
 
 Let's drive Internet Explorer with it:
 
@@ -153,8 +153,8 @@ Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
 
     >gem install watir-webdriver --no-ri --no-rdoc
     (...)
-    Successfully installed watir-webdriver-0.3.2
-    6 gems installed
+    Successfully installed watir-webdriver-0.4.1
+    (...)
 
 
 
