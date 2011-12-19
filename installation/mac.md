@@ -1,4 +1,4 @@
-## Mac OS X 10.6 and 10.5 ##
+## Mac OS X 10.7, 10.6 and 10.5 ##
 
 *You will need internet access if you want to follow examples in this chapter.*
 
@@ -6,7 +6,7 @@
 
 *Mac OS X 10.6 default desktop*
 
-Machine is a clean installation of Mac OS X 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.6 has Safari 5.1 and 10.5 has Safari 5.0.6. Firefox is 6.0.1, Chrome 13, Opera 11.51. All browsers are English (US) version.
+Machine is a clean installation of Mac OS X 10.7.2, 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.7 has Safari 5.1.2, 10.6 has Safari 5.1 and 10.5 has Safari 5.0.6. Firefox is 6.0.1, Chrome 13, Opera 11.51. All browsers are English (US) version.
 
 
 
@@ -18,36 +18,44 @@ Regarding installing Ruby on Mac, I have good news and bad news. Good news is th
 
 To check if Ruby is installed on your Mac, open Terminal application (located in `/Applications/Utilities`) any type `ruby -v`.
 
+On 10.7 you should get this:
+
+    $ ruby -v
+    ruby 1.8.7 (2010-01-10 patchlevel 249) [universal-darwin11.0]
+
 On 10.6 you should get this:
 
     $ ruby -v
     ruby 1.8.7 (2009-06-12 patchlevel 174) [universal-darwin10.0]
-
-Ruby 1.8.7 patchlevel 174 (released June 12, 2009). That is actually not so bad.
 
 On 10.5 you should get this:
 
     $ ruby -v
     ruby 1.8.6 (2009-06-08 patchlevel 369) [universal-darwin9.0]
 
-Ruby 1.8.6 is pretty old, as the date says (2009). Does not matter at the moment, you can install newer version of Ruby later.
 
 
 
 
+### RubyGems on 10.7 and 10.6 ###
 
-### RubyGems on 10.6 ###
+With RubyGems, the same story as with Ruby. It is already installed, but an old version. Let's see which version is here with `gem -v`.
 
-With RubyGems, the same story as with Ruby. It is already installed, but an old version. Let's see which version is here with `gem -v`:
+On 10.7 you should get this:
+
+    $ gem -v
+    1.3.6
+
+On 10.6 you should get this:
 
     $ gem -v
     1.3.5
 
-1.3.5 is pretty old. Watir needs never version. Fortunately, it is easy to upgrade RubyGems with `sudo gem update --system`:
+Both versions are pretty old. Watir needs never version. Fortunately, it is easy to upgrade RubyGems with `sudo gem update --system`:
 
     $ sudo gem update --system
     (...)
-    RubyGems 1.8.10 installed
+    RubyGems 1.8.12 installed
     (...)
 
 
@@ -99,6 +107,14 @@ Everything is as it should be.
 You will need OSX GCC Installer or Xcode if you want to install watir-webdriver gem. OSX GCC Installer is way smaller than Xcode (287 MB instead of 1.68 GB for 10.7, 180 MB instead of 4.1 GB for 10.6). If you want to install safariwatir gem, OSX GCC Installer is not enough, you will have to install Xcode. There is no OSX GCC Installer for 10.5, you will have to install Xcode 3.1 ("just" 1 GB).
 
 Download OSX GCC Installer from https://github.com/kennethreitz/osx-gcc-installer and install it.
+
+
+
+
+
+### Xcode 4.2.1 for 10.7 ###
+
+To install Xcode 4.2.1 on 10.7, open App Store application and search for Xcode. Download and install it. Please notice it is 1.68 GB.
 
 
 
