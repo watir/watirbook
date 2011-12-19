@@ -30,7 +30,7 @@ You probably do not have Ruby installed. To make sure, open command prompt and t
 
 If you get the same thing as I did, you do not have Ruby installed.
 
-Download the latest Ruby 1.9. from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 1.9.2-p290*. Execute the file.
+Download the latest Ruby 1.9. from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 1.9.3-p0*. Execute the file.
 
 ![Ruby Installation](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/ruby.png)\
 
@@ -41,9 +41,9 @@ You can leave all settings at default values, except at the *Installation Destin
 Let's check if Ruby is installed. You will have to open another command prompt, because the one you have opened does not see Ruby.
 
     >ruby -v
-    ruby 1.9.2p290 (2011-07-09) [i386-mingw32]
+    ruby 1.9.3p0 (2011-10-30) [i386-mingw32]
 
-Congratulations! You now have the latest and greatest Ruby, 1.9.2!
+Congratulations! You now have the latest and greatest Ruby, 1.9.3!
 
 
 
@@ -54,7 +54,7 @@ Congratulations! You now have the latest and greatest Ruby, 1.9.2!
 Software written in Ruby is usually distributed as RubyGems (colloquial name is *gem*), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we get it's version with `gem -v`.
 
     >gem -v
-    1.7.2
+    1.8.11
 
 You should update it with `gem update --system`:
 
@@ -65,7 +65,7 @@ You should update it with `gem update --system`:
 Ask RubyGems again for it's version, just to make sure:
 
     >gem -v
-    1.8.10
+    1.8.12
 
 
 
