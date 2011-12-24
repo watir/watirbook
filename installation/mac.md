@@ -2,9 +2,9 @@
 
 *You will need internet access if you want to follow examples in this chapter.*
 
-![Mac OS X 10.6 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/desktop.png)\
+![Mac OS X 10.7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/desktop.png)\
 
-*Mac OS X 10.6 default desktop*
+*Mac OS X 10.7 default desktop*
 
 Machine is a clean installation of Mac OS X 10.7.2, 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.7 has Safari 5.1.2, 10.6 has Safari 5.1 and 10.5 has Safari 5.0.6. Firefox is 6.0.1, Chrome 13, Opera 11.51. All browsers are English (US) version.
 
