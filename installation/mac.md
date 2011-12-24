@@ -6,7 +6,7 @@
 
 *Mac OS X 10.7 default desktop*
 
-Machine is a clean installation of Mac OS X 10.7.2, 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.7 has Safari 5.1.2, 10.6 has Safari 5.1 and 10.5 has Safari 5.0.6. Firefox is 6.0.1, Chrome 13, Opera 11.51. All browsers are English (US) version.
+Machine is a clean installation of Mac OS X 10.7.2, 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.7 has Safari 5.1.2, 10.6 has Safari 5.1 and 10.5 has Safari 5.0.6. Firefox is 9.0.1, Chrome 16, Opera 11.60. All browsers are English (US) version.
 
 
 
