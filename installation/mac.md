@@ -244,7 +244,7 @@ It works! :)
 
 Let's try watir-webdriver gem. For now it can drive Firefox, Chrome and Opera. It should also be able to drive Safari in the future. Install it with `sudo gem install watir-webdriver --no-ri --no-rdoc`.
 
-If you did not install Xcode, you will get this:
+If you did not install OSX GCC Installer or Xcode, you will get this:
 
     $ sudo gem install watir-webdriver --no-ri --no-rdoc
     (...)
@@ -262,7 +262,7 @@ If you did not install Xcode, you will get this:
     Results logged to
       /Library/Ruby/Gems/1.8/gems/ffi-1.0.7/ext/ffi_c/gem_make.out
 
-Fortunately, it is easy to fix. Install Xcode 3 or 4 (see previous chapters).
+Fortunately, it is easy to fix. Install OSX GCC Installer or Xcode (see previous chapters).
 
 Try again:
 
