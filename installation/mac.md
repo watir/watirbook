@@ -392,9 +392,33 @@ Finally! It works!
 
 
 
-### Java ###
+### Java on 10.7 ###
 
-To drive Opera, you need Java. Fortunatelly, it is already installed. All you have to do is check if it is installed with `java -version`:
+To drive Opera, you need Java. It is not installed by default on Mac OS X 10.7. To install it type `java -version` in Terminal:
+
+    $ java -version
+    No Java runtime present, requesting install.
+
+You will get `No Java runtime present, requesting install` message and a popup window will appear.
+
+![Install Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/java.png)\
+
+*Install Java*
+
+Click button *Install* and Java will install. Check if Java is installed with `java -version`:
+
+    $ java -version
+    java version "1.6.0_29"
+    Java(TM) SE Runtime Environment (build 1.6.0_29-b11-402-11M3527)
+    Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02-402, mixed mode)
+
+
+
+
+
+### Java on 10.6 and 10.5 ###
+
+To drive Opera, you need Java. Fortunately, it is already installed. All you have to do is check if it is installed with `java -version`:
 
 On 10.6 you should get this:
 
