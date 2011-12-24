@@ -118,7 +118,11 @@ Download OSX GCC Installer from https://github.com/kennethreitz/osx-gcc-installe
 
 ### Xcode 4.2.1 for 10.7 ###
 
-To install Xcode 4.2.1 on 10.7, open App Store application and search for Xcode. Download and install it. Please notice it is 1.68 GB.
+![Install Xcode 4.2.1 from App Store](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/xcode-4-2-1.png)\
+
+*Install Xcode 4.2.1 from App Store*
+
+To install Xcode 4.2.1 on 10.7, open App Store application, search for Xcode and download it. Please notice it is 1.68 GB. After the download is complete, you will find `Install Xcode.app` file in `/Applications`. Install it.
 
 
 
