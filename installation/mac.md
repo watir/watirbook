@@ -296,6 +296,19 @@ Let's try to drive Firefox! To drive [Firefox], make sure you have it installed.
 
 Great! We can drive Firefox.
 
+Maybe you will get this warning:
+
+    > browser = Watir::Browser.new :ff
+    Warning: multi_json is using default ok_json engine. Suggested action: require and load an appropriate JSON library.
+    => #<Watir::Browser:0x105035088 url="about:blank" title="">
+
+You can get rid of the error message by installing json gem:
+
+    $ sudo gem install json --no-ri --no-rdoc
+    (...)
+    Successfully installed json-1.6.4
+    (...)
+
 ![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-firefox.png)\
 
 *watir-webdriver driving Firefox 4 on Mac OS 10.6*
