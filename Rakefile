@@ -23,6 +23,10 @@ task :pdf => [:merge] do
   `markdown2pdf --toc book/watirbook-#{version}-#{type}.md -o book/watirbook-#{version}-#{type}.pdf`
 end
 
+task :pdf_and_cleanup => [:pdf] do
+  Rake::Task[:cleanup].invoke
+end
+
 task :epub => [:merge] do
   `pandoc --toc --epub-metadata=misc/metadata.xml --epub-cover-image=images/watir-logo.jpg -o book/watirbook-#{version}-#{type}.epub title.txt book/watirbook-#{version}-#{type}.md`
 end
