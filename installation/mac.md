@@ -365,7 +365,7 @@ Looks like we have to install something called *chromedriver executable*. Fortun
     $ echo $PATH
     /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
-So, in my case, these folders are on my `PATH`: `/usr/bin`, `/bin`, `/usr/sbin`, `/sbin`, `/usr/local/bin` and `/usr/X11/bin`. `usr/bin` looks like a good place to put `chromedriver` file. To open the folder, go to *Finder > Go > Go to Folder > /usr/bin > Go*. Copy the file there. You will have to provide admin password.
+So, in my case, these folders are on my `PATH`: `/usr/bin`, `/bin`, `/usr/sbin`, `/sbin`, `/usr/local/bin` and `/usr/X11/bin`. `/usr/bin` looks like a good place to put `chromedriver` file. To open the folder, go to *Finder > Go > Go to Folder > /usr/bin > Go*. Copy the file there. You will have to provide admin password.
 
 Let's try again:
 
