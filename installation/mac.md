@@ -69,7 +69,7 @@ With RubyGems, the same story as with Ruby. It is already installed, but an old 
     $ gem -v
     1.0.1
 
-RubyGems 1.0.1 is pretty old. Watir needs never version. Fortunately, it should be easy to upgrade RubyGems with `sudo gem update --system`:
+RubyGems 1.0.1 is pretty old. Watir needs newer version. Fortunately, it should be easy to upgrade RubyGems with `sudo gem update --system`:
 
     $ sudo gem update --system
     (...)
