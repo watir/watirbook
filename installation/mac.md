@@ -1,4 +1,4 @@
-## Mac OS X 10.7, 10.6 and 10.5 ##
+## Mac OS X 10.8, 10.7, 10.6 and 10.5 ##
 
 *You will need internet access if you want to follow examples in this chapter.*
 
@@ -7,6 +7,7 @@
 *Mac OS X 10.7 default desktop*
 
 Machine is a clean installation of Mac OS X 10.7.2, 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.7 has Safari 5.1.2, 10.6 has Safari 5.1 and 10.5 has Safari 5.0.6. Firefox is 9.0.1, Chrome 16, Opera 11.60. All browsers are English (US) version.
+All steps for Mac OS X 10.7 should also work on 10.8 (Mountain Lion), tested on 10.8.1.
 
 
 
