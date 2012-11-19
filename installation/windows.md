@@ -103,7 +103,8 @@ Go to `C:\devkit` in command prompt and type `ruby dk.rb init`:
 And the final step is `ruby dk.rb install`:
 
     C:\devkit>ruby dk.rb install
-    [INFO] Installing 'C:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/defaults/operating_system.rb'
+    [INFO] Installing 'C:/Ruby193/lib/ruby/
+      site_ruby/1.9.1/rubygems/defaults/operating_system.rb'
     [INFO] Installing 'C:/Ruby193/lib/ruby/site_ruby/devkit.rb'
 
 That is it, you are ready to install watir and watir-webdriver gems.
@@ -344,12 +345,15 @@ Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable
     => true
 
     > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::UnhandledError: No response in a timely fashion.
-    Build info: version: '2.3.0', revision: '13158', time: '2011-08-01 18:13:39'
-    System info: os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1',
-      java.version: '1.6.0_26'
+    Selenium::WebDriver::Error::UnhandledError: No response in a
+      timely fashion.
+    Build info: version: '2.3.0', revision: '13158', time:
+      '2011-08-01 18:13:39'
+    System info: os.name: 'Windows 7', os.arch: 'x86',
+      os.version: '6.1', java.version: '1.6.0_26'
     Driver info: driver.version: OperaDriver
-      (com.opera.core.systems.scope.exceptions.ResponseNotReceivedException)
+      (com.opera.core.systems.scope.exceptions.
+      ResponseNotReceivedException)
 
 IRB said `No response in a timely fashion`. Then I got Windows Firewall popup. Since I do not know what to do with it, just close the popup.
 
@@ -377,7 +381,8 @@ Finally, let's drive Opera:
     => true
 
     > browser = Watir::Browser.new :opera
-    => #<Watir::Browser:0x..fef436832 url="http://www.google.hr/" title="Google">
+    => #<Watir::Browser:0x..fef436832 url="http://www.google.hr/"
+      title="Google">
 
     > browser.goto "watir.com"
     => "http://watir.com/"
@@ -422,16 +427,21 @@ Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable
     => true
 
     > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::UnhandledError: Could not start the process:
+    Selenium::WebDriver::Error::UnhandledError: Could not start the
+      process:
     Cannot run program
-    "C:\Documents and Settings\zeljko\.launcher\launcher-win32-i86pc.exe":
-    CreateProcess error=14001, This application has failed to start because the
-    application configuration is incorrect. Reinstalling the application may fix
-    this problem
-    Build info: version: '2.5.0', revision: '13516', time: '2011-08-23 18:29:57'
-    System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1',
-      java.version: '1.6.0_26'
-    Driver info: driver.version: OperaDriver (org.openqa.selenium.WebDriverException)
+    "C:\Documents and Settings\zeljko\.launcher\
+      launcher-win32-i86pc.exe":
+    CreateProcess error=14001, This application has failed to start
+      because the
+    application configuration is incorrect. Reinstalling the
+      application may fix this problem
+    Build info: version: '2.5.0', revision: '13516', time:
+      '2011-08-23 18:29:57'
+    System info: os.name: 'Windows XP', os.arch: 'x86',
+      os.version: '5.1', java.version: '1.6.0_26'
+    Driver info: driver.version: OperaDriver
+    (org.openqa.selenium.WebDriverException)
 
 I got Windows Firewall popup. Since I do not know what to do with it, just close the popup.
 
@@ -449,7 +459,8 @@ Finally, let's drive Opera:
     => true
 
     > browser = Watir::Browser.new :opera
-    => #<Watir::Browser:0x..fef436832 url="http://www.google.hr/" title="Google">
+    => #<Watir::Browser:0x..fef436832 url="http://www.google.hr/"
+      title="Google">
 
     > browser.goto "watir.com"
     => "http://watir.com/"

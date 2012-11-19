@@ -598,7 +598,8 @@ Or, the more explicit way:
 
 At the moment, you can use XPath to access elements located in a frame, but you can not use XPath to access the frame itself. In another words, this would work:
 
-    browser.frame(:name => "one").link(:xpath => "//a[@href='clicked.htm']/").click
+    browser.frame(:name => "one").link(
+      :xpath => "//a[@href='clicked.htm']/").click
 
 but this would not:
 

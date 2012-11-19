@@ -197,8 +197,8 @@ If you do not have Xcode installed, you will get this error message if you try t
     Building native extensions.  This could take a while...
     ERROR:  Error installing safariwatir:
     ERROR: Failed to build gem native extension.
-    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/
-    ruby extconf.rb
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/
+    usr/bin/ruby extconf.rb
     mkmf.rb can't find header files for ruby at /System/Library/
     Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/ruby.h
     Gem files will remain installed in /Library/Ruby/Gems/1.8/gems/
@@ -254,10 +254,11 @@ If you did not install OSX GCC Installer or Xcode, you will get this:
     Building native extensions.  This could take a while...
     ERROR:  Error installing watir-webdriver:
     ERROR: Failed to build gem native extension.
-    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
-      extconf.rb
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/
+      usr/bin/ruby/extconf.rb
     mkmf.rb can't find header files for ruby at
-      /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/ruby.h
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/
+      usr/lib/ruby/ruby.h
     Gem files will remain installed in
       /Library/Ruby/Gems/1.8/gems/ffi-1.0.7 for inspection.
     Results logged to
@@ -300,7 +301,8 @@ Great! We can drive Firefox.
 Maybe you will get this warning:
 
     > browser = Watir::Browser.new :ff
-    Warning: multi_json is using default ok_json engine. Suggested action: require and load an appropriate JSON library.
+    Warning: multi_json is using default ok_json engine. Suggested
+      action: require and load an appropriate JSON library.
     => #<Watir::Browser:0x105035088 url="about:blank" title="">
 
 You can get rid of the error message by installing json gem:
@@ -328,7 +330,8 @@ There is a problem with driving Firefox 4+ on 10.5:
     => true
 
     > browser = Watir::Browser.new :ff
-    Selenium::WebDriver::Error::WebDriverError: unable to start Firefox cleanly, args: ["-silent"]
+    Selenium::WebDriver::Error::WebDriverError: unable to start
+      Firefox cleanly, args: ["-silent"]
     (...)
 
 Take a look at https://github.com/jnicklas/capybara/issues/313 for more detail.
@@ -431,7 +434,8 @@ On 10.6 you should get this:
 On 10.5 you should get this:
 
     java version "1.5.0_30"
-    Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_30-b03-389-9M3425)
+    Java(TM) 2 Runtime Environment, Standard Edition
+      (build 1.5.0_30-b03-389-9M3425)
     Java HotSpot(TM) Client VM (build 1.5.0_30-161, mixed mode)
 
 

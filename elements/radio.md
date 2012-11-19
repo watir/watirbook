@@ -42,7 +42,8 @@ If you want to deselect radio button, use `clear`:
 
 I am getting this error message:
 
-    NoMethodError: undefined method `clear' for #<Watir::Radio:0x00000100f8bb18>
+    NoMethodError: undefined method `clear' for
+      #<Watir::Radio:0x00000100f8bb18>
 
 Looks like watir-webdriver gem does not support `clear` with radio buttons. I am pretty sure watir gem supports it.
 
