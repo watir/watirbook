@@ -1,6 +1,6 @@
 # About Me and the Book
 
-![Željko Filipin](https://github.com/zeljkofilipin/watirbook/raw/master/images/zeljko.jpg)\
+![Željko Filipin](https://github.com/zeljkofilipin/watirbook/raw/master/images/zeljko.jpg)
 
 Hi, my name is [Željko Filipin](http://zeljkofilipin.com/). I am a software tester, the [Watir](http://watir.com/) community manager and host of the [Watir Podcast](http://watirpodcast.com/). I am also one of the organizers of [viaqa](http://viaqa.mobi/) conference on software testing.
 

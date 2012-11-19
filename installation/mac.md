@@ -2,7 +2,7 @@
 
 *You will need internet access if you want to follow examples in this chapter.*
 
-![Mac OS X 10.7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/desktop.png)\
+![Mac OS X 10.7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/desktop.png)
 
 *Mac OS X 10.7 default desktop*
 
@@ -105,7 +105,7 @@ Everything is as it should be.
 
 ### OSX GCC Installer ###
 
-![OSX GCC Installer](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/gcc.png)\
+![OSX GCC Installer](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/gcc.png)
 
 *OSX GCC Installer*
 
@@ -119,7 +119,7 @@ Download OSX GCC Installer from https://github.com/kennethreitz/osx-gcc-installe
 
 ### Xcode 4.2.1 for 10.7 ###
 
-![Install Xcode 4.2.1 from App Store](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/xcode-4-2-1.png)\
+![Install Xcode 4.2.1 from App Store](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/xcode-4-2-1.png)
 
 *Install Xcode 4.2.1 from App Store*
 
@@ -137,7 +137,7 @@ You will need Xcode from Apple if you want to install watir-webdriver or safariw
 
 The easiest way to install Xcode is from Mac OS DVD. Insert the DVD, go to *Optional Installs* folder and double click *Xcode.mpkg* file.
 
-![Install Xcode 3.2 from Mac OS DVD](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/xcode-3-2.png)\
+![Install Xcode 3.2 from Mac OS DVD](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/xcode-3-2.png)
 
 *Install Xcode 3.2 from Mac OS DVD*
 
@@ -159,7 +159,7 @@ You will need Xcode from Apple for watir-webdriver and safariwatir gems.
 
 The easiest way to install Xcode is from Mac OS DVD. Insert the DVD, go to *Optional Installs/Xcode Tools* folder and double click *XcodeTools* file. Leave all settings at default values.
 
-![Install Xcode 3.1.2 from Mac OS DVD](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/xcode-3-1.png)\
+![Install Xcode 3.1.2 from Mac OS DVD](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/xcode-3-1.png)
 
 *Install Xcode 3.1.2 from Mac OS DVD*
 
@@ -183,7 +183,7 @@ According to Xcode site, Xcode 4 "is a free download for all members of the iOS 
 
 ### Safari with safariwatir ###
 
-![Safari 5.1 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/safari.png)\
+![Safari 5.1 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/safari.png)
 
 *Safari 5.1 on Mac 10.6*
 
@@ -233,7 +233,7 @@ Let's try safariwatir.
 
 It works! :)
 
-![safariwatir gem driving Safari 5 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/safariwatir.png)\
+![safariwatir gem driving Safari 5 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/safariwatir.png)
 
 *safariwatir gem driving Safari 5 on Mac OS 10.6*
 
@@ -279,7 +279,7 @@ Try again:
 
 ### Firefox with watir-webdriver on 10.6 ###
 
-![Firefox 6 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/firefox.png)\
+![Firefox 6 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/firefox.png)
 
 *Firefox 6 on Mac OS 10.6*
 
@@ -312,7 +312,7 @@ You can get rid of the error message by installing json gem:
     Successfully installed json-1.6.4
     (...)
 
-![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-firefox.png)\
+![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-firefox.png)
 
 *watir-webdriver driving Firefox 4 on Mac OS 10.6*
 
@@ -346,7 +346,7 @@ The easiest way to fix it is to uninstall the current version of Firefox, and in
 
 ### Chrome with watir-webdriver ###
 
-![Chrome 13 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/chrome.png)\
+![Chrome 13 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/chrome.png)
 
 *Chrome 13 on Mac OS 10.6*
 
@@ -386,7 +386,7 @@ Let's try again:
 
 Finally! It works!
 
-![watir-webdriver driving Chrome 12 on Mac OS 10.5](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-chrome.png)\
+![watir-webdriver driving Chrome 12 on Mac OS 10.5](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-chrome.png)
 
 *watir-webdriver driving Chrome 12 on Mac OS 10.5*
 
@@ -405,7 +405,7 @@ To drive Opera, you need Java. It is not installed by default on Mac OS X 10.7. 
 
 You will get `No Java runtime present, requesting install` message and a popup window will appear.
 
-![Install Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/java.png)\
+![Install Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/java.png)
 
 *Install Java*
 
@@ -444,7 +444,7 @@ On 10.5 you should get this:
 
 ### Opera with watir-webdriver ###
 
-![Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/opera.png)\
+![Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/opera.png)
 
 *Opera 11.51 on Mac 10.6*
 
@@ -474,7 +474,7 @@ If you just got lost, I have step by step guide how to do it. Open new Terminal 
 
 *GNU nano* text editor will open. Paste (cmd-v, for example) `export SELENIUM_SERVER_JAR...` line. Exit *GNU nano* and save the file with *control+x*. Press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` and press *Enter* when it displays `File Name to Write: .bash_profile` or `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` (text is different if the file already exists or not).
 
-![GNU nano asking should it save changes to `.bash_profile` file](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/nano.png)\
+![GNU nano asking should it save changes to `.bash_profile` file](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/nano.png)
 
 *GNU nano asking should it save changes to `.bash_profile` file*
 
@@ -493,7 +493,7 @@ Let's drive Opera, finally! Open new Terminal window or tab (this is important, 
     > browser = Watir::Browser.new :opera
     #<Watir::Browser:0x1017f6a28 url="opera:debug" title="Connect to Debugger">
 
-![watir-webdriver gem drives Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-opera.png)\
+![watir-webdriver gem drives Opera 11.51 on Mac 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/mac/webdriver-opera.png)
 
 *watir-webdriver gem drives Opera 11.51 on Mac 10.6*
 

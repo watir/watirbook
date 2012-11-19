@@ -48,7 +48,7 @@ Then create another file, `clicked.htm` and put it in the same folder as `link.h
 
 You can save the files anywhere (make sure both files are in the same folder), but I suggest that you save it to desktop, it will be easy to find there. Open `link.htm` with Firefox.
 
-![A simple web page with only one link.](https://github.com/zeljkofilipin/watirbook/raw/master/images/link/text.png)\
+![A simple web page with only one link.](https://github.com/zeljkofilipin/watirbook/raw/master/images/link/text.png)
 
 *A simple web page with only one link.*
 
