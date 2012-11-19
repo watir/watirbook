@@ -4,5 +4,5 @@ The table lists all HTML elements from [HTML Standard](http://www.whatwg.org/spe
 
 (Insert elements.htm here.)
 
-\newpage
+
 

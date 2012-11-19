@@ -499,5 +499,5 @@ Let's drive Opera, finally! Open new Terminal window or tab (this is important, 
 
 [Opera]: http://www.opera.com/
 
-\newpage
+
 

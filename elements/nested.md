@@ -63,5 +63,5 @@ So, there is a browser, then a div, another div and the link we are looking for.
 
 The nesting can go as deep as you like.
 
-\newpage
+
 

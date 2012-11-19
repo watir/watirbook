@@ -8,5 +8,5 @@ I am installing everything in VMware Fusion 3.1.3 virtual machines, except Mac O
 
 You will probably be bored to tears if you read all installation chapters. A lot of stuff is repeated. I suggest that you read only the chapters you need. Feel free to read the rest of the book in the whole.
 
-\newpage
+
 

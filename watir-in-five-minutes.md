@@ -190,5 +190,5 @@ Later I will show you how to make cool looking reports.
 
 If you are not impressed by now, you probably never will. If you liked what you saw so far, it is time to bring on heavy artillery. Let's go deeper.
 
-\newpage
+
 

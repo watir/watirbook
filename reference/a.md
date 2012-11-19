@@ -32,5 +32,5 @@ collection          `browser.as.each {|a| puts a.text}`
 multiple attributes `browser.a(:text => "click me", :index => 1).click`
 ------------------- ---------------------------------------------------
 
-\newpage
+
 

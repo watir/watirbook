@@ -24,5 +24,5 @@ string, regular expression
 
     browser.form(:action => /beer/)
 
-\newpage
+
 

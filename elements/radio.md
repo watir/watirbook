@@ -47,5 +47,5 @@ I am getting this error message:
 
 Looks like watir-webdriver gem does not support `clear` with radio buttons. I am pretty sure watir gem supports it.
 
-\newpage
+
 

@@ -22,5 +22,5 @@ element
 
     browser.a(:after? => browser.a(:id => "lager"))
 
-\newpage
+
 

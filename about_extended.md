@@ -187,5 +187,5 @@ Watir community is a topic I think a lot. There a few things I think we should d
 [Software Freedom Conservancy]: http://sfconservancy.org/
 [Viaqa Watir Day]: http://viaqa.mobi/watir-day/
 
-\newpage
+
 

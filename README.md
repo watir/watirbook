@@ -18,5 +18,5 @@ If you like the idea, but do not have $9, feel free to send any amount to zeljko
 
 You can discuss the book at [groups.google.com/group/watirbook](http://groups.google.com/group/watirbook/). Anybody can suggest book format (currently PDF, EPUB and MOBI, but almost anything is possible) and which chapter to write next. Of course, if you buy the book and then suggest a format/chapter, your vote will count more.
 
-\newpage
+
 

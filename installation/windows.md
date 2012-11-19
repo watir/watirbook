@@ -465,5 +465,5 @@ Finally, let's drive Opera:
     > browser.goto "watir.com"
     => "http://watir.com/"
 
-\newpage
+
 

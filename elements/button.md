@@ -22,5 +22,5 @@ The *how* part can be (alphabetically): `after?`, `alt`\*, `class`, `css`, `html
 
 Since I have gone into great detail there how to access links in the *Link* chapter and how to access images in *Img* chapter, I will assume that you are familiar with all that stuff, and here I will just talk about things that are different for buttons. Take a look at *Button* table in *Reference* chapter for more examples.
 
-\newpage
+
 

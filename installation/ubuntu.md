@@ -283,5 +283,5 @@ Looks good to me!  After all this work, enjoy driving Opera:
 
 *Watir-webdriver drives Opera on Ubuntu 11.04*
 
-\newpage
+
 

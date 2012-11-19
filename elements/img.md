@@ -55,5 +55,5 @@ If you know the portion of value of `alt` attribute, use regular expression to c
 
     browser.img(:alt => /red/).click
 
-\newpage
+
 

@@ -28,5 +28,5 @@ string, regular expression
     browser.img(:alt => /bock/)
     browser.button(:alt => /doppelbock/)
 
-\newpage
+
 

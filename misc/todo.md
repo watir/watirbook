@@ -115,5 +115,5 @@
 
   In this chapter I will briefly mention other tools that can be used to test web applications.
 
-\newpage
+
 

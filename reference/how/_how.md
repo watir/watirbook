@@ -24,5 +24,5 @@ string, regular expression
 
     browser._(:_ => /beer/)
 
-\newpage
+
 

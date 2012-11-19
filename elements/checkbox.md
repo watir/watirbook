@@ -40,5 +40,5 @@ If you want to make sure checkbox is unchecked, you can use `clear`:
 
     browser.checkbox(:id => "click-me").clear
 
-\newpage
+
 

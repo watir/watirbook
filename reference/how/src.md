@@ -36,5 +36,5 @@ string, regular expression
     browser.img(:src => /bock/)
     browser.button(:src => /bock/)
 
-\newpage
+
 

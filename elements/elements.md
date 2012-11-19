@@ -4,5 +4,5 @@ Different Watir gems support different HTML elements. For example, watir-webdriv
 
 Please take a look at *HTML Elements Supported by Watir* table in Reference chapter for more details.
 
-\newpage
+
 

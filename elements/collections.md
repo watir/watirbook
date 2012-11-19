@@ -6,5 +6,5 @@ You can even do stuff with all elements of a particular kind on a page. If you w
       puts link.href
     end
 
-\newpage
+
 

@@ -61,5 +61,5 @@ I have tried to contact authors of Win32-Watir and win-control, but did not get 
 
 Another popular tool for driving browsers is Selenium (http://seleniumhq.org/). Watir-webdriver uses WebDriver (part of Selenium project) to drive browsers, so Selenium and Watir communities are now closer than ever.
 
-\newpage
+
 

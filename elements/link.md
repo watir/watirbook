@@ -650,5 +650,5 @@ The output should look like this:
 
 This is just one example. There will be entire chapter on collections.
 
-\newpage
+
 
