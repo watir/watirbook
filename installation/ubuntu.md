@@ -147,7 +147,8 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for linux32*) from *http://code.google.com/p/chromium/downloads/list* and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for linux32*) from  
+*http://code.google.com/p/chromium/downloads/list* and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
 
 The easiest way to do it on Ubuntu is to create a folder called `bin` in your home folder (`/home/zeljko/bin` in my case). You have to reboot (or at least log out and then log in, but I have not checked that) and by some magic (provided by `/home/zeljko/.profile` file in my case) `/home/zeljko/bin` folder will appear in your `PATH`:
 
