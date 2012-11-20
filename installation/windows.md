@@ -4,8 +4,6 @@
 
 ![Windows 7 default desktop](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/desktop.png)
 
-*Windows 7 default desktop*
-
 Machine is a clean installation of:
 
  - Microsoft Windows 7 Professional 32-bit, Service Pack 1,
@@ -33,8 +31,6 @@ If you get the same thing as I did, you do not have Ruby installed.
 Download the latest Ruby 1.9. from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 1.9.3-p0*. Execute the file.
 
 ![Ruby Installation](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/ruby.png)
-
-*Ruby Installation*
 
 You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check both *Add Ruby executables to your PATH* and *Associate .rb and .rbw files with this Ruby installation* checkboxes. Installation should take you just a few seconds.
 
@@ -89,8 +85,6 @@ The solution is easy. Go to http://rubyinstaller.org/downloads and download the 
 
 ![DevKit extracting](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/devkit-extracting.png)
 
-*DevKit Installation*
-
 Go to `C:\devkit` in command prompt and type `ruby dk.rb init`:
 
     C:\devkit>ruby dk.rb init
@@ -112,8 +106,6 @@ That is it, you are ready to install watir and watir-webdriver gems.
 ### Internet Explorer with watir ###
 
 ![Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/ie.png)
-
-*Internet Explorer 9 on Windows 7*
 
 Let's install Watir, finally. It is also done from the command line, the command is `gem install watir`. I prefer to add `--no-ri --no-rdoc` options, because I do not use either ri (Ruby Index) or RDoc (Ruby Documentation), and it cuts installation time to one third. So, if you want ri or Rdoc, use `gem install watir`, else use `gem install watir --no-ri --no-rdoc`.
 
@@ -139,8 +131,6 @@ Let's drive Internet Explorer with it:
     => 16.998912
 
 ![watir gem drives Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/watir-ie.png)
-
-*watir gem drives Internet Explorer 9 on Windows 7*
 
 
 
@@ -180,15 +170,11 @@ On 7 and Vista I got `Protected Mode must be set to the same value (enabled or d
 
 ![Windows Firewall has blocked some features of this program](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/firewall.png)
 
-*Windows Firewall has blocked some features of this program*
-
 For now just close the popup, let's see how to fix the error message.
 
 Open *Internet Explorer > wrench > Internet Options > Security*. There are four zones: Internet, Local intranet, Trusted sites and Restricted sites. Protected Mode is enabled by default in Internet and Restricted sites. Enable it for Local intranet and Trusted sites and close the browser.
 
 ![Enable Protected Mode for all zones](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/protected-mode.png)
-
-*Enable Protected Mode for all zones*
 
 Let' try again:
 
@@ -207,8 +193,6 @@ Let' try again:
 It works!
 
 ![watir-webdriver gem drives Internet Explorer 9 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/webdriver-ie.png)
-
-*watir-webdriver gem drives Internet Explorer 9 on Windows 7*
 
 
 
@@ -235,8 +219,6 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
 
 ![watir-webdriver gem drives Firefox 5 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/webdriver-firefox.png)
 
-*watir-webdriver gem drives Firefox 5 on Windows 7*
-
 
 
 
@@ -244,8 +226,6 @@ Can it drive Firefox? It can! (If you do not have it installed, download it from
 ### Chrome with watir-webdriver ###
 
 ![Chrome 13 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/chrome.png)
-
-*Chrome 13 on Windows 7*
 
 Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at *[google.com/chrome](http://www.google.com/chrome)*.)
 
@@ -286,8 +266,6 @@ Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I w
 
 ![watir-webdriver gem drives Chrome 12 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/webdriver-chrome.png)
 
-*watir-webdriver gem drives Chrome 12 on Windows 7*
-
 I got Windows Firewall popup again letting me know that it has blocked `C:\ruby192\bin\chromedriver.exe`. Just close it for now, I have no idea what to do with it.
 
 
@@ -318,8 +296,6 @@ Looks good to me!
 ### Opera with watir-webdriver on 7 and Vista###
 
 ![Opera on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/opera.png)
-
-*Opera on Windows 7*
 
 And finally, let's drive Opera. If you do not have it installed, you can get it at *[opera.com](http://www.opera.com/)*.
 
@@ -359,19 +335,13 @@ IRB said `No response in a timely fashion`. Then I got Windows Firewall popup. S
 
 ![Windows Firewall blocking Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/java.png)
 
-*Windows Firewall blocking Java*
-
 And finally I got Opera startup error popup saying: `Opera has failed to access or upgrade your profile. This may have occurred because your computer has insufficient resources available or because some files are locked by other applications. You may have to restart your computer before Opera will start again.`
 
 ![Opera startup error](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/opera-startup-error.png)
 
-*Opera startup error*
-
 Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). What did help is running command prompt as administrator. So, instead of *Start > Search programs and files > cmd > Enter*, right click *cmd* and select *Run as administrator*.
 
 ![Run command prompt as administrator](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/cmd-as-administrator.png)
-
-*Run command prompt as administrator*
 
 Finally, let's drive Opera:
 
@@ -388,14 +358,6 @@ Finally, let's drive Opera:
     => "http://watir.com/"
 
 ![watir-webdriver gem drives Opera 11.50 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/webdriver-opera.png)
-
-*watir-webdriver gem drives Opera 11.50 on Windows 7*
-
-
-
-
-
-
 
 
 
@@ -447,8 +409,6 @@ I got Windows Firewall popup. Since I do not know what to do with it, just close
 
 ![Windows Firewall blocking Java](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/java.png)
 
-*Windows Firewall blocking Java*
-
 I also got `This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem` error message. Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). What did help is installing [Microsoft Visual C++ 2008 Redistributable Package (x86)](http://www.microsoft.com/download/en/details.aspx?id=29).
 
 Finally, let's drive Opera:
@@ -464,6 +424,3 @@ Finally, let's drive Opera:
 
     > browser.goto "watir.com"
     => "http://watir.com/"
-
-
-

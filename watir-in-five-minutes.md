@@ -54,8 +54,6 @@ And now the magic starts. With just one command you will open Firefox.
 
 ![watir-webdriver driving Firefox 6 on Mac OS 10.6](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-in-five-minutes/webdriver-firefox.png)
 
-*watir-webdriver driving Firefox 6 on Mac OS 10.6*
-
 When I saw the browser magically appearing for the first time, I started singing (with apologies to [Foreigner](http://www.youtube.com/watch?v=BrzzR-3PPqw)): *I've been waiting for a tool like you to come into my life...*
 
 Please open just one browser. It will be enough. You can play with other browsers later.

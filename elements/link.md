@@ -50,8 +50,6 @@ You can save the files anywhere (make sure both files are in the same folder), b
 
 ![A simple web page with only one link.](https://github.com/zeljkofilipin/watirbook/raw/master/images/link/text.png)
 
-*A simple web page with only one link.*
-
 Copy URL from the address bar and paste it somewhere safe, in another file, for example. In my case, URL was `file:///Users/zeljko/Desktop/link.htm`, since I have saved the file to my desktop. We will need the URL to open the same HTML page later with Watir. Close the browser.
 
 Open command prompt application and open IRB (make sure you are opening command prompt as administrator if you are on Windows):
