@@ -95,6 +95,7 @@ Before we click another link, I want to show off one of Watir's killer features.
     => 10
 
 ![Link Images with normal background](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-in-five-minutes/flash-1.png)
+
 ![Link Images with red background](https://github.com/zeljkofilipin/watirbook/raw/master/images/watir-in-five-minutes/flash-2.png)
 
 *Link Images changes background from white to red a few times.*
