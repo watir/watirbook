@@ -344,7 +344,8 @@ Let's see if it can really drive Chrome too. To drive [Chrome], make sure you ha
     somewhere on your PATH. More info at
     http://code.google.com/p/selenium/wiki/ChromeDriver.
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_mac_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for Mac OS X*) from *http://code.google.com/p/chromedriver/downloads/list* and unzip it (with mouse double-click, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said. If you have no idea what that means, read on. To find out where to put `chromedriver` file, type this in Terminal:
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_mac_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for Mac OS X*) from  
+*http://code.google.com/p/chromedriver/downloads/list* and unzip it (with mouse double-click, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said. If you have no idea what that means, read on. To find out where to put `chromedriver` file, type this in Terminal:
 
     $ echo $PATH
     /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin

@@ -266,7 +266,8 @@ Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I w
 
 ![watir-webdriver gem drives Chrome 12 on Windows 7](https://github.com/zeljkofilipin/watirbook/raw/master/images/installation/windows/webdriver-chrome.png)
 
-I got Windows Firewall popup again letting me know that it has blocked `C:\ruby192\bin\chromedriver.exe`. Just close it for now, I have no idea what to do with it.
+I got Windows Firewall popup again letting me know that it has blocked  
+`C:\ruby192\bin\chromedriver.exe`. Just close it for now, I have no idea what to do with it.
 
 
 
@@ -280,7 +281,8 @@ To drive Opera, you will have to install Java first. Let's check if Java is alre
     'java' is not recognized as an internal or external command,
     operable program or batch file.
 
-Looks like we will have to install Java. There is big *Free Java Download* button at *http://www.java.com/en/download*. Execute download file and install Java. Let's check if Java is really installed with `java -version`:
+Looks like we will have to install Java. There is big *Free Java Download* button at  
+*http://www.java.com/en/download*. Execute download file and install Java. Let's check if Java is really installed with `java -version`:
 
     >java -version
     java version "1.6.0_26"
@@ -311,7 +313,7 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     SELENIUM_SERVER_JAR environmental variable to its location.  More
     info at http://code.google.com/p/selenium/wiki/OperaDriver.
 
-Download `selenium-server-standalone-2.5.0.jar` (or newer version) from
+Download `selenium-server-standalone-2.5.0.jar` (or newer version) from  
 *http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar`. To create environmental variable, right click *computer* and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`.
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
@@ -380,7 +382,8 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     SELENIUM_SERVER_JAR environmental variable to its location.  More
     info at http://code.google.com/p/selenium/wiki/OperaDriver.
 
-Download `selenium-server-standalone-2.5.0.jar` (or newer version) from *http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar`. To create environmental variable right click *My Computer* and then `Properties > Advanced > Environment Variables > User variables > New > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`
+Download `selenium-server-standalone-2.5.0.jar` (or newer version) from  
+*http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar`. To create environmental variable right click *My Computer* and then `Properties > Advanced > Environment Variables > User variables > New > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
 
