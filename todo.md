@@ -1,21 +1,9 @@
 # TODO
 
+- create book sections
+- move code to separate files
 - xpath#frames
-
-- create books in bin folder, for example, not in project root
-
-- all links in pdf should be in the footer
-
 - link#after and later
-
-- ubuntu 11.10
-- linux mint
-  - http://royal.pingdom.com/2011/11/23/ubuntu-linux-losing-popularity-fast-new-unity-interface-to-blame/
-  - http://www.linuxmint.com/edition.php?id=83
-  - Linux Mint 11 "Katya" - CD no codecs (32-bit)
-
-- mac 10.7
-  - buy
 
 - ie 7/8 on xp
 
@@ -114,6 +102,3 @@
 - Other Tools for Testing Web Applications
 
   In this chapter I will briefly mention other tools that can be used to test web applications.
-
-
-
