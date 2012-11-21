@@ -1,2 +1,0 @@
-% Watir Book
-% Zeljko Filipin
