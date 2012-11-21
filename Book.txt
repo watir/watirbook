@@ -1,7 +1,9 @@
+frontmatter:
 LICENSE.md
 README.md
 prerequisites.md
 about.md
+mainmatter:
 installation/installation.md
 installation/windows.md
 installation/mac.md
