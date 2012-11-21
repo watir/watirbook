@@ -1,20 +1,20 @@
 # TODO
 
-- move md files from root to misc
-- create book sections
+- rvm
+- bundler
 - move code to separate files
+- create book sections
+
+--
+
 - xpath#frames
 - link#after and later
-
 - ie 7/8 on xp
-
 - https://github.com/zeljkofilipin/pacman
-
 - installation
   - watir
     - from behind a proxy
     - from behind a firewall
-
 - unit tests/watirspec
 - celerity?
 - chromium?
@@ -24,7 +24,6 @@
   - textpad
   - netbeans
   - rubymine
-
 - foreword
 - preface
   - audience
