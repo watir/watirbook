@@ -1,9 +1,9 @@
-frontmatter:
+Front:
 LICENSE.md
 README.md
 prerequisites.md
 about.md
-mainmatter:
+Main:
 installation/installation.md
 installation/windows.md
 installation/mac.md
@@ -18,3 +18,5 @@ elements/radio.md
 elements/collections.md
 elements/nested.md
 about_extended.md
+converted_files.txt
+elements.txt
