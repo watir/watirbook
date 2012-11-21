@@ -1,14 +1,14 @@
 Front:
 LICENSE.md
 README.md
-prerequisites.md
+front/prerequisites.md
 Main:
-about.md
+main/about.md
 installation/installation.md
 installation/windows.md
 installation/mac.md
 installation/ubuntu.md
-watir-in-five-minutes.md
+main/watir-in-five-minutes.md
 elements/elements.md
 elements/link.md
 elements/img.md
@@ -17,4 +17,4 @@ elements/checkbox.md
 elements/radio.md
 elements/collections.md
 elements/nested.md
-about_extended.md
+main/about_extended.md
