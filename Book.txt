@@ -1,7 +1,7 @@
 Front:
 LICENSE.md
 README.md
-front/prerequisites.md
+main/prerequisites.md
 Main:
 main/about.md
 installation/installation.md
