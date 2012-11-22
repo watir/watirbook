@@ -3,6 +3,7 @@
 # 0.8.1
 
 - 2012-11-22 The book finally has a usable HTML version at http://zeljkofilipin.github.com/watirbook
+- 2012-11-21 Sold the first book via Leanpub.
 
 # 0.8.0
 
@@ -12,6 +13,7 @@
   - Created table with all supported HTML elements.
   - A lot of small improvements and fixes.
 - 2012-11-17 Started working on the book again.
+- 2012-11-14 Sold the last book via PayPal.
 
 # 2011
 
@@ -73,7 +75,7 @@
 
 # 0.1
 
-- 2011-03-14 Published the book in PDF format at Dropbox. The first time the book is published as PDF and at at Dropbox.
+- 2011-03-14 Published the book in PDF format at Dropbox. The first time the book is published as PDF and at at Dropbox. Sold the first book via PayPal.
 - 2011-03-11 Started working on the book again.
 
 # 2010
