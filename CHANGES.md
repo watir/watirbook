@@ -1,3 +1,7 @@
+# 0.8.1
+
+- The book now has a web site too! http://zeljkofilipin.github.com/watirbook/
+
 # 0.8.0
 
 - 2012-11-20
