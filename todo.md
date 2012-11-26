@@ -1,7 +1,7 @@
 # TODO
 
-- fix http://zeljkofilipin.github.com/watirbook/
-- hours spent, books downloaded, books sold, money earned before leanpub, money donated to watir project
+- openqa wiki
+- move the repo to watir organization
 - blog watir 4.0 and watir-classic 3.x
 - blog post at watir.com
 - links to book at watir's twitter, facebook, google plus, linkedin...
