@@ -24,5 +24,5 @@ Time is in hours, money in USD. Updated 2012-11-23.
   - minimum amount payed for one book: 2.40 (2012-04-25)
   - number of books sold in one day: 4 (2012-04-30)
 
-(*) probably double, but this is what I have in my notes
+(*) probably double, but this is what I have in my notes  
 (**) probably half, see (*)
