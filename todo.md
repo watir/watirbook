@@ -1,5 +1,6 @@
 # TODO
 
+- https://github.com/watir/watirbook/issues/7
 - openqa wiki
 - move the repo to watir organization
 - blog watir 4.0 and watir-classic 3.x
