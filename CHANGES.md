@@ -1,7 +1,8 @@
 # 2012
 
-# 0.8.1
+# next
 
+- 2012-11-28 Moved book repository to https://github.com/watir/watirbook and HTML version to http://watir.github.com/watirbook/
 - 2012-11-22 The book finally has a usable HTML version at http://zeljkofilipin.github.com/watirbook
 - 2012-11-21 Sold the first book via Leanpub.
 
