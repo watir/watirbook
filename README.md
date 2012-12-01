@@ -8,4 +8,4 @@ The book is available as [PDF](http://en.wikipedia.org/wiki/Portable_Document_Fo
 
 More information about the book is available at [my blog](http://filipin.eu/homebrewers-guide-to-watir-0-8-0/).
 
-Money that you have donated to the Watir project == $43.98 (Updated 2012-11-23. For more stats see [stats page](https://github.com/watir/watirbook/blob/master/stats.md).)
+Money that book readers have donated to the Watir project == $105.22 (Updated 2012-12-01. For more stats see [stats page](https://github.com/watir/watirbook/blob/master/stats.md).)
