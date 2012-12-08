@@ -82,9 +82,9 @@ This is the first time we will perform a check. It is also the first time we wil
 
 It really works! Ruby returned a string (the thing in double quotes) that contains the text from the browser address bar. Since I am in Croatia, *google.hr* opened. If you are not in the US, some other Google site could open.
 
-Time to click on a link. It is easy to explicitly say which link to click on. Right now I want to click on a link with the text *Google.com in English*. It gets just a bit more complicated if there are two links with the same text on the page, but we will deal with that later. If your browser already opened *google.com*, ignore this step.
+Time to click on a link. It is easy to explicitly say which link to click on. Right now I want to click on a link with the text *Google.com*. It gets just a bit more complicated if there are two links with the same text on the page, but we will deal with that later. If your browser already opened *google.com*, ignore this step.
 
-    > browser.a(:text => "Google.com in English").click
+    > browser.a(:text => "Google.com").click
     => []
 
 And *google.com* opens.
@@ -123,9 +123,9 @@ Let's search for something. This will enter *book* in search text field:
 
 Maybe you are wondering how I knew the text field had the value of *name* attribute set to *q* (I am talking about `:name => "q"`). If you do not know how to inspect pages, read on. I will explain it later.
 
-Now, click *Search Images* button:
+Now, click the search button:
 
-    > browser.button(:value => "Search Images").click
+    > browser.button(name:"btnG").click
     => []
 
 Page with search results will open. Let's check how many images are on the page. (You might get a different number, it does not have to be 250.)
