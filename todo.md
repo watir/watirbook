@@ -1,12 +1,6 @@
 # TODO
 
-- contributors
-- https://github.com/watir/watirbook/issues/7
 - move code to separate files
-- openqa wiki
-
---
-
 - xpath#frames
 - link#after and later
 - ie 7/8 on xp
@@ -30,7 +24,6 @@
   - book layout
   - font conventions
   - command-line conventions
-- contributors
 
 - HTML Elements Supported by Watir
   - Link
@@ -94,10 +87,6 @@
 - Frameworks
   - Test Unit
   - RSpec
-  - WatirCraft
-  - Taza
-  - Rasta
-  - Watirloo
 
 - Other Tools for Testing Web Applications
 
