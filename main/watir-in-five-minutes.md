@@ -125,7 +125,7 @@ Maybe you are wondering how I knew the text field had the value of *name* attrib
 
 Now, click the search button:
 
-    > browser.button(name:"btnG").click
+    > browser.button(:name => "btnG").click
     => []
 
 Page with search results will open. Let's check how many images are on the page. (You might get a different number, it does not have to be 250.)
@@ -144,11 +144,11 @@ Well, that was a lot of fun. But you do not want to type into IRB all the time. 
     browser = Watir::Browser.new :ff
     browser.goto "http://www.google.com/"
     browser.url
-    browser.a(:text => "Google.com in English").click
+    browser.a(:text => "Google.com").click
     browser.a(:text => "Images").click
     browser.title
     browser.text_field(:name => "q").set "book"
-    browser.button(:value => "Search Images").click
+    browser.button(:name => "btnG").click
     browser.images.size
     browser.close
 
@@ -170,11 +170,11 @@ What is the output in the command prompt? Nothing? Yes, nothing. IRB displays va
     browser = Watir::Browser.new :ff
     browser.goto "http://www.google.com/"
     puts browser.url
-    browser.a(:text => "Google.com in English").click
+    browser.a(:text => "Google.com").click
     browser.a(:text => "Images").click
     puts browser.title
     browser.text_field(:name => "q").set "book"
-    browser.button(:value => "Search Images").click
+    browser.button(:name => "btnG").click
     puts browser.images.size
     browser.close
 
@@ -188,6 +188,3 @@ Run the script. This time the output should look like this:
 Later I will show you how to make cool looking reports.
 
 If you are not impressed by now, you probably never will. If you liked what you saw so far, it is time to bring on heavy artillery. Let's go deeper.
-
-
-
