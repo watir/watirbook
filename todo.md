@@ -1,5 +1,7 @@
 # TODO
 
+- ask contributors if they are fine with changing the license
+- get stats from leanpub cvs
 - move code to separate files
 - xpath#frames
 - link#after and later
