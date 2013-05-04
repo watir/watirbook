@@ -1,5 +1,9 @@
 # TODO
 
+- move pages from http://watir.com/ to https://github.com/watir/watir/wiki
+- move pages from http://watirwebdriver.com/ to http://watir.com/
+- move pages from http://wiki.openqa.org/display/WTR to https://github.com/watir/watirbook or https://github.com/watir/watir/wiki
+
 ## bugs
 
 - test if accessing element via css works just for Element or also for other elements
