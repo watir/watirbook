@@ -242,7 +242,7 @@ Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` (or newer version) from *http://code.google.com/p/chromium/downloads/list*. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your `PATH`. To check which folders are in `PATH`, open command prompt and type `path`:
+Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` (or newer version) from *https://code.google.com/p/chromedriver/downloads/list*. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your `PATH`. To check which folders are in `PATH`, open command prompt and type `path`:
 
     >path
     PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;
