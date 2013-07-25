@@ -79,7 +79,7 @@ Watir and watir-webdriver gems needs `ffi` gem, and it needs RubyInstaller Devel
     from 'http://rubyinstaller.org/downloads' and follow the instructions
     at 'http://github.com/oneclick/rubyinstaller/wiki/Development-Kit'
 
-The solution is easy. Go to http://rubyinstaller.org/downloads and download the latest version of DevKit. At the moment it is DevKit-tdm-32-4.5.2-20110712-1620-sfx.exe. Execute the file. It tried to install in the folder where the file was located, in my case it was `C:\Documents and Settings\zeljko\Desktop\`. The documentation says spaces in path could cause trouble, as is often the case. Install it to `C:\devkit`. It will actually just extract itself there and DevKit window will disappear. There will be no *Installation OK* popup.
+The solution is easy. Go to http://rubyinstaller.org/downloads and download the latest version of DevKit. At the moment it is DevKit-tdm-32-4.5.2-20110712-1620-sfx.exe. Execute the file. It tried to extract it to the folder where the file was located, in my case it was `C:\Documents and Settings\zeljko\Desktop\`. The documentation says spaces in path could cause trouble, as is often the case. Install it to `C:\devkit`. It will actually just extract itself there and DevKit window will disappear. There will be no *Installation OK* popup.
 
 ![Where to extract DevKit](https://github.com/watir/watirbook/raw/master/images/installation/windows/devkit-folder.png)
 
