@@ -2,7 +2,7 @@
 
 *You will need internet access if you want to follow examples in this chapter.*
 
-![Ubuntu Linux 11.04 default desktop](https://github.com/watir/watirbook/raw/master/images/installation/ubuntu/desktop.png)
+![Ubuntu Linux 11.04 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/desktop.png)
 
 Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM. Firefox 5.0, Chrome 12, Opera 11.50.
 
@@ -97,7 +97,7 @@ Install watir-webdriver gem with `sudo gem install watir-webdriver --no-ri --no-
 
 ### Firefox with watir-webdriver ###
 
-![Firefox on Ubuntu 11.04](https://github.com/watir/watirbook/raw/master/images/installation/ubuntu/firefox.png)
+![Firefox on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/firefox.png)
 
 Since Firefox is installed by default on Ubuntu, you do not have to install it.
 
@@ -117,7 +117,7 @@ Let's check if it can drive Firefox:
     > browser.goto "watir.com"
     => "http://watir.com/"
 
-![Watir-webdriver drives Firefox on Ubuntu 11.04](https://github.com/watir/watirbook/raw/master/images/installation/ubuntu/webdriver-firefox.png)
+![Watir-webdriver drives Firefox on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/webdriver-firefox.png)
 
 No problem here, works just fine.
 
@@ -127,7 +127,7 @@ No problem here, works just fine.
 
 ### Chrome with watir-webdriver ###
 
-![Chrome on Ubuntu 11.04](https://github.com/watir/watirbook/raw/master/images/installation/ubuntu/chrome.png)
+![Chrome on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/chrome.png)
 
 Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from *[google.com/chrome](http://www.google.com/chrome)*. After installation Chrome will appear at *Applications > Internet > Chrome*.
 
@@ -147,7 +147,7 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for linux32*) from  
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for linux32*) from
 *http://code.google.com/p/chromium/downloads/list* and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
 
 The easiest way to do it on Ubuntu is to create a folder called `bin` in your home folder (`/home/zeljko/bin` in my case). You have to reboot (or at least log out and then log in, but I have not checked that) and by some magic (provided by `/home/zeljko/.profile` file in my case) `/home/zeljko/bin` folder will appear in your `PATH`:
@@ -174,7 +174,7 @@ Let's drive Chrome, finally:
 
 And it really works!
 
-![Watir-webdriver drives Chrome on Ubuntu 11.04](https://github.com/watir/watirbook/raw/master/images/installation/ubuntu/webdriver-chrome.png)
+![Watir-webdriver drives Chrome on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/webdriver-chrome.png)
 
 
 
@@ -218,7 +218,7 @@ Looks good to me!
 
 ### Opera with watir-webdriver ###
 
-![Opera on Ubuntu 11.04](https://github.com/watir/watirbook/raw/master/images/installation/ubuntu/opera.png)
+![Opera on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/opera.png)
 
 To drive [Opera](http://www.opera.com/) make sure you have it installed.
 
@@ -268,4 +268,4 @@ Looks good to me!  After all this work, enjoy driving Opera:
     => "http://watir.com/"
 
 
-![Watir-webdriver drives Opera on Ubuntu 11.04](https://github.com/watir/watirbook/raw/master/images/installation/ubuntu/webdriver-opera.png)
+![Watir-webdriver drives Opera on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/webdriver-opera.png)
