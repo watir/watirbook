@@ -1,3 +1,9 @@
+# 2013
+
+- 2013-11-14
+  - Moved HTML version to https://leanpub.com/watirbook/read
+  - Changed license to BSD.
+
 # 2012
 
 # next
