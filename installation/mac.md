@@ -4,8 +4,7 @@
 
 ![Mac OS X 10.7 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/mac/desktop.png)
 
-Machine is a clean installation of Mac OS X 10.7.2, 10.6.8 or 10.5.8, fully patched, with 4 GB RAM. 10.7 has Safari 5.1.2, 10.6 has Safari 5.1 and 10.5 has Safari 5.0.6. Firefox is 9.0.1, Chrome 16, Opera 11.60. All browsers are English (US) version.
-All steps for Mac OS X 10.7 should also work on 10.8 (Mountain Lion), tested on 10.8.1.
+Machine is a clean installation of Mac OS X 10.9, fully patched, with 4 GB RAM with Safari 7.0. Firefox is 9.0.1, Chrome 16, Opera 11.60. All browsers are English (US) version.
 
 
 
@@ -13,215 +12,70 @@ All steps for Mac OS X 10.7 should also work on 10.8 (Mountain Lion), tested on 
 
 ### Ruby ###
 
-Regarding installing Ruby on Mac, I have good news and bad news. Good news is that Ruby is already installed by default, so you can skip this step if you just want to try Watir. Bad news is that you have an old version of Ruby installed. It will be good enough for trying Watir, but if you decide you want to use it, you will probably want to install a newer version. So, for now, I will skip Ruby installation. I will cover it later.
+Good news is that Ruby is already installed by default. To check Ruby version, open Terminal application (located in `/Applications/Utilities`) any type `ruby -v`.
 
-To check if Ruby is installed on your Mac, open Terminal application (located in `/Applications/Utilities`) any type `ruby -v`.
-
-On 10.7 you should get this:
+You should get this:
 
     $ ruby -v
-    ruby 1.8.7 (2010-01-10 patchlevel 249) [universal-darwin11.0]
-
-On 10.6 you should get this:
-
-    $ ruby -v
-    ruby 1.8.7 (2009-06-12 patchlevel 174) [universal-darwin10.0]
-
-On 10.5 you should get this:
-
-    $ ruby -v
-    ruby 1.8.6 (2009-06-08 patchlevel 369) [universal-darwin9.0]
+    ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
 
 
 
 
 
-### RubyGems on 10.7 and 10.6 ###
+### RubyGems ###
 
-With RubyGems, the same story as with Ruby. It is already installed, but an old version. Let's see which version is here with `gem -v`.
+It is already installed, but an old version. Let's see which version is here with `gem -v`.
 
-On 10.7 you should get this:
+You should get this:
 
     $ gem -v
-    1.3.6
+    2.0.3
 
-On 10.6 you should get this:
-
-    $ gem -v
-    1.3.5
-
-Both versions are pretty old. Watir needs never version. Fortunately, it is easy to upgrade RubyGems with `sudo gem update --system`:
+Fortunately, it is easy to upgrade RubyGems with `sudo gem update --system`:
 
     $ sudo gem update --system
     (...)
-    RubyGems 1.8.12 installed
+    RubyGems 2.1.11 installed
     (...)
 
 
 
 
+### selenium-webdriver ###
 
-### RubyGems on 10.5 ###
+Let's try selenium-webdriver gem. It can drive Firefox, Chrome, Opera and Safari. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
 
-With RubyGems, the same story as with Ruby. It is already installed, but an old version. Let's see which version is here with `gem -v`:
+You will probably get this:
 
-    $ gem -v
-    1.0.1
-
-RubyGems 1.0.1 is pretty old. Watir needs newer version. Fortunately, it should be easy to upgrade RubyGems with `sudo gem update --system`:
-
-    $ sudo gem update --system
+    $ sudo gem install selenium-webdriver
     (...)
-    Updating RubyGems...
-    ERROR:  While executing gem ... (Gem::RemoteSourceException)
-    HTTP Response 302 fetching http://gems.rubyforge.org/yaml
-
-Now you see why I said "should be easy". RubyGems 1.0.1 is so old, it could not even be updated the easy way. See how lucky you are to have this book? Of course there is a way to upgrade to the newer version of RubyGems. The latest version I could install or Ruby 1.8.6 is RubyGems 1.4.2. Download [rubygems-update-1.4.2.gem] (click *Download* link), open Terminal window in folder where you have downloaded it (`/Users/zeljko/Downloads` in my case) and install it:
-
-    $ sudo gem install -l rubygems-update-1.4.2.gem
-    Successfully installed rubygems-update-1.4.2
-    1 gem installed
-    Installing ri documentation for rubygems-update-1.4.2...
-    Installing RDoc documentation for rubygems-update-1.4.2...
-
-    $ sudo update_rubygems
-    RubyGems 1.4.2 installed
-    File not found: README
-
-Ignore `File not found: README` error message. Check if RubyGems is updated:
-
-    $ gem -v
-    1.4.2
-
-Everything is as it should be.
-
-[rubygems-update-1.4.2.gem]: https://rubygems.org/gems/rubygems-update/versions/1.4.2
-
-
-
-
-
-### OSX GCC Installer ###
-
-![OSX GCC Installer](https://raw.github.com/watir/watirbook/master/images/installation/mac/gcc.png)
-
-You will need OSX GCC Installer or Xcode if you want to install watir-webdriver gem. OSX GCC Installer is way smaller than Xcode (287 MB instead of 1.68 GB for 10.7, 180 MB instead of 4.1 GB for 10.6). If you want to install safariwatir gem, OSX GCC Installer is not enough, you will have to install Xcode. There is no OSX GCC Installer for 10.5, you will have to install Xcode 3.1 ("just" 1 GB).
-
-Download OSX GCC Installer from https://github.com/kennethreitz/osx-gcc-installer and install it.
-
-
-
-
-
-### Xcode 4.6.2 for 10.7 and 10.8 ###
-
-![Install Xcode 4.2.1 from App Store](https://raw.github.com/watir/watirbook/master/images/installation/mac/xcode-4-2-1.png)
-
-To install Xcode 4.6.2 on 10.7, open App Store application, search for Xcode and download it. Please notice it is 1.68 GB. After the download is complete, you will find `Install Xcode.app` file in `/Applications`. Install it.
-
-After installation, go to Preferences > Downloads and install the Command Line Tools.
-
-
-
-### Xcode 3.2 for 10.6 ###
-
-*Xcode 3.2 does not work on Mac OS 10.5. It works on 10.6.*
-
-You will need Xcode from Apple if you want to install watir-webdriver or safariwatir gems.
-
-The easiest way to install Xcode is from Mac OS DVD. Insert the DVD, go to *Optional Installs* folder and double click *Xcode.mpkg* file.
-
-![Install Xcode 3.2 from Mac OS DVD](https://raw.github.com/watir/watirbook/master/images/installation/mac/xcode-3-2.png)
-
-You can get a newer version from Apple web site. You will need Apple ID. It is username and password you already use for iTunes Store or Mac App Store. If you do not have Apple ID, you can create one for free. Sign in with your Apple ID at [Xcode] site and on the bottom right you will see *Looking for Xcode 3? Download Now*. Download *Xcode 3.2.6 and iOS SDK 4.3 (Disk Image)*. Please notice it is 4.1 GB.
-
-You can get the newest Xcode 3.2 without Apple ID and without downloading 4 GB file. Install Xcode 3.2 from Mac OS DVD and run Software Update. It will update Xcode to 3.2.6, and downloaded file will be "just" about 600 MB.
-
-[Xcode]: http://developer.apple.com/xcode/
-
-
-
-
-
-### Xcode 3.1 for 10.5 ###
-
-*Xcode 3.1 is for Mac OS 10.5. On 10.6 install Xcode 3.2 or Xcode 4.*
-
-You will need Xcode from Apple for watir-webdriver and safariwatir gems.
-
-The easiest way to install Xcode is from Mac OS DVD. Insert the DVD, go to *Optional Installs/Xcode Tools* folder and double click *XcodeTools* file. Leave all settings at default values.
-
-![Install Xcode 3.1.2 from Mac OS DVD](https://raw.github.com/watir/watirbook/master/images/installation/mac/xcode-3-1.png)
-
-Optionally, after Xcode is installed, run Software Update. At the moment, there is no update.
-
-If you do not have Mac OS 10.5 DVD, you can download Xcode 3.1.4 from Apple. Log in to http://connect.apple.com/ with your Apple ID. Click *Developer Tools* link (at the right hand side, under *Downloads*) and download *Xcode 3.1.4 Developer DVD (Disk Image)*. Please note it is 993 MB.
-
-
-
-
-
-### Xcode 4 for 10.6 ###
-
-*Xcode 4 does not work on Mac OS 10.5. It works on 10.6.*
-
-According to Xcode site, Xcode 4 "is a free download for all members of the iOS and Mac Developer Programs". Both programs are $99/year. If you are not a member of mentioned programs (I am not), you can buy it from Mac App Store for $4.99. But, since you can install Xcode 3 for free, there is no need to buy anything.
-
-
-
-
-
-### Safari with safariwatir ###
-
-![Safari 5.1 on Mac 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/safari.png)
-
-Safari is installed by default on Mac OS X, so you do not have to install it. You do have to install Xcode 3 or 4 (see previous chapters).
-
-If you do not have Xcode installed, you will get this error message if you try to install safariwatir:
-
-    $ sudo gem install safariwatir --no-ri --no-rdoc
-    (...)
-    Fetching: rb-appscript-0.6.1.gem (100%)
+    Fetching: ffi-1.9.3.gem (100%)
     Building native extensions.  This could take a while...
-    ERROR:  Error installing safariwatir:
+    ERROR:  Error installing selenium-webdriver:
     ERROR: Failed to build gem native extension.
-    /System/Library/Frameworks/Ruby.framework/Versions/1.8/
-    usr/bin/ruby extconf.rb
-    mkmf.rb can't find header files for ruby at /System/Library/
-    Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/ruby.h
-    Gem files will remain installed in /Library/Ruby/Gems/1.8/gems/
-    rb-appscript-0.6.1 for inspection.
-    Results logged to /Library/Ruby/Gems/1.8/gems/rb-appscript-0.6.1/
-    ./gem_make.out
 
-Install Xcode 3 or 4 and try again:
+    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb
+    mkmf.rb can't find header files for ruby at /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/include/ruby.h
 
-    $ sudo gem install safariwatir --no-ri --no-rdoc
+    Gem files will remain installed in /Library/Ruby/Gems/2.0.0/gems/ffi-1.9.3 for inspection.
+    Results logged to /Library/Ruby/Gems/2.0.0/gems/ffi-1.9.3/ext/ffi_c/gem_make.out
+
+Fortunately, it is easy to fix. Install command line developer tools. To install them, type `git --version` into Terminal. A popup will appear asking if you would like to install command line developer tools. Click *Install*. After the installation is finished, try again:
+
+    $ sudo gem install selenium-webdriver --no-ri --no-rdoc
     (...)
-    Successfully installed safariwatir-0.4.0
+    Successfully installed selenium-webdriver-2.37.0
     (...)
 
-Let's try safariwatir.
 
-    $ irb
 
-    > require "safariwatir"
-    => true
 
-    > browser = Watir::Safari.new
-    => #<Watir::Safari:0x10116fc68
-      @scripter=#<Watir::AppleScripter:0x10116fbf0
-      @js=#<Watir::JavaScripter:0x10116fc18>, @typing_lag=0.08,
-      @app=app("/Applications/Safari.app"),
-      @document=app("/Applications/Safari.app").documents[1],
-      @appname="Safari">>
 
-    > browser.goto "http://watir.com"
-    => nil
 
-It works! :)
 
-![safariwatir gem driving Safari 5 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/safariwatir.png)
+
+
 
 
 
