@@ -1,10 +1,10 @@
-## Mac OS X 10.8, 10.7, 10.6 and 10.5 ##
+## Mac OS X 10.9 ##
 
 *You will need internet access if you want to follow examples in this chapter.*
 
 ![Mac OS X 10.7 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/mac/desktop.png)
 
-Machine is a clean installation of Mac OS X 10.9, fully patched, with 4 GB RAM with Safari 7.0. Firefox is 9.0.1, Chrome 16, Opera 11.60. All browsers are English (US) version.
+Machine is a clean installation of Mac OS X 10.9, fully patched, with 4 GB RAM with Safari 7.0. Firefox is Firefox 25.0.1, Chrome 31, Opera 18.0, PhantomJS 1.9.2. All browsers are English (US) version.
 
 
 
@@ -44,7 +44,7 @@ Fortunately, it is easy to upgrade RubyGems with `sudo gem update --system`:
 
 ### selenium-webdriver ###
 
-Let's try selenium-webdriver gem. It can drive Firefox, Chrome, Opera and Safari. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
+Let's try selenium-webdriver gem. It can drive Firefox, Chrome, Opera, Safari and PhantomJS. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
 
 You will probably get this:
 
@@ -61,7 +61,11 @@ You will probably get this:
     Gem files will remain installed in /Library/Ruby/Gems/2.0.0/gems/ffi-1.9.3 for inspection.
     Results logged to /Library/Ruby/Gems/2.0.0/gems/ffi-1.9.3/ext/ffi_c/gem_make.out
 
-Fortunately, it is easy to fix. Install command line developer tools. To install them, type `git --version` into Terminal. A popup will appear asking if you would like to install command line developer tools. Click *Install*. After the installation is finished, try again:
+Fortunately, it is easy to fix. Install command line developer tools. To install them, type `git --version` into Terminal. A popup will appear asking if you would like to install command line developer tools.
+
+![Install command line developer tools popup](https://raw.github.com/watir/watirbook/master/images/installation/mac/command-line-developer-tools-1.png)
+
+Click *Install*. After the installation is finished, try again:
 
     $ sudo gem install selenium-webdriver --no-ri --no-rdoc
     (...)
@@ -72,52 +76,7 @@ Fortunately, it is easy to fix. Install command line developer tools. To install
 
 
 
-
-
-
-
-
-
-
-
-
-### watir-webdriver ###
-
-Let's try watir-webdriver gem. For now it can drive Firefox, Chrome and Opera. It should also be able to drive Safari in the future. Install it with `sudo gem install watir-webdriver --no-ri --no-rdoc`.
-
-If you did not install OSX GCC Installer or Xcode, you will get this:
-
-    $ sudo gem install watir-webdriver --no-ri --no-rdoc
-    (...)
-    Fetching: ffi-1.0.7.gem (100%)
-    (...)
-    Building native extensions.  This could take a while...
-    ERROR:  Error installing watir-webdriver:
-    ERROR: Failed to build gem native extension.
-    /System/Library/Frameworks/Ruby.framework/Versions/1.8/
-      usr/bin/ruby/extconf.rb
-    mkmf.rb can't find header files for ruby at
-    /System/Library/Frameworks/Ruby.framework/Versions/1.8/
-      usr/lib/ruby/ruby.h
-    Gem files will remain installed in
-      /Library/Ruby/Gems/1.8/gems/ffi-1.0.7 for inspection.
-    Results logged to
-      /Library/Ruby/Gems/1.8/gems/ffi-1.0.7/ext/ffi_c/gem_make.out
-
-Fortunately, it is easy to fix. Install OSX GCC Installer or Xcode (see previous chapters).
-
-Try again:
-
-    $ sudo gem install watir-webdriver --no-ri --no-rdoc
-    (...)
-    Successfully installed watir-webdriver-0.3.2
-    (...)
-
-
-
-
-
-### Firefox with watir-webdriver on 10.6 ###
+### Firefox with selenium-webdriver ###
 
 ![Firefox 6 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/firefox.png)
 
@@ -151,30 +110,6 @@ You can get rid of the error message by installing json gem:
     (...)
 
 ![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/webdriver-firefox.png)
-
-
-
-
-
-### Firefox with watir-webdriver on 10.5 ###
-
-There is a problem with driving Firefox 4+ on 10.5:
-
-    $ irb
-
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :ff
-    Selenium::WebDriver::Error::WebDriverError: unable to start
-      Firefox cleanly, args: ["-silent"]
-    (...)
-
-Take a look at https://github.com/jnicklas/capybara/issues/313 for more detail.
-
-The easiest way to fix it is to uninstall the current version of Firefox, and install Firefox 3.6.22. I could not find how to download Firefox 4 or 5, so I did not test with them.
-
-[Firefox]: http://www.mozilla.com/en-US/firefox/new/
 
 
 
@@ -246,28 +181,6 @@ Click button *Install* and Java will install. Check if Java is installed with `j
     java version "1.6.0_29"
     Java(TM) SE Runtime Environment (build 1.6.0_29-b11-402-11M3527)
     Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02-402, mixed mode)
-
-
-
-
-
-### Java on 10.6 and 10.5 ###
-
-To drive Opera, you need Java. Fortunately, it is already installed. All you have to do is check if it is installed with `java -version`:
-
-On 10.6 you should get this:
-
-    $ java -version
-    java version "1.6.0_26"
-    Java(TM) SE Runtime Environment (build 1.6.0_26-b03-384-10M3425)
-    Java HotSpot(TM) 64-Bit Server VM (build 20.1-b02-384, mixed mode)
-
-On 10.5 you should get this:
-
-    java version "1.5.0_30"
-    Java(TM) 2 Runtime Environment, Standard Edition
-      (build 1.5.0_30-b03-389-9M3425)
-    Java HotSpot(TM) Client VM (build 1.5.0_30-161, mixed mode)
 
 
 
