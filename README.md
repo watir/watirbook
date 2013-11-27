@@ -1,6 +1,6 @@
 # About the Book
 
-[Web Application Testing in Ruby](https://leanpub.com/watirbook) (with Selenium and friends) is a book on, well, [web application testing in ruby](http://watir.com/) (Watir). It is not finished. We are working on it.
+[Web Application Testing in Ruby (with Selenium and friends)](https://leanpub.com/watirbook) is a book on, well, [web application testing in Ruby](http://watir.com/) (Watir). It is not finished. We are working on it.
 
 Book source code is at [github.com/watir/watirbook](https://github.com/watir/watirbook). You can discuss the book at [groups.google.com/group/watirbook](http://groups.google.com/group/watirbook/). More information about the book is available at [filipin.eu/tag/watirbook](http://filipin.eu/tag/watirbook/).
 
