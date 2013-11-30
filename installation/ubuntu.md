@@ -119,6 +119,38 @@ No problem here, works just fine.
 
 
 ### Chrome with watir-webdriver ###
+### PhantomJS ###
+
+To drive [PhantomJS](http://phantomjs.org/), make install it via `apt-get`:
+
+    $ sudo apt-get install phantomjs
+    (...)
+    Setting up phantomjs (1.9.0-1) ...
+
+Let's try driving it:
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :phantomjs
+    => #<Selenium::WebDriver::Driver:0x..fa5f26f44 browser=:phantomjs>
+
+    > browser.navigate.to "http://watir.com"
+    => {}
+
+    > browser.save_screenshot "phantomjs.png"
+    => #<File:phantomjs.png (closed)>
+
+The last command saves screenshot of the page. A screenshot from a headless browser. Nice, right?
+
+![PhantomJS](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/phantomjs.png)
+
+
+
+
+
 
 ![Chrome on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/chrome.png)
 
