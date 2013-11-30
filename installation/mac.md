@@ -164,6 +164,40 @@ Finally! It works!
 
 
 ### Java on 10.7 ###
+### PhantomJS ###
+
+To drive [PhantomJS](https://www.google.com/intl/en/chrome/browser/), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
+
+    $ brew install phantomjs
+    ==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/phantomjs-
+    ######################################################################## 100.0%
+    ==> Pouring phantomjs-1.9.2.mavericks.bottle.1.tar.gz
+    🍺  /usr/local/Cellar/phantomjs/1.9.2: 104 files, 34M
+
+Let's try driving it:
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :phantomjs
+    => #<Selenium::WebDriver::Driver:0x..fbdc736b89bb162d0 browser=:phantomjs>
+
+    > browser.navigate.to "http://watir.com"
+    => ""
+
+    > browser.save_screenshot "phantomjs.png"
+    => #<File:phantomjs.png (closed)>
+
+The last command saves screenshot of the page. A screenshot from a headless browser. Nice, right?
+
+![PhantomJS](https://raw.github.com/watir/watirbook/master/images/installation/mac/phantomjs.png)
+
+
+
+
+
 
 To drive Opera, you need Java. It is not installed by default on Mac OS X 10.7. To install it type `java -version` in Terminal:
 
