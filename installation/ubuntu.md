@@ -93,7 +93,7 @@ Sucess!
 
 
 
-### Firefox with watir-webdriver ###
+### Firefox ###
 
 ![Firefox on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/firefox.png)
 
@@ -103,19 +103,14 @@ Let's check if it can drive Firefox:
 
     $ irb
 
-    > require "rubygems"
+    > require "selenium-webdriver"
     => true
 
-    > require "watir-webdriver"
-    => true
+    > browser = Selenium::WebDriver.for :firefox
+    => #<Selenium::WebDriver::Driver:0x21564606 browser=:firefox>
 
-    > browser = Watir::Browser.new :ff
-    => #<Watir::Browser:0x..fb734a4d8 url="about:blank" title="">
-
-    > browser.goto "watir.com"
-    => "http://watir.com/"
-
-![Watir-webdriver drives Firefox on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/webdriver-firefox.png)
+    > browser.navigate.to "http://watir.com"
+    => ""
 
 No problem here, works just fine.
 
