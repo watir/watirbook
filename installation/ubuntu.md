@@ -12,28 +12,26 @@ Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 G
 
 ### Ruby ###
 
-Let's see if Ubuntu comes with Ruby installed. Open Terminal (*Applications > Accessories > Terminal*) and type `ruby -v`:
+Let's see if Ubuntu comes with Ruby installed. Open Terminal and type `ruby -v`:
 
     $ ruby -v
-    The program 'ruby' is currently not installed. You can install it
-    by typing:
-    sudo apt-get install ruby
+    The program 'ruby' can be found in the following packages:
+     * ruby1.8
+     * ruby1.9.1
+    Try: sudo apt-get install <selected package>
 
-Install it with `sudo apt-get install ruby`:
 
-    $ sudo apt-get install ruby
+Install it with `sudo apt-get install ruby1.9.1`:
+
+    $ sudo apt-get install ruby1.9.1
     (...)
-    Setting up libruby1.8 (1.8.7.302-2) ...
-    Setting up ruby1.8 (1.8.7.302-2) ...
-    Setting up ruby (4.5) ...
+    Setting up ruby1.9.1 (1.9.3.194-8.1ubuntu2.1) ...
     (...)
 
 Check the version with `ruby -v`:
 
     $ ruby -v
-    ruby 1.8.7 (2010-08-16 patchlevel 302) [i686-linux]
-
-Ruby 1.8.7 is pretty good, but 1.9.2 would be better. Since we just want to get Watir installed the easiest possible way, we will user Ruby 1.8.7.
+    ruby 1.9.3p194 (2012-04-20 revision 35410) [i686-linux]
 
 
 
