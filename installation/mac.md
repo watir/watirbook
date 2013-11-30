@@ -76,6 +76,27 @@ Click *Install*. After the installation is finished, try again:
 
 
 
+### Safari ###
+
+![Safari 7 on Mac OS 10.9](https://raw.github.com/watir/watirbook/master/images/installation/mac/safari.png)
+
+Since Safari is already installed, all you have to do is to open IRB and type this:
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :safari
+    => #<Selenium::WebDriver::Driver:0x..f93d5546968bec45e browser=:safari>
+    
+    irb(main):003:0> browser.navigate.to "http://watir.com"
+    => nil
+
+
+
+
+
 ### Firefox ###
 
 ![Firefox 6 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/firefox.png)
