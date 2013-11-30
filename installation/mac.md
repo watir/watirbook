@@ -184,7 +184,6 @@ Finally! It works!
 
 
 
-### Java on 10.7 ###
 ### PhantomJS ###
 
 To drive [PhantomJS](https://www.google.com/intl/en/chrome/browser/), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
@@ -219,77 +218,103 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 
 
-
-To drive Opera, you need Java. It is not installed by default on Mac OS X 10.7. To install it type `java -version` in Terminal:
-
-    $ java -version
-    No Java runtime present, requesting install.
-
-You will get `No Java runtime present, requesting install` message and a popup window will appear.
-
-![Install Java](https://raw.github.com/watir/watirbook/master/images/installation/mac/java.png)
-
-Click button *Install* and Java will install. Check if Java is installed with `java -version`:
-
-    $ java -version
-    java version "1.6.0_29"
-    Java(TM) SE Runtime Environment (build 1.6.0_29-b11-402-11M3527)
-    Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02-402, mixed mode)
-
-
-
-
-
-### Opera with watir-webdriver ###
+### Opera ###
 
 ![Opera 11.51 on Mac 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/opera.png)
 
-Let's see how it drives Opera. To drive [Opera], make sure you have it installed.
+To drive [Opera](http://www.opera.com/), make sure you have it installed.
 
     $ irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the
-    Selenium server jar. Please download the standalone server from
-    http://code.google.com/p/selenium/downloads/list and set the
-    SELENIUM_SERVER_JAR environmental variable to its location.
-    More info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    > browser = Selenium::WebDriver.for :opera
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.  Please download the standalone server from http://code.google.com/p/selenium/downloads/list and set the SELENIUM_SERVER_JAR environmental variable to its location.  More info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    (...)
 
-Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `selenium-server-standalone-2.5.0.jar` (or newer version). Since I have put `chromedriver` file in `/usr/bin`, I will put `selenium-server-standalone-2.5.0.jar` file there too. You will have to provide admin password when copying the file.
+Error message similar to the one when we first tried to open Chrome. The solution is similar too. Install selenium-server-standalone via Homebrew! (If you did not thank me for Homebrew, you can do it now. You are welcome.)
 
-The last step is setting `SELENIUM_SERVER_JAR` environmental variable. Create (if the file does not exist) or edit `.bash_profile` file in your home folder (`/Users/zeljko` in my case) with your favorite text editor. Add this line to the file:
+    $ brew install selenium-server-standalone
+    ==> Downloading http://selenium.googlecode.com/files/selenium-server-standalone-2.37.0.jar
+    ######################################################################## 100.0%
+    ==> Caveats
+    To have launchd start selenium-server-standalone at login:
+        ln -sfv /usr/local/opt/selenium-server-standalone/*.plist ~/Library/LaunchAgents
+    Then to load selenium-server-standalone now:
+        launchctl load ~/Library/LaunchAgents/homebrew.mxcl.selenium-server-standalone.plist
+    Or, if you don't want/need launchctl, you can just run:
+        java -jar /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar -p 4444
+    ==> Summary
+    🍺  /usr/local/Cellar/selenium-server-standalone/2.37.0: 3 files, 33M, built in 22 seconds
 
-     export SELENIUM_SERVER_JAR=/usr/bin/selenium-server-standalone-2.5.0.jar
+Let's try again:
 
-If you just got lost, I have step by step guide how to do it. Open new Terminal tab or window (it should open in your home folder by default, `/Users/zeljko` in my case) and type `nano .bash_profile`:
+    $ irb
 
-    $ nano .bash_profile
+    > require "selenium-webdriver"
+    => true
 
-*GNU nano* text editor will open. Paste (cmd-v, for example) `export SELENIUM_SERVER_JAR...` line. Exit *GNU nano* and save the file with *control+x*. Press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` and press *Enter* when it displays `File Name to Write: .bash_profile` or `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` (text is different if the file already exists or not).
+    > browser = Selenium::WebDriver.for :opera
+
+![Install Java](https://raw.github.com/watir/watirbook/master/images/installation/mac/java.png)
+
+A popup window will appear saying *To open "java," you need a Java SE 6 runtime. Would you like to install one now?*. Click buttion *Install*, agree with license agreement and Java will install.
+
+Check if Java is installed. Open new Terminal window or tab (it is important to open new window or tab, Terminal will not see Java otherwise) and type `java -version`:
+
+    $ java -version
+    java version "1.6.0_65"
+    Java(TM) SE Runtime Environment (build 1.6.0_65-b14-462-11M4609)
+    Java HotSpot(TM) 64-Bit Server VM (build 20.65-b04-462, mixed mode)
+
+The last step is setting `SELENIUM_SERVER_JAR` environmental variable.
+
+If you just want to try driving opera, typing this into Terminal will do the trick:
+
+    $ export SELENIUM_SERVER_JAR=/usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
+
+Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported SELENIUM_SERVER_JAR environment variable.)
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :opera
+Selenium::WebDriver::Error::UnknownError: Invalid service list received: 䝅吠⼠䡔呐⼱⸱ഊ䡯獴㨠ㄲ㜮〮〮ㄺ㌴㌳㜍੃潮湥捴楯渺⁫敥瀭慬楶攍ੁ捣数琺⁴數琯桴浬ⱡ灰汩捡瑩潮⽸桴浬⭸浬ⱡ灰汩捡瑩潮⽸浬㭱㴰⸹Ⱪ浡来⽷敢瀬⨯⨻焽〮㠍੕獥爭䅧敮琺⁍潺楬污⼵⸰ 䵡捩湴潳栻⁉湴敬⁍慣⁏匠堠㄰弹弰⤠䅰灬敗敢䭩琯㔳㜮㌶ 䭈呍䰬⁬楫攠䝥捫漩⁃桲潭支㌱⸰⸱㘵〮㔷⁓慦慲椯㔳㜮㌶⁏偒⼱㠮〮ㄲ㠴⸴㤍ੁ捣数琭䕮捯摩湧㨠杺楰Ɽ敦污瑥ⱳ摣栍ੁ捣数琭䱡湧畡来㨠敮ⵕ匬敮㭱㴰⸸ഊഊ (java.lang.IllegalStateException)
+    from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):343:in `parseServiceList'
+    from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):387:in `readMessage'
+    from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):265:in `canRead'
+    from [remote server] com.opera.core.systems.internal.SocketMonitor(SocketMonitor.java):212:in `processSelectionKey'
+    from [remote server] com.opera.core.systems.internal.SocketMonitor(SocketMonitor.java):134:in `pollSockets'
+    from [remote server] com.opera.core.systems.internal.SocketMonitor(SocketMonitor.java):108:in `poll'
+    from [remote server] com.opera.core.systems.scope.stp.StpThread(StpThread.java):58:in `run'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/response.rb:51:in `assert_ok'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/response.rb:15:in `initialize'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/http/common.rb:59:in `new'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/http/common.rb:59:in `create_response'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/http/default.rb:66:in `request'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/http/common.rb:40:in `call'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/bridge.rb:634:in `raw_execute'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/bridge.rb:99:in `create_session'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/bridge.rb:68:in `initialize'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/opera/bridge.rb:28:in `initialize'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/common/driver.rb:43:in `new'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/common/driver.rb:43:in `for'
+    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver.rb:67:in `for'
+
+I do not know what went wrong. :(
+
+If you plan to drive Opera frequently, you should add SELENIUM_SERVER_JAR to `.bash_profile` file. Create (if the file does not exist) or edit `.bash_profile` file in your home folder (`/Users/zeljko/.bash_profile` in my case, or shorter `~/.bash_profile`) with your favorite text editor. Add `export SELENIUM_SERVER_JAR...` line to the file (if you have a newer version of `selenium-server-standalone` file, replace `2.37.0` appropriately).
+
+This is how to do it with *GNU nano*. Type type `nano ~/.bash_profile`. *GNU nano* text editor will open. Paste (cmd-v, for example) `export SELENIUM_SERVER_JAR...` line. Exit *GNU nano* and save the file with *control+x*. Press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` and press *Enter* when it displays `File Name to Write: .bash_profile` or `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` (text is different if the file already exists or not).
 
 ![GNU nano asking should it save changes to `.bash_profile` file](https://raw.github.com/watir/watirbook/master/images/installation/mac/nano.png)
 
  If you have done everything right, GNU nano will close and you will see normal Terminal window. We can check if the line is written to `.bash_profile` file:
 
-    $ cat .bash_profile
-    export SELENIUM_SERVER_JAR=/usr/bin/selenium-server-standalone-2.5.0.jar
+    $ cat ~/.bash_profile
+    export SELENIUM_SERVER_JAR=/usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
 
-Let's drive Opera, finally! Open new Terminal window or tab (this is important, already opened windows or tabs would not see `SELENIUM_SERVER_JAR` variable).
-
-    $ irb
-
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :opera
-    #<Watir::Browser:0x1017f6a28 url="opera:debug" title="Connect to Debugger">
-
-![watir-webdriver gem drives Opera 11.51 on Mac 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/webdriver-opera.png)
-
-[Opera]: http://www.opera.com/
-
-
-
+Open new Terminal window or tab (this is important, already opened windows or tabs would not see `SELENIUM_SERVER_JAR` variable).
