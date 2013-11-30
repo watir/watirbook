@@ -1,10 +1,10 @@
-## Ubuntu Linux 11.04 ##
+## Ubuntu Linux 13.10 ##
 
 *You will need internet access if you want to follow examples in this chapter.*
 
 ![Ubuntu Linux 13.10 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/desktop.png)
 
-Machine is a clean installation of Ubuntu Linux 11.04, fully patched, 512 MB RAM. Firefox 5.0, Chrome 12, Opera 11.50.
+Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, Chrome 12, Opera 11.50.
 
 
 
