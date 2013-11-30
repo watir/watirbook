@@ -118,10 +118,9 @@ No problem here, works just fine.
 
 
 
-### Chrome with watir-webdriver ###
 ### PhantomJS ###
 
-To drive [PhantomJS](http://phantomjs.org/), make install it via `apt-get`:
+To drive [PhantomJS](http://phantomjs.org/), install it via `apt-get`:
 
     $ sudo apt-get install phantomjs
     (...)
@@ -151,6 +150,7 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 
 
+### Chrome with watir-webdriver ###
 
 ![Chrome on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/chrome.png)
 
