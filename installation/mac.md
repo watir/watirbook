@@ -186,7 +186,7 @@ Finally! It works!
 
 ### PhantomJS ###
 
-To drive [PhantomJS](https://www.google.com/intl/en/chrome/browser/), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
+To drive [PhantomJS](http://phantomjs.org/), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
 
     $ brew install phantomjs
     ==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/phantomjs-
