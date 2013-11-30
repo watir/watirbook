@@ -98,8 +98,23 @@ Great! We can drive Firefox.
 
 
 
-    (...)
 
+### Homebrew ###
+
+To drive Chrome, you need [Homebrew](http://brew.sh/). To install it, paste this into Terminal. You will have to type your password during installation.
+
+    $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+    (...)
+    ==> Installation successful!
+    You should run `brew doctor' *before* you install anything.
+    Now type: brew help
+
+To check if everything is set up correctly, type `brew doctor`:
+
+    $ brew doctor
+    Your system is ready to brew.
+
+Everything looks good!
 
 
 
