@@ -63,7 +63,7 @@ You will probably get this:
 
 Fortunately, it is easy to fix. Install command line developer tools. To install them, type `git --version` into Terminal. A popup will appear asking if you would like to install command line developer tools.
 
-![Install command line developer tools popup](https://raw.github.com/watir/watirbook/master/images/installation/mac/command-line-developer-tools-1.png)
+![Install command line developer tools popup](https://raw.github.com/watir/watirbook/master/images/installation/mac/command-line-developer-tools.png)
 
 Click *Install*. After the installation is finished, try again:
 
