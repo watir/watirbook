@@ -116,6 +116,8 @@ To check if everything is set up correctly, type `brew doctor`:
 
 Everything looks good!
 
+(You can thank me later for Homebrew.)
+
 
 
 
@@ -124,7 +126,7 @@ Everything looks good!
 
 ![Chrome 13 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/chrome.png)
 
-Let's see if it can really drive Chrome too. To drive [Chrome](https://www.google.com/intl/en/chrome/browser/), make sure you have it installed.
+To drive [Chrome](https://www.google.com/intl/en/chrome/browser/), make sure you have it installed.
 
     $ irb
 
@@ -150,7 +152,7 @@ Let's try again:
     => true
 
     > browser = Selenium::WebDriver.for :chrome
-    => #<Selenium::WebDriver::Driver:0x10e1416dd9107ffe browser=:firefox>
+    => #<Selenium::WebDriver::Driver:0xec6568f803e9898 browser=:chrome>
 
     > browser.navigate.to "http://watir.com"
     => ""
