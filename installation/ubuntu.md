@@ -57,16 +57,37 @@ Since I do not *really* know what I am doing, I will leave RubyGems at current v
 
 
 
-### watir-webdriver ###
+### selenium-webdriver ###
 
-I think that Watir-webdriver gem is the future of Watir. In short, it can drive Firefox, Chrome and Opera.
+Let's try selenium-webdriver gem. It can drive Firefox, Chrome, Opera and PhantomJS. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
 
-Install watir-webdriver gem with `sudo gem install watir-webdriver --no-ri --no-rdoc`.
-
-    $ sudo gem install watir-webdriver --no-ri --no-rdoc
+    $ sudo gem install selenium-webdriver --no-ri --no-rdoc
     (...)
-    Successfully installed watir-webdriver-0.2.8
-    4 gems installed
+    Fetching: ffi-1.9.3.gem (100%)
+    Building native extensions.  This could take a while...
+    ERROR:  Error installing selenium-webdriver:
+    ERROR: Failed to build gem native extension.
+    /usr/bin/ruby1.9.1 extconf.rb
+    /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
+    from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+    from extconf.rb:4:in `<main>'
+    Gem files will remain installed in /var/lib/gems/1.9.1/gems/ffi-1.9.3 for inspection.
+    Results logged to /var/lib/gems/1.9.1/gems/ffi-1.9.3/ext/ffi_c/gem_make.out
+
+This should fix the problem:
+
+    $ sudo apt-get install ruby1.9.1-dev
+    (...)
+    Setting up ruby1.9.1-dev (1.9.3.194-8.1ubuntu2.1) ...
+
+Let's try installing selenium-webdriver again:
+
+    $ sudo gem install selenium-webdriver --no-ri --no-rdoc
+    (...)
+    Successfully installed selenium-webdriver-2.37.0
+    (...)
+
+Sucess!
 
 
 
