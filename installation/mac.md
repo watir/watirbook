@@ -120,50 +120,42 @@ Everything looks good!
 
 
 
-### Chrome with watir-webdriver ###
+### Chrome ###
 
 ![Chrome 13 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/chrome.png)
 
-Let's see if it can really drive Chrome too. To drive [Chrome], make sure you have it installed.
+Let's see if it can really drive Chrome too. To drive [Chrome](https://www.google.com/intl/en/chrome/browser/), make sure you have it installed.
 
     $ irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the
-    chromedriver executable. Please download the server from
-    http://code.google.com/p/chromium/downloads/list and place it
-    somewhere on your PATH. More info at
-    http://code.google.com/p/selenium/wiki/ChromeDriver.
+    > browser = Selenium::WebDriver.for :chrome
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromedriver/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
+    (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_mac_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for Mac OS X*) from
-*http://code.google.com/p/chromedriver/downloads/list* and unzip it (with mouse double-click, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said. If you have no idea what that means, read on. To find out where to put `chromedriver` file, type this in Terminal:
+Looks like we have to install something called *chromedriver executable*. The easiest way to install chromedriver is via Homebrew.
 
-    $ echo $PATH
-    /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
-
-So, in my case, these folders are on my `PATH`: `/usr/bin`, `/bin`, `/usr/sbin`, `/sbin`, `/usr/local/bin` and `/usr/X11/bin`. `/usr/bin` looks like a good place to put `chromedriver` file. To open the folder, go to *Finder > Go > Go to Folder > /usr/bin > Go*. Copy the file there. You will have to provide admin password.
+    $ brew install chromedriver
+    ==> Downloading http://chromedriver.storage.googleapis.com/2.7/chromedriver_mac32.zip
+    ######################################################################## 100.0%
+    🍺  /usr/local/Cellar/chromedriver/2.7: 2 files, 21M, built in 13 seconds
 
 Let's try again:
 
     $ irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :chrome
-    => #<Watir::Browser:0x12d610c url="about:blank" title="about:blank">
+    > browser = Selenium::WebDriver.for :chrome
+    => #<Selenium::WebDriver::Driver:0x10e1416dd9107ffe browser=:firefox>
 
-    > browser.goto "watir.com"
-    => "http://watir.com/"
+    > browser.navigate.to "http://watir.com"
+    => ""
 
 Finally! It works!
-
-![watir-webdriver driving Chrome 12 on Mac OS 10.5](https://raw.github.com/watir/watirbook/master/images/installation/mac/webdriver-chrome.png)
-
-[Chrome]: http://www.google.com/chrome/
 
 
 
