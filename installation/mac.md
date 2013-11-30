@@ -282,7 +282,7 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
     => true
 
     > browser = Selenium::WebDriver.for :opera
-Selenium::WebDriver::Error::UnknownError: Invalid service list received: 䝅吠⼠䡔呐⼱⸱ഊ䡯獴㨠ㄲ㜮〮〮ㄺ㌴㌳㜍੃潮湥捴楯渺⁫敥瀭慬楶攍ੁ捣数琺⁴數琯桴浬ⱡ灰汩捡瑩潮⽸桴浬⭸浬ⱡ灰汩捡瑩潮⽸浬㭱㴰⸹Ⱪ浡来⽷敢瀬⨯⨻焽〮㠍੕獥爭䅧敮琺⁍潺楬污⼵⸰ 䵡捩湴潳栻⁉湴敬⁍慣⁏匠堠㄰弹弰⤠䅰灬敗敢䭩琯㔳㜮㌶ 䭈呍䰬⁬楫攠䝥捫漩⁃桲潭支㌱⸰⸱㘵〮㔷⁓慦慲椯㔳㜮㌶⁏偒⼱㠮〮ㄲ㠴⸴㤍ੁ捣数琭䕮捯摩湧㨠杺楰Ɽ敦污瑥ⱳ摣栍ੁ捣数琭䱡湧畡来㨠敮ⵕ匬敮㭱㴰⸸ഊഊ (java.lang.IllegalStateException)
+    Selenium::WebDriver::Error::UnknownError: Invalid service list received: 䝅吠⼠䡔呐⼱⸱ഊ䡯獴㨠ㄲ㜮〮〮ㄺ㌴㌳㜍੃潮湥捴楯渺⁫敥瀭慬楶攍ੁ捣数琺⁴數琯桴浬ⱡ灰汩捡瑩潮⽸桴浬⭸浬ⱡ灰汩捡瑩潮⽸浬㭱㴰⸹Ⱪ浡来⽷敢瀬⨯⨻焽〮㠍੕獥爭䅧敮琺⁍潺楬污⼵⸰ 䵡捩湴潳栻⁉湴敬⁍慣⁏匠堠㄰弹弰⤠䅰灬敗敢䭩琯㔳㜮㌶ 䭈呍䰬⁬楫攠䝥捫漩⁃桲潭支㌱⸰⸱㘵〮㔷⁓慦慲椯㔳㜮㌶⁏偒⼱㠮〮ㄲ㠴⸴㤍ੁ捣数琭䕮捯摩湧㨠杺楰Ɽ敦污瑥ⱳ摣栍ੁ捣数琭䱡湧畡来㨠敮ⵕ匬敮㭱㴰⸸ഊഊ (java.lang.IllegalStateException)
     from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):343:in `parseServiceList'
     from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):387:in `readMessage'
     from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):265:in `canRead'
