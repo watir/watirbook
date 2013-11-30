@@ -4,7 +4,7 @@
 
 ![Ubuntu Linux 13.10 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/desktop.png)
 
-Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, Chrome 12, Opera 11.50.
+Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, PhantomJS 1.9.0, Chrome 12, Opera 11.50.
 
 
 
@@ -59,7 +59,7 @@ Since I do not *really* know what I am doing, I will leave RubyGems at current v
 
 ### selenium-webdriver ###
 
-Let's try selenium-webdriver gem. It can drive Firefox, Chrome, Opera and PhantomJS. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
+Let's try selenium-webdriver gem. It can drive Firefox, PhantomJS, Chrome and Opera. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
 
     $ sudo gem install selenium-webdriver --no-ri --no-rdoc
     (...)
