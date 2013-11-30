@@ -76,40 +76,30 @@ Click *Install*. After the installation is finished, try again:
 
 
 
-### Firefox with selenium-webdriver ###
+### Firefox ###
 
 ![Firefox 6 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/firefox.png)
 
-Let's try to drive Firefox! To drive [Firefox], make sure you have it installed. Open our old friend IRB and type this:
+Let's try to drive Firefox! To drive [Firefox](http://www.mozilla.org/en-US/firefox/new/), make sure you have it installed. Open our old friend IRB and type this:
 
     $ irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :ff
-    => #<Watir::Browser:0x10101ee40 url="about:blank" title="">
+    > browser = Selenium::WebDriver.for :firefox
+    => #<Selenium::WebDriver::Driver:0x10e1416dd9107ffe browser=:firefox>
 
-    > browser.goto "watir.com"
-    => "http://watir.com/"
+    > browser.navigate.to "http://watir.com"
+    => ""
 
 Great! We can drive Firefox.
 
-Maybe you will get this warning:
 
-    > browser = Watir::Browser.new :ff
-    Warning: multi_json is using default ok_json engine. Suggested
-      action: require and load an appropriate JSON library.
-    => #<Watir::Browser:0x105035088 url="about:blank" title="">
 
-You can get rid of the error message by installing json gem:
 
-    $ sudo gem install json --no-ri --no-rdoc
-    (...)
-    Successfully installed json-1.6.4
     (...)
 
-![watir-webdriver driving Firefox 4 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/webdriver-firefox.png)
 
 
 
