@@ -154,7 +154,7 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 ![Chrome on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/chrome.png)
 
-Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from *[google.com/chrome](http://www.google.com/chrome)*. After installation Chrome will appear at *Applications > Internet > Chrome*.
+Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from *[google.com/chrome](http://www.google.com/chrome)*.
 
     $ irb
 
