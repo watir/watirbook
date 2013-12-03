@@ -150,7 +150,7 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 
 
-### Chrome with watir-webdriver ###
+### Chrome ###
 
 ![Chrome on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/chrome.png)
 
@@ -241,7 +241,7 @@ Looks good to me!
 
 
 
-### Opera with watir-webdriver ###
+### Opera ###
 
 ![Opera on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/opera.png)
 
