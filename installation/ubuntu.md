@@ -4,7 +4,7 @@
 
 ![Ubuntu Linux 13.10 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/desktop.png)
 
-Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, PhantomJS 1.9.0, Chrome 12, Opera 11.50.
+Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, PhantomJS 1.9.0, Chrome 31, Opera 11.50.
 
 
 
@@ -158,48 +158,39 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
 
     $ irb
 
-    > require "rubygems"
+    > require "selenium-webdriver"
     => true
 
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the
-    chromedriver executable. Please download the server from
-    http://code.google.com/p/chromium/downloads/list and place it
-    somewhere on your PATH. More info at
-    http://code.google.com/p/selenium/wiki/ChromeDriver.
+    > browser = Selenium::WebDriver.for :chrome
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromedriver/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. Download `chromedriver_linux32_14.0.836.0.zip` (or newer version, the description should be *ChromeDriver server for linux32*) from
-*http://code.google.com/p/chromium/downloads/list* and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. *http://code.google.com/p/chromedriver/downloads/list* will let you know that *chromedriver executable* is now located at *﻿http://chromedriver.storage.googleapis.com/index.html*. Download the latest version of `﻿chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
 
-The easiest way to do it on Ubuntu is to create a folder called `bin` in your home folder (`/home/zeljko/bin` in my case). You have to reboot (or at least log out and then log in, but I have not checked that) and by some magic (provided by `/home/zeljko/.profile` file in my case) `/home/zeljko/bin` folder will appear in your `PATH`:
+Let's find out what is *on our `PATH`*.
 
     $ echo $PATH
     /home/zeljko/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:
     /sbin:/bin:/usr/games
 
+`/usr/bin` looks like a nice place, so let's move `chromedriver` there. You will have to provide your password to move the file there.
+
+    $ sudo mv chromedriver /usr/bin
+
 Let's drive Chrome, finally:
 
-    $ irb
+    ﻿$ irb
 
-    > require "rubygems"
+    > require "selenium-webdriver"
     => true
 
-    > require "watir-webdriver"
-    => true
+    > browser = Selenium::WebDriver.for :chrome
+    => #<Selenium::WebDriver::Driver:0x5b77effe browser=:chrome>
 
-    > browser = Watir::Browser.new :chrome
-    => #<Watir::Browser:0x..fb743b7d4 url="about:blank" title="about:blank">
-
-    > browser.goto "watir.com"
-    => "http://watir.com/"
+    > browser.navigate.to "http://watir.com"
+    => nil
 
 And it really works!
-
-![Watir-webdriver drives Chrome on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/webdriver-chrome.png)
 
 
 
