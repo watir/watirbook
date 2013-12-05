@@ -89,7 +89,7 @@ Since Safari is already installed, all you have to do is to open IRB and type th
 
     > browser = Selenium::WebDriver.for :safari
     => #<Selenium::WebDriver::Driver:0x..f93d5546968bec45e browser=:safari>
-    
+
     irb(main):003:0> browser.navigate.to "http://watir.com"
     => nil
 
@@ -179,6 +179,28 @@ Let's try again:
     => ""
 
 Finally! It works!
+
+
+
+
+
+### Chromium ###
+
+Let's try driving [Chromium](http://www.chromium.org/) too, just for fun. Download zip file it from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install chromedriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > Selenium::WebDriver::Chrome.path = "/Applications/Chromium.app/Contents/MacOS/Chromium"
+    => "/Applications/Chromium.app/Contents/MacOS/Chromium"
+
+    > browser = Selenium::WebDriver.for :chrome
+    => #<Selenium::WebDriver::Driver:0x1e35d5faa9511ec6 browser=:chrome>
+
+    > browser.navigate.to "http://watir.com"
+    => nil
 
 
 
