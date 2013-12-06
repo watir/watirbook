@@ -196,6 +196,47 @@ And it really works!
 
 
 
+### Chromium ###
+
+Let's try driving [Chromium](http://www.chromium.org/) too, just for fun. Install it with `sudo apt-get install chromium-browser`:
+
+    $ sudo apt-get install chromium-browser
+    (...)
+    Setting up chromium-browser (30.0.1599.114-0ubuntu0.13.10.2) ...
+    (...)
+
+If you did not already install chromedriver, see Chrome chapter.
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > ﻿Selenium::WebDriver::Chrome.path = "﻿﻿/usr/bin/chromium-browser"
+    Selenium::WebDriver::Error::WebDriverError: not a file: "﻿/usr/bin/﻿chromium-browser"
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/common/platform.rb:118:in `assert_file'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/common/platform.rb:123:in `assert_executable'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/chrome.rb:16:in `path='
+    from (irb):2
+    from /usr/bin/irb:12:in `<main>'
+
+I am not sure what went wrong here. `﻿chromium-browser` is located at `﻿/usr/bin/chromium-browser`:
+
+    ﻿$ which chromium-browser
+    /usr/bin/chromium-browser
+
+If Chromium decided to cooperate, you would be able to drive it like this:
+
+    > browser = Selenium::WebDriver.for :chrome
+    => #<Selenium::WebDriver::Driver:0x1e35d5faa9511ec6 browser=:chrome>
+
+    > browser.navigate.to "http://watir.com"
+    => nil
+
+
+
+
+
 ### Java ###
 
 To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
