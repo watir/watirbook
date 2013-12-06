@@ -209,26 +209,14 @@ If you did not already install chromedriver, see Chrome chapter.
 
     $ irb
 
-    > require "selenium-webdriver"
+    > ﻿require "selenium-webdriver"
     => true
 
-    > ﻿Selenium::WebDriver::Chrome.path = "﻿﻿/usr/bin/chromium-browser"
-    Selenium::WebDriver::Error::WebDriverError: not a file: "﻿/usr/bin/﻿chromium-browser"
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/common/platform.rb:118:in `assert_file'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/common/platform.rb:123:in `assert_executable'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/chrome.rb:16:in `path='
-    from (irb):2
-    from /usr/bin/irb:12:in `<main>'
-
-I am not sure what went wrong here. `﻿chromium-browser` is located at `﻿/usr/bin/chromium-browser`:
-
-    ﻿$ which chromium-browser
-    /usr/bin/chromium-browser
-
-If Chromium decided to cooperate, you would be able to drive it like this:
+    > Selenium::WebDriver::Chrome.path = "/usr/bin/chromium-browser"
+    => "/usr/bin/chromium-browser"
 
     > browser = Selenium::WebDriver.for :chrome
-    => #<Selenium::WebDriver::Driver:0x1e35d5faa9511ec6 browser=:chrome>
+    ﻿=> #<Selenium::WebDriver::Driver:0x..fb4c9860a browser=:chrome>
 
     > browser.navigate.to "http://watir.com"
     => nil
