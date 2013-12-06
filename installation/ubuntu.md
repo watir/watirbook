@@ -4,7 +4,7 @@
 
 ![Ubuntu Linux 13.10 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/desktop.png)
 
-Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, PhantomJS 1.9.0, Chrome 31, Opera 11.50.
+Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, PhantomJS 1.9.0, Chrome 31, Opera ﻿12.16.
 
 
 
@@ -227,35 +227,23 @@ If you did not already install chromedriver, see Chrome chapter.
 
 ### Java ###
 
-To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
+To drive Opera, you will have to install Java first. Let's check if Java is already installed:
 
-    $ java
+    ﻿$ ﻿java -version
     The program 'java' can be found in the following packages:
-     * gcj-4.4-jre-headless
-     * gcj-4.5-jre-headless
+     * default-jre
+     * gcj-4.6-jre-headless
+     * gcj-4.7-jre-headless
+     * openjdk-7-jre-headless
      * openjdk-6-jre-headless
     Try: sudo apt-get install <selected package>
 
-Looks like we will have to install Java. Install it with `sudo apt-get install openjdk-6-jre-headless`:
+Looks like we will have to install Java. Install it with `sudo apt-get install openjdk-7-jre-headless`:
 
-    $ sudo apt-get install openjdk-6-jre-headless
+    $ sudo apt-get install openjdk-7-jre-headless
     (...)
-    Setting up openjdk-6-jre-lib (6b22-1.10.2-0ubuntu1~11.04.1) ...
-    Setting up icedtea-6-jre-cacao (6b22-1.10.2-0ubuntu1~11.04.1) ...
-    Setting up icedtea-6-jre-jamvm (6b22-1.10.2-0ubuntu1~11.04.1) ...
-    Setting up ca-certificates-java (20100412) ...
-    creating /etc/ssl/certs/java/cacerts...
-    done.
-
-Let's check if Java is really installed with `java -version`:
-
-    $ java -version
-    java version "1.6.0_22"
-    OpenJDK Runtime Environment (IcedTea6 1.10.2)
-    (6b22-1.10.2-0ubuntu1~11.04.1)
-    OpenJDK Client VM (build 20.0-b11, mixed mode, sharing)
-
-Looks good to me!
+    Setting up openjdk-7-jre-lib (7u25-2.3.12-4ubuntu3) ...
+    (...)
 
 
 
@@ -269,25 +257,48 @@ To drive [Opera](http://www.opera.com/) make sure you have it installed.
 
 Let's see how it drives Opera. Open our old friend, IRB:
 
-    $ irb
+    ﻿$ irb
 
-    > require "rubygems"
+    > require "selenium-webdriver"
     => true
 
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the
-    Selenium server jar. Please download the standalone server from
-    http://code.google.com/p/selenium/downloads/list and set the
-    SELENIUM_SERVER_JAR environmental variable to its location.
-    More info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    > browser = Selenium::WebDriver.for :opera
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.  Please download the standalone server from http://code.google.com/p/selenium/downloads/list and set the SELENIUM_SERVER_JAR environmental variable to its location.  More info at http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
-Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `selenium-server-standalone-2.5.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*). Since I have put `chromedriver` file in `/home/zeljko/bin`, I will put this file there too.
+Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `﻿selenium-server-standalone-2.38.0.jar ` (or newer version, the description should be *﻿Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
 
-The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just got lost, I have step by step guide how to do it. Open Nautilus and go to your home folder: *Places > Home Folder*. You want to edit `.bashrc` file, but by default files that have names starting with dot are not displayed. To see the file go to *View > Show Hidden Files*. Doubleclick `.bashrc` file (it will open the file in *gedit* editor). Add this line to the file:
+The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder):
+
+    ﻿export SELENIUM_SERVER_JAR=﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+
+Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported SELENIUM_SERVER_JAR environment variable.)
+
+    $ irb
+
+    > ﻿require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :opera
+    Errno::ENOENT: No such file or directory - /home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/server.rb:141:in `initialize'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/service.rb:30:in `new'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/service.rb:30:in `initialize'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/service.rb:24:in `new'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/service.rb:24:in `default_service'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/bridge.rb:14:in `initialize'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/common/driver.rb:43:in `new'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/common/driver.rb:43:in `for'
+    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver.rb:67:in `for'
+    from (irb):2
+    from /usr/bin/irb:12:in `<main>'
+
+I have no clue why Selenium thinks `SELENIUM_SERVER_JAR` points to `/home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar` instead of `/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar`.
+
+    ﻿$ echo $SELENIUM_SERVER_JAR
+    /home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+
+If you just got lost, I have step by step guide how to do it. Open Nautilus and go to your home folder: *Places > Home Folder*. You want to edit `.bashrc` file, but by default files that have names starting with dot are not displayed. To see the file go to *View > Show Hidden Files*. Doubleclick `.bashrc` file (it will open the file in *gedit* editor). Add this line to the file:
 
     export SELENIUM_SERVER_JAR=~/bin/selenium-server-standalone-2.5.0.jar
 
