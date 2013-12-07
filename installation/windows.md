@@ -67,48 +67,45 @@ Let's try selenium-webdriver gem.
 
 
 
-### Internet Explorer with watir-webdriver ###
+### Internet Explorer ###
 
-Since Internet Explorer is already installed, we will start with it. Let's see if watir-webdriver can drive Internet Explorer:
+Since Internet Explorer is already installed, we will start with it.
 
-    >irb
+    ﻿>irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :ie
-    Selenium::WebDriver::Error::NoSuchDriverError: Unexpected error
-    launching Internet Explorer. Protected Mode must be set to the
-    same value (enabled or disabled) for all zones.
+    > browser = Selenium::WebDriver.for :internet_explorer
+    Selenium::WebDriver::Error::WebDriverError: Unable to find standalone executable. Please download the IEDriverServer from http://code.google.com/p/selenium/downloads/list and place the executable on your PATH.
     (...)
 
-On 7 and Vista I got `Protected Mode must be set to the same value (enabled or disabled) for all zones` error message (does not appear for Internet Explorer 6 on Windows XP) and Windows Firewall popup appeared letting me know that it has blocked `C:\ruby192\bin\ruby.exe`. So, XP/IE6 users can skip enabling protected mode.
+Windows Firewall popup appeared letting me know that it has blocked Ruby.
 
 ![Windows Firewall has blocked some features of this program](https://raw.github.com/watir/watirbook/master/images/installation/windows/firewall.png)
 
-For now just close the popup, let's see how to fix the error message.
+For now just close the popup, let's see how to fix the error message. Follow the instructions from the error message. Go to [code.google.com/p/selenium/downloads/list](http://code.google.com/p/selenium/downloads/list) and download 32-bit or 64-bit IEDriverServer. Extract the downloaded zip file (with mouse right click and then *Extract All..*, for example). Let's find out what is on the PATH.
 
-Open *Internet Explorer > wrench > Internet Options > Security*. There are four zones: Internet, Local intranet, Trusted sites and Restricted sites. Protected Mode is enabled by default in Internet and Restricted sites. Enable it for Local intranet and Trusted sites and close the browser.
+    >PATH
+    PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Ruby200\bin
 
-![Enable Protected Mode for all zones](https://raw.github.com/watir/watirbook/master/images/installation/windows/protected-mode.png)
+`C:\Ruby200\bin` (or where ever you have installed Ruby) looks like a good place to me. Move the IEDriverServer file there.
 
 Let' try again:
 
-    >irb
+    ﻿>irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :ie
-    => #<Watir::Browser:0x..fcf3d4bb8 url="http://localhost:5555/"
-    title="WebDriver">
+    > browser = Selenium::WebDriver.for :internet_explorer
+    Started InternetExplorerDriver server (32-bit)
+    2.38.0.0
+    Listening on port 5555
+    => #<Selenium::WebDriver::Driver:0x5469141e browser=:internet_explorer>
 
-    > browser.goto "watir.com"
-    => "http://watir.com/"
-
-It works!
-
-![watir-webdriver gem drives Internet Explorer 9 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/webdriver-ie.png)
+    > browser.navigate.to "http://watir.com"
+    => nil
 
 
 
