@@ -192,6 +192,12 @@ Download [Chromium](﻿https://download-chromium.appspot.com/) (tested with vers
 
 
 
+### PhantomJS ###
+
+
+
+
+
 ### Java ###
 
 To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
