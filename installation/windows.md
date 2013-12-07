@@ -169,6 +169,29 @@ I got Windows Firewall popup again letting me know that it has blocked chromedri
 
 
 
+### Chromium ###
+
+Download [Chromium](﻿https://download-chromium.appspot.com/) (tested with version 33).
+
+    >irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > Selenium::WebDriver::Chrome.path = 'C:\Users\IEUser\Downloads\chrome-win32\chrome-win32\chrome.exe'
+    => "C:\\Users\\IEUser\\Downloads\\chrome-win32\\chrome-win32\\chrome.exe"
+
+    > browser = Selenium::WebDriver.for :chrome
+    Starting ChromeDriver (v2.7.236900) on port 9515
+    => #<Selenium::WebDriver::Driver:0x..f9d38b82e browser=:chrome>
+
+    > browser.navigate.to "http://watir.com"
+    => nil
+
+
+
+
+
 ### Java ###
 
 To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
