@@ -54,16 +54,14 @@ You should update it with `gem update --system`:
 
 
 
-### watir-webdriver ###
+### selenium-webdriver ###
 
-If you are just starting with Watir, start with watir-webdriver gem. It can drive Internet Explorer, Firefox, Chrome, and Opera.
+Let's try selenium-webdriver gem.
 
-Install it with `gem install watir-webdriver --no-ri --no-rdoc`:
-
-    >gem install watir-webdriver --no-ri --no-rdoc
-    (...)
-    Successfully installed watir-webdriver-0.4.1
-    (...)
+        >gem install selenium-webdriver --no-ri --no-rdoc
+        (...)
+        Successfully installed selenium-webdriver-2.38.0
+        (...)
 
 
 
