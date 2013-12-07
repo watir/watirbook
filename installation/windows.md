@@ -111,26 +111,22 @@ Let' try again:
 
 
 
-### Firefox with watir-webdriver ###
+### Firefox ###
 
 ![Firefox 5 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/firefox.png)
 
-*Firefox 5 on Windows 7*
+If it is not installed (tested with version ﻿25.0.1), download it from *[mozilla.com/firefox](http://www.mozilla.com/firefox/)*.)
 
-Can it drive Firefox? It can! (If you do not have it installed, download it from *[mozilla.com/firefox](http://www.mozilla.com/firefox/)*.)
+    ﻿>irb
 
-    >irb
-
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :ff
-    => #<Watir::Browser:0x62d8c4a6 url="about:blank" title="">
+    > browser = Selenium::WebDriver.for :firefox
+    => #<Selenium::WebDriver::Driver:0xdc8ad4a browser=:firefox>
 
-    > browser.goto "watir.com"
-    => "http://watir.com/"
-
-![watir-webdriver gem drives Firefox 5 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/webdriver-firefox.png)
+    > browser.navigate.to "http://watir.com"
+    => ""
 
 
 
