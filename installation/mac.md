@@ -4,7 +4,7 @@
 
 ![Mac OS X 10.9 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/mac/desktop.png)
 
-Machine is a clean installation of Mac OS X 10.9, fully patched, with 4 GB RAM with Safari 7.0. Firefox is Firefox 25.0.1, Chrome 31, Opera 18.0, PhantomJS 1.9.2. All browsers are English (US) version.
+Machine is a clean installation of Mac OS X 10.9, fully patched, with 4 GB RAM. All browsers are English (US) version.
 
 
 
@@ -80,7 +80,7 @@ Click *Install*. After the installation is finished, try again:
 
 ![Safari 7 on Mac OS 10.9](https://raw.github.com/watir/watirbook/master/images/installation/mac/safari.png)
 
-Since Safari is already installed, all you have to do is to open IRB and type this:
+Since Safari (version 7.0) is already installed, all you have to do is to open IRB and type this:
 
     $ irb
 
@@ -101,7 +101,7 @@ Since Safari is already installed, all you have to do is to open IRB and type th
 
 ![Firefox 6 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/firefox.png)
 
-Let's try to drive Firefox! To drive [Firefox](http://www.mozilla.org/en-US/firefox/new/), make sure you have it installed. Open our old friend IRB and type this:
+To drive [Firefox](http://www.mozilla.org/en-US/firefox/new/) (version 25.0.1), make sure you have it installed. Open our old friend IRB and type this:
 
     $ irb
 
@@ -147,7 +147,7 @@ Everything looks good!
 
 ![Chrome 13 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/chrome.png)
 
-To drive [Chrome](https://www.google.com/intl/en/chrome/browser/), make sure you have it installed.
+To drive [Chrome](https://www.google.com/intl/en/chrome/browser/) (version 31), make sure you have it installed.
 
     $ irb
 
@@ -186,7 +186,7 @@ Finally! It works!
 
 ### Chromium ###
 
-Let's try driving [Chromium](http://www.chromium.org/) too, just for fun. Download zip file it from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install chromedriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
+Let's try driving [Chromium](http://www.chromium.org/) (version 33) too, just for fun. Download zip file it from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install chromedriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
 
     $ irb
 
@@ -208,7 +208,7 @@ Let's try driving [Chromium](http://www.chromium.org/) too, just for fun. Downlo
 
 ### PhantomJS ###
 
-To drive [PhantomJS](http://phantomjs.org/), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
+To drive [PhantomJS](http://phantomjs.org/) (version 1.9.2), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
 
     $ brew install phantomjs
     ==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/phantomjs-
@@ -244,7 +244,7 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 ![Opera 11.51 on Mac 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/opera.png)
 
-To drive [Opera](http://www.opera.com/), make sure you have it installed.
+To drive [Opera](http://www.opera.com/) (version 17.0), make sure you have it installed.
 
     $ irb
 
