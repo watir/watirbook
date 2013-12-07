@@ -244,7 +244,7 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 ![Opera 11.51 on Mac 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/opera.png)
 
-To drive [Opera](http://www.opera.com/) (version 17.0), make sure you have it installed.
+To drive [Opera](http://www.opera.com/) (version 12.16), make sure you have it installed.
 
     $ irb
 
@@ -305,28 +305,24 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
 
     > browser = Selenium::WebDriver.for :opera
     Selenium::WebDriver::Error::UnknownError: Invalid service list received: 䝅吠⼠䡔呐⼱⸱ഊ䡯獴㨠ㄲ㜮〮〮ㄺ㌴㌳㜍੃潮湥捴楯渺⁫敥瀭慬楶攍ੁ捣数琺⁴數琯桴浬ⱡ灰汩捡瑩潮⽸桴浬⭸浬ⱡ灰汩捡瑩潮⽸浬㭱㴰⸹Ⱪ浡来⽷敢瀬⨯⨻焽〮㠍੕獥爭䅧敮琺⁍潺楬污⼵⸰ 䵡捩湴潳栻⁉湴敬⁍慣⁏匠堠㄰弹弰⤠䅰灬敗敢䭩琯㔳㜮㌶ 䭈呍䰬⁬楫攠䝥捫漩⁃桲潭支㌱⸰⸱㘵〮㔷⁓慦慲椯㔳㜮㌶⁏偒⼱㠮〮ㄲ㠴⸴㤍ੁ捣数琭䕮捯摩湧㨠杺楰Ɽ敦污瑥ⱳ摣栍ੁ捣数琭䱡湧畡来㨠敮ⵕ匬敮㭱㴰⸸ഊഊ (java.lang.IllegalStateException)
-    from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):343:in `parseServiceList'
-    from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):387:in `readMessage'
-    from [remote server] com.opera.core.systems.scope.stp.StpConnection(StpConnection.java):265:in `canRead'
-    from [remote server] com.opera.core.systems.internal.SocketMonitor(SocketMonitor.java):212:in `processSelectionKey'
-    from [remote server] com.opera.core.systems.internal.SocketMonitor(SocketMonitor.java):134:in `pollSockets'
-    from [remote server] com.opera.core.systems.internal.SocketMonitor(SocketMonitor.java):108:in `poll'
-    from [remote server] com.opera.core.systems.scope.stp.StpThread(StpThread.java):58:in `run'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/response.rb:51:in `assert_ok'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/response.rb:15:in `initialize'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/http/common.rb:59:in `new'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/http/common.rb:59:in `create_response'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/http/default.rb:66:in `request'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/http/common.rb:40:in `call'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/bridge.rb:634:in `raw_execute'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/bridge.rb:99:in `create_session'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/remote/bridge.rb:68:in `initialize'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/opera/bridge.rb:28:in `initialize'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/common/driver.rb:43:in `new'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver/common/driver.rb:43:in `for'
-    from /Library/Ruby/Gems/2.0.0/gems/selenium-webdriver-2.37.0/lib/selenium/webdriver.rb:67:in `for'
+    (...)
 
-I do not know what went wrong. :(
+If you get above error message, install an older version of Opera. Looks like Selenium can not drive newer versions. The last version that I managed to drive was 12.16. You can get older versions at [opera.com/download/guide/?os=mac&list=all](http://www.opera.com/download/guide/?os=mac&list=all) or [arc.opera.com/pub/opera](http://arc.opera.com/pub/opera/).
+
+Let's try again.
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :opera
+    => #<Selenium::WebDriver::Driver:0x..fc28c93dae7536a48 browser=:opera>
+
+    > browser.navigate.to "http://watir.com"
+     => nil
+
+Success!
 
 If you plan to drive Opera frequently, you should add SELENIUM_SERVER_JAR to `.bash_profile` file. Create (if the file does not exist) or edit `.bash_profile` file in your home folder (`/Users/zeljko/.bash_profile` in my case, or shorter `~/.bash_profile`) with your favorite text editor. Add `export SELENIUM_SERVER_JAR...` line to the file (if you have a newer version of `selenium-server-standalone` file, replace `2.37.0` appropriately).
 
@@ -339,4 +335,15 @@ This is how to do it with *GNU nano*. Type type `nano ~/.bash_profile`. *GNU nan
     $ cat ~/.bash_profile
     export SELENIUM_SERVER_JAR=/usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
 
-Open new Terminal window or tab (this is important, already opened windows or tabs would not see `SELENIUM_SERVER_JAR` variable).
+Open new Terminal window or tab (this is important, already opened windows or tabs would not see `SELENIUM_SERVER_JAR` variable). Run the same commands again and everything should just work.
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :opera
+    => #<Selenium::WebDriver::Driver:0x..fc28c93dae7536a48 browser=:opera>
+
+    > browser.navigate.to "http://watir.com"
+     => nil
