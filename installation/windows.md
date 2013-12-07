@@ -132,51 +132,38 @@ If it is not installed (tested with version ﻿25.0.1), download it from *[mozil
 
 
 
-### Chrome with watir-webdriver ###
+### Chrome ###
 
 ![Chrome 13 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/chrome.png)
 
-Could it be that it can drive Chrome too? Let's find out. (You can get Chrome at *[google.com/chrome](http://www.google.com/chrome)*.)
+If it is not installed (tested with version 31), download it from[google.com/chrome](http://www.google.com/chrome).
 
-    >irb
+    ﻿>irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the
-    chromedriver executable. Please download the server from
-    http://code.google.com/p/chromium/downloads/list and place it
-    somewhere on your PATH. More info at
-    http://code.google.com/p/selenium/wiki/ChromeDriver.
+    > browser = Selenium::WebDriver.for :chrome
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://chromedriver.storage.googleapis.com/index.html and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like there is a problem. You have to download `chromedriver_win32_14.0.836.0.zip` (or newer version) from *https://code.google.com/p/chromedriver/downloads/list*. Unzip the file (you will get `chromedriver.exe`) and put it in any folder that is in your `PATH`. To check which folders are in `PATH`, open command prompt and type `path`:
+You have to download chromedriver from [chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html). Unzip the file and put it in any folder that is in your `PATH`. If you do not know what that is, see Internet Explorer chapter. Move the file to `C:\Ruby200\bin`.
 
-    >path
-    PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;
-    C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Ruby192\bin
-
-Folders are separated with `;`. `C:\Ruby192\bin` looks like a good place, so I will put `chromedriver.exe` there. Let's try again:
+Let's try again:
 
     >irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :chrome
-    Started ChromeDriver
-    port=49522
-    => #<Watir::Browser:0x..fdbf27548 url="about:blank"
-    title="about:blank">
+    > browser = Selenium::WebDriver.for :chrome
+    Starting ChromeDriver (v2.7.236900) on port 9515
+    => #<Selenium::WebDriver::Driver:0x..fc23f2ebe browser=:chrome>
 
-    > browser.goto "watir.com"
-    => "http://watir.com/"
+    > browser.navigate.to "http://watir.com"
+    => nil
 
-![watir-webdriver gem drives Chrome 12 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/webdriver-chrome.png)
-
-I got Windows Firewall popup again letting me know that it has blocked
-`C:\ruby192\bin\chromedriver.exe`. Just close it for now, I have no idea what to do with it.
+I got Windows Firewall popup again letting me know that it has blocked chromedriver. Just close it for now, I have no idea what to do with it.
 
 
 
