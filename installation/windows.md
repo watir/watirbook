@@ -1,18 +1,10 @@
-## Windows 7, Vista and XP ##
+## Windows 8.1 ##
 
 *You will need internet access if you want to follow examples in this chapter.*
 
 ![Windows 7 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
 
-Machine is a clean installation of:
-
- - Microsoft Windows 7 Professional 32-bit, Service Pack 1,
- - Microsoft Windows Vista Ultimate 32-bit, Service Pack 1,
- - Microsoft Windows XP Professional, Version 2002, Service Pack 3.
-
-Windows 7 and Vista machines have 1 GB RAM, XP has 512 MB. All machines are fully patched, including Internet Explorer 9 on Windows 7 and Vista. I left Internet Explorer on version 6 at XP machine, just for fun.
-
-I did not notice any difference in installing or using Watir on any version on Windows, so I have decided to put them in one chapter.
+Machine is a clean installation of  Microsoft Windows 8.1 Pro with Internet Explorer 11, 1 GB RAM, fully patched.
 
 
 
@@ -20,7 +12,7 @@ I did not notice any difference in installing or using Watir on any version on W
 
 ### Ruby ###
 
-You probably do not have Ruby installed. To make sure, open command prompt and type `ruby -v`. On 7 and Vista open command prompt with *Start > Search programs and files > cmd > Enter*, and on XP with *Start > Run... > cmd > Enter*.
+You probably do not have Ruby installed. To make sure, open Command Prompt application and type `ruby -v`.
 
     >ruby -v
     'ruby' is not recognized as an internal or external command,
@@ -28,18 +20,18 @@ You probably do not have Ruby installed. To make sure, open command prompt and t
 
 If you get the same thing as I did, you do not have Ruby installed.
 
-Download the latest Ruby 1.9. from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 1.9.3-p0*. Execute the file.
+Download the latest Ruby 2.0 from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *﻿Ruby 2.0.0-p353*. Execute the file.
 
 ![Ruby Installation](https://raw.github.com/watir/watirbook/master/images/installation/windows/ruby.png)
 
-You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check both *Add Ruby executables to your PATH* and *Associate .rb and .rbw files with this Ruby installation* checkboxes. Installation should take you just a few seconds.
+You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check *Add Ruby executables to your PATH* checkbox. Installation should take you just a few seconds.
 
 Let's check if Ruby is installed. You will have to open another command prompt, because the one you have opened does not see Ruby.
 
     >ruby -v
-    ruby 1.9.3p0 (2011-10-30) [i386-mingw32]
+    ﻿ruby 2.0.0p353 (2013-11-22) [i386-mingw32]
 
-Congratulations! You now have the latest and greatest Ruby, 1.9.3!
+Congratulations! You now have the latest and greatest Ruby!
 
 
 
@@ -50,18 +42,13 @@ Congratulations! You now have the latest and greatest Ruby, 1.9.3!
 Software written in Ruby is usually distributed as RubyGems (colloquial name is *gem*), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we get it's version with `gem -v`.
 
     >gem -v
-    1.8.11
+    ﻿2.0.14
 
 You should update it with `gem update --system`:
 
     >gem update --system
     (...)
     RubyGems system software updated
-
-Ask RubyGems again for it's version, just to make sure:
-
-    >gem -v
-    1.8.12
 
 
 
