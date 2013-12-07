@@ -4,7 +4,7 @@
 
 ![Windows 7 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
 
-Machine is a clean installation of  Microsoft Windows 8.1 Pro with Internet Explorer 11, 1 GB RAM, fully patched.
+Machine is a clean installation of Microsoft Windows 8.1 Pro with Internet Explorer 11, 1 GB RAM, fully patched.
 
 
 
