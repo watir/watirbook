@@ -194,6 +194,26 @@ Download [Chromium](https://download-chromium.appspot.com/). (Tested with versio
 
 ### PhantomJS ###
 
+To drive [PhantomJS](http://phantomjs.org/) (tested with version 1.9.2) download it, unzip the file and put it in any folder that is in your `PATH`. If you do not know what that is, see Internet Explorer chapter. Move the `phantomjs.exe` file to `C:\Ruby200\bin`.
+
+Let's try driving it:
+
+    >irb
+
+    > browser = Selenium::WebDriver.for :phantomjs
+    (...)
+    => #<Selenium::WebDriver::Driver:0x442ed372 browser=:phantomjs>
+
+    > browser.navigate.to "http://watir.com"
+    => {}
+
+    > browser.save_screenshot "phantomjs.png"
+    => #<File:phantomjs.png (closed)>
+
+The last command saves screenshot of the page. A screenshot from a headless browser. Nice, right?
+
+![PhantomJS](https://raw.github.com/watir/watirbook/master/images/installation/mac/phantomjs.png)
+
 
 
 
