@@ -115,7 +115,7 @@ Let' try again:
 
 ![Firefox 5 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/firefox.png)
 
-If it is not installed (tested with version ﻿25.0.1), download it from *[mozilla.com/firefox](http://www.mozilla.com/firefox/)*.)
+If it is not installed (tested with version ﻿25.0.1), download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).
 
     ﻿>irb
 
@@ -136,7 +136,7 @@ If it is not installed (tested with version ﻿25.0.1), download it from *[mozil
 
 ![Chrome 13 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/chrome.png)
 
-If it is not installed (tested with version 31), download it from[google.com/chrome](http://www.google.com/chrome).
+If it is not installed (tested with version 31), download it from [google.com/chrome](http://www.google.com/chrome).
 
     ﻿>irb
 
@@ -171,7 +171,7 @@ I got Windows Firewall popup again letting me know that it has blocked chromedri
 
 ### Chromium ###
 
-Download [Chromium](﻿https://download-chromium.appspot.com/) (tested with version 33).
+Download [Chromium](﻿https://download-chromium.appspot.com) (tested with version 33).
 
     >irb
 
