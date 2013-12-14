@@ -171,7 +171,7 @@ I got Windows Firewall popup again letting me know that it has blocked chromedri
 
 ### Chromium ###
 
-Download [Chromium](﻿https://download-chromium.appspot.com) (tested with version 33).
+Download [Chromium](﻿https://download-chromium.appspot.com). (Tested with version 33.)
 
     >irb
 
