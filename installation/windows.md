@@ -227,12 +227,12 @@ To drive Opera, you will have to install Java first. Let's check if Java is alre
     operable program or batch file.
 
 Looks like we will have to install Java. There is big *Free Java Download* button at
-*http://www.java.com/en/download*. Execute download file and install Java. Let's check if Java is really installed with `java -version`:
+[java.com](http://www.java.com/). Execute downloaded file and install Java. Let's check if Java is really installed with `java -version`:
 
     >java -version
-    java version "1.6.0_26"
-    Java(TM) SE Runtime Environment (build 1.6.0_26-b03)
-    Java HotSpot(TM) Client VM (build 20.1-b02, mixed mode, sharing)
+    java version "1.7.0_45"
+    Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+    Java HotSpot(TM) Client VM (build 24.45-b08, mixed mode, sharing)
 
 Looks good to me!
 
