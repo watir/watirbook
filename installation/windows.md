@@ -240,26 +240,43 @@ Looks good to me!
 
 
 
-### Opera with watir-webdriver on 7 and Vista###
+### Opera ###
 
 ![Opera on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/opera.png)
 
-And finally, let's drive Opera. If you do not have it installed, you can get it at *[opera.com](http://www.opera.com/)*.
+And finally, let's drive Opera. If you do not have it installed, you can get it at [opera.com](http://www.opera.com/).
 
     >irb
 
-    > require "watir-webdriver"
+    > require "selenium-webdriver"
     => true
 
-    > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the
-    Selenium server jar.  Please download the standalone server from
-    http://code.google.com/p/selenium/downloads/list and set the
-    SELENIUM_SERVER_JAR environmental variable to its location.  More
-    info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    > browser = Selenium::WebDriver.for :opera
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.  Please download the standalone server from http://code.google.com/p/selenium/downloads/list
+    and set the SELENIUM_SERVER_JAR environmental variable to its location.  More info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    (...)
 
-Download `selenium-server-standalone-2.5.0.jar` (or newer version) from
-*http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar`. To create environmental variable, right click *computer* and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`.
+Download `selenium-server-standalone-2.39.0.jar` (or newer version) from
+[code.google.com/p/selenium/downloads/list](http://code.google.com/p/selenium/downloads/list) and put it in `C:\Ruby200\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar`.
+
+If you just want to try driving opera, typing this into Command Prompt will do the trick:
+
+    >set SELENIUM_SERVER_JAR=C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar
+
+    >irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :opera
+    Selenium::WebDriver::Error::UnknownError: Could not find a platform that supports bundled launchers, please set it manually
+    Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+    System info: host: 'IE11WIN8_1', ip: '10.0.2.15', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.7.0_45'
+    Driver info: driver.version: OperaDriver (org.openqa.selenium.WebDriverException)
+
+No luck today with Opera. :(
+
+To create environmental variable, right click *computer* and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar > OK > OK > OK`.
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
 
