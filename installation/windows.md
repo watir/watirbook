@@ -263,6 +263,8 @@ If you just want to try driving opera, typing this into Command Prompt will do t
 
     >set SELENIUM_SERVER_JAR=C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar
 
+Let's try driving Opera again.
+
     >irb
 
     > require "selenium-webdriver"
@@ -276,7 +278,10 @@ If you just want to try driving opera, typing this into Command Prompt will do t
 
 No luck today with Opera. :(
 
-To create environmental variable, right click *computer* and click `Properties > Advanced system settings > Environmental Variables > User variables > New... > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar > OK > OK > OK`.
+If I ever manage to drive Opera on Windows, to create a permanent environmental variable, use `setx`:
+
+﻿    C:\Users\IEUser>setx SELENIUM_SERVER_JAR C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar
+    SUCCESS: Specified value was saved.
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
 
