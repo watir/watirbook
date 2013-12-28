@@ -276,7 +276,7 @@ Let's try driving Opera again.
     System info: host: 'IE11WIN8_1', ip: '10.0.2.15', os.name: 'Windows 8', os.arch: 'x86', os.version: '6.2', java.version: '1.7.0_45'
     Driver info: driver.version: OperaDriver (org.openqa.selenium.WebDriverException)
 
-No luck today with Opera. :(
+Looks like Selenium can not drive Opera on Windows 8.1.
 
 If I ever manage to drive Opera on Windows, to create a permanent environmental variable, use `setx`:
 
@@ -284,54 +284,6 @@ If I ever manage to drive Opera on Windows, to create a permanent environmental 
     SUCCESS: Specified value was saved.
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
-
-    >irb
-
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::UnhandledError: No response in a
-      timely fashion.
-    Build info: version: '2.3.0', revision: '13158', time:
-      '2011-08-01 18:13:39'
-    System info: os.name: 'Windows 7', os.arch: 'x86',
-      os.version: '6.1', java.version: '1.6.0_26'
-    Driver info: driver.version: OperaDriver
-      (com.opera.core.systems.scope.exceptions.
-      ResponseNotReceivedException)
-
-IRB said `No response in a timely fashion`. Then I got Windows Firewall popup. Since I do not know what to do with it, just close the popup.
-
-![Windows Firewall blocking Java](https://raw.github.com/watir/watirbook/master/images/installation/windows/java.png)
-
-And finally I got Opera startup error popup saying: `Opera has failed to access or upgrade your profile. This may have occurred because your computer has insufficient resources available or because some files are locked by other applications. You may have to restart your computer before Opera will start again.`
-
-![Opera startup error](https://raw.github.com/watir/watirbook/master/images/installation/windows/opera-startup-error.png)
-
-Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). What did help is running command prompt as administrator. So, instead of *Start > Search programs and files > cmd > Enter*, right click *cmd* and select *Run as administrator*.
-
-![Run command prompt as administrator](https://raw.github.com/watir/watirbook/master/images/installation/windows/cmd-as-administrator.png)
-
-Finally, let's drive Opera:
-
-    >irb
-
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :opera
-    => #<Watir::Browser:0x..fef436832 url="http://www.google.hr/"
-      title="Google">
-
-    > browser.goto "watir.com"
-    => "http://watir.com/"
-
-![watir-webdriver gem drives Opera 11.50 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/webdriver-opera.png)
-
-
-
-
 
 ### Opera with watir-webdriver on XP ###
 
