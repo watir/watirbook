@@ -285,69 +285,6 @@ If I ever manage to drive Opera on Windows, to create a permanent environmental 
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
 
-### Opera with watir-webdriver on XP ###
-
-And finally, let's drive Opera. If you do not have it installed, you can get it at *[opera.com](http://www.opera.com/)*.
-
-    >irb
-
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the
-    Selenium server jar.  Please download the standalone server from
-    http://code.google.com/p/selenium/downloads/list and set the
-    SELENIUM_SERVER_JAR environmental variable to its location.  More
-    info at http://code.google.com/p/selenium/wiki/OperaDriver.
-
-Download `selenium-server-standalone-2.5.0.jar` (or newer version) from
-*http://code.google.com/p/selenium/downloads/list* and put it in `C:\Ruby192\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar`. To create environmental variable right click *My Computer* and then `Properties > Advanced > Environment Variables > User variables > New > Variable name: SELENIUM_SERVER_JAR > Variable value: C:\Ruby192\bin\selenium-server-standalone-2.5.0.jar > OK > OK > OK`
-
-Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
-
-    >irb
-
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :opera
-    Selenium::WebDriver::Error::UnhandledError: Could not start the
-      process:
-    Cannot run program
-    "C:\Documents and Settings\zeljko\.launcher\
-      launcher-win32-i86pc.exe":
-    CreateProcess error=14001, This application has failed to start
-      because the
-    application configuration is incorrect. Reinstalling the
-      application may fix this problem
-    Build info: version: '2.5.0', revision: '13516', time:
-      '2011-08-23 18:29:57'
-    System info: os.name: 'Windows XP', os.arch: 'x86',
-      os.version: '5.1', java.version: '1.6.0_26'
-    Driver info: driver.version: OperaDriver
-    (org.openqa.selenium.WebDriverException)
-
-I got Windows Firewall popup. Since I do not know what to do with it, just close the popup.
-
-![Windows Firewall blocking Java](https://raw.github.com/watir/watirbook/master/images/installation/windows/java.png)
-
-I also got `This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem` error message. Well, rebooting did not help. Not even reinstalling Opera (and then rebooting). What did help is installing [Microsoft Visual C++ 2008 Redistributable Package (x86)](http://www.microsoft.com/download/en/details.aspx?id=29).
-
-Finally, let's drive Opera:
-
-    >irb
-
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :opera
-    => #<Watir::Browser:0x..fef436832 url="http://www.google.hr/"
-      title="Google">
-
-    > browser.goto "watir.com"
-    => "http://watir.com/"
-
 
 
 
