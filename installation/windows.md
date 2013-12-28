@@ -289,46 +289,6 @@ Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable
 
 
 
-### DevKit ###
-
-Watir and watir-webdriver gems needs `ffi` gem, and it needs RubyInstaller Development Kit (DevKit) . Do not worry, it is not complicated as it sounds. If you do not have DevKit installed, you will get this error message while installing watir or watir-webdriver gems:
-
-    Fetching: ffi-1.0.11.gem (100%)
-    ERROR:  Error installing watir:
-    The 'ffi' native gem requires installed build tools.
-
-    Please update your PATH to include build tools or download the DevKit
-    from 'http://rubyinstaller.org/downloads' and follow the instructions
-    at 'http://github.com/oneclick/rubyinstaller/wiki/Development-Kit'
-
-The solution is easy. Go to http://rubyinstaller.org/downloads and download the latest version of DevKit. At the moment it is DevKit-tdm-32-4.5.2-20110712-1620-sfx.exe. Execute the file. It tried to extract it to the folder where the file was located, in my case it was `C:\Documents and Settings\zeljko\Desktop\`. The documentation says spaces in path could cause trouble, as is often the case. Install it to `C:\devkit`. It will actually just extract itself there and DevKit window will disappear. There will be no *Installation OK* popup.
-
-![Where to extract DevKit](https://raw.github.com/watir/watirbook/master/images/installation/windows/devkit-folder.png)
-
-![DevKit extracting](https://raw.github.com/watir/watirbook/master/images/installation/windows/devkit-extracting.png)
-
-Go to `C:\devkit` in command prompt and type `ruby dk.rb init`:
-
-    C:\devkit>ruby dk.rb init
-    [INFO] found RubyInstaller v1.9.3 at C:/Ruby193
-
-    Initialization complete! Please review and modify the auto-generated
-    'config.yml' file to ensure it contains the root directories to all
-    of the installed Rubies you want enhanced by the DevKit.
-
-And the final step is `ruby dk.rb install`:
-
-    C:\devkit>ruby dk.rb install
-    [INFO] Installing 'C:/Ruby193/lib/ruby/
-      site_ruby/1.9.1/rubygems/defaults/operating_system.rb'
-    [INFO] Installing 'C:/Ruby193/lib/ruby/site_ruby/devkit.rb'
-
-That is it, you are ready to install watir and watir-webdriver gems.
-
-
-
-
-
 ### watir ###
 
 ![Internet Explorer 9 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/ie.png)
