@@ -29,7 +29,7 @@ You can leave all settings at default values, except at the *Installation Destin
 Let's check if Ruby is installed. You will have to open another command prompt, because the one you have opened does not see Ruby.
 
     >ruby -v
-    ﻿ruby 2.0.0p353 (2013-11-22) [i386-mingw32]
+    ruby 2.0.0p353 (2013-11-22) [i386-mingw32]
 
 Congratulations! You now have the latest and greatest Ruby!
 
@@ -42,7 +42,7 @@ Congratulations! You now have the latest and greatest Ruby!
 Software written in Ruby is usually distributed as RubyGems (colloquial name is *gem*), Ruby package manager. Sometimes Ruby installations do not have the latest versions of RubyGems, so we will first update it. RubyGems is also a gem, (a bit recursive, right?) and we get it's version with `gem -v`.
 
     >gem -v
-    ﻿2.0.14
+    2.0.14
 
 You should update it with `gem update --system`:
 
@@ -58,10 +58,10 @@ You should update it with `gem update --system`:
 
 Let's try selenium-webdriver gem.
 
-        >gem install selenium-webdriver --no-ri --no-rdoc
-        (...)
-        Successfully installed selenium-webdriver-2.38.0
-        (...)
+    >gem install selenium-webdriver --no-ri --no-rdoc
+    (...)
+    Successfully installed selenium-webdriver-2.38.0
+    (...)
 
 
 
@@ -71,7 +71,7 @@ Let's try selenium-webdriver gem.
 
 Since Internet Explorer is already installed, we will start with it.
 
-    ﻿>irb
+    >irb
 
     > require "selenium-webdriver"
     => true
@@ -97,7 +97,7 @@ For now just close the popup, let's see how to fix the error message. Follow the
 
 Let' try again:
 
-    ﻿>irb
+    >irb
 
     > require "selenium-webdriver"
     => true
@@ -121,7 +121,7 @@ Let' try again:
 
 If it is not installed (tested with version ﻿25.0.1), download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).
 
-    ﻿>irb
+    >irb
 
     > require "selenium-webdriver"
     => true
@@ -142,7 +142,7 @@ If it is not installed (tested with version ﻿25.0.1), download it from [mozill
 
 If it is not installed (tested with version 31), download it from [google.com/chrome](http://www.google.com/chrome).
 
-    ﻿>irb
+    >irb
 
     > require "selenium-webdriver"
     => true
@@ -296,7 +296,7 @@ Looks like Selenium can not drive Opera on Windows 8.1.
 
 If I ever manage to drive Opera on Windows, to create a permanent environmental variable, use `setx`:
 
-﻿   >setx SELENIUM_SERVER_JAR C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar
+    >setx SELENIUM_SERVER_JAR C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar
     SUCCESS: Specified value was saved.
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.

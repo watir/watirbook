@@ -279,7 +279,7 @@ Error message similar to the one when we first tried to open Chrome. The solutio
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder):
 
     $ ﻿export SELENIUM_SERVER_JAR=
-    ﻿  /home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+      /home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
 
 Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported SELENIUM_SERVER_JAR environment variable.)
 
@@ -296,7 +296,7 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
 I have no clue why Selenium thinks `SELENIUM_SERVER_JAR` points to `/home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar` instead of `/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar`.
 
     ﻿$ echo $SELENIUM_SERVER_JAR
-    /home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+    /home/z/Downloads﻿/selenium-server-standalone-2.38.0.jar
 
 If you just got lost, I have step by step guide how to do it. Open Nautilus and go to your home folder: *Places > Home Folder*. You want to edit `.bashrc` file, but by default files that have names starting with dot are not displayed. To see the file go to *View > Show Hidden Files*. Doubleclick `.bashrc` file (it will open the file in *gedit* editor). Add this line to the file:
 
