@@ -48,8 +48,13 @@ Update RubyGems with `gem update --system`:
 
     $ gem update --system
     ERROR:  While executing gem ... (RuntimeError)
-    gem update --system is disabled on Debian, because it will overwrite the content of the rubygems Debian package, and might break your Debian system in subtle ways. The Debian-supported way to update rubygems is through apt-get, using Debian official repositories.
-    If you really know what you are doing, you can still update rubygems by setting the REALLY_GEM_UPDATE_SYSTEM environment variable, but please remember that this is completely unsupported by Debian.
+    gem update --system is disabled on Debian, because it will overwrite the
+    content of the rubygems Debian package, and might break your Debian system
+    in subtle ways. The Debian-supported way to update rubygems is through
+    apt-get, using Debian official repositories.
+    If you really know what you are doing, you can still update rubygems by
+    setting the REALLY_GEM_UPDATE_SYSTEM environment variable, but please
+    remember that this is completely unsupported by Debian.
 
 Since I do not *really* know what I am doing, I will leave RubyGems at current version and hope everything will work.
 
@@ -67,12 +72,7 @@ Let's try selenium-webdriver gem. It can drive Firefox, PhantomJS, Chrome and Op
     Building native extensions.  This could take a while...
     ERROR:  Error installing selenium-webdriver:
     ERROR: Failed to build gem native extension.
-    /usr/bin/ruby1.9.1 extconf.rb
-    /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
-    from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
-    from extconf.rb:4:in `<main>'
-    Gem files will remain installed in /var/lib/gems/1.9.1/gems/ffi-1.9.3 for inspection.
-    Results logged to /var/lib/gems/1.9.1/gems/ffi-1.9.3/ext/ffi_c/gem_make.out
+    (...)
 
 This should fix the problem:
 
@@ -162,7 +162,11 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
     => true
 
     > browser = Selenium::WebDriver.for :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromedriver/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver
+    executable. Please download the server from
+    http://code.google.com/p/chromedriver/downloads/list and place it somewhere
+    on your PATH. More info at
+    http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
 Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. *http://code.google.com/p/chromedriver/downloads/list* will let you know that *chromedriver executable* is now located at *﻿http://chromedriver.storage.googleapis.com/index.html*. Download the latest version of `﻿chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
@@ -263,7 +267,11 @@ Let's see how it drives Opera. Open our old friend, IRB:
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.  Please download the standalone server from http://code.google.com/p/selenium/downloads/list and set the SELENIUM_SERVER_JAR environmental variable to its location.  More info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium
+    server jar.  Please download the standalone server from
+    http://code.google.com/p/selenium/downloads/list and set the
+    SELENIUM_SERVER_JAR environmental variable to its location. More info at
+    http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
 Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `﻿selenium-server-standalone-2.38.0.jar ` (or newer version, the description should be *﻿Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
@@ -280,18 +288,9 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Errno::ENOENT: No such file or directory - /home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/server.rb:141:in `initialize'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/service.rb:30:in `new'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/service.rb:30:in `initialize'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/service.rb:24:in `new'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/service.rb:24:in `default_service'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/opera/bridge.rb:14:in `initialize'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/common/driver.rb:43:in `new'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver/common/driver.rb:43:in `for'
-    from /var/lib/gems/1.9.1/gems/selenium-webdriver-2.38.0/lib/selenium/webdriver.rb:67:in `for'
-    from (irb):2
-    from /usr/bin/irb:12:in `<main>'
+    Errno::ENOENT: No such file or directory -
+    /home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+    (...)
 
 I have no clue why Selenium thinks `SELENIUM_SERVER_JAR` points to `/home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar` instead of `/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar`.
 

@@ -54,12 +54,7 @@ You will probably get this:
     Building native extensions.  This could take a while...
     ERROR:  Error installing selenium-webdriver:
     ERROR: Failed to build gem native extension.
-
-    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb
-    mkmf.rb can't find header files for ruby at /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/include/ruby.h
-
-    Gem files will remain installed in /Library/Ruby/Gems/2.0.0/gems/ffi-1.9.3 for inspection.
-    Results logged to /Library/Ruby/Gems/2.0.0/gems/ffi-1.9.3/ext/ffi_c/gem_make.out
+    (...)
 
 Fortunately, it is easy to fix. Install command line developer tools. To install them, type `git --version` into Terminal. A popup will appear asking if you would like to install command line developer tools.
 
@@ -155,15 +150,17 @@ To drive [Chrome](https://www.google.com/intl/en/chrome/browser/) (version 31), 
     => true
 
     > browser = Selenium::WebDriver.for :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver executable. Please download the server from http://code.google.com/p/chromedriver/downloads/list and place it somewhere on your PATH. More info at http://code.google.com/p/selenium/wiki/ChromeDriver.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver
+    executable. Please download the server from
+    http://code.google.com/p/chromedriver/downloads/list and place it somewhere
+    on your PATH. More info at
+    http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
 Looks like we have to install something called *chromedriver executable*. The easiest way to install chromedriver is via Homebrew.
 
     $ brew install chromedriver
-    ==> Downloading http://chromedriver.storage.googleapis.com/2.7/chromedriver_mac32.zip
-    ######################################################################## 100.0%
-    🍺  /usr/local/Cellar/chromedriver/2.7: 2 files, 21M, built in 13 seconds
+    (...)
 
 Let's try again:
 
@@ -193,7 +190,8 @@ Let's try driving [Chromium](http://www.chromium.org/) (version 33) too, just fo
     > require "selenium-webdriver"
     => true
 
-    > Selenium::WebDriver::Chrome.path = "/Applications/Chromium.app/Contents/MacOS/Chromium"
+    > Selenium::WebDriver::Chrome.path =
+    "/Applications/Chromium.app/Contents/MacOS/Chromium"
     => "/Applications/Chromium.app/Contents/MacOS/Chromium"
 
     > browser = Selenium::WebDriver.for :chrome
@@ -211,10 +209,7 @@ Let's try driving [Chromium](http://www.chromium.org/) (version 33) too, just fo
 To drive [PhantomJS](http://phantomjs.org/) (version 1.9.2), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
 
     $ brew install phantomjs
-    ==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/phantomjs-
-    ######################################################################## 100.0%
-    ==> Pouring phantomjs-1.9.2.mavericks.bottle.1.tar.gz
-    🍺  /usr/local/Cellar/phantomjs/1.9.2: 104 files, 34M
+    (...)
 
 Let's try driving it:
 
@@ -252,23 +247,17 @@ To drive [Opera](http://www.opera.com/) (version 12.16), make sure you have it i
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium server jar.  Please download the standalone server from http://code.google.com/p/selenium/downloads/list and set the SELENIUM_SERVER_JAR environmental variable to its location.  More info at http://code.google.com/p/selenium/wiki/OperaDriver.
+    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium
+    server jar.  Please download the standalone server from
+    http://code.google.com/p/selenium/downloads/list and set the
+    SELENIUM_SERVER_JAR environmental variable to its location. More info at
+    http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
 Error message similar to the one when we first tried to open Chrome. The solution is similar too. Install selenium-server-standalone via Homebrew! (If you did not thank me for Homebrew, you can do it now. You are welcome.)
 
     $ brew install selenium-server-standalone
-    ==> Downloading http://selenium.googlecode.com/files/selenium-server-standalone-2.37.0.jar
-    ######################################################################## 100.0%
-    ==> Caveats
-    To have launchd start selenium-server-standalone at login:
-        ln -sfv /usr/local/opt/selenium-server-standalone/*.plist ~/Library/LaunchAgents
-    Then to load selenium-server-standalone now:
-        launchctl load ~/Library/LaunchAgents/homebrew.mxcl.selenium-server-standalone.plist
-    Or, if you don't want/need launchctl, you can just run:
-        java -jar /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar -p 4444
-    ==> Summary
-    🍺  /usr/local/Cellar/selenium-server-standalone/2.37.0: 3 files, 33M, built in 22 seconds
+    (...)
 
 Let's try again:
 
@@ -304,7 +293,9 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Selenium::WebDriver::Error::UnknownError: Invalid service list received: 䝅吠⼠䡔呐⼱⸱ഊ䡯獴㨠ㄲ㜮〮〮ㄺ㌴㌳㜍੃潮湥捴楯渺⁫敥瀭慬楶攍ੁ捣数琺⁴數琯桴浬ⱡ灰汩捡瑩潮⽸桴浬⭸浬ⱡ灰汩捡瑩潮⽸浬㭱㴰⸹Ⱪ浡来⽷敢瀬⨯⨻焽〮㠍੕獥爭䅧敮琺⁍潺楬污⼵⸰ 䵡捩湴潳栻⁉湴敬⁍慣⁏匠堠㄰弹弰⤠䅰灬敗敢䭩琯㔳㜮㌶ 䭈呍䰬⁬楫攠䝥捫漩⁃桲潭支㌱⸰⸱㘵〮㔷⁓慦慲椯㔳㜮㌶⁏偒⼱㠮〮ㄲ㠴⸴㤍ੁ捣数琭䕮捯摩湧㨠杺楰Ɽ敦污瑥ⱳ摣栍ੁ捣数琭䱡湧畡来㨠敮ⵕ匬敮㭱㴰⸸ഊഊ (java.lang.IllegalStateException)
+    Selenium::WebDriver::Error::UnknownError: Invalid service list received:
+    (...)
+    (java.lang.IllegalStateException)
     (...)
 
 If you get above error message, install an older version of Opera. Looks like Selenium can not drive newer versions. The last version that I managed to drive was 12.16. You can get older versions at [opera.com/download/guide/?os=mac&list=all](http://www.opera.com/download/guide/?os=mac&list=all) or [arc.opera.com/pub/opera](http://arc.opera.com/pub/opera/).
@@ -333,7 +324,8 @@ This is how to do it with *GNU nano*. Type type `nano ~/.bash_profile`. *GNU nan
  If you have done everything right, GNU nano will close and you will see normal Terminal window. We can check if the line is written to `.bash_profile` file:
 
     $ cat ~/.bash_profile
-    export SELENIUM_SERVER_JAR=/usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
+    export SELENIUM_SERVER_JAR=
+    /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
 
 Open new Terminal window or tab (this is important, already opened windows or tabs would not see `SELENIUM_SERVER_JAR` variable). Run the same commands again and everything should just work.
 
