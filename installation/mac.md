@@ -286,7 +286,7 @@ If you just want to try driving opera, typing this into Terminal will do the tri
     $ export SELENIUM_SERVER_JAR=
       /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
 
-Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported SELENIUM_SERVER_JAR environment variable.)
+Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported `SELENIUM_SERVER_JAR` environment variable.)
 
     $ irb
 
@@ -316,7 +316,7 @@ Let's try again.
 
 Success!
 
-If you plan to drive Opera frequently, you should add SELENIUM_SERVER_JAR to `.bash_profile` file. Create (if the file does not exist) or edit `.bash_profile` file in your home folder (`/Users/zeljko/.bash_profile` in my case, or shorter `~/.bash_profile`) with your favorite text editor. Add `export SELENIUM_SERVER_JAR...` line to the file (if you have a newer version of `selenium-server-standalone` file, replace `2.37.0` appropriately).
+If you plan to drive Opera frequently, you should add `SELENIUM_SERVER_JAR` to `.bash_profile` file. Create (if the file does not exist) or edit `.bash_profile` file in your home folder (`/Users/zeljko/.bash_profile` in my case, or shorter `~/.bash_profile`) with your favorite text editor. Add `export SELENIUM_SERVER_JAR...` line to the file (if you have a newer version of `selenium-server-standalone` file, replace `2.37.0` appropriately).
 
 This is how to do it with *GNU nano*. Type type `nano ~/.bash_profile`. *GNU nano* text editor will open. Paste (cmd-v, for example) `export SELENIUM_SERVER_JAR...` line. Exit *GNU nano* and save the file with *control+x*. Press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` and press *Enter* when it displays `File Name to Write: .bash_profile` or `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` (text is different if the file already exists or not).
 

@@ -169,7 +169,7 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. *http://code.google.com/p/chromedriver/downloads/list* will let you know that *chromedriver executable* is now located at ﻿[chromedriver.storage.googleapis.com](http://chromedriver.storage.googleapis.com/index.html). Download the latest version of `﻿chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. *http://code.google.com/p/chromedriver/downloads/list* will let you know that *chromedriver executable* is now located at [chromedriver.storage.googleapis.com](http://chromedriver.storage.googleapis.com/index.html). Download the latest version of `chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
 
 Let's find out what is *on our `PATH`*.
 
@@ -183,7 +183,7 @@ Let's find out what is *on our `PATH`*.
 
 Let's drive Chrome, finally:
 
-    ﻿$ irb
+    $ irb
 
     > require "selenium-webdriver"
     => true
@@ -281,22 +281,22 @@ The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you ju
     $ ﻿export SELENIUM_SERVER_JAR=
       /home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
 
-Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported SELENIUM_SERVER_JAR environment variable.)
+Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported `SELENIUM_SERVER_JAR` environment variable.)
 
     $ irb
 
-    > ﻿require "selenium-webdriver"
+    > require "selenium-webdriver"
     => true
 
     > browser = Selenium::WebDriver.for :opera
     Errno::ENOENT: No such file or directory -
-    /home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+    /home/z//home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
     (...)
 
 I have no clue why Selenium thinks `SELENIUM_SERVER_JAR` points to `/home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar` instead of `/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar`.
 
-    ﻿$ echo $SELENIUM_SERVER_JAR
-    /home/z/Downloads﻿/selenium-server-standalone-2.38.0.jar
+    $ echo $SELENIUM_SERVER_JAR
+    /home/z/Downloads/selenium-server-standalone-2.38.0.jar
 
 If you just got lost, I have step by step guide how to do it. Open Nautilus and go to your home folder: *Places > Home Folder*. You want to edit `.bashrc` file, but by default files that have names starting with dot are not displayed. To see the file go to *View > Show Hidden Files*. Doubleclick `.bashrc` file (it will open the file in *gedit* editor). Add this line to the file:
 
