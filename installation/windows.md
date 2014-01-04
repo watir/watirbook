@@ -221,7 +221,7 @@ Let's try driving it:
 
 The last command saves screenshot of the page. A screenshot from a headless browser. Nice, right?
 
-![PhantomJS](https://raw.github.com/watir/watirbook/master/images/installation/mac/phantomjs.png)
+![PhantomJS](https://raw.github.com/watir/watirbook/master/images/installation/windows/phantomjs.png)
 
 
 
