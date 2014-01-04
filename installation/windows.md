@@ -2,9 +2,9 @@
 
 *You will need internet access if you want to follow examples in this chapter.*
 
-![Windows 7 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
+![Windows 8.1 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
 
-Machine is a clean installation of Microsoft Windows 8.1 Pro with Internet Explorer 11, 1 GB RAM, fully patched.
+Machine is a clean installation of Microsoft Windows 8.1 Pro, 1 GB RAM, fully patched.
 
 
 
@@ -69,7 +69,9 @@ Let's try selenium-webdriver gem.
 
 ### Internet Explorer ###
 
-Since Internet Explorer is already installed, we will start with it.
+![Internet Explorer 11](https://raw.github.com/watir/watirbook/master/images/installation/windows/internet_explorer.png)
+
+Since Internet Explorer (tested with version 11) is already installed, we will start with it.
 
     >irb
 
@@ -117,7 +119,7 @@ Let' try again:
 
 ### Firefox ###
 
-![Firefox 5 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/firefox.png)
+![Firefox 26](https://raw.github.com/watir/watirbook/master/images/installation/windows/firefox.png)
 
 If it is not installed (tested with version 25.0.1), download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).
 
@@ -138,7 +140,7 @@ If it is not installed (tested with version 25.0.1), download it from [mozilla.c
 
 ### Chrome ###
 
-![Chrome 13 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/chrome.png)
+![Chrome 31](https://raw.github.com/watir/watirbook/master/images/installation/windows/chrome.png)
 
 If it is not installed (tested with version 31), download it from [google.com/chrome](http://www.google.com/chrome).
 
@@ -155,7 +157,7 @@ If it is not installed (tested with version 31), download it from [google.com/ch
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-You have to download chromedriver from [chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html). Unzip the file and put it in any folder that is in your `PATH`. If you do not know what that is, see Internet Explorer chapter. Move the file to `C:\Ruby200\bin`.
+You have to download chromedriver from [chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html). Unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see Internet Explorer chapter. In short, move the file to Ruby folder, probably `C:\Ruby200\bin`.
 
 Let's try again:
 
@@ -179,16 +181,15 @@ I got Windows Firewall popup again letting me know that it has blocked chromedri
 
 ### Chromium ###
 
-Download [Chromium](https://download-chromium.appspot.com/). (Tested with version 33.)
+First make sure that you can drive Chrome. (See previous chapter.) Then download [Chromium](https://download-chromium.appspot.com/). (Tested with version 33.) Replace `C:\chrome\chrome.exe` with path to Chromium executable.
 
     >irb
 
     > require "selenium-webdriver"
     => true
 
-    > Selenium::WebDriver::Chrome.path =
-      'C:\Users\IEUser\Downloads\chrome-win32\chrome-win32\chrome.exe'
-    => "C:\\Users\\IEUser\\Downloads\\chrome-win32\\chrome-win32\\chrome.exe"
+    > Selenium::WebDriver::Chrome.path = 'C:\chrome\chrome.exe'
+    => "C:\\chrome\\chrome.exe"
 
     > browser = Selenium::WebDriver.for :chrome
     Starting ChromeDriver (v2.7.236900) on port 9515
@@ -203,7 +204,7 @@ Download [Chromium](https://download-chromium.appspot.com/). (Tested with versio
 
 ### PhantomJS ###
 
-To drive [PhantomJS](http://phantomjs.org/) (tested with version 1.9.2) download it, unzip the file and put it in any folder that is in your `PATH`. If you do not know what that is, see Internet Explorer chapter. Move the `phantomjs.exe` file to `C:\Ruby200\bin`.
+To drive [PhantomJS](http://phantomjs.org/) (tested with version 1.9.2) download it, unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see Internet Explorer chapter. In short, move `phantomjs.exe` file to Ruby folder, probably `C:\Ruby200\bin`.
 
 Let's try driving it:
 
@@ -251,9 +252,9 @@ Looks good to me!
 
 ### Opera ###
 
-![Opera on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/opera.png)
+![Opera 18](https://raw.github.com/watir/watirbook/master/images/installation/windows/opera.png)
 
-And finally, let's drive Opera. If you do not have it installed, you can get it at [opera.com](http://www.opera.com/).
+And finally, let's drive Opera. If you do not have it installed, you can get it at [opera.com](http://www.opera.com/) (tested with version 18.0).
 
     >irb
 
