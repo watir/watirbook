@@ -1,6 +1,9 @@
 # TODO
 
 - https://github.com/watir/watirbook/blob/master/installation/ubuntu.md#opera
+- change book cover
+
+## web
 - move pages from http://watir.com/ to https://github.com/watir/watir/wiki
 - move pages from http://watirwebdriver.com/ to http://watir.com/
 - move pages from http://wiki.openqa.org/display/WTR to https://github.com/watir/watirbook or https://github.com/watir/watir/wiki
