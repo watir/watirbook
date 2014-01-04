@@ -4,7 +4,7 @@
 
 ![Ubuntu Linux 13.10 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/desktop.png)
 
-Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, PhantomJS 1.9.0, Chrome 31, Opera ﻿12.16.
+Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM. Firefox 25.0.1, PhantomJS 1.9.0, Chrome 31, Opera 12.16.
 
 
 
@@ -169,7 +169,7 @@ Now, lets see if it can really drive Chrome too. Ubuntu does not have Chrome ins
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. *http://code.google.com/p/chromedriver/downloads/list* will let you know that *chromedriver executable* is now located at *﻿http://chromedriver.storage.googleapis.com/index.html*. Download the latest version of `﻿chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. *http://code.google.com/p/chromedriver/downloads/list* will let you know that *chromedriver executable* is now located at ﻿[chromedriver.storage.googleapis.com](http://chromedriver.storage.googleapis.com/index.html). Download the latest version of `﻿chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
 
 Let's find out what is *on our `PATH`*.
 
@@ -213,7 +213,7 @@ If you did not already install chromedriver, see Chrome chapter.
 
     $ irb
 
-    > ﻿require "selenium-webdriver"
+    > require "selenium-webdriver"
     => true
 
     > Selenium::WebDriver::Chrome.path = "/usr/bin/chromium-browser"
@@ -233,7 +233,7 @@ If you did not already install chromedriver, see Chrome chapter.
 
 To drive Opera, you will have to install Java first. Let's check if Java is already installed:
 
-    ﻿$ ﻿java -version
+    $ java -version
     The program 'java' can be found in the following packages:
      * default-jre
      * gcj-4.6-jre-headless
@@ -261,7 +261,7 @@ To drive [Opera](http://www.opera.com/) make sure you have it installed.
 
 Let's see how it drives Opera. Open our old friend, IRB:
 
-    ﻿$ irb
+    $ irb
 
     > require "selenium-webdriver"
     => true
@@ -274,7 +274,7 @@ Let's see how it drives Opera. Open our old friend, IRB:
     http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
-Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `﻿selenium-server-standalone-2.38.0.jar ` (or newer version, the description should be *﻿Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
+Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `﻿selenium-server-standalone-2.38.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
 
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder):
 

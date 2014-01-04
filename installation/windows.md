@@ -20,7 +20,7 @@ You probably do not have Ruby installed. To make sure, open Command Prompt appli
 
 If you get the same thing as I did, you do not have Ruby installed.
 
-Download the latest Ruby 2.0 from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *﻿Ruby 2.0.0-p353*. Execute the file.
+Download the latest Ruby 2.0 from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 2.0.0-p353*. Execute the file.
 
 ![Ruby Installation](https://raw.github.com/watir/watirbook/master/images/installation/windows/ruby.png)
 
@@ -119,7 +119,7 @@ Let' try again:
 
 ![Firefox 5 on Windows 7](https://raw.github.com/watir/watirbook/master/images/installation/windows/firefox.png)
 
-If it is not installed (tested with version ﻿25.0.1), download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).
+If it is not installed (tested with version 25.0.1), download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).
 
     >irb
 
@@ -269,7 +269,7 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     (...)
 
 Download `selenium-server-standalone-2.39.0.jar` (or newer version) from
-[code.google.com/p/selenium/downloads/list](http://code.google.com/p/selenium/downloads/list) and put it in `C:\Ruby200\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar`.
+[Google Code](http://code.google.com/p/selenium/downloads/list) and put it in `C:\Ruby200\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar`.
 
 If you just want to try driving opera, typing this into Command Prompt will do the trick:
 
