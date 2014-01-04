@@ -2,6 +2,7 @@
 
 - https://github.com/watir/watirbook/blob/master/installation/ubuntu.md#opera
 - change book cover
+- update images
 
 ## web
 - move pages from http://watir.com/ to https://github.com/watir/watir/wiki
