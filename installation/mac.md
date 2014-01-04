@@ -44,7 +44,7 @@ Fortunately, it is easy to upgrade RubyGems with `sudo gem update --system`:
 
 ### selenium-webdriver ###
 
-Let's try selenium-webdriver gem. It can drive Firefox, Chrome, Opera, Safari and PhantomJS. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
+Let's try selenium-webdriver gem. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
 
 You will probably get this:
 
@@ -73,9 +73,9 @@ Click *Install*. After the installation is finished, try again:
 
 ### Safari ###
 
-![Safari 7 on Mac OS 10.9](https://raw.github.com/watir/watirbook/master/images/installation/mac/safari.png)
+![Safari 7](https://raw.github.com/watir/watirbook/master/images/installation/mac/safari.png)
 
-Since Safari (version 7.0) is already installed, all you have to do is to open IRB and type this:
+Since Safari (tested with version 7.0) is already installed, all you have to do is to open IRB and type this:
 
     $ irb
 
@@ -94,9 +94,9 @@ Since Safari (version 7.0) is already installed, all you have to do is to open I
 
 ### Firefox ###
 
-![Firefox 6 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/firefox.png)
+![Firefox 26](https://raw.github.com/watir/watirbook/master/images/installation/mac/firefox.png)
 
-To drive [Firefox](http://www.mozilla.org/en-US/firefox/new/) (version 25.0.1), make sure you have it installed. Open our old friend IRB and type this:
+To drive [Firefox](http://www.mozilla.org/en-US/firefox/new/) (tested with version 25.0.1), make sure you have it installed. Open our old friend IRB and type this:
 
     $ irb
 
@@ -140,9 +140,9 @@ Everything looks good!
 
 ### Chrome ###
 
-![Chrome 13 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/chrome.png)
+![Chrome 31](https://raw.github.com/watir/watirbook/master/images/installation/mac/chrome.png)
 
-To drive [Chrome](https://www.google.com/intl/en/chrome/browser/) (version 31), make sure you have it installed.
+To drive [Chrome](https://www.google.com/intl/en/chrome/browser/) (tested with version 31), make sure you have it installed.
 
     $ irb
 
@@ -183,7 +183,9 @@ Finally! It works!
 
 ### Chromium ###
 
-Let's try driving [Chromium](http://www.chromium.org/) (version 33) too, just for fun. Download zip file it from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install chromedriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
+![Chromium 34](https://raw.github.com/watir/watirbook/master/images/installation/mac/chromium.png)
+
+Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) too, just for fun. Download zip file it from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install chromedriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
 
     $ irb
 
@@ -206,7 +208,7 @@ Let's try driving [Chromium](http://www.chromium.org/) (version 33) too, just fo
 
 ### PhantomJS ###
 
-To drive [PhantomJS](http://phantomjs.org/) (version 1.9.2), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
+To drive [PhantomJS](http://phantomjs.org/) (tested with version 1.9.2), make sure you have it installed. The easiest way to install it is via Homebrew. (You can thank me now for Homebrew. You are welcome.)
 
     $ brew install phantomjs
     (...)
@@ -237,9 +239,9 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 ### Opera ###
 
-![Opera 11.51 on Mac 10.6](https://raw.github.com/watir/watirbook/master/images/installation/mac/opera.png)
+![Opera 18](https://raw.github.com/watir/watirbook/master/images/installation/mac/opera.png)
 
-To drive [Opera](http://www.opera.com/) (version 12.16), make sure you have it installed.
+To drive [Opera](http://www.opera.com/) (tested with version 12.16), make sure you have it installed.
 
     $ irb
 
