@@ -181,6 +181,8 @@ I got Windows Firewall popup again letting me know that it has blocked chromedri
 
 ### Chromium ###
 
+![Chromium 34](https://raw.github.com/watir/watirbook/master/images/installation/windows/chromium.png)
+
 First make sure that you can drive Chrome. (See previous chapter.) Then download [Chromium](https://download-chromium.appspot.com/). (Tested with version 33.) Replace `C:\chrome\chrome.exe` with path to Chromium executable.
 
     >irb
