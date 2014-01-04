@@ -283,7 +283,8 @@ The last step is setting `SELENIUM_SERVER_JAR` environmental variable.
 
 If you just want to try driving opera, typing this into Terminal will do the trick:
 
-    $ export SELENIUM_SERVER_JAR=/usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
+    $ export SELENIUM_SERVER_JAR=
+      /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
 
 Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported SELENIUM_SERVER_JAR environment variable.)
 

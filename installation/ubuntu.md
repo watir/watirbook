@@ -278,7 +278,8 @@ Error message similar to the one when we first tried to open Chrome. The solutio
 
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder):
 
-    ﻿export SELENIUM_SERVER_JAR=﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+    $ ﻿export SELENIUM_SERVER_JAR=
+    ﻿  /home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
 
 Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported SELENIUM_SERVER_JAR environment variable.)
 
