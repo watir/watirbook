@@ -276,13 +276,12 @@ Let's see how it drives Opera. Open our old friend, IRB:
     http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
-Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download
-﻿selenium-server-standalone-2.38.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
+Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to [code.google.com/p/selenium/downloads/list](http://code.google.com/p/selenium/downloads/list) and download
+﻿`selenium-server-standalone-2.39.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
 
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder):
 
-    $ ﻿export SELENIUM_SERVER_JAR=
-      /home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
+    $ ﻿export SELENIUM_SERVER_JAR=~/Downloads/﻿selenium-server-standalone-2.39.0.jar
 
 Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported `SELENIUM_SERVER_JAR` environment variable.)
 
@@ -292,36 +291,18 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Errno::ENOENT: No such file or directory -
-    /home/z//home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
-    (...)
+    => #<Selenium::WebDriver::Driver:0x..fb4bb92ce browser=:opera>
 
-I have no clue why Selenium thinks `SELENIUM_SERVER_JAR` points to `/home/z/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar` instead of `/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar`.
+    > browser.navigate.to "http://watir.com"
+    => nil
 
-    $ echo $SELENIUM_SERVER_JAR
-    /home/z/Downloads/selenium-server-standalone-2.38.0.jar
+If you plan to drive Opera frequently, you should add `SELENIUM_SERVER_JAR` to `.bashrc` file. Create (if the file does not exist) or edit `.bashrc` file in your home folder (`/home/z/.bashrc` in my case, or shorter `~/.bashrc`) with your favorite text editor. Add `export SELENIUM_SERVER_JAR...` line to the file.
 
-If you just got lost, I have step by step guide how to do it. Open Nautilus and go to your home folder: *Places > Home Folder*. You want to edit `.bashrc` file, but by default files that have names starting with dot are not displayed. To see the file go to *View > Show Hidden Files*. Doubleclick `.bashrc` file (it will open the file in *gedit* editor). Add this line to the file:
+    $ nano ~/.bashrc
 
-    export SELENIUM_SERVER_JAR=~/bin/selenium-server-standalone-2.5.0.jar
-
-Save the file and close all Terminal windows. Open Terminal again. To check if the variable is set, try `printenv | grep SELENIUM`:
+Save the file (ctrl+x) and close all Terminal windows. Open Terminal again. To check if the variable is set, try `printenv | grep SELENIUM`:
 
     $ printenv | grep SELENIUM
     SELENIUM_SERVER_JAR=/home/zeljko/bin/selenium-server-standalone-2.5.0.jar
 
-Looks good to me!  After all this work, enjoy driving Opera:
-
-    $ irb
-
-    > require "rubygems"
-    => true
-
-    > require "watir-webdriver"
-    => true
-
-    > browser = Watir::Browser.new :opera
-    => #<Watir::Browser:0x..fb72fd854 url="http://watir.com/" title="Watir">
-
-    > browser.goto "watir.com"
-    => "http://watir.com/"
+Looks good to me!
