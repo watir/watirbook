@@ -324,6 +324,3 @@ Looks good to me!  After all this work, enjoy driving Opera:
 
     > browser.goto "watir.com"
     => "http://watir.com/"
-
-
-![Watir-webdriver drives Opera on Ubuntu 11.04](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/webdriver-opera.png)
