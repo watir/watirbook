@@ -276,7 +276,8 @@ Let's see how it drives Opera. Open our old friend, IRB:
     http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
-Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download `﻿selenium-server-standalone-2.38.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
+Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to *http://code.google.com/p/selenium/downloads/list* and download
+﻿selenium-server-standalone-2.38.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
 
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder):
 
@@ -295,7 +296,7 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
     /home/z//home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar
     (...)
 
-I have no clue why Selenium thinks `SELENIUM_SERVER_JAR` points to `/home/z/﻿/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar` instead of `/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar`.
+I have no clue why Selenium thinks `SELENIUM_SERVER_JAR` points to `/home/z/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar` instead of `/home/z/Downloads/﻿selenium-server-standalone-2.38.0.jar`.
 
     $ echo $SELENIUM_SERVER_JAR
     /home/z/Downloads/selenium-server-standalone-2.38.0.jar
