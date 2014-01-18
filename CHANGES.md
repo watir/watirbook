@@ -1,6 +1,10 @@
-# 0.9.0
+# Changes
 
 # 2014
+
+# 0.9.0
+
+- 2014-01-18 Published PDF, EPUB, MOBI and HTML at Leanpub. Installation chapters updated. Everything else removed from the book until updated.
 
 # 2013
 
