@@ -64,7 +64,7 @@ Since I do not *really* know what I am doing, I will leave RubyGems at current v
 
 ### selenium-webdriver ###
 
-Let's try selenium-webdriver gem. It can drive Firefox, PhantomJS, Chrome and Opera. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
+Let's try selenium-webdriver gem. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
 
     $ sudo gem install selenium-webdriver --no-ri --no-rdoc
     (...)
@@ -169,7 +169,7 @@ Now, lets see if it can really drive Chrome (tested with version 31) too. Ubuntu
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. *http://code.google.com/p/chromedriver/downloads/list* will let you know that *chromedriver executable* is now located at [chromedriver.storage.googleapis.com](http://chromedriver.storage.googleapis.com/index.html). Download the latest version of `chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
+Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. [code.google.com/p/chromedriver/downloads/list](http://code.google.com/p/chromedriver/downloads/list) will let you know that *chromedriver executable* is now located at [chromedriver.storage.googleapis.com](http://chromedriver.storage.googleapis.com/index.html). Download the latest version of `chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
 
 Let's find out what is *on our `PATH`*.
 
@@ -222,7 +222,7 @@ If you did not already install chromedriver, see Chrome chapter.
     => "/usr/bin/chromium-browser"
 
     > browser = Selenium::WebDriver.for :chrome
-    ﻿=> #<Selenium::WebDriver::Driver:0x..fb4c9860a browser=:chrome>
+    => #<Selenium::WebDriver::Driver:0x..fb4c9860a browser=:chrome>
 
     > browser.navigate.to "http://watir.com"
     => nil
@@ -281,7 +281,7 @@ Error message similar to the one when we first tried to open Chrome. The solutio
 
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder):
 
-    $ ﻿export SELENIUM_SERVER_JAR=~/Downloads/﻿selenium-server-standalone-2.39.0.jar
+    $ export SELENIUM_SERVER_JAR=~/Downloads/selenium-server-standalone-2.39.0.jar
 
 Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported `SELENIUM_SERVER_JAR` environment variable.)
 
@@ -303,6 +303,6 @@ If you plan to drive Opera frequently, you should add `SELENIUM_SERVER_JAR` to `
 Save the file (ctrl+x) and close all Terminal windows. Open Terminal again. To check if the variable is set, try `printenv | grep SELENIUM`:
 
     $ printenv | grep SELENIUM
-    SELENIUM_SERVER_JAR=/home/zeljko/bin/selenium-server-standalone-2.5.0.jar
+    SELENIUM_SERVER_JAR=/home/zeljko/bin/selenium-server-standalone-2.39.0.jar
 
 Looks good to me!
