@@ -9,3 +9,5 @@
   - https://github.com/watir/watirbook/commits?author=kemery
 - Dino Kovač
   - https://github.com/watir/watirbook/commits?author=reisub
+- Željko Filipin
+  - https://github.com/watir/watirbook/commits?author=zeljkofilipin
