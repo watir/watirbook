@@ -85,7 +85,7 @@ Since Safari (tested with version 7.0) is already installed, all you have to do 
     > browser = Selenium::WebDriver.for :safari
     => #<Selenium::WebDriver::Driver:0x..f93d5546968bec45e browser=:safari>
 
-    irb(main):003:0> browser.navigate.to "http://watir.com"
+    > browser.navigate.to "http://watir.com"
     => nil
 
 
@@ -185,7 +185,7 @@ Finally! It works!
 
 ![Chromium 34](https://raw.github.com/watir/watirbook/master/images/installation/mac/chromium.png)
 
-Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) too, just for fun. Download zip file it from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install chromedriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
+Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) too, just for fun. Download zip file from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install chromedriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
 
     $ irb
 
@@ -283,7 +283,7 @@ Check if Java is installed. Open new Terminal window or tab (it is important to 
 
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable.
 
-If you just want to try driving opera, typing this into Terminal will do the trick:
+If you just want to try driving Opera, typing this into Terminal will do the trick:
 
     $ export SELENIUM_SERVER_JAR=
       /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
