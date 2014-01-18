@@ -279,7 +279,7 @@ Let's see how it drives Opera. Open our old friend, IRB:
 Error message similar to the one when we first tried to open Chrome. The solution is similar too. We have to download a file, put it somewhere and point a variable to it. Do not worry, it sounds more complicated than it really is. Fortunately again, the error message says it all. Go to [code.google.com/p/selenium/downloads/list](http://code.google.com/p/selenium/downloads/list) and download
 ﻿`selenium-server-standalone-2.39.0.jar` (or newer version, the description should be *Use this if you want to use the Selenium RC or Remote WebDriver or use Grid 2 without needing any additional dependencies*).
 
-The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder):
+The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder, if you have a newer version of `selenium-server-standalone` file, replace `2.39.0` appropriately):
 
     $ export SELENIUM_SERVER_JAR=~/Downloads/selenium-server-standalone-2.39.0.jar
 

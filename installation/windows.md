@@ -272,7 +272,7 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     (...)
 
 Download `selenium-server-standalone-2.39.0.jar` (or newer version) from
-[Google Code](http://code.google.com/p/selenium/downloads/list) and put it in `C:\Ruby200\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar`.
+[Google Code](http://code.google.com/p/selenium/downloads/list) and put it in `C:\Ruby200\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar`. (If you have a newer version of `selenium-server-standalone` file, replace `2.39.0` appropriately.)
 
 If you just want to try driving opera, typing this into Command Prompt will do the trick:
 
