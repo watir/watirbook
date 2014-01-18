@@ -3,4 +3,7 @@ installation/installation.md
 installation/windows.md
 installation/mac.md
 installation/ubuntu.md
+contributors.md
+CHANGES.md
+stats.md
 LICENSE.md
