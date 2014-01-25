@@ -5,5 +5,5 @@ installation/mac.md
 installation/ubuntu.md
 misc/contributors.md
 misc/CHANGES.md
-main/stats.md
+misc/stats.md
 LICENSE.md
