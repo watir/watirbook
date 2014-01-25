@@ -1,7 +1,5 @@
 # TODO
 
-- update stats
-
 ## web
 - move pages from http://watir.com/ to https://github.com/watir/watir/wiki
 - move pages from http://watirwebdriver.com/ to http://watir.com/
