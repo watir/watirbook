@@ -2,6 +2,13 @@
 
 ## 2014
 
+### 0.9.1
+
+- 2014-01-25
+  - Updated contributors, stats and todo.
+  - Deleted unused files.
+  - Added Quick Start chapter.
+
 ### 0.9.0
 
 - 2014-01-18
