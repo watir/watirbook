@@ -3,6 +3,7 @@ installation/installation.md
 installation/windows.md
 installation/mac.md
 installation/ubuntu.md
+main/quick_start.md
 misc/contributors.md
 misc/CHANGES.md
 misc/stats.md
