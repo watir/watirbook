@@ -11,6 +11,8 @@
 - selenium
   - elements
   - collections
+  - nesting
+  - headless
   - pop ups
 - editor
   - RubyMine http://www.jetbrains.com/ruby
