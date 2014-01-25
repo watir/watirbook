@@ -1,7 +1,6 @@
 # TODO
 
 - update stats
-- find out when the book was named "Homebrewer's Guide to Watir"
 
 ## web
 - move pages from http://watir.com/ to https://github.com/watir/watir/wiki

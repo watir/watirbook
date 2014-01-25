@@ -6,7 +6,7 @@
 
 - 2014-01-18
   - Published PDF, EPUB, MOBI and HTML at Leanpub.
-  - The title changed from "Homebrewer's Guide to Watir" to "Web Application Testing in Ruby (With Selenium and friends.)"
+  - Renamed the book from "Homebrewer's Guide to Watir" to "Web Application Testing in Ruby (With Selenium and friends.)"
   - Installation chapters updated. Everything else removed from the book until updated.
 
 ## 2013
@@ -28,6 +28,7 @@
   - New or improved chapters: About, Link, Button, Image, Checkbox...
   - Created table with all supported HTML elements.
   - A lot of small improvements and fixes.
+  - Renamed the book from "Watir Book" to "Homebrewer’s Guide to Watir".
 - 2012-11-17 Started working on the book again.
 - 2012-11-14 Sold the last book via PayPal.
 
