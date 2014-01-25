@@ -11,7 +11,7 @@ To start IRB, just type `irb` in command line. You will see something like this:
     $ irb
     >
 
-Now you can enter any Ruby command and you will immediately get a result. We will start with telling Ruby that we want to use selenium-webdriver gem with `require "watir-webdriver"`:
+Now you can enter any Ruby command and you will immediately get a result. We will start with telling Ruby that we want to use selenium-webdriver gem with `require "selenium-webdriver"`:
 
 You should see something like this:
 
