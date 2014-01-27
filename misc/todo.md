@@ -14,6 +14,9 @@
   - nesting
   - headless
   - pop ups
+  - Capybara
+  - Webrat
+  - Watir
 - editor
   - RubyMine http://www.jetbrains.com/ruby
   - Sublime Text http://www.sublimetext.com/3
