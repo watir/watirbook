@@ -13,6 +13,8 @@
   - collections
   - nesting
   - headless
+  - remote
+    - sauce labs
   - pop ups
   - Capybara
   - Webrat
