@@ -43,6 +43,8 @@
   - Jenkins http://jenkins-ci.org/
     - CloudBees http://www.cloudbees.com/
   - Travis CI https://travis-ci.org/
+- command line
+- virual machines - virtualbox
 
 ## maybe
 
