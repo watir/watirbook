@@ -94,7 +94,7 @@ Before we click another link, I want to show off one of Watir's killer features.
     > browser.a(:text => "Images").flash
     => 10
 
-![Link Images with normal background](https://raw.github.com/watir/watirbook/master/old(images/watir_in_five_minutes/flash_1.png)
+![Link Images with normal background](https://raw.github.com/watir/watirbook/master/old/images/watir_in_five_minutes/flash_1.png)
 
 ![Link Images with red background](https://raw.github.com/watir/watirbook/master/old/images/watir_in_five_minutes/flash_2.png)
 
