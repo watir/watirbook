@@ -52,7 +52,7 @@ And now the magic starts. With just one command you will open Firefox.
 
     browser = Watir::Browser.new :ff
 
-![watir-webdriver driving Firefox 6 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/watir-in-five-minutes/webdriver-firefox.png)
+![watir-webdriver driving Firefox 6 on Mac OS 10.6](https://raw.github.com/watir/watirbook/master/images/watir_in_five_minutes/webdriver_firefox.png)
 
 When I saw the browser magically appearing for the first time, I started singing (with apologies to [Foreigner](http://www.youtube.com/watch?v=BrzzR-3PPqw)): *I've been waiting for a tool like you to come into my life...*
 
@@ -94,9 +94,9 @@ Before we click another link, I want to show off one of Watir's killer features.
     > browser.a(:text => "Images").flash
     => 10
 
-![Link Images with normal background](https://raw.github.com/watir/watirbook/master/images/watir-in-five-minutes/flash-1.png)
+![Link Images with normal background](https://raw.github.com/watir/watirbook/master/images/watir_in_five_minutes/flash_1.png)
 
-![Link Images with red background](https://raw.github.com/watir/watirbook/master/images/watir-in-five-minutes/flash-2.png)
+![Link Images with red background](https://raw.github.com/watir/watirbook/master/images/watir_in_five_minutes/flash_2.png)
 
 *Link Images changes background from white to red a few times.*
 
