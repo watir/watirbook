@@ -6,7 +6,7 @@ TODO
 
 *All examples in this chapter are tried on Mac OS X 10.9.1, Firefox 26.0, Ruby 2.1.0p0 and selenium-webdriver 2.39.0 but everything should work on all supported platforms.*
 
-After you had a taste of Selenium in Getting Started chapter, it is time to take a closer look at Selenium API. This chapter will get you introduced to the API but it will not cover the entire API. For more information see [Selenium::WebDriver::Element](http://rdoc.info/gems/selenium-webdriver/Selenium/WebDriver/Element) API documentation.
+After you had a taste of Selenium in Getting Started chapter, it is time to take a closer look at Selenium API. This chapter will get you introduced to the API but it will not cover it entirely. For more information see [Selenium::WebDriver::Element](http://rdoc.info/gems/selenium-webdriver/Selenium/WebDriver/Element) API documentation.
 
 Most of the time you will be dealing with page elements, so let's see how to do that.
 
