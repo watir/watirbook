@@ -85,7 +85,7 @@ Since Safari (tested with version 7.0) is already installed, all you have to do 
     > browser = Selenium::WebDriver.for :safari
     => #<Selenium::WebDriver::Driver:0x..f93d5546968bec45e browser=:safari>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => nil
 
 
@@ -106,7 +106,7 @@ To drive [Firefox](http://www.mozilla.org/en-US/firefox/new/) (tested with versi
     > browser = Selenium::WebDriver.for :firefox
     => #<Selenium::WebDriver::Driver:0x10e1416dd9107ffe browser=:firefox>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => ""
 
 Great! We can drive Firefox.
@@ -172,7 +172,7 @@ Let's try again:
     > browser = Selenium::WebDriver.for :chrome
     => #<Selenium::WebDriver::Driver:0xec6568f803e9898 browser=:chrome>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => ""
 
 Finally! It works!
@@ -199,7 +199,7 @@ Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) 
     > browser = Selenium::WebDriver.for :chrome
     => #<Selenium::WebDriver::Driver:0x1e35d5faa9511ec6 browser=:chrome>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => nil
 
 
@@ -223,7 +223,7 @@ Let's try driving it:
     > browser = Selenium::WebDriver.for :phantomjs
     => #<Selenium::WebDriver::Driver:0x..fbdc736b89bb162d0 browser=:phantomjs>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => ""
 
     > browser.save_screenshot "phantomjs.png"
@@ -313,7 +313,7 @@ Let's try again.
     > browser = Selenium::WebDriver.for :opera
     => #<Selenium::WebDriver::Driver:0x..fc28c93dae7536a48 browser=:opera>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
      => nil
 
 Success!
@@ -340,5 +340,5 @@ Open new Terminal window or tab (this is important, already opened windows or ta
     > browser = Selenium::WebDriver.for :opera
     => #<Selenium::WebDriver::Driver:0x..fc28c93dae7536a48 browser=:opera>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
      => nil

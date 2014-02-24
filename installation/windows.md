@@ -110,7 +110,7 @@ Let' try again:
     Listening on port 5555
     => #<Selenium::WebDriver::Driver:0x5469141e browser=:internet_explorer>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => nil
 
 
@@ -131,7 +131,7 @@ If it is not installed (tested with version 25.0.1), download it from [mozilla.c
     > browser = Selenium::WebDriver.for :firefox
     => #<Selenium::WebDriver::Driver:0xdc8ad4a browser=:firefox>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => ""
 
 
@@ -170,7 +170,7 @@ Let's try again:
     Starting ChromeDriver (v2.7.236900) on port 9515
     => #<Selenium::WebDriver::Driver:0x..fc23f2ebe browser=:chrome>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => nil
 
 I got Windows Firewall popup again letting me know that it has blocked chromedriver. Just close it for now, I have no idea what to do with it.
@@ -197,7 +197,7 @@ First make sure that you can drive Chrome. (See previous chapter.) Then download
     Starting ChromeDriver (v2.7.236900) on port 9515
     => #<Selenium::WebDriver::Driver:0x..f9d38b82e browser=:chrome>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => nil
 
 
@@ -216,7 +216,7 @@ Let's try driving it:
     (...)
     => #<Selenium::WebDriver::Driver:0x442ed372 browser=:phantomjs>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => {}
 
     > browser.save_screenshot "phantomjs.png"

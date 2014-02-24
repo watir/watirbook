@@ -109,7 +109,7 @@ Let's check if it can drive Firefox:
     > browser = Selenium::WebDriver.for :firefox
     => #<Selenium::WebDriver::Driver:0x21564606 browser=:firefox>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => ""
 
 No problem here, works just fine.
@@ -136,7 +136,7 @@ Let's try driving it:
     > browser = Selenium::WebDriver.for :phantomjs
     => #<Selenium::WebDriver::Driver:0x..fa5f26f44 browser=:phantomjs>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => {}
 
     > browser.save_screenshot "phantomjs.png"
@@ -191,7 +191,7 @@ Let's drive Chrome, finally:
     > browser = Selenium::WebDriver.for :chrome
     => #<Selenium::WebDriver::Driver:0x5b77effe browser=:chrome>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => nil
 
 And it really works!
@@ -224,7 +224,7 @@ If you did not already install chromedriver, see Chrome chapter.
     > browser = Selenium::WebDriver.for :chrome
     => #<Selenium::WebDriver::Driver:0x..fb4c9860a browser=:chrome>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => nil
 
 
@@ -293,7 +293,7 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
     > browser = Selenium::WebDriver.for :opera
     => #<Selenium::WebDriver::Driver:0x..fb4bb92ce browser=:opera>
 
-    > browser.navigate.to "http://watir.com"
+    > browser.get "http://watir.com"
     => nil
 
 If you plan to drive Opera frequently, you should add `SELENIUM_SERVER_JAR` to `.bashrc` file. Create (if the file does not exist) or edit `.bashrc` file in your home folder (`/home/z/.bashrc` in my case, or shorter `~/.bashrc`) with your favorite text editor. Add `export SELENIUM_SERVER_JAR...` line to the file.

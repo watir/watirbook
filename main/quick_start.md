@@ -31,7 +31,7 @@ Just opening a browser is not so useful. Let's open *google.com*. I would sugges
 
 So, go to *google.com*:
 
-    > browser.navigate.to "https://www.google.com/"
+    > browser.get "https://www.google.com/"
     => ""
 
 And *google.com* opens. (Since I am in Croatia, *google.hr* opened. If you are not in the US, some other Google site could open.)
@@ -88,7 +88,7 @@ Well, that was a lot of fun. But you do not want to type into IRB all the time. 
 
     require "selenium-webdriver"
     browser = Selenium::WebDriver.for :firefox
-    browser.navigate.to "https://www.google.com/"
+    browser.get "https://www.google.com/"
     browser.current_url
     browser.find_element(link_text: "Google.com").click
     browser.find_element(link_text: "Images").click
@@ -112,7 +112,7 @@ What is the output in the command prompt? Nothing? Yes, nothing. IRB displays va
 
     require "selenium-webdriver"
     browser = Selenium::WebDriver.for :firefox
-    browser.navigate.to "https://www.google.com/"
+    browser.get "https://www.google.com/"
     puts browser.current_url
     browser.find_element(link_text: "Google.com").click
     browser.find_element(link_text: "Images").click
