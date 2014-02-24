@@ -2,11 +2,9 @@
 
 TODO
 
-I> You will need internet access if you want to follow examples in this chapter.
+I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Mac OS X 10.8.5, Firefox 27.0.1, Ruby 2.1.0p0 and selenium-webdriver 2.40.0 but everything should work on all supported platforms.
 
-*All examples in this chapter are tried on Mac OS X 10.9.1, Firefox 26.0, Ruby 2.1.0p0 and selenium-webdriver 2.39.0 but everything should work on all supported platforms.*
-
-In this chapter you will learn how to control the [browser](http://selenium.googlecode.com/svn/trunk/docs/api/rb/Selenium/WebDriver/Driver.html) using Selenium. In Quick Start chapter you have touched two important part of Selenium API, driver and element. In this chapter we will focus on the driver.
+In this chapter you will learn how to control the [browser](http://rdoc.info/gems/selenium-webdriver/Selenium/WebDriver/Driver) using Selenium. In Quick Start chapter you have touched two important part of Selenium API, driver and element. In this chapter we will focus on the driver.
 
 The first thing you have to do is to open the browser. According to the documentation, currently supported browsers are Firefox, Internet Explorer, Chrome, Android, iPhone, Opera, PhantomJS, Safari and remote browser. Let's focus on desktop drivers for now. See Mobile chapter on how to drive mobile browsers and Selenium in the Cloud chapter on how to driver remote browsers. How to set up everything is explained in detail in Installation chapter.
 
