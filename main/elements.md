@@ -21,7 +21,8 @@ Let's start Firefox and open Google home page:
 To find an element via it's `id`, just provide the `id`:
 
     > browser["gbqfq"]
-    => #<Selenium::WebDriver::Element:0x6faea7c65902853c id="{fca96529-8bc6-bf4f-8e78-376f037c351a}">
+    => #<Selenium::WebDriver::Element:0x6faea7c65902853c
+       id="{fca96529-8bc6-bf4f-8e78-376f037c351a}">
 
 To get the value of any element attribute, use `attribute`:
 
