@@ -8,15 +8,16 @@ In this chapter you will learn how to control the [browser](http://rdoc.info/gem
 
 The first thing you have to do is to open the browser. According to the documentation, currently supported browsers are Firefox, Internet Explorer, Chrome, Android, iPhone, Opera, PhantomJS, Safari and remote browser. Let's focus on desktop drivers for now. See Mobile chapter on how to drive mobile browsers and Selenium in the Cloud chapter on how to driver remote browsers. How to set up everything is explained in detail in Installation chapter.
 
-<table>
-<tr><th>Browser</th><th>Symbol</th></tr>
-<tr><td>Chrome</td><td>:chrome</td></tr>
-<tr><td>Firefox</td><td>:firefox :ff</td></tr>
-<tr><td>Internet Explorer</td><td>:internet_explorer :ie</td></tr>
-<tr><td>Opera</td><td>:opera</td></tr>
-<tr><td>PhantomJS</td><td>:phantomjs</td></tr>
-<tr><td>Safari</td><td>:safari</td></tr>
-</table>
+| Browser           | Symbol             | Shortcut |
+|-------------------|--------------------|----------|
+| Chrome            | :chrome            |          |
+| Firefox           | :firefox           | :ff      |
+| Internet Explorer | :internet_explorer | :ie      |
+| Opera             | :opera             |          |
+| PhantomJS         | :phantomjs         |          |
+| Safari            | :safari            |          |
+
+*Browser/Symbol/Shorcut table*
 
 In this chapter we will use [IRB](https://en.wikipedia.org/wiki/Interactive_Ruby_Shell) (Interactive Ruby Shell). If you are not familiar with it, take a look at Ruby Tools chapter.
 
