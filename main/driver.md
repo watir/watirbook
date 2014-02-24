@@ -1,7 +1,5 @@
 # Driver
 
-TODO
-
 I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Mac OS X 10.8.5, Firefox 27.0.1, Ruby 2.1.0p0 and selenium-webdriver 2.40.0 but everything should work on all supported platforms.
 
 In this chapter you will learn how to control the [browser](http://rdoc.info/gems/selenium-webdriver/Selenium/WebDriver/Driver) using Selenium. In Quick Start chapter you have touched two important part of Selenium API, driver and element. In this chapter we will focus on the driver.
