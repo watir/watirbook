@@ -67,19 +67,19 @@ Let's search for something. This will enter *book* in search text field:
     > browser.find_element(name: "q").send_keys "book"
     => ""
 
-Maybe you are wondering how I knew the text field had the value of *name* attribute set to *q* (I am talking about `name: "q"`). If you do not know how to inspect pages, read on. I will explain it later.
+Maybe you are wondering how I knew the text field had the value of `name` attribute set to `q` (I am talking about `name: "q"`). If you do not know how to inspect pages, read on. It will be explained in *Browser Developer Tools* chapter.
 
 Now, click the search button:
 
     > browser.find_element(name: "btnG").click
     => "ok"
 
-Page with search results will open. Let's check how many images are on the page. (You might get a different number, it does not have to be 126.)
+Page with search results will open. Let's check how many images are on the page.
 
     > browser.find_elements(tag_name: "img").size
     => 126
 
-And finally, let's close the browser.
+You might get a different number, it does not have to be 126. And finally, let's close the browser.
 
     > browser.close
     => ""
@@ -102,7 +102,7 @@ You can use any text editor to edit the file. I use [RubyMine](http://www.jetbra
 
 Save the file as `quick_start.rb`. If IRB is still running in your command line, press `ctrl+d` to return to normal command prompt, or open a new command prompt. (To exit from IRB to normal command line, instead of pressing `ctrl+d`, you can also type `quit` or `exit`.) You should remove clicking *Google.com* link if Firefox opens it automatically for you.
 
-To run the file, navigate in command prompt to the folder where you have saved it and run it with `ruby quick_start.rb`:
+To run the file, navigate in command prompt to the folder where you have saved it and run it:
 
     $ ruby quick_start.rb
 
