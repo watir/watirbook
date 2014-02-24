@@ -2,7 +2,7 @@
 
 TODO
 
-*You will need internet access if you want to follow examples in this chapter.*
+I> You will need internet access if you want to follow examples in this chapter.
 
 *All examples in this chapter are tried on Mac OS X 10.9.1, Firefox 26.0, Ruby 2.1.0p0 and selenium-webdriver 2.39.0 but everything should work on all supported platforms.*
 
