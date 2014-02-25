@@ -1,4 +1,4 @@
-#ruby=ruby-2.1.0
+#ruby=ruby-2.1.1
 #ruby-gemset=watirbook
 
 source "https://rubygems.org/"
