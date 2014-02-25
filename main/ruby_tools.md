@@ -10,7 +10,7 @@ On Mac and Linux you can install and use multiple versions of Ruby at the same t
 
 A> ## RVM on Ubuntu
 A>
-A> On Ubuntu, first you have to install `﻿curl`:
+A> On Ubuntu, first you have to install `curl`:
 A>
 A>     $ sudo apt-get install curl
 A>     ...
@@ -32,12 +32,12 @@ Then install RVM:
 
 Open new *Terminal* tab or window. That is important. RVM might not work properly if you do not open new tab/window after installation. Finally, install a recent version of Ruby:
 
-    ﻿$ rvm install 2.1.1
+    $ rvm install 2.1.1
     ...
 
 Ask RVM which versions for Ruby are installed:
 
-    ﻿$ rvm list
+    $ rvm list
 
     rvm rubies
 
@@ -46,10 +46,10 @@ Ask RVM which versions for Ruby are installed:
 
 *Terminal* will not be aware of the Ruby installed via RVM until you explicitly tell it to use it. Try asking the *Terminal* for Ruby version:
 
-       ﻿$ ruby -v
-       The program 'ruby' can be found in the following packages:
-        * ruby1.8
-        * ruby1.9.1
+    ﻿$ ruby -v
+    The program 'ruby' can be found in the following packages:
+    * ruby1.8
+    * ruby1.9.1
 
 See, *Terminal* does not think Ruby is installed. Now, tell RVM you want to use the latest version:
 
