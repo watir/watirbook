@@ -11,8 +11,8 @@ main/getting_help.md
 main/driver.md
 main/element.md
 main/nesting.md
-main/frames.md
 main/collections.md
+main/frames.md
 main/pop_ups.md
 main/headless.md
 main/selenium_in_the_cloud.md
