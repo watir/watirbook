@@ -3,7 +3,13 @@
 I have noticed a lot of confusion about headless testing, but it really noting special. The confusion may be caused because the term *headless* is a bit vague. In the context of driving a browser, *headless* means you can drive a real browser but without seeing anything on the machine.
 
 
-There are two ways to run browser in a headless mode that I am aware of. One is to use a headless browser like [PhantomJS](http://phantomjs.org/). That option is available on all major operating systems. Another option is using [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) and [Headless](https://github.com/leonid-shevtsov/headless) gem, but that works only on Linux.
+There are two ways to run browser in a headless mode that I am aware of. One is to use a headless browser like [PhantomJS](http://phantomjs.org/). Another option is using [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) and [Headless](https://github.com/leonid-shevtsov/headless) gem, but that works only on Linux.
+
+The advantage of running tests in PhantomJS is that it is supported on all major operating systems. The browser is pretty good, it has the same Selenium API as all other browsers, so the vast majority of the tests developed using another browser will just work. It also has a pretty good JavaScript engine, so even JavaScript heavy pages should work fine. The browser is also faster than other browsers. More speed is always good, but speed improvement depends on a lot of things, so sometimes you will see a lot of improvement, and sometimes just a few percent.
+
+The disadvantage is that the users of your web application are not using PhantomJS to access it, they are using one of the major browsers, so some things will require tweaking the tests or the application. It is also harder to debug failures, since the browse is headless. Fortunately, you can take screen shots and HTML of the page (the entire page or just a relevant part).
+
+The advantage of using Xvfb is that it works with any browser that Selenium can drive. You can delevop the tests using your favorite browser and then run the tests in headless mode with no modifications. The disadvantage is that is it somewhat slower (but not a lot) than PhantomJS and it works only works only on Linux. It does not work on Windows or Mac OS.
 
 ## PhantomJS
 
@@ -92,6 +98,8 @@ At the end, close the browser:
 
 I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Ubuntu Linux 13.10, Firefox 27.0.1, Ruby 2.1.1p76 and selenium-webdriver 2.40.0 but everything should work on all supported platforms.
 
+W> Xvfb works only on Linux. It does not work on Windows or Mac OS.
+
 If you do not have Firefox, Ruby or Selenium installed, see *Installation* chapter.
 
 Without getting into a lot of technical detail, [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) is a piece of software that makes is possible to run browsers (and other applications) in a headless mode. It works only on Linux.
@@ -113,3 +121,91 @@ W> ## "To sudo or not to sudo, that is the question..."
 >     $ sudo gem install headless --no-ri --no-rdoc
 >     ...
 
+There are two modes of using *headless* gem, block and object. Block mode will automatically start and destroy headless session. In object mode, you have to explicitly start and destroy the session.
+
+This is an example of block mode (using IRB):
+
+    ﻿$ irb
+
+    > require "headless"
+    => true
+
+    > require "selenium-webdriver"
+    => true
+
+    > Headless.ly do
+    >   browser = Selenium::WebDriver.for :firefox
+    >   browser.get "http://google.com"
+    >   browser.title
+    > end
+     => "Google"
+
+This is an example of object mode (using IRB):
+
+    ﻿$ irb
+
+    > require "headless"
+    => true
+
+    > require "selenium-webdriver"
+    => true
+
+    ﻿> headless = Headless.new
+    => #<Headless:0x9e957d8 @display=99, @autopick_display=true,
+    @reuse_display=true, @dimensions="1280x1024x24", @video_capture_options={},
+    @destroy_at_exit=true>
+
+    > headless.start
+    => #<Proc:0x9eaa2b4@/home/z/.rvm/gems/ruby-2.1.1/gems/headless-1.0.1/lib/
+    headless.rb:175>
+
+    > browser = Selenium::WebDriver.for :firefox
+    => #<Selenium::WebDriver::Driver:0x..f9de848e2 browser=:firefox>
+
+    > browser.get "http://google.com"
+    => ""
+
+    > browser.title
+    => "Google"
+
+    > headless.destroy
+    => ["/tmp/.X99-lock"]
+
+Of course, block and object mode can be used in Ruby files, not just in IRB. Save the following text as `headless_block_mode.rb` file.
+
+    require "headless"
+    require "selenium-webdriver"
+
+    Headless.ly do
+      browser = Selenium::WebDriver.for :firefox
+      browser.get "http://google.com"
+      p browser.title
+    end
+
+Run the file:
+
+    ﻿$ ruby headless_block_mode.rb
+    "Google"
+
+Save the following text as `headless_object_mode.rb` file.
+
+    require "headless"
+    require "selenium-webdriver"
+
+    headless = Headless.new
+    headless.start
+
+    browser = Selenium::WebDriver.for :firefox
+    browser.get "http://google.com"
+    p browser.title
+
+    headless.destroy
+
+Run the file:
+
+    ﻿$ ruby headless_object_mode.rb
+    "Google"
+
+As usual, you can take screenshots using Selenium API while running tests, even in headless mode. If you do not know how to do that, see *Driver* chapter.
+
+Xvfb has it's own screenshots and video recording API, but it is beyond the scope of this book to cover it. For more information see documentation for [headless](https://github.com/leonid-shevtsov/headless) gem.
