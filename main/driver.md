@@ -62,3 +62,19 @@ If you want to close multiple browser windows at once, use `quit`:
 
     > browser.quit
     => nil
+
+Create a Ruby file from the above IRB session and save it as `driver.rb`. Of course, add a `p` in front of a few commands, so the script outputs something.
+
+    require "selenium-webdriver"
+    browser = Selenium::WebDriver.for :firefox
+    browser.get "http://google.com"
+    p browser.current_url
+    p browser.title
+    browser.close
+    browser.quit
+
+Run the file:
+
+    $ ruby driver.rb
+    "https://www.google.hr/?gfe_rd=ctrl&ei=6QEOU4P4AYeV_Aaj_4CQDA&gws_rd=cr"
+    "Google"

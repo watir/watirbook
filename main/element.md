@@ -82,3 +82,29 @@ To get the value of any element attribute, use `attribute`. Try a few attributes
     transparent; position: absolute; z-index: 6; left: 0px; outline: medium none;\"
     id=\"gbqfq\" class=\"gbqfif\" name=\"q\" autocomplete=\"off\" value=\"\"
     type=\"text\">"
+
+Create a Ruby file from the above IRB session and save it as `element.rb`. Of course, add a `p` in front of a few commands, so the script outputs something.
+
+    require "selenium-webdriver"
+    browser = Selenium::WebDriver.for :firefox
+    browser.get "http://google.com"
+    browser.find_element(name: "q")
+    browser.find_element(name: "q").send_keys "watir"
+    browser.find_element(name: "q").clear
+    browser["gbqfq"]
+    p browser["gbqfq"].attribute(:name)
+    p browser["gbqfq"].attribute(:class)
+    p browser["gbqfq"].attribute(:type)
+    p browser["gbqfq"].attribute(:autocomplete)
+    p browser["gbqfq"].attribute(:style)
+    p browser["gbqfq"].attribute(:outerHTML)
+
+Run the file:
+
+    $ ruby element.rb
+    "q"
+    "gbqfif"
+    "text"
+    "off"
+    "border: medium none; padding: 0px; margin: 0px; height: auto; width: 100%; ...
+    "<input spellcheck=\"false\" dir=\"ltr\" style=\"border: medium none; ...
