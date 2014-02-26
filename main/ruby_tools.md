@@ -46,14 +46,14 @@ Ask RVM which versions for Ruby are installed:
 
 *Terminal* will not be aware of the Ruby installed via RVM until you explicitly tell it to use it. Try asking the *Terminal* for Ruby version:
 
-    ﻿$ ruby -v
+    $ ruby -v
     The program 'ruby' can be found in the following packages:
     * ruby1.8
     * ruby1.9.1
 
 See, *Terminal* does not think Ruby is installed. Now, tell RVM you want to use the latest version:
 
-    ﻿$ rvm use ruby-2.1.1
+    $ rvm use ruby-2.1.1
     Using /home/z/.rvm/gems/ruby-2.1.1
 
 Ask *Terminal* again for Ruby version:
