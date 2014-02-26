@@ -4,5 +4,6 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
 rvm:
   - 2.1.0
-script: bundle exec ruby lib/quick_start_1.rb
-script: bundle exec ruby lib/quick_start_2.rb
+script:
+  - bundle exec ruby lib/quick_start_1.rb
+  - bundle exec ruby lib/quick_start_2.rb
