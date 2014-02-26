@@ -94,6 +94,36 @@ At the end, close the browser:
     > browser.quit
     => nil
 
+Create a Ruby file from the above IRB session and save it as `headless_phantomjs.rb`. Of course, add a `p` in front of a few commands, so the script outputs something.
+
+    require "selenium-webdriver"
+    browser = Selenium::WebDriver.for :phantomjs
+    browser.get "http://google.com"
+    p browser.current_url
+    p browser.title
+    browser.find_element(name: "q").send_keys "watir"
+    browser.find_element(name: "q").clear
+    p browser.find_element(name: "q").attribute(:name)
+    p browser.find_element(name: "q").attribute(:class)
+    p browser.find_element(name: "q").attribute(:type)
+    p browser.find_element(name: "q").attribute(:autocomplete)
+    browser.save_screenshot "phantomjs.png"
+    p browser.page_source
+    p browser.find_element(name: "q").attribute(:outerHTML)
+    browser.quit
+
+Run the file:
+
+    $ ruby headless_phantomjs.rb
+    "http://www.google.hr/?gfe_rd=ctrl&ei=7wUOU72wMMWB_AaEzoCgAQ&gws_rd=cr"
+    "Google"
+    "q"
+    "lst tiah"
+    "text"
+    "off"
+    "<!DOCTYPE html><html itemscope=\"\" itemtype=\"http://schema.org/WebPage\">...
+    "<input autocomplete=\"off\" class=\"lst tiah\" value=\"\" title=\"Google ...
+
 ## Xvfb
 
 I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Ubuntu Linux 13.10, Firefox 27.0.1, Ruby 2.1.1p76 and selenium-webdriver 2.40.0 but everything should work on all supported platforms.

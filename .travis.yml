@@ -5,7 +5,10 @@ before_install:
 rvm:
   - 2.1.0
 script:
-  - bundle exec ruby lib/installation.rb
   - bundle exec ruby lib/driver.rb
   - bundle exec ruby lib/element.rb
+  - bundle exec ruby lib/headless_block_mode.rb
+  - bundle exec ruby lib/headless_object_mode.rb
+  - bundle exec ruby lib/headless_phantomjs.rb
+  - bundle exec ruby lib/installation.rb
   - bundle exec ruby lib/quick_start.rb
