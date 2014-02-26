@@ -9,21 +9,21 @@ You will be writing a lot of Ruby code. It is beyond scope of this book to teach
 On Mac and Linux you can install and use multiple versions of Ruby at the same time using [RVM](http://rvm.io) (Ruby Version Manager).
 
 A> ## RVM on Ubuntu
-A>
-A> On Ubuntu, first you have to install `curl`:
-A>
-A>     $ sudo apt-get install curl
-A>     ...
-A>
-A> Then, you have to configure *Terminal*. Go to *Terminal > Edit > Profile Preferences*.
-A>
-A> ![PhantomJS](https://raw.github.com/watir/watirbook/master/images/main/terminal_profile_preferences.png)
-A>
-A> Select *Title and Command* tab, check *Run command as a login shell* checkbox and then click *Close* button.
-A>
-A> ![PhantomJS](https://raw.github.com/watir/watirbook/master/images/main/terminal_title_and_command.png)
-A>
-A> In case of trouble see [RVM documentation on Terminal](https://rvm.io/integration/gnome-terminal).
+>
+> On Ubuntu, first you have to install `curl`:
+>
+>     $ sudo apt-get install curl
+>     ...
+>
+> Then, you have to configure *Terminal*. Go to *Terminal > Edit > Profile Preferences*.
+>
+> ![PhantomJS](https://raw.github.com/watir/watirbook/master/images/main/terminal_profile_preferences.png)
+>
+> Select *Title and Command* tab, check *Run command as a login shell* checkbox and then click *Close* button.
+>
+> ![PhantomJS](https://raw.github.com/watir/watirbook/master/images/main/terminal_title_and_command.png)
+>
+> In case of trouble see [RVM documentation on Terminal](https://rvm.io/integration/gnome-terminal).
 
 Then install RVM:
 
