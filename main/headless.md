@@ -1,15 +1,15 @@
 # Headless
 
-I have noticed a lot of confusion about headless testing, but it really noting special. The confusion may be caused because the term *headless* is a bit vague. In the context of driving a browser, *headless* means you can drive a real browser but without seeing anything on the machine.
+I have noticed a lot of confusion about headless testing, but there is really noting special there. The confusion may be caused because the term *headless* is a bit vague. In the context of driving a browser, *headless* means you can drive a real browser, but without seeing anything on the machine. It can be useful for running tests on a headless machine, or on a desktop machine. For example, if you want to run the tests without browsers opening and closing on the screen all the time, while you are doing something else.
 
 
-There are two ways to run browser in a headless mode that I am aware of. One is to use a headless browser like [PhantomJS](http://phantomjs.org/). Another option is using [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) and [Headless](https://github.com/leonid-shevtsov/headless) gem, but that works only on Linux.
+There are two ways to run browser in a headless mode that I am aware of. One is to use a headless browser like [PhantomJS](http://phantomjs.org/). Another option is using [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) and [Headless](https://github.com/leonid-shevtsov/headless) gem. Please notice that Xvfb works only on Linux.
 
 The advantage of running tests in PhantomJS is that it is supported on all major operating systems. The browser is pretty good, it has the same Selenium API as all other browsers, so the vast majority of the tests developed using another browser will just work. It also has a pretty good JavaScript engine, so even JavaScript heavy pages should work fine. The browser is also faster than other browsers. More speed is always good, but speed improvement depends on a lot of things, so sometimes you will see a lot of improvement, and sometimes just a few percent.
 
-The disadvantage is that the users of your web application are not using PhantomJS to access it, they are using one of the major browsers, so some things will require tweaking the tests or the application. It is also harder to debug failures, since the browse is headless. Fortunately, you can take screen shots and HTML of the page (the entire page or just a relevant part).
+The disadvantage is that the users of your web application are not using PhantomJS to access it, they are using one of the major browsers. Sometimes you will have to tweak the tests or the application to get all tests to run fine. It is also harder to debug failures, since the browser is headless. Fortunately, you can take screen shots and HTML of the page (the entire page or just a relevant part).
 
-The advantage of using Xvfb is that it works with any browser that Selenium can drive. You can delevop the tests using your favorite browser and then run the tests in headless mode with no modifications. The disadvantage is that is it somewhat slower (but not a lot) than PhantomJS and it works only works only on Linux. It does not work on Windows or Mac OS.
+The advantage of using Xvfb is that it works with any browser that Selenium can drive. You can delevop the tests using your favorite browser and then run the tests in headless mode with no modifications. The disadvantage is that is it somewhat slower than PhantomJS (but not a lot), and it works only works only on Linux. Let me repeat that, Xvfb does not work on Windows or Mac OS.
 
 ## PhantomJS
 
@@ -17,7 +17,7 @@ I> You will need internet access if you want to follow examples in this chapter.
 
 If you do not have Ruby, Selenium and PhantomJS already installed, please see *Installation* chapter. If you are not familiar with Selenium API, please see *Quick Start*, *Driver* and *Element* chapters.
 
-All you have to do to drive PhantomJS is to let Selenium know that you want to drive it when starting the browser:
+All you have to do to drive PhantomJS is to let Selenium know that you want to drive it:
 
     $ irb
 
@@ -100,9 +100,9 @@ I> You will need internet access if you want to follow examples in this chapter.
 
 W> Xvfb works only on Linux. It does not work on Windows or Mac OS.
 
-If you do not have Firefox, Ruby or Selenium installed, see *Installation* chapter.
+If you do not have Firefox, Ruby or Selenium installed, see *Installation* chapter. If you are not familiar with Selenium API, please see *Quick Start*, *Driver* and *Element* chapters.
 
-Without getting into a lot of technical detail, [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) is a piece of software that makes is possible to run browsers (and other applications) in a headless mode. It works only on Linux.
+Without getting into a lot of technical detail, [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) is a piece of software that makes is possible to run browsers (and other applications) in a headless mode.
 
 Install Xvfb via `apt-get`:
 
@@ -138,7 +138,7 @@ This is an example of block mode (using IRB):
     >   browser.get "http://google.com"
     >   browser.title
     > end
-     => "Google"
+    => "Google"
 
 This is an example of object mode (using IRB):
 
