@@ -1,6 +1,6 @@
 # Headless
 
-I have noticed a lot of confusion about headless testing, but there is really noting special there. The confusion may be caused because the term *headless* is a bit vague. In the context of driving a browser, *headless* means you can drive a real browser, but without seeing anything on the machine. It can be useful for running tests on a headless machine, or on a desktop machine. For example, if you want to run the tests without browsers opening and closing on the screen all the time, while you are doing something else.
+I have noticed a lot of confusion about headless testing, but there is really nothing special there. The confusion may be caused by the term *headless* being a bit vague. In the context of driving a browser, *headless* means you can drive a real browser, but without seeing anything on the machine. It can be useful for running tests on a headless machine, or on a desktop machine. For example, if you want to run the tests on a headless machine as part of continuous integration, or if you want to run the tests on your desktop machine without browsers opening and closing on the screen all the time, while you are doing something else.
 
 
 There are two ways to run browser in a headless mode that I am aware of. One is to use a headless browser like [PhantomJS](http://phantomjs.org/). Another option is using [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) and [Headless](https://github.com/leonid-shevtsov/headless) gem. Please notice that Xvfb works only on Linux.
