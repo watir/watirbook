@@ -107,9 +107,9 @@ Then install `headless` Ruby gem:
     ...
 
 W> ## "To sudo or not to sudo, that is the question..."
-W>
-W> On the machine I was using while writing this chapter, Ruby was installed via RVM (Ruby Version Manager). If you are using Ruby that was preinstalled on the computer (as it is on a Mac OS X) or if you have installed Ruby via `apt-get` (on Ubuntu) then you have to add `sudo` in front of `gem`:
-W>
-W>     $ sudo gem install headless --no-ri --no-rdoc
-W>     ...
+>
+> On the machine I was using while writing this chapter, Ruby was installed via RVM (Ruby Version Manager). If you are using Ruby that was preinstalled on the computer (as it is on a Mac OS X) or if you have installed Ruby via `apt-get` (on Ubuntu) then you have to add `sudo` in front of `gem`:
+>
+>     $ sudo gem install headless --no-ri --no-rdoc
+>     ...
 
