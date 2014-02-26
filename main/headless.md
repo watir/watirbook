@@ -7,6 +7,8 @@ There are two ways to run browser in a headless mode that I am aware of. One is 
 
 ## PhantomJS
 
+I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Mac OS X 10.8.5, PhantomJS 1.9.7, Ruby 2.1.1p76 and selenium-webdriver 2.40.0 but everything should work on all supported platforms.
+
 If you do not have Ruby, Selenium and PhantomJS already installed, please see *Installation* chapter. If you are not familiar with Selenium API, please see *Quick Start*, *Driver* and *Element* chapters.
 
 All you have to do to drive PhantomJS is to let Selenium know that you want to drive it when starting the browser:
@@ -85,3 +87,29 @@ At the end, close the browser:
 
     > browser.quit
     => nil
+
+## Xvfb
+
+I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Ubuntu Linux 13.10, Firefox 27.0.1, Ruby 2.1.1p76 and selenium-webdriver 2.40.0 but everything should work on all supported platforms.
+
+If you do not have Firefox, Ruby or Selenium installed, see *Installation* chapter.
+
+Without getting into a lot of technical detail, [Xvfb](https://en.wikipedia.org/wiki/Xvfb) (X virtual framebuffer) is a piece of software that makes is possible to run browsers (and other applications) in a headless mode. It works only on Linux.
+
+Install Xvfb via `apt-get`:
+
+    $ sudo apt-get install xvfb
+    ...
+
+Then install `headless` Ruby gem:
+
+    $ gem install headless --no-ri --no-rdoc
+    ...
+
+W> ## "To sudo or not to sudo, that is the question..."
+W>
+W> On the machine I was using while writing this chapter, Ruby was installed via RVM (Ruby Version Manager). If you are using Ruby that was preinstalled on the computer (as it is on a Mac OS X) or if you have installed Ruby via `apt-get` (on Ubuntu) then you have to add `sudo` in front of `gem`:
+W>
+W>     $ sudo gem install headless --no-ri --no-rdoc
+W>     ...
+
