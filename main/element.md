@@ -21,7 +21,7 @@ Let's start Firefox and open Google home page:
 Most of the time you will be dealing with page elements, so let's see how to do that. First, you need to find the element on the page, then you usually need to do something with it, like entering text or clicking it. To find the element, use `find_element` method.
 
     > browser.find_element(name: "q")
-    => #<Selenium::WebDriver::Element:0x2ab0c124c2d3bb12
+    => #<Selenium::WebDriver::Element:...
        id="{25201324-ac0c-8e40-9766-c35aa5b54786}">
 
 There are many options available to find an element.
@@ -52,7 +52,7 @@ We can also clear the text field:
 There is a shortcut if you want to find an element via it's `id`. Just provide the `id`:
 
     > browser["gbqfq"]
-    => #<Selenium::WebDriver::Element:0x6faea7c65902853c
+    => #<Selenium::WebDriver::Element:...
        id="{fca96529-8bc6-bf4f-8e78-376f037c351a}">
 
 To get the value of any element attribute, use `attribute`. Try a few attributes:

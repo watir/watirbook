@@ -15,7 +15,8 @@ Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 G
 Let's see if Ubuntu comes with Ruby installed. Open Terminal and type `ruby -v`:
 
     $ ruby -v
-    The program 'ruby' can be found in the following packages:
+    The program 'ruby' can be found in the following
+    packages:
      * ruby1.8
      * ruby1.9.1
     Try: sudo apt-get install <selected package>
@@ -49,13 +50,16 @@ Update RubyGems with `gem update --system`:
 
     $ gem update --system
     ERROR:  While executing gem ... (RuntimeError)
-    gem update --system is disabled on Debian, because it will overwrite the
-    content of the rubygems Debian package, and might break your Debian system
-    in subtle ways. The Debian-supported way to update rubygems is through
-    apt-get, using Debian official repositories.
-    If you really know what you are doing, you can still update rubygems by
-    setting the REALLY_GEM_UPDATE_SYSTEM environment variable, but please
-    remember that this is completely unsupported by Debian.
+    gem update --system is disabled on Debian, because
+    it will overwrite the content of the rubygems
+    Debian package, and might break your Debian system
+    in subtle ways. The Debian-supported way to update
+    rubygems is through apt-get, using Debian official
+    repositories. If you really know what you are
+    doing, you can still update rubygems by setting
+    the REALLY_GEM_UPDATE_SYSTEM environment variable,
+    but please remember that this is completely
+    unsupported by Debian.
 
 Since I do not *really* know what I am doing, I will leave RubyGems at current version and hope everything will work.
 
@@ -171,9 +175,11 @@ Now, lets see if it can really drive Chrome (tested with version 31) too. Ubuntu
     Selenium::WebDriver::Error::WebDriverError: Unable
     to find the chromedriver executable. Please
     download the server from
-    http://code.google.com/p/chromedriver/downloads/list
-    and place it somewhere on your PATH. More info at
-    http://code.google.com/p/selenium/wiki/ChromeDriver.
+    http://code.google.com/p/chromedriver/downloads/
+    list and place it somewhere on your PATH. More
+    info at
+    http://code.google.com/p/selenium/wiki/
+    ChromeDriver.
     (...)
 
 Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. [code.google.com/p/chromedriver/downloads/list](http://code.google.com/p/chromedriver/downloads/list) will let you know that *chromedriver executable* is now located at [chromedriver.storage.googleapis.com](http://chromedriver.storage.googleapis.com/index.html). Download the latest version of `chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.

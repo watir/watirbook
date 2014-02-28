@@ -33,7 +33,8 @@ Open Firefox:
 or
 
     > browser = Selenium::WebDriver.for :ff
-    => #<Selenium::WebDriver::Driver:0x..faf203ad50b5b4c08 browser=:firefox>
+    => #<Selenium::WebDriver::Driver:...
+    browser=:firefox>
 
 If you want to drive a different browser, just replace `:firefox` with another symbol.
 

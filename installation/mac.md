@@ -160,9 +160,11 @@ To drive [Chrome](https://www.google.com/intl/en/chrome/browser/) (tested with v
     Selenium::WebDriver::Error::WebDriverError: Unable
     to find the chromedriver executable. Please
     download the server from
-    http://code.google.com/p/chromedriver/downloads/list
-    and place it somewhere on your PATH. More info at
-    http://code.google.com/p/selenium/wiki/ChromeDriver.
+    http://code.google.com/p/chromedriver/downloads/
+    list and place it somewhere on your PATH. More
+    info at
+    http://code.google.com/p/selenium/wiki/
+    ChromeDriver.
     (...)
 
 Looks like we have to install something called *chromedriver executable*. The easiest way to install chromedriver is via Homebrew.
@@ -202,8 +204,10 @@ Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) 
     => true
 
     > Selenium::WebDriver::Chrome.path =
-    "/Applications/Chromium.app/Contents/MacOS/Chromium"
-    => "/Applications/Chromium.app/Contents/MacOS/Chromium"
+    "/Applications/Chromium.app/Contents/MacOS/
+    Chromium"
+    => "/Applications/Chromium.app/Contents/MacOS/
+    Chromium"
 
     > browser = Selenium::WebDriver.for :chrome
     => #<Selenium::WebDriver::Driver:

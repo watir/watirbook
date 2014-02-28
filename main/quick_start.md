@@ -48,7 +48,8 @@ It really works! Ruby returned a string (the thing in double quotes) that contai
 
 It's time to click on a link. It is easy to explicitly say which link to click on. Right now I want to click on a link with the text *Google.com*. If your browser already opened *google.com*, ignore this step.
 
-    > browser.find_element(link_text: "Google.com").click
+    > browser.find_element(link_text: "Google.com").
+    click
     => "ok"
 
 And *google.com* opens. Now that all of us are on literally on the same page, let's click another link:

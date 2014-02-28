@@ -69,7 +69,7 @@ After outputting the string, Ruby returned `nil`. You can ignore it for now. All
     `doge' for main:Object
     from (irb):7
     from /Users/z/.rvm/rubies/ruby-2.1.1/bin/irb:11:in
-     `<main>'
+    `<main>'
 
 Looks like Ruby does not know about [Doge meme](http://knowyourmeme.com/memes/doge). Important thing here is to notice how an error message looks like. Let's do something useful now, like nicely formatting output. First, we will create a `doge` variable:
 

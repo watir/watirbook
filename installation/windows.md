@@ -160,9 +160,11 @@ If it is not installed (tested with version 31), download it from [google.com/ch
     Selenium::WebDriver::Error::WebDriverError: Unable
     to find the chromedriver executable. Please
     download the server from
-    http://chromedriver.storage.googleapis.com/index.html
-    and place it somewhere on your PATH. More info at
-    http://code.google.com/p/selenium/wiki/ChromeDriver.
+    http://chromedriver.storage.googleapis.com/
+    index.html and place it somewhere on your PATH.
+    More info at
+    http://code.google.com/p/selenium/wiki/
+    ChromeDriver.
     (...)
 
 You have to download chromedriver from [chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html). Unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see Internet Explorer chapter. In short, move the file to Ruby folder, probably `C:\Ruby200\bin`.

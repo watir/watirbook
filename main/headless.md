@@ -51,16 +51,17 @@ Enter text into the text field and then clear the text field:
 
 Play with element attributes:
 
-    >  browser.find_element(name: "q").attribute(:name)
+    > browser.find_element(name: "q").attribute(:name)
     => "q"
 
-    >  browser.find_element(name: "q").attribute(:class)
+    > browser.find_element(name: "q").attribute(:class)
     => "lst tiah"
 
-    >  browser.find_element(name: "q").attribute(:type)
+    > browser.find_element(name: "q").attribute(:type)
     => "text"
 
-    >  browser.find_element(name: "q").attribute(:autocomplete)
+    > browser.find_element(name: "q").
+    attribute(:autocomplete)
     => "off"
 
 When driving Firefox or any of the usual browsers, you are able to see how to page looks like. With PhantomJS you do not see anything, so it is really important to know how to debug problems. Two features are really useful, taking screenshots and getting page HTML.
@@ -83,7 +84,8 @@ To get page HTML, use
 
 To get HTML of just a part of the page, ask for `outerHTML` attribute:
 
-    >  browser.find_element(name: "q").attribute(:outerHTML)
+    > browser.find_element(name: "q").
+    attribute(:outerHTML)
     => "<input autocomplete=\"off\" class=\"lst tiah\"
     ...
 
@@ -104,10 +106,12 @@ Create a Ruby file from the above IRB session and save it as `headless_phantomjs
     p browser.find_element(name: "q").attribute(:name)
     p browser.find_element(name: "q").attribute(:class)
     p browser.find_element(name: "q").attribute(:type)
-    p browser.find_element(name: "q").attribute(:autocomplete)
+    p browser.find_element(name: "q").
+      attribute(:autocomplete)
     browser.save_screenshot "phantomjs.png"
     p browser.page_source
-    p browser.find_element(name: "q").attribute(:outerHTML)
+    p browser.find_element(name: "q").
+      attribute(:outerHTML)
     browser.quit
 
 Run the file:
