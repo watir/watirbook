@@ -23,7 +23,8 @@ Every Ruby command returns something. You should get `=> true` after `require "s
 Open Firefox.
 
     > browser = Selenium::WebDriver.for :firefox
-    => #<Selenium::WebDriver::Driver:0x10e1416dd9107ffe browser=:firefox>
+    => #<Selenium::WebDriver::Driver:...
+    browser=:firefox>
 
 As I said earlier, you can ignore `#<Selenium::WebDriver::Driver:...>`. Opening Firefox returned the browser as an object, and this is textual representation of the object.
 
@@ -41,7 +42,7 @@ Controlling the browser is really useful but, as I am sure you already know, the
 This is the first time we will perform a check. It is also the first time we will take a look what Ruby returns after the command. Let's check if the browser really opened *google.com*.
 
     > browser.current_url
-    => "https://www.google.hr/?gws_rd=cr&ei=RDrkUrWVJOS24ASbyYCQDQ"
+    => "https://www.google.hr/"
 
 It really works! Ruby returned a string (the thing in double quotes) that contains the text from the browser address bar.
 
@@ -125,7 +126,7 @@ What is the output in the command prompt? Nothing? Yes, nothing. IRB displays va
 Run the script. This time the output should look like this:
 
     $ ruby quick_start.rb
-    https://www.google.hr/?gws_rd=cr&ei=RkLkUvqMIYeH4gTf_oDYBQ
+    https://www.google.hr/
     Google Images
     126
 

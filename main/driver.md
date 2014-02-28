@@ -27,7 +27,8 @@ Open Firefox:
      => true
 
     > browser = Selenium::WebDriver.for :firefox
-    => #<Selenium::WebDriver::Driver:0x..f8698791d2bff9778 browser=:firefox>
+    => #<Selenium::WebDriver::Driver:0x..
+    f8698791d2bff9778 browser=:firefox>
 
 or
 
@@ -44,7 +45,7 @@ Let's try a few interesting methods. `get` opens a page:
 `current_url` returns page URL:
 
     > browser.current_url
-    => "https://www.google.hr/?gws_rd=cr&ei=xXjtUr6oAqTL4wTvooCYDQ"
+    => "https://www.google.hr/"
 
 `title` returns page title:
 
@@ -76,5 +77,5 @@ Create a Ruby file from the above IRB session and save it as `driver.rb`. Of cou
 Run the file:
 
     $ ruby driver.rb
-    "https://www.google.hr/?gfe_rd=ctrl&ei=6QEOU4P4AYeV_Aaj_4CQDA&gws_rd=cr"
+    "https://www.google.hr/"
     "Google"

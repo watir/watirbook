@@ -25,7 +25,8 @@ All you have to do to drive PhantomJS is to let Selenium know that you want to d
      => true
 
     > browser = Selenium::WebDriver.for :phantomjs
-    => #<Selenium::WebDriver::Driver:0x4a9629199067c7c6 browser=:phantomjs>
+    => #<Selenium::WebDriver::Driver:...
+    browser=:phantomjs>
 
 The rest of the API is the same as for any other browser. For example, go to a page:
 
@@ -35,7 +36,7 @@ The rest of the API is the same as for any other browser. For example, go to a p
 Get it's URL and title:
 
     > browser.current_url
-    => "http://www.google.hr/?gfe_rd=cr&ei=LJwMU_nuAsHe_Aa50IHIAQ"
+    => "http://www.google.hr/"
 
     > browser.title
     => "Google"
@@ -72,8 +73,10 @@ To take a screenshot, use `save_screenshot` method:
 To get page HTML, use
 
     > browser.page_source
-    => "<!DOCTYPE html><html itemscope=\"\" itemtype=\"http://schema.org/WebPage\">
-    <head><meta itemprop=\"image\" content=\"/images/google_favicon_128.png\">
+    => "<!DOCTYPE html><html itemscope=\"\"
+    itemtype=\"http://schema.org/WebPage\"><head><meta
+    itemprop=\"image\"
+    content=\"/images/google_favicon_128.png\">
     <title>Google</title><script>
     ...
     </script></body></html>"
@@ -81,13 +84,8 @@ To get page HTML, use
 To get HTML of just a part of the page, ask for `outerHTML` attribute:
 
     >  browser.find_element(name: "q").attribute(:outerHTML)
-    => "<input autocomplete=\"off\" class=\"lst tiah\" value=\"\"
-    title=\"Google pretraživanje\" maxlength=\"2048\" name=\"q\" size=\"57\"
-    style=\"color: rgb(0, 0, 0); margin-top: 0px; margin-right: 0px; margin-bottom:
-     0px; margin-left: 0px; padding-top: 5px; padding-bottom: 0px;
-     padding-left: 6px; vertical-align: top; padding-right: 38px;
-     outline-style: none; outline-width: initial; outline-color: initial; \"
-     dir=\"ltr\" spellcheck=\"false\">"
+    => "<input autocomplete=\"off\" class=\"lst tiah\"
+    ...
 
 At the end, close the browser:
 
@@ -115,14 +113,14 @@ Create a Ruby file from the above IRB session and save it as `headless_phantomjs
 Run the file:
 
     $ ruby headless_phantomjs.rb
-    "http://www.google.hr/?gfe_rd=ctrl&ei=7wUOU72wMMWB_AaEzoCgAQ&gws_rd=cr"
+    "http://www.google.hr/"
     "Google"
     "q"
     "lst tiah"
     "text"
     "off"
-    "<!DOCTYPE html><html itemscope=\"\" itemtype=\"http://schema.org/WebPage\">...
-    "<input autocomplete=\"off\" class=\"lst tiah\" value=\"\" title=\"Google ...
+    "<!DOCTYPE html><html itemscope=\"\" itemtype=...
+    "<input autocomplete=\"off\" class=\"lst tiah\"...
 
 ## Xvfb
 
@@ -181,16 +179,17 @@ This is an example of object mode (using IRB):
     => true
 
     ﻿> headless = Headless.new
-    => #<Headless:0x9e957d8 @display=99, @autopick_display=true,
-    @reuse_display=true, @dimensions="1280x1024x24", @video_capture_options={},
-    @destroy_at_exit=true>
+    => #<Headless:0x9e957d8 @display=99,
+    @autopick_display=true, @reuse_display=true,
+    @dimensions="1280x1024x24",
+    @video_capture_options={}, @destroy_at_exit=true>
 
     > headless.start
-    => #<Proc:0x9eaa2b4@/home/z/.rvm/gems/ruby-2.1.1/gems/headless-1.0.1/lib/
-    headless.rb:175>
+    => #<Proc:...>
 
     > browser = Selenium::WebDriver.for :firefox
-    => #<Selenium::WebDriver::Driver:0x..f9de848e2 browser=:firefox>
+    => #<Selenium::WebDriver::Driver:...
+     browser=:firefox>
 
     > browser.get "http://google.com"
     => ""

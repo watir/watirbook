@@ -31,7 +31,8 @@ Install it with `sudo apt-get install ruby1.9.1`:
 Check the version with `ruby -v`:
 
     $ ruby -v
-    ruby 1.9.3p194 (2012-04-20 revision 35410) [i686-linux]
+    ruby 1.9.3p194 (2012-04-20 revision 35410)
+    [i686-linux]
 
 
 
@@ -66,10 +67,12 @@ Since I do not *really* know what I am doing, I will leave RubyGems at current v
 
 Let's try selenium-webdriver gem. Install it with `sudo gem install selenium-webdriver --no-ri --no-rdoc`.
 
-    $ sudo gem install selenium-webdriver --no-ri --no-rdoc
+    $ sudo gem install selenium-webdriver --no-ri
+    --no-rdoc
     (...)
     Fetching: ffi-1.9.3.gem (100%)
-    Building native extensions.  This could take a while...
+    Building native extensions.  This could take a
+    while...
     ERROR:  Error installing selenium-webdriver:
     ERROR: Failed to build gem native extension.
     (...)
@@ -78,11 +81,12 @@ This should fix the problem:
 
     $ sudo apt-get install ruby1.9.1-dev
     (...)
-    Setting up ruby1.9.1-dev (1.9.3.194-8.1ubuntu2.1) ...
+    Setting up ruby1.9.1-dev (1.9.3.194-8.1ubuntu2.1)
 
 Let's try installing selenium-webdriver again:
 
-    $ sudo gem install selenium-webdriver --no-ri --no-rdoc
+    $ sudo gem install selenium-webdriver --no-ri
+    --no-rdoc
     (...)
     Successfully installed selenium-webdriver-2.37.0
     (...)
@@ -107,7 +111,8 @@ Let's check if it can drive Firefox:
     => true
 
     > browser = Selenium::WebDriver.for :firefox
-    => #<Selenium::WebDriver::Driver:0x21564606 browser=:firefox>
+    => #<Selenium::WebDriver::Driver:0x21564606
+    browser=:firefox>
 
     > browser.get "http://watir.com"
     => ""
@@ -134,7 +139,8 @@ Let's try driving it:
     => true
 
     > browser = Selenium::WebDriver.for :phantomjs
-    => #<Selenium::WebDriver::Driver:0x..fa5f26f44 browser=:phantomjs>
+    => #<Selenium::WebDriver::Driver:0x..fa5f26f44
+    browser=:phantomjs>
 
     > browser.get "http://watir.com"
     => {}
@@ -162,10 +168,11 @@ Now, lets see if it can really drive Chrome (tested with version 31) too. Ubuntu
     => true
 
     > browser = Selenium::WebDriver.for :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver
-    executable. Please download the server from
-    http://code.google.com/p/chromedriver/downloads/list and place it somewhere
-    on your PATH. More info at
+    Selenium::WebDriver::Error::WebDriverError: Unable
+    to find the chromedriver executable. Please
+    download the server from
+    http://code.google.com/p/chromedriver/downloads/list
+    and place it somewhere on your PATH. More info at
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
@@ -174,8 +181,8 @@ Looks like we have to install something called *chromedriver executable*. Fortun
 Let's find out what is *on our `PATH`*.
 
     $ echo $PATH
-    /home/zeljko/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:
-    /sbin:/bin:/usr/games
+    /home/zeljko/bin:/usr/local/sbin:/usr/local/bin:
+    /usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 `/usr/bin` looks like a nice place, so let's move `chromedriver` there. You will have to provide your password to move the file there.
 
@@ -189,7 +196,8 @@ Let's drive Chrome, finally:
     => true
 
     > browser = Selenium::WebDriver.for :chrome
-    => #<Selenium::WebDriver::Driver:0x5b77effe browser=:chrome>
+    => #<Selenium::WebDriver::Driver:0x5b77effe
+    browser=:chrome>
 
     > browser.get "http://watir.com"
     => nil
@@ -208,7 +216,8 @@ Let's try driving [Chromium](http://www.chromium.org/) (tested with version 30) 
 
     $ sudo apt-get install chromium-browser
     (...)
-    Setting up chromium-browser (30.0.1599.114-0ubuntu0.13.10.2) ...
+    Setting up chromium-browser
+    (30.0.1599.114-0ubuntu0.13.10.2) ...
     (...)
 
 If you did not already install chromedriver, see Chrome chapter.
@@ -218,11 +227,13 @@ If you did not already install chromedriver, see Chrome chapter.
     > require "selenium-webdriver"
     => true
 
-    > Selenium::WebDriver::Chrome.path = "/usr/bin/chromium-browser"
+    > Selenium::WebDriver::Chrome.path =
+    "/usr/bin/chromium-browser"
     => "/usr/bin/chromium-browser"
 
     > browser = Selenium::WebDriver.for :chrome
-    => #<Selenium::WebDriver::Driver:0x..fb4c9860a browser=:chrome>
+    => #<Selenium::WebDriver::Driver:0x..fb4c9860a
+    browser=:chrome>
 
     > browser.get "http://watir.com"
     => nil
@@ -236,7 +247,8 @@ If you did not already install chromedriver, see Chrome chapter.
 To drive Opera, you will have to install Java first. Let's check if Java is already installed:
 
     $ java -version
-    The program 'java' can be found in the following packages:
+    The program 'java' can be found in the following
+    packages:
      * default-jre
      * gcj-4.6-jre-headless
      * gcj-4.7-jre-headless
@@ -248,7 +260,7 @@ Looks like we will have to install Java. Install it with `sudo apt-get install o
 
     $ sudo apt-get install openjdk-7-jre-headless
     (...)
-    Setting up openjdk-7-jre-lib (7u25-2.3.12-4ubuntu3) ...
+    Setting up openjdk-7-jre-lib (7u25-2.3.12-4ubuntu3)
     (...)
 
 
@@ -269,10 +281,12 @@ Let's see how it drives Opera. Open our old friend, IRB:
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium
-    server jar.  Please download the standalone server from
-    http://code.google.com/p/selenium/downloads/list and set the
-    SELENIUM_SERVER_JAR environmental variable to its location. More info at
+    Selenium::WebDriver::Error::WebDriverError: Unable
+    to find the Selenium server jar. Please download
+    the standalone server from
+    http://code.google.com/p/selenium/downloads/list
+    and set the SELENIUM_SERVER_JAR environmental
+    variable to its location. More info at
     http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
@@ -281,7 +295,8 @@ Error message similar to the one when we first tried to open Chrome. The solutio
 
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable. If you just want to try driving Opera, typing this into Terminal will do the trick (assuming that the file is located in Downloads folder, if you have a newer version of `selenium-server-standalone` file, replace `2.39.0` appropriately):
 
-    $ export SELENIUM_SERVER_JAR=~/Downloads/selenium-server-standalone-2.39.0.jar
+    $ export SELENIUM_SERVER_JAR=
+    ~/Downloads/selenium-server-standalone-2.39.0.jar
 
 Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported `SELENIUM_SERVER_JAR` environment variable.)
 
@@ -291,7 +306,8 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    => #<Selenium::WebDriver::Driver:0x..fb4bb92ce browser=:opera>
+    => #<Selenium::WebDriver::Driver:0x..fb4bb92ce
+    browser=:opera>
 
     > browser.get "http://watir.com"
     => nil
@@ -303,6 +319,7 @@ If you plan to drive Opera frequently, you should add `SELENIUM_SERVER_JAR` to `
 Save the file (ctrl+x) and close all Terminal windows. Open Terminal again. To check if the variable is set, try `printenv | grep SELENIUM`:
 
     $ printenv | grep SELENIUM
-    SELENIUM_SERVER_JAR=/home/zeljko/bin/selenium-server-standalone-2.39.0.jar
+    SELENIUM_SERVER_JAR=/home/zeljko/bin/
+    selenium-server-standalone-2.39.0.jar
 
 Looks good to me!

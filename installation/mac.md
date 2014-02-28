@@ -17,7 +17,8 @@ Good news is that Ruby is already installed by default. To check Ruby version, o
 You should get this:
 
     $ ruby -v
-    ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
+    ruby 2.0.0p247 (2013-06-27 revision 41674)
+    [universal.x86_64-darwin13]
 
 
 
@@ -51,7 +52,8 @@ You will probably get this:
     $ sudo gem install selenium-webdriver
     (...)
     Fetching: ffi-1.9.3.gem (100%)
-    Building native extensions.  This could take a while...
+    Building native extensions.  This could take a
+    while...
     ERROR:  Error installing selenium-webdriver:
     ERROR: Failed to build gem native extension.
     (...)
@@ -62,7 +64,8 @@ Fortunately, it is easy to fix. Install command line developer tools. To install
 
 Click *Install*. After the installation is finished, try again:
 
-    $ sudo gem install selenium-webdriver --no-ri --no-rdoc
+    $ sudo gem install selenium-webdriver --no-ri
+    --no-rdoc
     (...)
     Successfully installed selenium-webdriver-2.37.0
     (...)
@@ -83,7 +86,8 @@ Since Safari (tested with version 7.0) is already installed, all you have to do 
     => true
 
     > browser = Selenium::WebDriver.for :safari
-    => #<Selenium::WebDriver::Driver:0x..f93d5546968bec45e browser=:safari>
+    => #<Selenium::WebDriver::Driver:0x..
+    f93d5546968bec45e browser=:safari>
 
     > browser.get "http://watir.com"
     => nil
@@ -104,7 +108,8 @@ To drive [Firefox](http://www.mozilla.org/en-US/firefox/new/) (tested with versi
     => true
 
     > browser = Selenium::WebDriver.for :firefox
-    => #<Selenium::WebDriver::Driver:0x10e1416dd9107ffe browser=:firefox>
+    => #<Selenium::WebDriver::Driver:
+    0x10e1416dd9107ffe browser=:firefox>
 
     > browser.get "http://watir.com"
     => ""
@@ -119,10 +124,12 @@ Great! We can drive Firefox.
 
 To drive Chrome, you need [Homebrew](http://brew.sh/). To install it, paste this into Terminal. You will have to type your password during installation.
 
-    $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+    $ ruby -e "$(curl -fsSL
+    https://raw.github.com/mxcl/homebrew/go/install)"
     (...)
     ==> Installation successful!
-    You should run `brew doctor' *before* you install anything.
+    You should run `brew doctor' *before* you install
+    anything.
     Now type: brew help
 
 To check if everything is set up correctly, type `brew doctor`:
@@ -150,10 +157,11 @@ To drive [Chrome](https://www.google.com/intl/en/chrome/browser/) (tested with v
     => true
 
     > browser = Selenium::WebDriver.for :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver
-    executable. Please download the server from
-    http://code.google.com/p/chromedriver/downloads/list and place it somewhere
-    on your PATH. More info at
+    Selenium::WebDriver::Error::WebDriverError: Unable
+    to find the chromedriver executable. Please
+    download the server from
+    http://code.google.com/p/chromedriver/downloads/list
+    and place it somewhere on your PATH. More info at
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
@@ -170,7 +178,8 @@ Let's try again:
     => true
 
     > browser = Selenium::WebDriver.for :chrome
-    => #<Selenium::WebDriver::Driver:0xec6568f803e9898 browser=:chrome>
+    => #<Selenium::WebDriver::Driver:
+    0xec6568f803e9898 browser=:chrome>
 
     > browser.get "http://watir.com"
     => ""
@@ -197,7 +206,8 @@ Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) 
     => "/Applications/Chromium.app/Contents/MacOS/Chromium"
 
     > browser = Selenium::WebDriver.for :chrome
-    => #<Selenium::WebDriver::Driver:0x1e35d5faa9511ec6 browser=:chrome>
+    => #<Selenium::WebDriver::Driver:
+    0x1e35d5faa9511ec6 browser=:chrome>
 
     > browser.get "http://watir.com"
     => nil
@@ -221,7 +231,8 @@ Let's try driving it:
     => true
 
     > browser = Selenium::WebDriver.for :phantomjs
-    => #<Selenium::WebDriver::Driver:0x..fbdc736b89bb162d0 browser=:phantomjs>
+    => #<Selenium::WebDriver::Driver:0x..
+    fbdc736b89bb162d0 browser=:phantomjs>
 
     > browser.get "http://watir.com"
     => ""
@@ -249,10 +260,12 @@ To drive [Opera](http://www.opera.com/) (tested with version 12.16), make sure y
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium
-    server jar.  Please download the standalone server from
-    http://code.google.com/p/selenium/downloads/list and set the
-    SELENIUM_SERVER_JAR environmental variable to its location. More info at
+    Selenium::WebDriver::Error::WebDriverError: Unable
+    to find the Selenium server jar. Please download
+    the standalone server from
+    http://code.google.com/p/selenium/downloads/list
+    and set the SELENIUM_SERVER_JAR environmental
+    variable to its location. More info at
     http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
@@ -278,15 +291,18 @@ Check if Java is installed. Open new Terminal window or tab (it is important to 
 
     $ java -version
     java version "1.6.0_65"
-    Java(TM) SE Runtime Environment (build 1.6.0_65-b14-462-11M4609)
-    Java HotSpot(TM) 64-Bit Server VM (build 20.65-b04-462, mixed mode)
+    Java(TM) SE Runtime Environment
+    (build 1.6.0_65-b14-462-11M4609)
+    Java HotSpot(TM) 64-Bit Server VM
+    (build 20.65-b04-462, mixed mode)
 
 The last step is setting `SELENIUM_SERVER_JAR` environmental variable.
 
 If you just want to try driving Opera, typing this into Terminal will do the trick (if you have a newer version of `selenium-server-standalone` file, replace `2.37.0` appropriately):
 
     $ export SELENIUM_SERVER_JAR=
-    /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
+    /usr/local/opt/selenium-server-standalone/
+    selenium-server-standalone-2.37.0.jar
 
 Let's drive Opera, finally! (Following steps will work only in Terminal tab or window where you have exported `SELENIUM_SERVER_JAR` environment variable.)
 
@@ -296,7 +312,8 @@ Let's drive Opera, finally! (Following steps will work only in Terminal tab or w
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Selenium::WebDriver::Error::UnknownError: Invalid service list received:
+    Selenium::WebDriver::Error::UnknownError: Invalid
+    service list received:
     (...)
     (java.lang.IllegalStateException)
     (...)
@@ -311,7 +328,8 @@ Let's try again.
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    => #<Selenium::WebDriver::Driver:0x..fc28c93dae7536a48 browser=:opera>
+    => #<Selenium::WebDriver::Driver:0x..
+    fc28c93dae7536a48 browser=:opera>
 
     > browser.get "http://watir.com"
      => nil
@@ -328,7 +346,8 @@ This is how to do it with *GNU nano*. Type type `nano ~/.bash_profile`. *GNU nan
 
     $ cat ~/.bash_profile
     export SELENIUM_SERVER_JAR=
-    /usr/local/opt/selenium-server-standalone/selenium-server-standalone-2.37.0.jar
+    /usr/local/opt/selenium-server-standalone/
+    selenium-server-standalone-2.37.0.jar
 
 Open new Terminal window or tab (this is important, already opened windows or tabs would not see `SELENIUM_SERVER_JAR` variable). Run the same commands again and everything should just work.
 
@@ -338,7 +357,8 @@ Open new Terminal window or tab (this is important, already opened windows or ta
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    => #<Selenium::WebDriver::Driver:0x..fc28c93dae7536a48 browser=:opera>
+    => #<Selenium::WebDriver::Driver:0x..
+    fc28c93dae7536a48 browser=:opera>
 
     > browser.get "http://watir.com"
      => nil

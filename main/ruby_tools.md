@@ -45,8 +45,9 @@ Since the part before the `>` or `*` is not important for us at the moment, we w
 Executing `ls` command in Mac/Linux CLI:
 
     $ ls
-    Book.txt	Gemfile.lock	README.md	VERSION		images		lib		misc
-    Gemfile		LICENSE.md	Subset.txt	epub_images	installation	main		old
+    Book.txt Gemfile.lock README.md VERSION images lib
+    misc Gemfile LICENSE.md Subset.txt epub_images
+    installation main old
 
 Executing `1+1` in IRB:
 
@@ -64,21 +65,28 @@ The above IRB example shows that Ruby knows how to calculate sum of two numbers.
 After outputting the string, Ruby returned `nil`. You can ignore it for now. All you need to know is that it did not complain. Let's try something that will fail:
 
     > doge
-    NameError: undefined local variable or method `doge' for main:Object
+    NameError: undefined local variable or method
+    `doge' for main:Object
     from (irb):7
-    from /Users/z/.rvm/rubies/ruby-2.1.1/bin/irb:11:in `<main>'
+    from /Users/z/.rvm/rubies/ruby-2.1.1/bin/irb:11:in
+     `<main>'
 
 Looks like Ruby does not know about [Doge meme](http://knowyourmeme.com/memes/doge). Important thing here is to notice how an error message looks like. Let's do something useful now, like nicely formatting output. First, we will create a `doge` variable:
 
-> doge = {dogecoin: "To the moon!", hello: "This is Doge", wow: "much addon", so: "internet"}
-=> {:dogecoin=>"To the moon!", :hello=>"This is Doge", :wow=>"much addon", :so=>"internet"}
+    > doge = {dogecoin: "To the moon!",
+    hello: "This is Doge", wow: "much addon",
+    so: "internet"}
+    => {:dogecoin=>"To the moon!",
+    :hello=>"This is Doge", :wow=>"much addon",
+    :so=>"internet"}
 
 Then we will try to output is nicely with `pp` library:
 
     > pp doge
-    NoMethodError: undefined method `pp' for main:Object
+    NoMethodError: undefined method `pp' for
+    main:Object
     from (irb):9
-    from /Users/z/.rvm/rubies/ruby-2.1.1/bin/irb:11:in `<main>'
+    from ...irb:11:in `<main>'
 
 Looks like Ruby does not know about `pp` too. All you need to do to fix the problem is to require the library:
 
@@ -92,7 +100,9 @@ Let's output `doge`, finally:
     :hello=>"This is Doge",
     :wow=>"much addon",
     :so=>"internet"}
-    => {:dogecoin=>"To the moon!", :hello=>"This is Doge", :wow=>"much addon", :so=>"internet"}
+    => {:dogecoin=>"To the moon!",
+    :hello=>"This is Doge", :wow=>"much addon",
+    :so=>"internet"}
 
 [PP](http://ruby-doc.org/stdlib-2.1.1/libdoc/pp/rdoc/PP.html) is a pretty-printer for Ruby objects. It is really useful for outputting bit objects.
 
@@ -141,7 +151,8 @@ Ask RVM which versions for Ruby are installed:
 *Terminal* will not be aware of the Ruby installed via RVM until you explicitly tell it to use it. Try asking the *Terminal* for Ruby version:
 
     $ ruby -v
-    The program 'ruby' can be found in the following packages:
+    The program 'ruby' can be found in the following
+    packages:
     * ruby1.8
     * ruby1.9.1
 
@@ -153,7 +164,8 @@ See, *Terminal* does not think Ruby is installed. Now, tell RVM you want to use 
 Ask *Terminal* again for Ruby version:
 
     $ ruby -v
-    ruby 2.1.1p76 (2014-02-24 revision 45161) [i686-linux]
+    ruby 2.1.1p76 (2014-02-24 revision 45161)
+    [i686-linux]
 
 Now it knows about Ruby installed via RVM. You can also ask RVM which Ruby is it using currently:
 
@@ -164,7 +176,8 @@ Now it knows about Ruby installed via RVM. You can also ask RVM which Ruby is it
        ruby-2.1.0 [ i686 ]
     => ruby-2.1.1 [ i686 ]
 
-    # Default ruby not set. Try 'rvm alias create default <ruby>'.
+    # Default ruby not set. Try 'rvm alias create
+    default <ruby>'.
 
     # => - current
     # =* - current && default

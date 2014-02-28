@@ -12,7 +12,8 @@ Let's start Firefox and open Google home page:
      => true
 
     > browser = Selenium::WebDriver.for :firefox
-    => #<Selenium::WebDriver::Driver:0x..f8698791d2bff9778 browser=:firefox>
+    => #<Selenium::WebDriver::Driver:0x..
+    f8698791d2bff9778 browser=:firefox>
 
     > browser.get "http://google.com"
     => ""
@@ -69,19 +70,10 @@ To get the value of any element attribute, use `attribute`. Try a few attributes
     => "off"
 
     > browser["gbqfq"].attribute(:style)
-    => "border: medium none; padding: 0px; margin: 0px; height: auto; width: 100%;
-    background: url(\"data:image/gif;base64,R0lGODlhAQABAID/
-    AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D\") repeat scroll 0% 0%
-    transparent; position: absolute; z-index: 6; left: 0px; outline: medium none;"
+    => "border: medium none; padding: 0px; margin: ...
 
     > browser["gbqfq"].attribute(:outerHTML)
-    => "<input spellcheck=\"false\" dir=\"ltr\" style=\"border: medium none;
-    padding: 0px; margin: 0px; height: auto; width: 100%; background: url(&quot;
-    data:image/gif;base64,R0lGODlhAQABAID/
-    AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D&quot;) repeat scroll 0% 0%
-    transparent; position: absolute; z-index: 6; left: 0px; outline: medium none;\"
-    id=\"gbqfq\" class=\"gbqfif\" name=\"q\" autocomplete=\"off\" value=\"\"
-    type=\"text\">"
+    => "<input spellcheck=\"false\" dir=\"ltr\" ...
 
 Create a Ruby file from the above IRB session and save it as `element.rb`. Of course, add a `p` in front of a few commands, so the script outputs something.
 
@@ -106,5 +98,5 @@ Run the file:
     "gbqfif"
     "text"
     "off"
-    "border: medium none; padding: 0px; margin: 0px; height: auto; width: 100%; ...
-    "<input spellcheck=\"false\" dir=\"ltr\" style=\"border: medium none; ...
+    "border: medium none; padding: 0px; margin: 0px;...
+    "<input spellcheck=\"false\" dir=\"ltr\" style=...

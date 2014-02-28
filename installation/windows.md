@@ -15,8 +15,8 @@ Machine is a clean installation of Microsoft Windows 8.1 Pro, 1 GB RAM, fully pa
 You probably do not have Ruby installed. To make sure, open Command Prompt application and type `ruby -v`.
 
     >ruby -v
-    'ruby' is not recognized as an internal or external command,
-    operable program or batch file.
+    'ruby' is not recognized as an internal or
+    external command, operable program or batch file.
 
 If you get the same thing as I did, you do not have Ruby installed.
 
@@ -78,11 +78,13 @@ Since Internet Explorer (tested with version 11) is already installed, we will s
     > require "selenium-webdriver"
     => true
 
-    > browser = Selenium::WebDriver.for :internet_explorer
-    Selenium::WebDriver::Error::WebDriverError: Unable to find standalone
-    executable. Please download the IEDriverServer from
-    http://code.google.com/p/selenium/downloads/list and place the executable on
-    your PATH.
+    > browser = Selenium::WebDriver.for
+    :internet_explorer
+    Selenium::WebDriver::Error::WebDriverError: Unable
+    to find standalone executable. Please download the
+    IEDriverServer from
+    http://code.google.com/p/selenium/downloads/list
+    and place the executable on your PATH.
     (...)
 
 Windows Firewall popup appeared letting me know that it has blocked Ruby.
@@ -92,8 +94,10 @@ Windows Firewall popup appeared letting me know that it has blocked Ruby.
 For now just close the popup, let's see how to fix the error message. Follow the instructions from the error message. Go to [code.google.com/p/selenium/downloads/list](http://code.google.com/p/selenium/downloads/list) and download 32-bit or 64-bit IEDriverServer. Extract the downloaded zip file (with mouse right click and then *Extract All..*, for example). Let's find out what is on the PATH.
 
     >PATH
-    PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;
-    C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Ruby200\bin
+    PATH=C:\Windows\system32;C:\Windows;
+    C:\Windows\System32\Wbem;
+    C:\Windows\System32\WindowsPowerShell\v1.0\;
+    C:\Ruby200\bin
 
 `C:\Ruby200\bin` (or where ever you have installed Ruby) looks like a good place to me. Move the IEDriverServer file there.
 
@@ -104,11 +108,13 @@ Let' try again:
     > require "selenium-webdriver"
     => true
 
-    > browser = Selenium::WebDriver.for :internet_explorer
+    > browser = Selenium::WebDriver.for
+    :internet_explorer
     Started InternetExplorerDriver server (32-bit)
     2.38.0.0
     Listening on port 5555
-    => #<Selenium::WebDriver::Driver:0x5469141e browser=:internet_explorer>
+    => #<Selenium::WebDriver::Driver:0x5469141e
+    browser=:internet_explorer>
 
     > browser.get "http://watir.com"
     => nil
@@ -129,7 +135,8 @@ If it is not installed (tested with version 25.0.1), download it from [mozilla.c
     => true
 
     > browser = Selenium::WebDriver.for :firefox
-    => #<Selenium::WebDriver::Driver:0xdc8ad4a browser=:firefox>
+    => #<Selenium::WebDriver::Driver:0xdc8ad4a
+    browser=:firefox>
 
     > browser.get "http://watir.com"
     => ""
@@ -150,10 +157,11 @@ If it is not installed (tested with version 31), download it from [google.com/ch
     => true
 
     > browser = Selenium::WebDriver.for :chrome
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the chromedriver
-    executable. Please download the server
-    from http://chromedriver.storage.googleapis.com/index.html and place it
-    somewhere on your PATH. More info at
+    Selenium::WebDriver::Error::WebDriverError: Unable
+    to find the chromedriver executable. Please
+    download the server from
+    http://chromedriver.storage.googleapis.com/index.html
+    and place it somewhere on your PATH. More info at
     http://code.google.com/p/selenium/wiki/ChromeDriver.
     (...)
 
@@ -168,7 +176,8 @@ Let's try again:
 
     > browser = Selenium::WebDriver.for :chrome
     Starting ChromeDriver (v2.7.236900) on port 9515
-    => #<Selenium::WebDriver::Driver:0x..fc23f2ebe browser=:chrome>
+    => #<Selenium::WebDriver::Driver:0x..fc23f2ebe
+    browser=:chrome>
 
     > browser.get "http://watir.com"
     => nil
@@ -190,12 +199,14 @@ First make sure that you can drive Chrome. (See previous chapter.) Then download
     > require "selenium-webdriver"
     => true
 
-    > Selenium::WebDriver::Chrome.path = 'C:\chrome\chrome.exe'
+    > Selenium::WebDriver::Chrome.path =
+    'C:\chrome\chrome.exe'
     => "C:\\chrome\\chrome.exe"
 
     > browser = Selenium::WebDriver.for :chrome
     Starting ChromeDriver (v2.7.236900) on port 9515
-    => #<Selenium::WebDriver::Driver:0x..f9d38b82e browser=:chrome>
+    => #<Selenium::WebDriver::Driver:0x..f9d38b82e
+    browser=:chrome>
 
     > browser.get "http://watir.com"
     => nil
@@ -214,7 +225,8 @@ Let's try driving it:
 
     > browser = Selenium::WebDriver.for :phantomjs
     (...)
-    => #<Selenium::WebDriver::Driver:0x442ed372 browser=:phantomjs>
+    => #<Selenium::WebDriver::Driver:0x442ed372
+    browser=:phantomjs>
 
     > browser.get "http://watir.com"
     => {}
@@ -235,16 +247,18 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
 
     >java -version
-    'java' is not recognized as an internal or external command,
-    operable program or batch file.
+    'java' is not recognized as an internal or
+    external command, operable program or batch file.
 
 Looks like we will have to install Java. There is big *Free Java Download* button at
 [java.com](http://www.java.com/). Execute downloaded file and install Java. Let's check if Java is really installed with `java -version`:
 
     >java -version
     java version "1.7.0_45"
-    Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
-    Java HotSpot(TM) Client VM (build 24.45-b08, mixed mode, sharing)
+    Java(TM) SE Runtime Environment
+    (build 1.7.0_45-b18)
+    Java HotSpot(TM) Client VM (build 24.45-b08,
+    mixed mode, sharing)
 
 Looks good to me!
 
@@ -264,10 +278,12 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Selenium::WebDriver::Error::WebDriverError: Unable to find the Selenium
-    server jar.  Please download the standalone server from
-    http://code.google.com/p/selenium/downloads/list and set the
-    SELENIUM_SERVER_JAR environmental variable to its location.  More info at
+    Selenium::WebDriver::Error::WebDriverError: Unable
+    to find the Selenium server jar. Please download
+    the standalone server from
+    http://code.google.com/p/selenium/downloads/list
+    and set the SELENIUM_SERVER_JAR environmental
+    variable to its location. More info at
     http://code.google.com/p/selenium/wiki/OperaDriver.
     (...)
 
@@ -276,7 +292,8 @@ Download `selenium-server-standalone-2.39.0.jar` (or newer version) from
 
 If you just want to try driving opera, typing this into Command Prompt will do the trick:
 
-    >set SELENIUM_SERVER_JAR=C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar
+    >set SELENIUM_SERVER_JAR=C:\Ruby200\bin\
+    selenium-server-standalone-2.39.0.jar
 
 Let's try driving Opera again.
 
@@ -286,12 +303,15 @@ Let's try driving Opera again.
     => true
 
     > browser = Selenium::WebDriver.for :opera
-    Selenium::WebDriver::Error::UnknownError: Could not find a platform that
-    supports bundled launchers, please set it manually
+    Selenium::WebDriver::Error::UnknownError: Could
+    not find a platform that supports bundled
+    launchers, please set it manually
     Build info: version: '2.39.0', revision: 'ff23eac',
     time: '2013-12-16 16:11:15'
-    System info: host: 'IE11WIN8_1', ip: '10.0.2.15', os.name: 'Windows 8',
-    os.arch: 'x86', os.version: '6.2', java.version: '1.7.0_45'
+    System info: host: 'IE11WIN8_1', ip: '10.0.2.15',
+    os.name: 'Windows 8',
+    os.arch: 'x86', os.version: '6.2', java.version:
+    '1.7.0_45'
     Driver info: driver.version: OperaDriver
     (org.openqa.selenium.WebDriverException)
 
@@ -299,7 +319,8 @@ Looks like Selenium can not drive Opera on Windows 8.1.
 
 If I ever manage to drive Opera on Windows, to create a permanent environmental variable, use `setx`:
 
-    >setx SELENIUM_SERVER_JAR C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar
+    >setx SELENIUM_SERVER_JAR C:\Ruby200\bin\
+    selenium-server-standalone-2.39.0.jar
     SUCCESS: Specified value was saved.
 
 Open new command prompt, the old one will not see `SELENIUM_SERVER_JAR` variable.
