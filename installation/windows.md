@@ -2,7 +2,7 @@
 
 *You will need internet access if you want to follow examples in this chapter.*
 
-![Windows 8.1 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
+![Windows 8.1 default desktop](images/installation/windows/desktop.png)
 
 Machine is a clean installation of Microsoft Windows 8.1 Pro, 1 GB RAM, fully patched.
 
@@ -22,7 +22,7 @@ If you get the same thing as I did, you do not have Ruby installed.
 
 Download the latest Ruby 2.0 from *[rubyinstaller.org/downloads](http://rubyinstaller.org/downloads)*. At the moment it is *Ruby 2.0.0-p353*. Execute the file.
 
-![Ruby Installation](https://raw.github.com/watir/watirbook/master/images/installation/windows/ruby.png)
+![Ruby Installation](images/installation/windows/ruby.png)
 
 You can leave all settings at default values, except at the *Installation Destination and Optional Tasks* screen check *Add Ruby executables to your PATH* checkbox. Installation should take you just a few seconds.
 
@@ -69,7 +69,7 @@ Let's try selenium-webdriver gem.
 
 ### Internet Explorer ###
 
-![Internet Explorer 11](https://raw.github.com/watir/watirbook/master/images/installation/windows/internet_explorer.png)
+![Internet Explorer 11](images/installation/windows/internet_explorer.png)
 
 Since Internet Explorer (tested with version 11) is already installed, we will start with it.
 
@@ -89,7 +89,7 @@ Since Internet Explorer (tested with version 11) is already installed, we will s
 
 Windows Firewall popup appeared letting me know that it has blocked Ruby.
 
-![Windows Firewall has blocked some features of this program](https://raw.github.com/watir/watirbook/master/images/installation/windows/firewall.png)
+![Windows Firewall has blocked some features of this program](images/installation/windows/firewall.png)
 
 For now just close the popup, let's see how to fix the error message. Follow the instructions from the error message. Go to [code.google.com/p/selenium/downloads/list](http://code.google.com/p/selenium/downloads/list) and download 32-bit or 64-bit IEDriverServer. Extract the downloaded zip file (with mouse right click and then *Extract All..*, for example). Let's find out what is on the PATH.
 
@@ -125,7 +125,7 @@ Let' try again:
 
 ### Firefox ###
 
-![Firefox 26](https://raw.github.com/watir/watirbook/master/images/installation/windows/firefox.png)
+![Firefox 26](images/installation/windows/firefox.png)
 
 If it is not installed (tested with version 25.0.1), download it from [mozilla.com/firefox](http://www.mozilla.com/firefox/).
 
@@ -147,7 +147,7 @@ If it is not installed (tested with version 25.0.1), download it from [mozilla.c
 
 ### Chrome ###
 
-![Chrome 31](https://raw.github.com/watir/watirbook/master/images/installation/windows/chrome.png)
+![Chrome 31](images/installation/windows/chrome.png)
 
 If it is not installed (tested with version 31), download it from [google.com/chrome](http://www.google.com/chrome).
 
@@ -192,7 +192,7 @@ I got Windows Firewall popup again letting me know that it has blocked chromedri
 
 ### Chromium ###
 
-![Chromium 34](https://raw.github.com/watir/watirbook/master/images/installation/windows/chromium.png)
+![Chromium 34](images/installation/windows/chromium.png)
 
 First make sure that you can drive Chrome. (See previous chapter.) Then download [Chromium](https://download-chromium.appspot.com/). (Tested with version 33.) Replace `C:\chrome\chrome.exe` with path to Chromium executable.
 
@@ -238,7 +238,7 @@ Let's try driving it:
 
 The last command saves screenshot of the page. A screenshot from a headless browser. Nice, right?
 
-![PhantomJS](https://raw.github.com/watir/watirbook/master/images/installation/windows/phantomjs.png)
+![PhantomJS](images/installation/windows/phantomjs.png)
 
 
 
@@ -270,7 +270,7 @@ Looks good to me!
 
 ### Opera ###
 
-![Opera 18](https://raw.github.com/watir/watirbook/master/images/installation/windows/opera.png)
+![Opera 18](images/installation/windows/opera.png)
 
 And finally, let's drive Opera. If you do not have it installed, you can get it at [opera.com](http://www.opera.com/) (tested with version 18.0).
 

@@ -121,11 +121,11 @@ A> ## RVM on Ubuntu
 >
 > Then, you have to configure *Terminal*. Go to *Terminal > Edit > Profile Preferences*.
 >
-> ![PhantomJS](https://raw.github.com/watir/watirbook/master/images/main/terminal_profile_preferences.png)
+> ![PhantomJS](images/main/terminal_profile_preferences.png)
 >
 > Select *Title and Command* tab, check *Run command as a login shell* checkbox and then click *Close* button.
 >
-> ![PhantomJS](https://raw.github.com/watir/watirbook/master/images/main/terminal_title_and_command.png)
+> ![PhantomJS](images/main/terminal_title_and_command.png)
 >
 > In case of trouble see [RVM documentation on Terminal](https://rvm.io/integration/gnome-terminal).
 
