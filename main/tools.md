@@ -6,7 +6,7 @@ You will have to learn how to use [Command-line interface](https://en.wikipedia.
 
 ##  Command-line interface (CLI)
 
-You will spend a lot of time using Command-line interface (CLI). It is just another application. It is already installed in your operating system, whether you are using Windows, Mac or Linux. CLI looks similar and behaves similarly on Mac and Linux, and it it slightly different on Windows.
+Command-line interface (CLI) is just another application. It is already installed, whether you are using Windows, Mac or Linux. CLI looks similar and behaves similarly on Mac and Linux, and it it slightly different on Windows.
 
 ### Windows
 
@@ -22,10 +22,6 @@ You can also search for it.
 
 C> *Searching for Command Prompt app on Windows 8.1*
 
-![*Command Prompt* app on Windows 8.1](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_windows_command_prompt.png)
-
-C> *Command Prompt app on Windows 8.1*
-
 I could not find a keyboard shortcut to open *Command Prompt*.
 
 By default, when you open *Command Prompt*, text similar to this will be displayed:
@@ -34,6 +30,10 @@ By default, when you open *Command Prompt*, text similar to this will be display
     (c) 2013 Microsoft Corporation. All rights reserved.
 
     C:\Users\IEUser>
+
+![*Command Prompt* app on Windows 8.1](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_windows_command_prompt.png)
+
+C> *Command Prompt app on Windows 8.1*
 
 You can ignore the first two lines. The last line, `C:\Users\IEUser>` is important. It is called command prompt (or just prompt). `C:\Users\IEUser` part is the folder where Command Prompt commands will be executed (path). `IEUser` is the name of the current user. The last character, `>`, separates path from the text that you will enter. Since both Mac and Linux use `$` as separator, this book will use that character. In short, if an instruction in the book says you should run a Ruby file with this command:
 
