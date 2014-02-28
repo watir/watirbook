@@ -27,7 +27,8 @@ I could not find a keyboard shortcut to open *Command Prompt*.
 By default, when you open *Command Prompt*, text similar to this will be displayed:
 
     ﻿Microsoft Windows [Version 6.3.9600]
-    (c) 2013 Microsoft Corporation. All rights reserved.
+    (c) 2013 Microsoft Corporation. All rights
+    reserved.
 
     C:\Users\IEUser>
 
@@ -42,7 +43,8 @@ You can ignore the first two lines. The last line, `C:\Users\IEUser>` is importa
 Your screen should look similar to this:
 
     ﻿Microsoft Windows [Version 6.3.9600]
-    (c) 2013 Microsoft Corporation. All rights reserved.
+    (c) 2013 Microsoft Corporation. All rights
+    reserved.
 
     C:\Users\IEUser>ruby file_name.rb
 
