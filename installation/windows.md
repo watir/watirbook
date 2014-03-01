@@ -1,10 +1,10 @@
 ## Windows 8.1 ##
 
-<!--g > You will need internet access if you want to follow examples in this chapter. g-->
+> You will need internet access if you want to follow examples in this chapter.
 <!--l I> You will need internet access if you want to follow examples in this chapter. l-->
 
-<!--g ![Windows 8.1 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
-> Windows 8.1 default desktop g-->
+![Windows 8.1 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
+> Windows 8.1 default desktop
 <!--l ![Windows 8.1 default desktop](images/installation/windows/desktop.png) l-->
 
 Machine is a clean installation of Microsoft Windows 8.1 Pro, 1 GB RAM, fully patched.
