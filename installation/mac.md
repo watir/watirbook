@@ -1,10 +1,8 @@
 ## Mac OS X 10.9 ##
 
-*You will need internet access if you want to follow examples in this chapter.*
+I> You will need internet access if you want to follow examples. All examples are tested with Mac OS X 10.9. All browsers are English (US) version.
 
 ![Mac OS X 10.9 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/mac/desktop.png)
-
-Machine is a clean installation of Mac OS X 10.9, fully patched, with 4 GB RAM. All browsers are English (US) version.
 
 
 
@@ -12,7 +10,7 @@ Machine is a clean installation of Mac OS X 10.9, fully patched, with 4 GB RAM. 
 
 ### Ruby ###
 
-Good news is that Ruby is already installed by default. To check Ruby version, open Terminal application (located in `/Applications/Utilities`) any type `ruby -v`.
+Good news is that Ruby is already installed by default. To check Ruby version, open Terminal application any type `ruby -v`.  If you are not familiar with Terminal, see *Command-line interface* chapter.
 
 You should get this:
 
@@ -78,7 +76,7 @@ Click *Install*. After the installation is finished, try again:
 
 ![Safari 7](https://raw.github.com/watir/watirbook/master/images/installation/mac/safari.png)
 
-Since Safari (tested with version 7.0) is already installed, all you have to do is to open IRB and type this:
+Since Safari (tested with version 7.0) is already installed, all you have to do is to open IRB and type this. If you are not familiar with IRB, see *IRB* chapter.
 
     $ irb
 
