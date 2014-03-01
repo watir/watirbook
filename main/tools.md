@@ -12,13 +12,13 @@ Command-line interface (CLI) is just another application. It is already installe
 
 On Windows, the application is called *Command Prompt*. To open it (on Windows 8.1), go to *Apps* screen (swipe up, or click *down* arrow at the bottom of the screen) and it should be located in *Windows System* section.
 
-![*Command Prompt* app on Windows 8.1 *Apps* screen](images/main/tools_cli_windows_apps_command_prompt.png)
+![*Command Prompt* app on Windows 8.1 *Apps* screen](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_windows_apps_command_prompt.png)
 
 C> *Command Prompt app on Windows 8.1 Apps screen*
 
 You can also search for it.
 
-![Searching for *Command Prompt* app on Windows 8.1](images/main/tools_cli_windows_search_command_prompt.png)
+![Searching for *Command Prompt* app on Windows 8.1](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_windows_search_command_prompt.png)
 
 C> *Searching for Command Prompt app on Windows 8.1*
 
@@ -32,7 +32,7 @@ By default, when you open *Command Prompt*, text similar to this will be display
 
     C:\Users\IEUser>
 
-![*Command Prompt* app on Windows 8.1](images/main/tools_cli_windows_command_prompt.png)
+![*Command Prompt* app on Windows 8.1](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_windows_command_prompt.png)
 
 C> *Command Prompt app on Windows 8.1*
 
@@ -52,23 +52,23 @@ Your screen should look similar to this:
 
 On Mac, the application is called `Terminal.app` and you can find it in `/Applications/Utilities` folder.
 
-![`Terminal.app` in *Finder*](images/main/tools_cli_mac_finder.png)
+![`Terminal.app` in *Finder*](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_mac_finder.png)
 
 C> *`Terminal.app` in Finder*
 
-![*Terminal* app on Mac](images/main/tools_cli_mac_terminal.png)
+![*Terminal* app on Mac](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_mac_terminal.png)
 
 C> *Terminal* app on Mac
 
 A quick way to open it is by using built in *Spotlight* search. Press *cmd + space* or click magnifying icon and *Spotlight* will open.
 
-![Spotlight](images/main/tools_cli_mac_spotlight.png)
+![Spotlight](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_mac_spotlight.png)
 
 C> *Spotlight*
 
 Start typing `terminal` and you should see *Terminal* in search results.
 
-![*Terminal* app in *Spotlight*](images/main/tools_cli_mac_spotlight_terminal.png)
+![*Terminal* app in *Spotlight*](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_mac_spotlight_terminal.png)
 
 C> *Terminal app in Spotlight*
 
@@ -92,13 +92,13 @@ Your screen should look similar to this:
 
 On Ubuntu Linux, the application is called *GNOME Terminal*. You can open it with keyboard shortcut *Ctrl + Alt + T*.
 
-![*Terminal* app on Ubuntu Linux](images/main/tools_cli_ubuntu_terminal.png)
+![*Terminal* app on Ubuntu Linux](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_ubuntu_terminal.png)
 
 C> *Terminal app on Ubuntu Linux*
 
 Alternatively, search for *terminal* and you should find it.
 
-![*Terminal* app in Ubuntu search](images/main/tools_cli_ubuntu_search_terminal.png)
+![*Terminal* app in Ubuntu search](https://raw.github.com/watir/watirbook/master/images/main/tools_cli_ubuntu_search_terminal.png)
 
 C> *Terminal app in Ubuntu search*
 

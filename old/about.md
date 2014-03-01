@@ -1,6 +1,6 @@
 # About Watir
 
-![Watir Logo](old/images/watir_logo.jpg)
+![Watir Logo](https://raw.github.com/watir/watirbook/master/old/images/watir_logo.jpg)
 
 What is this thing Watir, that I have decided to write a book about?
 

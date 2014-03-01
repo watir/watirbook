@@ -2,7 +2,7 @@
 
 *You will need internet access if you want to follow examples in this chapter.*
 
-![Ubuntu Linux 13.10](images/installation/ubuntu/desktop.png)
+![Ubuntu Linux 13.10](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/desktop.png)
 
 Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM.
 
@@ -103,7 +103,7 @@ Sucess!
 
 ### Firefox ###
 
-![Firefox 25](images/installation/ubuntu/firefox.png)
+![Firefox 25](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/firefox.png)
 
 Since Firefox (tested with version 25.0.1) is installed by default on Ubuntu, you do not have to install it.
 
@@ -154,7 +154,7 @@ Let's try driving it:
 
 The last command saves screenshot of the page. A screenshot from a headless browser. Nice, right?
 
-![PhantomJS 1.9.0](images/installation/ubuntu/phantomjs.png)
+![PhantomJS 1.9.0](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/phantomjs.png)
 
 
 
@@ -162,7 +162,7 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 ### Chrome ###
 
-![Chrome 31](images/installation/ubuntu/chrome.png)
+![Chrome 31](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/chrome.png)
 
 Now, lets see if it can really drive Chrome (tested with version 31) too. Ubuntu does not have Chrome installed by default, so you have to install it yourself. Download it from *[google.com/chrome](http://www.google.com/chrome)*.
 
@@ -216,7 +216,7 @@ And it really works!
 
 ### Chromium ###
 
-![Chromium 30](images/installation/ubuntu/chrome.png)
+![Chromium 30](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/chrome.png)
 
 Let's try driving [Chromium](http://www.chromium.org/) (tested with version 30) too, just for fun. Install it with `sudo apt-get install chromium-browser`:
 
@@ -275,7 +275,7 @@ Looks like we will have to install Java. Install it with `sudo apt-get install o
 
 ### Opera ###
 
-![Opera 12.16](images/installation/ubuntu/opera.png)
+![Opera 12.16](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/opera.png)
 
 To drive [Opera](http://www.opera.com/) (tested with version 12.16) make sure you have it installed.
 
