@@ -1,6 +1,6 @@
 ## Windows 8.1 ##
 
-*You will need internet access if you want to follow examples in this chapter.*
+> You will need internet access if you want to follow examples in this chapter.
 
 ![Windows 8.1 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
 
