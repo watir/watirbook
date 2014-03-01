@@ -1,10 +1,8 @@
 ## Windows 8.1 ##
 
-I> You will need internet access if you want to follow examples in this chapter.
+I> You will need internet access if you want to follow examples. All examples are tested with Microsoft Windows 8.1 Pro. All browsers are English (US) version.
 
 ![Windows 8.1 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/windows/desktop.png)
-
-Machine is a clean installation of Microsoft Windows 8.1 Pro, 1 GB RAM, fully patched.
 
 
 
@@ -12,7 +10,7 @@ Machine is a clean installation of Microsoft Windows 8.1 Pro, 1 GB RAM, fully pa
 
 ### Ruby ###
 
-You probably do not have Ruby installed. To make sure, open Command Prompt application and type `ruby -v`.
+You probably do not have Ruby installed. To make sure, open Command Prompt application and type `ruby -v`. If you are not familiar with Command Prompt, see *Command-line interface* chapter.
 
     >ruby -v
     'ruby' is not recognized as an internal or
@@ -71,7 +69,7 @@ Let's try selenium-webdriver gem.
 
 ![Internet Explorer 11](https://raw.github.com/watir/watirbook/master/images/installation/windows/internet_explorer.png)
 
-Since Internet Explorer (tested with version 11) is already installed, we will start with it.
+Since Internet Explorer (tested with version 11) is already installed, we will start with it. We will be using IRB (Interactive Ruby Shell). If you are not familiar with it, see *IRB* chapter.
 
     >irb
 
@@ -167,7 +165,7 @@ If it is not installed (tested with version 31), download it from [google.com/ch
     ChromeDriver.
     (...)
 
-You have to download chromedriver from [chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html). Unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see Internet Explorer chapter. In short, move the file to Ruby folder, probably `C:\Ruby200\bin`.
+You have to download [ChromeDriver](http://chromedriver.storage.googleapis.com/index.html). Unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see Internet Explorer chapter. In short, move the file to Ruby folder, probably `C:\Ruby200\bin`.
 
 Let's try again:
 
@@ -184,7 +182,7 @@ Let's try again:
     > browser.get "http://watir.com"
     => nil
 
-I got Windows Firewall popup again letting me know that it has blocked chromedriver. Just close it for now, I have no idea what to do with it.
+I got Windows Firewall popup again letting me know that it has blocked ChromeDriver. Just close it for now, I have no idea what to do with it.
 
 
 
@@ -194,7 +192,7 @@ I got Windows Firewall popup again letting me know that it has blocked chromedri
 
 ![Chromium 34](https://raw.github.com/watir/watirbook/master/images/installation/windows/chromium.png)
 
-First make sure that you can drive Chrome. (See previous chapter.) Then download [Chromium](https://download-chromium.appspot.com/). (Tested with version 33.) Replace `C:\chrome\chrome.exe` with path to Chromium executable.
+First make sure that you can drive Chrome. (See Chrome chapter.) Then download [Chromium](https://download-chromium.appspot.com/). (Tested with version 33.) Replace `C:\chrome\chrome.exe` with path to Chromium executable.
 
     >irb
 
@@ -292,7 +290,7 @@ And finally, let's drive Opera. If you do not have it installed, you can get it 
 Download `selenium-server-standalone-2.39.0.jar` (or newer version) from
 [Google Code](http://code.google.com/p/selenium/downloads/list) and put it in `C:\Ruby200\bin`. Then make `SELENIUM_SERVER_JAR` environmental variable and set it to `C:\Ruby200\bin\selenium-server-standalone-2.39.0.jar`. (If you have a newer version of `selenium-server-standalone` file, replace `2.39.0` appropriately.)
 
-If you just want to try driving opera, typing this into Command Prompt will do the trick:
+If you just want to try driving Opera, typing this into Command Prompt will do the trick:
 
     >set SELENIUM_SERVER_JAR=C:\Ruby200\bin\
     selenium-server-standalone-2.39.0.jar
