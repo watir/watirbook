@@ -17,9 +17,27 @@ Machine is a clean installation of Microsoft Windows 8.1 Pro, 1 GB RAM, fully pa
 
 You probably do not have Ruby installed. To make sure, open Command Prompt application and type `ruby -v`.
 
-    >ruby -v
-    'ruby' is not recognized as an internal or
-    external command, operable program or batch file.
+<!--g
+```bat
+g-->
+
+
+<!--l
+{lang="bat"}
+~~~~~~~~
+l-->
+
+>ruby -v
+'ruby' is not recognized as an internal or
+external command, operable program or batch file.
+
+<!--g
+```
+g-->
+
+<!--l
+~~~~~~~~
+l-->
 
 If you get the same thing as I did, you do not have Ruby installed.
 
