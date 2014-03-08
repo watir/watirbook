@@ -4,7 +4,7 @@ I> You will need internet access if you want to follow examples in this chapter.
 
 In this chapter you will learn how to control the browser using Selenium. In Quick Start chapter we have touched two important part of Selenium API, driver and element. In this chapter we will focus on the driver. The chapter will not cover the entire driver API, for more information see [Selenium::WebDriver::Driver](http://rdoc.info/gems/selenium-webdriver/Selenium/WebDriver/Driver) API documentation.
 
-The first thing you have to do is to open the browser. According to the documentation, currently supported browsers are Firefox, Internet Explorer, Chrome, Android, iPhone, Opera, PhantomJS, Safari and remote browser. Let's focus on desktop drivers for now. See Mobile chapter on how to drive mobile browsers and Selenium in the Cloud chapter on how to driver remote browsers. How to set up everything is explained in detail in Installation chapter.
+The first thing you have to do is to open the browser. According to the documentation, currently supported browsers are Firefox, Internet Explorer, Chrome, Android, iPhone, Opera, PhantomJS, Safari and remote browser. Let's focus on desktop drivers for now. See *Mobile* chapter on how to drive mobile browsers and *Selenium in the Cloud* chapter on how to driver remote browsers. How to set up everything is explained in detail in *Installation* chapter.
 
 | Browser           | Symbol             | Shortcut |
 |-------------------|--------------------|----------|
@@ -15,9 +15,9 @@ The first thing you have to do is to open the browser. According to the document
 | PhantomJS         | :phantomjs         |          |
 | Safari            | :safari            |          |
 
-*Browser/Symbol/Shorcut table*
+C> Browser/Symbol/Shorcut table
 
-In this chapter we will use [IRB](https://en.wikipedia.org/wiki/Interactive_Ruby_Shell) (Interactive Ruby Shell). If you are not familiar with it, take a look at Ruby Tools chapter.
+I> If you are not familiar with Command-line interface or IRB, see  *Command-line interface* and *IRB* chapters.
 
 Open Firefox:
 
