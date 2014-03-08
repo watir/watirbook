@@ -8,7 +8,7 @@ You will be writing a lot of Ruby code. It is beyond scope of this book to teach
 
 I> You do need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Mac OS X 10.8.5 and Ruby 2.1.1p76 but everything should work on all supported platforms.
 
-Most of the examples in the book are using a Ruby tool called [IRB](https://en.wikipedia.org/wiki/Interactive_Ruby_Shell) (Interactive Ruby Shell). We will not get into technical details here, all you need to know is that it is a shell that executes Ruby commands. Every command executes immediately and returns something. Sometimes you will be interested in the return value, the rest of the time you can ignore it.
+If you are familiar with Ruby, I am sure you already think [IRB](https://en.wikipedia.org/wiki/Interactive_Ruby_Shell) (Interactive Ruby Shell) is one of the greatest tools for learning a new Ruby library. If you are new to Ruby, you are probably thinking: *What is this IRB thing?* IRB is *Interactive Ruby Shell*. We will not get into technical details here, all you need to know is that it is a shell that executes Ruby commands. Every command executes immediately and returns something. Sometimes you will be interested in the return value, the rest of the time you can ignore it.
 
 T> IRB is a command-line interface (CLI) tool. If you are not familiar with CLI, see *Command-line interface* chapter.
 
@@ -23,7 +23,7 @@ On Windows, it should look like this:
     DL is deprecated, please use Fiddle
     irb(main):001:0>
 
-If you see something slightly different, it is probably fine, if the examples from this chapter work fine. Let's take a look at the output. Mac and Linux have `2.1.1 :001 >` as prompt and Windows has `irb(main):001:0>`. On Mac/Linux, `2.1.1` part is Ruby version. Windows does not display it. Windows has `irb(main)`, so you do not forget you are using IRB. Windows also displays `DL is deprecated, please use Fiddle` warning message. Feel free to ignore it.
+If you see something slightly different, do now worry, if the examples from this chapter work fine. Let's take a look at the output. Mac and Linux have `2.1.1 :001 >` as prompt and Windows has `irb(main):001:0>`. On Mac/Linux, `2.1.1` part is Ruby version. Windows does not display it. Windows has `irb(main)`, so you do not forget you are using IRB. Windows also displays `DL is deprecated, please use Fiddle` warning message. Feel free to ignore it.
 
 `:001` on Mac/Linux and `:001:0` on Windows is line number. If you just press enter/return (depending on your keyboard), you should see something like this.
 
@@ -104,7 +104,7 @@ Let's output `doge`, finally:
     :hello=>"This is Doge", :wow=>"much addon",
     :so=>"internet"}
 
-[PP](http://ruby-doc.org/stdlib-2.1.1/libdoc/pp/rdoc/PP.html) is a pretty-printer for Ruby objects. It is really useful for outputting bit objects.
+[PP](http://ruby-doc.org/stdlib-2.1.1/libdoc/pp/rdoc/PP.html) is a pretty-printer for Ruby objects. It is really useful for outputting big objects.
 
 T> IRB is not the only Ruby shell. There is [irb Alternatives](https://www.ruby-toolbox.com/categories/irb_Alternatives) category at [The Ruby Toolbox](https://www.ruby-toolbox.com/). The most popular alternative tool is [Pry](https://rubygems.org/gems/pry), but there is another one called [ripl](https://rubygems.org/gems/ripl).
 
@@ -129,7 +129,7 @@ A> ## RVM on Ubuntu
 >
 > In case of trouble see [RVM documentation on Terminal](https://rvm.io/integration/gnome-terminal).
 
-Then install RVM:
+Install RVM:
 
     $ \curl -sSL https://get.rvm.io | bash -s stable
     ...
