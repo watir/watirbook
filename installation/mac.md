@@ -56,7 +56,12 @@ You will probably get this:
     ERROR: Failed to build gem native extension.
     (...)
 
-Fortunately, it is easy to fix. Install command line developer tools. To install them, type `git --version` into Terminal. A popup will appear asking if you would like to install command line developer tools.
+Fortunately, it is easy to fix. Install command line developer tools. To install them, type this into Terminal.
+
+
+    $ git --version
+
+A popup will appear asking if you would like to install command line developer tools.
 
 ![Install command line developer tools popup](https://raw.github.com/watir/watirbook/master/images/installation/mac/command_line_developer_tools.png)
 
@@ -165,7 +170,7 @@ To drive [Chrome](https://www.google.com/intl/en/chrome/browser/) (tested with v
     ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. The easiest way to install chromedriver is via Homebrew.
+Looks like we have to install something called *ChromeDriver executable*. The easiest way to install ChromeDriver is via Homebrew.
 
     $ brew install chromedriver
     (...)
@@ -194,7 +199,7 @@ Finally! It works!
 
 ![Chromium 34](https://raw.github.com/watir/watirbook/master/images/installation/mac/chromium.png)
 
-Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) too, just for fun. Download zip file from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install chromedriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
+Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) too, just for fun. Download zip file from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install ChromeDriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
 
     $ irb
 
