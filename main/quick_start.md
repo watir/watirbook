@@ -1,10 +1,6 @@
 # Quick Start
 
-*You will need internet access if you want to follow examples in this chapter.*
-
-In this chapter I assume you have Ruby, RubyGems, selenium-webdriver gem and Firefox browser installed, since that is the combination available on all operating systems. If you do not have them installed, please see *Installation* chapter.
-
-If you are familiar with Ruby, I am sure you already think IRB is one of the greatest tools for learning a new Ruby library. If you are new to Ruby, you are probably thinking: *What is this IRB thing?* IRB is *Interactive Ruby Shell*. Think of it as a shell that knows Ruby (as the name says).
+I> You will need internet access if you want to follow examples in this chapter. If you do not have Ruby, RubyGems, Selenium and Firefox installed, please see *Installation* chapter. If you are not familiar with Command-line interface or IRB, see  *Command-line interface* and *IRB* chapters.
 
 To start IRB, just type `irb` in command line. You will see something like this:
 
@@ -69,7 +65,7 @@ Let's search for something. This will enter *book* in search text field:
     > browser.find_element(name: "q").send_keys "book"
     => ""
 
-Maybe you are wondering how I knew the text field had the value of `name` attribute set to `q` (I am talking about `name: "q"`). If you do not know how to inspect pages, read on. It will be explained in *Browser Developer Tools* chapter.
+Maybe you are wondering how I knew the text field had the value of `name` attribute set to `q`. (I am talking about `name: "q"`.) If you do not know how to inspect pages, read on. It will be explained in *Browser Developer Tools* chapter.
 
 Now, click the search button:
 
@@ -86,7 +82,7 @@ You might get a different number, it does not have to be 126. And finally, let's
     > browser.close
     => ""
 
-Well, that was a lot of fun. But you do not want to type into IRB all the time. You want to run the tests and do something else while it runs. As for almost everything else in Ruby, there is a simple solution. Paste all code you have entered in IRB in a text file, and save it with *rb* extension. IRB is used only for development or debugging, so do not paste `irb` as the first line of the file. The file should look like this:
+Well, that was a lot of fun. But you do not want to type into IRB all the time. You want to run the tests and do something else while they run. As for almost everything else in Ruby, there is a simple solution. Paste all code you have entered in IRB in a text file, and save it with *rb* extension. IRB is used only for development or debugging, so do not paste `irb` as the first line of the file. The file should look like this:
 
     require "selenium-webdriver"
     browser = Selenium::WebDriver.for :firefox
