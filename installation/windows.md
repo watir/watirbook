@@ -242,6 +242,34 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 
 
+### Safari ###
+
+![Safari 5.1.7](https://raw.github.com/watir/watirbook/master/images/installation/windows/safari.png)
+
+To drive [Safari](http://support.apple.com/downloads/#safari) (tested with version 5.1.7), make sure you have it installed.
+
+    $ irb
+
+    > require "selenium-webdriver"
+    => true
+
+    > browser = Selenium::WebDriver.for :safari
+    Selenium::WebDriver::Error::TimeOutError: timed out waiting for Safari to respond
+    ...
+
+Looks like driving Safari on Windows does not work. Safari does open, with this text is displayed on the screen:
+
+    SafariDriver Client
+
+    [  0.114s] [safaridriver.client] Requesting connection at ws://127.0.0.1:49349/wd...
+    [  2.488s] [safaridriver.client] Request acknowledged; connecting...
+
+But, nothing else happens, except the timeout. Well, it is not a big surprise. The current version of [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser)) for Mac OS is 7.0.2 and the latest supported version for Windows is 5.1.7, so it is not surprise that Selenium has trouble driving it.
+
+
+
+
+
 ### Java ###
 
 To drive Opera, you will have to install Java first. Let's check if Java is already installed with `java -version`:
