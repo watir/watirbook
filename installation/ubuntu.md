@@ -180,7 +180,7 @@ Now, lets see if it can really drive Chrome (tested with version 31) too. Ubuntu
     ChromeDriver.
     (...)
 
-Looks like we have to install something called *chromedriver executable*. Fortunately, the error message is pretty clear. [code.google.com/p/chromedriver/downloads/list](http://code.google.com/p/chromedriver/downloads/list) will let you know that *chromedriver executable* is now located at [chromedriver.storage.googleapis.com](http://chromedriver.storage.googleapis.com/index.html). Download the latest version of `chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
+Looks like we have to install something called *ChromeDriver executable*. Fortunately, the error message is pretty clear. [code.google.com/p/chromedriver/downloads/list](http://code.google.com/p/chromedriver/downloads/list) will let you know that *ChromeDriver executable* is now located at [chromedriver.storage.googleapis.com](http://chromedriver.storage.googleapis.com/index.html). Download the latest version of `chromedriver_linux32.zip` or `chromedriver_linux64.zip` (check if you have 32-bit or 64-bit operating system) and unzip it (mouse right click and then *Extract Here*, for example). You will get a file named `chromedriver`. Put it *somewhere on your `PATH`*, as the error message said.
 
 Let's find out what is *on our `PATH`*.
 
@@ -224,7 +224,7 @@ Let's try driving [Chromium](http://www.chromium.org/) (tested with version 30) 
     (30.0.1599.114-0ubuntu0.13.10.2) ...
     (...)
 
-If you did not already install chromedriver, see Chrome chapter.
+If you did not already install ChromeDriver, see *Chrome* chapter.
 
     $ irb
 
