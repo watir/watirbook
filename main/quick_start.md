@@ -106,25 +106,25 @@ To run the file, navigate in command prompt to the folder where you have saved i
 
 Smile while the browser clicks around.
 
-What is the output in the command prompt? Nothing? Yes, nothing. IRB displays values that Ruby returns, but when you execute Ruby file from the command line, it does not display the values Ruby returns. You have to explicitly say to Ruby that you want them displayed. It is as easy as adding `puts` in front of the command. Add `puts` in front of three lines. Modify the script to look like this. You can add puts in front of every command, but you really do not care about what some commands return:
+What is the output in the command prompt? Nothing? Yes, nothing. IRB displays values that Ruby returns, but when you execute Ruby file from the command line, it does not display the values Ruby returns. You have to explicitly say to Ruby that you want them displayed. It is as easy as adding `p` in front of the command. Add `p` in front of three lines. Modify the script to look like this. You can add `p` in front of every command, but you really do not care about what some commands return:
 
     require "selenium-webdriver"
     browser = Selenium::WebDriver.for :firefox
     browser.get "https://www.google.com/"
-    puts browser.current_url
+    p browser.current_url
     browser.find_element(link_text: "Google.com").click
     browser.find_element(link_text: "Images").click
-    puts browser.title
+    p browser.title
     browser.find_element(name: "q").send_keys "book"
     browser.find_element(name: "btnG").click
-    puts browser.find_elements(tag_name: "img").size
+    p browser.find_elements(tag_name: "img").size
     browser.close
 
 Run the script. This time the output should look like this:
 
     $ ruby quick_start.rb
-    https://www.google.hr/
-    Google Images
+    "https://www.google.hr/"
+    "Google Images"
     126
 
 Later I will show you how to make cool looking reports.

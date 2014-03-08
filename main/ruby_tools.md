@@ -58,11 +58,11 @@ Executing `1+1` in IRB:
 
 The above IRB example shows that Ruby knows how to calculate sum of two numbers. You can also ask it to output something:
 
-    > puts "wow much output so hip"
-    wow much output so hip
-     => nil
+    > p "wow much output so hip"
+    "wow much output so hip"
+    => "wow much output so hip"
 
-After outputting the string, Ruby returned `nil`. You can ignore it for now. All you need to know is that it did not complain. Let's try something that will fail:
+After outputting the string, Ruby returned it. You can ignore it for now. All you need to know is that it did not complain. Let's try something that will fail:
 
     > doge
     NameError: undefined local variable or method
