@@ -1,6 +1,6 @@
 # Driver
 
-I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Mac OS X 10.8.5, Firefox 27.0.1, Ruby 2.1.0p0 and selenium-webdriver 2.40.0 but everything should work on all supported platforms.
+I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Mac OS X 10.8.5, Firefox 27.0.1, Ruby 2.1.0p0 and selenium-webdriver 2.40.0 but everything should work on all supported platforms. If you are not familiar with Command-line interface or IRB, see  *Command-line interface* and *IRB* chapters.
 
 In this chapter you will learn how to control the browser using Selenium. In Quick Start chapter we have touched two important part of Selenium API, driver and element. In this chapter we will focus on the driver. The chapter will not cover the entire driver API, for more information see [Selenium::WebDriver::Driver](http://rdoc.info/gems/selenium-webdriver/Selenium/WebDriver/Driver) API documentation.
 
@@ -15,9 +15,7 @@ The first thing you have to do is to open the browser. According to the document
 | PhantomJS         | :phantomjs         |          |
 | Safari            | :safari            |          |
 
-C> Browser/Symbol/Shorcut table
-
-I> If you are not familiar with Command-line interface or IRB, see  *Command-line interface* and *IRB* chapters.
+C> How to start a browser
 
 Open Firefox:
 

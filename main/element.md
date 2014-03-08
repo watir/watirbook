@@ -1,8 +1,9 @@
 # Element
 
-I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Mac OS X 10.8.5, Firefox 27.0.1, Ruby 2.1.0p0 and selenium-webdriver 2.40.0 but everything should work on all supported platforms.
+I> You will need internet access if you want to follow examples in this chapter. All examples in this chapter are tried on Mac OS X 10.8.5, Firefox 27.0.1, Ruby 2.1.0p0 and selenium-webdriver 2.40.0 but everything should work on all supported platforms. If you are not familiar with Command-line interface or IRB, see  *Command-line interface* and *IRB* chapters.
 
-After you had a taste of Selenium in *Getting Started* chapter, it is time to take a closer look at Selenium API. This chapter will get you introduced to the API but it will not cover it entirely. For more information see [Selenium::WebDriver::Element](http://rdoc.info/gems/selenium-webdriver/Selenium/WebDriver/Element) API documentation.
+
+After you had a taste of Selenium in *Getting Started* chapter, it is time to take a closer look at the Selenium API. This chapter will get you introduced to the API but it will not cover it entirely. For more information see [Selenium::WebDriver::Element](http://rdoc.info/gems/selenium-webdriver/Selenium/WebDriver/Element) API documentation.
 
 Let's start Firefox and open Google home page:
 
@@ -37,7 +38,7 @@ There are many options available to find an element.
 | tag name          | :tag_name          |          |
 | xpath             | :xpath             |          |
 
-C> *Table of attributes to find elements*
+C> How to find an element
 
 Looks like we have found the element, but we did not do anything with it yet. Since the element we have found is a text field, let's enter some text into it:
 
