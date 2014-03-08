@@ -165,7 +165,7 @@ If it is not installed (tested with version 31), download it from [google.com/ch
     ChromeDriver.
     (...)
 
-You have to download [ChromeDriver](http://chromedriver.storage.googleapis.com/index.html). Unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see Internet Explorer chapter. In short, move the file to Ruby folder, probably `C:\Ruby200\bin`.
+You have to download [ChromeDriver](http://chromedriver.storage.googleapis.com/index.html). Unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see *Internet Explorer* chapter. In short, move the file to Ruby folder, probably `C:\Ruby200\bin`.
 
 Let's try again:
 
@@ -192,7 +192,7 @@ I got Windows Firewall popup again letting me know that it has blocked ChromeDri
 
 ![Chromium 34](https://raw.github.com/watir/watirbook/master/images/installation/windows/chromium.png)
 
-First make sure that you can drive Chrome. (See Chrome chapter.) Then download [Chromium](https://download-chromium.appspot.com/). (Tested with version 33.) Replace `C:\chrome\chrome.exe` with path to Chromium executable.
+First make sure that you can drive Chrome. (See *Chrome* chapter.) Then download [Chromium](https://download-chromium.appspot.com/). (Tested with version 33.) Replace `C:\chrome\chrome.exe` with path to Chromium executable.
 
     >irb
 
@@ -217,7 +217,7 @@ First make sure that you can drive Chrome. (See Chrome chapter.) Then download [
 
 ### PhantomJS ###
 
-To drive [PhantomJS](http://phantomjs.org/) (tested with version 1.9.2) download it, unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see Internet Explorer chapter. In short, move `phantomjs.exe` file to Ruby folder, probably `C:\Ruby200\bin`.
+To drive [PhantomJS](http://phantomjs.org/) (tested with version 1.9.2) download it, unzip the file and put it in any folder that is in your `PATH`. If you do not know what is `PATH`, see *Internet Explorer* chapter. In short, move `phantomjs.exe` file to Ruby folder, probably `C:\Ruby200\bin`.
 
 Let's try driving it:
 
