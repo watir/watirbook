@@ -2,6 +2,12 @@
 
 ## 2014
 
+### 0.9.2
+
+- 2014-03-08
+  - Added chapters: Driver, Element, Getting Help, Headless, RVM, IRB, Ruby Toolbox, CLI
+  - Running scripts from the book at Travis CI
+
 ### 0.9.1
 
 - 2014-01-25
