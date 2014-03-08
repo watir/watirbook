@@ -1,10 +1,8 @@
 ## Ubuntu Linux 13.10 ##
 
-*You will need internet access if you want to follow examples in this chapter.*
+I> You will need internet access if you want to follow examples. All examples are tested with Ubuntu Linux 13.10 32-bit. All browsers are English (US) version.
 
 ![Ubuntu Linux 13.10](https://raw.github.com/watir/watirbook/master/images/installation/ubuntu/desktop.png)
-
-Machine is a clean installation of Ubuntu Linux 13.10 32-bit, fully patched, 1 GB RAM.
 
 
 
