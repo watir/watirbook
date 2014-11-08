@@ -2,7 +2,7 @@
 
 I> You will need internet access if you want to follow examples. All examples are tested with Mac OS X 10.9. All browsers are English (US) version.
 
-![Mac OS X 10.9 default desktop](https://raw.github.com/watir/watirbook/master/images/installation/mac/desktop.png)
+![Mac OS X 10.9 default desktop](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/desktop.png)
 
 
 
@@ -63,7 +63,7 @@ Fortunately, it is easy to fix. Install command line developer tools. To install
 
 A popup will appear asking if you would like to install command line developer tools.
 
-![Install command line developer tools popup](https://raw.github.com/watir/watirbook/master/images/installation/mac/command_line_developer_tools.png)
+![Install command line developer tools popup](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/command_line_developer_tools.png)
 
 Click *Install*. After the installation is finished, try again:
 
@@ -79,7 +79,7 @@ Click *Install*. After the installation is finished, try again:
 
 ### Safari ###
 
-![Safari 7](https://raw.github.com/watir/watirbook/master/images/installation/mac/safari.png)
+![Safari 7](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/safari.png)
 
 Since Safari (tested with version 7.0) is already installed, all you have to do is to open IRB and type this. If you are not familiar with IRB, see *IRB* chapter.
 
@@ -101,7 +101,7 @@ Since Safari (tested with version 7.0) is already installed, all you have to do 
 
 ### Firefox ###
 
-![Firefox 26](https://raw.github.com/watir/watirbook/master/images/installation/mac/firefox.png)
+![Firefox 26](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/firefox.png)
 
 To drive [Firefox](http://www.mozilla.org/en-US/firefox/new/) (tested with version 25.0.1), make sure you have it installed. Open our old friend IRB and type this:
 
@@ -150,7 +150,7 @@ Everything looks good!
 
 ### Chrome ###
 
-![Chrome 31](https://raw.github.com/watir/watirbook/master/images/installation/mac/chrome.png)
+![Chrome 31](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/chrome.png)
 
 To drive [Chrome](https://www.google.com/intl/en/chrome/browser/) (tested with version 31), make sure you have it installed.
 
@@ -197,7 +197,7 @@ Finally! It works!
 
 ### Chromium ###
 
-![Chromium 34](https://raw.github.com/watir/watirbook/master/images/installation/mac/chromium.png)
+![Chromium 34](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/chromium.png)
 
 Let's try driving [Chromium](http://www.chromium.org/) (tested with version 33) too, just for fun. Download zip file from [download-chromium.appspot.com](https://download-chromium.appspot.com/). Unzip the file and move `Chromium.app` file to `/Applications` folder. If you did not already install ChromeDriver, see Chrome chapter. To open the browser for the first time you will have to right click it while holding control, then click *Open* from context menu. The next time you can open it in an usual way.
 
@@ -249,7 +249,7 @@ Let's try driving it:
 
 The last command saves screenshot of the page. A screenshot from a headless browser. Nice, right?
 
-![PhantomJS](https://raw.github.com/watir/watirbook/master/images/installation/mac/phantomjs.png)
+![PhantomJS](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/phantomjs.png)
 
 
 
@@ -257,7 +257,7 @@ The last command saves screenshot of the page. A screenshot from a headless brow
 
 ### Opera ###
 
-![Opera 18](https://raw.github.com/watir/watirbook/master/images/installation/mac/opera.png)
+![Opera 18](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/opera.png)
 
 To drive [Opera](http://www.opera.com/) (tested with version 12.16), make sure you have it installed.
 
@@ -290,7 +290,7 @@ Let's try again:
 
     > browser = Selenium::WebDriver.for :opera
 
-![Install Java](https://raw.github.com/watir/watirbook/master/images/installation/mac/java.png)
+![Install Java](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/java.png)
 
 A popup window will appear saying *To open "java," you need a Java SE 6 runtime. Would you like to install one now?*. Click buttion *Install*, agree with license agreement and Java will install.
 
@@ -347,7 +347,7 @@ If you plan to drive Opera frequently, you should add `SELENIUM_SERVER_JAR` to `
 
 This is how to do it with *GNU nano*. Type type `nano ~/.bash_profile`. *GNU nano* text editor will open. Paste (cmd-v, for example) `export SELENIUM_SERVER_JAR...` line. Exit *GNU nano* and save the file with *control+x*. Press *y* when it asks `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` and press *Enter* when it displays `File Name to Write: .bash_profile` or `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?` (text is different if the file already exists or not).
 
-![GNU nano asking should it save changes to `.bash_profile` file](https://raw.github.com/watir/watirbook/master/images/installation/mac/nano.png)
+![GNU nano asking should it save changes to `.bash_profile` file](https://raw.githubusercontent.com/watir/watirbook/master/manuscript/images/installation/mac/nano.png)
 
  If you have done everything right, GNU nano will close and you will see normal Terminal window. We can check if the line is written to `.bash_profile` file:
 
