@@ -1,18 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    childprocess (0.5.1)
+    childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
-    ffi (1.9.3)
-    headless (1.0.1)
-    multi_json (1.9.0)
-    rubyzip (1.1.0)
-    selenium-webdriver (2.40.0)
-      childprocess (>= 0.5.0)
+    ffi (1.9.6)
+    headless (1.0.2)
+    multi_json (1.10.1)
+    rubyzip (1.1.6)
+    selenium-webdriver (2.44.0)
+      childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
-      websocket (~> 1.0.4)
-    websocket (1.0.7)
+      websocket (~> 1.0)
+    websocket (1.2.1)
 
 PLATFORMS
   ruby
