@@ -3,8 +3,9 @@ before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
 rvm:
-  - 2.1.4
+  - 2.1.5
 script:
+  - bundle exec rubocop
   - bundle exec ruby manuscript/lib/driver.rb
   - bundle exec ruby manuscript/lib/element.rb
   - bundle exec ruby manuscript/lib/headless_phantomjs.rb

@@ -4,4 +4,5 @@
 source "https://rubygems.org/"
 
 gem "headless"
+gem "rubocop"
 gem "selenium-webdriver"
